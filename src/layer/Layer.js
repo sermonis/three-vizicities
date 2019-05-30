@@ -20,27 +20,36 @@ import {CSS2DObject} from '../vendor/CSS2DRenderer';
 // child is actually out of camera
 
 class Layer extends EventEmitter {
-  constructor(options) {
-    super();
 
-    var defaults = {
-      id: shortid.generate(),
-      output: true,
-      outputToScene: true
-    };
+    constructor(options) {
 
-    this._options = extend({}, defaults, options);
+        super()
 
-    if (this.isOutput()) {
-      this._object3D = new THREE.Object3D();
+        var defaults = {
 
-      this._dom3D = document.createElement('div');
-      this._domObject3D = new CSS3DObject(this._dom3D);
+            id: shortid.generate(),
+            output: true,
+            outputToScene: true,
 
-      this._dom2D = document.createElement('div');
-      this._domObject2D = new CSS2DObject(this._dom2D);
+        }
+
+        this._options = extend({}, defaults, options)
+
+        // console.log('this.isOutput()', this.isOutput())
+
+        if (this.isOutput()) {
+
+            this._object3D = new THREE.Object3D()
+
+            this._dom3D = document.createElement('div')
+            this._domObject3D = new CSS3DObject(this._dom3D)
+
+            this._dom2D = document.createElement('div')
+            this._domObject2D = new CSS2DObject(this._dom2D)
+
+        }
+
     }
-  }
 
   // Add THREE object directly to layer
   add(object) {
@@ -115,31 +124,54 @@ class Layer extends EventEmitter {
     this._world._engine._picking.remove(object);
   }
 
-  isOutput() {
-    return this._options.output;
-  }
+    isOutput () {
 
-  isOutputToScene() {
-    return this._options.outputToScene;
-  }
+        return this._options.output
 
-  // TODO: Also hide any attached DOM layers
-  hide() {
-    this._object3D.visible = false;
-
-    if (this._pickingMesh) {
-      this._pickingMesh.visible = false;
     }
-  }
 
-  // TODO: Also show any attached DOM layers
-  show() {
-    this._object3D.visible = true;
+    isOutputToScene() {
 
-    if (this._pickingMesh) {
-      this._pickingMesh.visible = true;
+        return this._options.outputToScene
+
     }
-  }
+
+    // TODO: Also hide any attached DOM layers
+    hide () {
+
+        // console.log('Layer', 'hide')
+        // console.dir(this._object3D)
+
+        if (this._object3D) {
+
+            this._object3D.visible = false;
+
+            if (this._pickingMesh) {
+
+                this._pickingMesh.visible = false;
+
+            }
+
+        }
+
+    }
+
+    // TODO: Also show any attached DOM layers
+    show () {
+
+        if (this._object3D) {
+
+            this._object3D.visible = true
+
+            if (this._pickingMesh) {
+
+                this._pickingMesh.visible = true
+
+            }
+
+        }
+
+    }
 
   // Destroys the layer and removes it from the scene and memory
   destroy() {
@@ -215,4 +247,4 @@ var noNew = function(options) {
   return new Layer(options);
 };
 
-export {noNew as layer};
+export { noNew as layer };

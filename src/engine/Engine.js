@@ -17,7 +17,8 @@ import VerticalTiltShiftShader from '../vendor/VerticalTiltShiftShader';
 import FXAAShader from '../vendor/FXAAShader';
 
 class Engine extends EventEmitter {
-  constructor(container, world) {
+
+  constructor (container, world) {
     console.log('Init Engine');
 
     super();
@@ -52,7 +53,7 @@ class Engine extends EventEmitter {
   // TODO: Set up composer to automatically resize on viewport change
   // TODO: Update passes that rely on width / height on resize
   // TODO: Merge default passes into a single shader / pass for performance
-  _initPostProcessing() {
+  _initPostProcessing () {
     var renderPass = new RenderPass(this._scene, this._camera);
 
     // TODO: Look at using @mattdesl's optimised FXAA shader
@@ -97,7 +98,8 @@ class Engine extends EventEmitter {
     window.addEventListener('resize', updatePostProcessingSize, false);
   }
 
-  update(delta) {
+  update (delta) {
+
     this.emit('preRender');
 
     if (this._world.options.postProcessing) {
@@ -116,7 +118,8 @@ class Engine extends EventEmitter {
     this.emit('postRender');
   }
 
-  destroy() {
+
+  destroy () {
     // Remove any remaining objects from scene
     var child;
     for (var i = this._scene.children.length - 1; i >= 0; i--) {
@@ -182,7 +185,17 @@ class Engine extends EventEmitter {
     this._clock = null;
     this._frustum = null;
   }
+
+  // Proxy for destroy()
+  terminate () {
+
+     this.destroy()
+
+  }
+  
 }
+
+
 
 export default Engine;
 

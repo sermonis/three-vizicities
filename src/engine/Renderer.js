@@ -1,54 +1,58 @@
-import * as THREE from 'three';
-import Scene from './Scene';
+import * as THREE from 'three'
+import Scene from './Scene'
 
 // This can only be accessed from Engine.renderer if you want to reference the
 // same scene in multiple places
+export default function (container, antialias) {
 
-export default function(container, antialias) {
-  var renderer = new THREE.WebGLRenderer({
-    antialias: antialias
+    var renderer = new THREE.WebGLRenderer({
 
-    // Enabling this removes a lot of z-index intersecting but it also removes
-    // shadows due to a bug in three.js
+        antialias: antialias,
+
+        // Enabling this removes a lot of z-index intersecting but it also removes
+        // shadows due to a bug in three.js
+        //
+        // See: https://github.com/mrdoob/three.js/issues/7815
+        // logarithmicDepthBuffer: true
+
+    })
+
+    // TODO: Re-enable when this works with the skybox
+    // renderer.setClearColor(Scene.fog.color, 1);
+    renderer.setClearColor(0xffffff, 1)
+
+    // TODO: Re-enable this when perf issues can be solved
     //
-    // See: https://github.com/mrdoob/three.js/issues/7815
-    // logarithmicDepthBuffer: true
-  });
+    // Rendering double the resolution of the screen can be really slow
+    // var pixelRatio = window.devicePixelRatio
+    var pixelRatio = 1
 
-  // TODO: Re-enable when this works with the skybox
-  // renderer.setClearColor(Scene.fog.color, 1);
+    renderer.setPixelRatio(pixelRatio)
 
-  renderer.setClearColor(0xffffff, 1);
+    // Gamma settings make things look nicer
+    renderer.gammaInput = true
+    renderer.gammaOutput = true
+    
+    renderer.shadowMap.enabled = true
 
-  // TODO: Re-enable this when perf issues can be solved
-  //
-  // Rendering double the resolution of the screen can be really slow
-  // var pixelRatio = window.devicePixelRatio;
-  var pixelRatio = 1;
+    // TODO: Work out which of the shadowmap types is best
+    // https://github.com/mrdoob/three.js/blob/r56/src/Three.js#L107
+    // renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
-  renderer.setPixelRatio(pixelRatio);
+    // TODO: Check that leaving this as default (CullFrontFace) is right
+    // renderer.shadowMap.cullFace = THREE.CullFaceBack
 
-  // Gamma settings make things look nicer
-  renderer.gammaInput = true;
-  renderer.gammaOutput = true;
+    container.appendChild(renderer.domElement)
 
-  renderer.shadowMap.enabled = true;
+    var updateSize = function() {
 
-  // TODO: Work out which of the shadowmap types is best
-  // https://github.com/mrdoob/three.js/blob/r56/src/Three.js#L107
-  // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.setSize(container.clientWidth, container.clientHeight)
 
-  // TODO: Check that leaving this as default (CullFrontFace) is right
-  // renderer.shadowMap.cullFace = THREE.CullFaceBack;
+    }
 
-  container.appendChild(renderer.domElement);
+    window.addEventListener('resize', updateSize, false)
+    updateSize()
 
-  var updateSize = function() {
-    renderer.setSize(container.clientWidth, container.clientHeight);
-  };
+    return renderer
 
-  window.addEventListener('resize', updateSize, false);
-  updateSize();
-
-  return renderer;
-};
+}

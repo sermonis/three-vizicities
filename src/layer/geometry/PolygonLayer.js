@@ -137,19 +137,26 @@ class PolygonLayer extends Layer {
     this._pickingId = this._options.pickingId = this.getPickingId();
   }
 
-  // Set up and re-emit interaction events
-  _addPickingEvents() {
-    // TODO: Find a way to properly remove this listener on destroy
-    this._world.on('pick-click-' + this._pickingId, (point2d, point3d, intersects) => {
-      // Re-emit click event from the layer
-      this.emit('click', this, point2d, point3d, intersects);
-    });
+    // Set up and re-emit interaction events
+    _addPickingEvents () {
 
-    this._world.on('pick-hover-' + this._pickingId, (point2d, point3d, intersects) => {
-      // Re-emit click event from the layer
-      this.emit('hover', this, point2d, point3d, intersects);
-    });
-  }
+        // TODO: Find a way to properly remove this listener on destroy
+        this._world.on('pick-click-' + this._pickingId, (point2d, point3d, intersects) => {
+
+            // Re-emit click event from the layer
+            this.emit('click', this, point2d, point3d, intersects)
+
+        })
+
+        this._world.on('pick-hover-' + this._pickingId, (point2d, point3d, intersects) => {
+
+            // Re-emit click event from the layer
+            this.emit('hover', this, point2d, point3d, intersects)
+            // alert ('hover')
+
+        })
+
+    }
 
   // Create and store reference to THREE.BufferAttribute data for this layer
   static SetBufferAttributes(coordinates, options) {

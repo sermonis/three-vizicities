@@ -17,8 +17,10 @@ class World extends EventEmitter {
     super();
 
     var defaults = {
-      skybox: false,
-      postProcessing: false
+
+        skybox: false,
+        postProcessing: false,
+        attribution: null,
     };
 
     this.options = extend({}, defaults, options);
@@ -49,22 +51,33 @@ class World extends EventEmitter {
   }
 
   _initAttribution() {
-    var message = '<a href="http://vizicities.com" target="_blank">ViziCities</a> | <a id="show-attr" href="#">Attribution</a>';
 
-    var element = document.createElement('div');
-    element.classList.add('vizicities-attribution');
+    var message = []
 
-    var additionalElem = document.createElement('div');
-    additionalElem.id = 'attribution-container';
+    if (this.options.attribution) {
 
-    element.innerHTML = message;
-    element.appendChild(additionalElem);
+        message.push(this.options.attribution)
+        message.push('<a id="show-attr" href="#">ГИС</a>')
 
-    this._container.appendChild(element);
+        var element = document.createElement('div')
+        element.classList.add('vizicities-attribution')
 
-    document.getElementById('show-attr').addEventListener('click', function(e) {
-      e.currentTarget.parentNode.classList.toggle('is-visible');
-    });
+        var additionalElem = document.createElement('div')
+        additionalElem.id = 'attribution-container'
+
+        element.innerHTML = message.join(' | ')
+        element.appendChild(additionalElem)
+
+        this._container.appendChild(element)
+
+        document.getElementById('show-attr').addEventListener('click', function (e) {
+
+            e.currentTarget.parentNode.classList.toggle('is-visible')
+
+        })
+
+    }
+
   }
 
   _initEngine() {
@@ -366,7 +379,15 @@ class World extends EventEmitter {
 
     this._container = null;
   }
+
+  // Proxy for destroy()
+  terminate () {
+
+     this.destroy()
+
+  }
 }
+
 
 export default World;
 

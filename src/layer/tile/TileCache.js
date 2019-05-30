@@ -42,9 +42,9 @@ class TileCache {
 
 export default TileCache;
 
-var noNew = function(cacheLimit, onDestroyTile) {
+var noNew = function (cacheLimit, onDestroyTile) {
   return new TileCache(cacheLimit, onDestroyTile);
 };
 
 // Initialise without requiring new keyword
-export {noNew as tileCache};
+export { noNew as tileCache };

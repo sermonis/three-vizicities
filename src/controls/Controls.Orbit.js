@@ -1,5 +1,6 @@
-import EventEmitter from 'eventemitter3';
 import * as THREE from 'three';
+
+import EventEmitter from 'eventemitter3';
 import OrbitControls from '../vendor/OrbitControls';
 import TweenLite from 'TweenLite';
 
@@ -341,4 +342,4 @@ var noNew = function() {
 };
 
 // Initialise without requiring new keyword
-export {noNew as orbit};
+export { noNew as orbit };

@@ -1,12 +1,11 @@
 /*
  * GeoJSON helpers for handling data and generating objects
  */
-
-import * as THREE from 'three';
-import * as topojson from 'topojson';
-import geojsonMerge from 'geojson-merge';
-import earcut from 'earcut';
-import extrudePolygon from './extrudePolygon';
+import * as THREE from 'three'
+import * as topojson from 'topojson'
+import geojsonMerge from 'geojson-merge'
+import earcut from 'earcut'
+import extrudePolygon from './extrudePolygon'
 
 // TODO: Make it so height can be per-coordinate / point but connected together
 // as a linestring (eg. GPS points with an elevation at each point)
@@ -17,24 +16,27 @@ import extrudePolygon from './extrudePolygon';
 // See: http://lists.geojson.org/pipermail/geojson-geojson.org/2009-June/000489.html
 
 // Light and dark colours used for poor-mans AO gradient on object sides
-var light = new THREE.Color(0xffffff);
-var shadow  = new THREE.Color(0x666666);
+var light = new THREE.Color(0xffffff)
+var shadow  = new THREE.Color(0x666666)
 
 var GeoJSON = (function() {
-  var defaultStyle = {
-    color: '#ffffff',
-    outline: false,
-    outlineColor: '#000000',
-    transparent: false,
-    opacity: 1,
-    blending: THREE.NormalBlending,
-    height: 0,
-    lineOpacity: 1,
-    lineTransparent: false,
-    lineColor: '#ffffff',
-    lineWidth: 1,
-    lineBlending: THREE.NormalBlending
-  };
+
+    var defaultStyle = {
+
+        color: '#ffffff',
+        outline: false,
+        outlineColor: '#000000',
+        transparent: false,
+        opacity: 1,
+        blending: THREE.NormalBlending,
+        height: 0,
+        lineOpacity: 1,
+        lineTransparent: false,
+        lineColor: '#ffffff',
+        lineWidth: 1,
+        lineBlending: THREE.NormalBlending
+        
+    };
 
   // Attempts to merge together multiple GeoJSON Features or FeatureCollections
   // into a single FeatureCollection

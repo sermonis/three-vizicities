@@ -3,7 +3,7 @@
  */
 
 import * as THREE from 'three';
-import {TextEncoder, TextDecoder} from 'text-encoding';
+import { TextEncoder, TextDecoder } from 'text-encoding';
 
 var Buffer = (function() {
   // Merge TypedArrays of the same type
