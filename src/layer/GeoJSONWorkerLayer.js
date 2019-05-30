@@ -334,11 +334,6 @@ class GeoJSONWorkerLayer extends Layer {
           this.add(outlineResult.mesh);
         }
 
-        // Clean up
-        results.attributes = null;
-        results.flats = null;
-        results = null;
-
         resolve();
       }).catch(reject);
     });
