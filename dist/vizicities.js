@@ -7,7 +7,7 @@
 		exports["VIZI"] = factory(require("THREE"), require("TweenLite"));
 	else
 		root["VIZI"] = factory(root["THREE"], root["TweenLite"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_41__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_7__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -60,87 +60,87 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _World = __webpack_require__(1);
+	var _World = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./World\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _World2 = _interopRequireDefault(_World);
 	
-	var _controlsIndex = __webpack_require__(37);
+	var _controlsIndex = __webpack_require__(1);
 	
 	var _controlsIndex2 = _interopRequireDefault(_controlsIndex);
 	
-	var _geoGeoJs = __webpack_require__(4);
+	var _geoGeoJs = __webpack_require__(8);
 	
 	var _geoGeoJs2 = _interopRequireDefault(_geoGeoJs);
 	
-	var _layerLayer = __webpack_require__(31);
+	var _layerLayer = __webpack_require__(11);
 	
 	var _layerLayer2 = _interopRequireDefault(_layerLayer);
 	
-	var _layerLayerGroup = __webpack_require__(42);
+	var _layerLayerGroup = __webpack_require__(16);
 	
 	var _layerLayerGroup2 = _interopRequireDefault(_layerLayerGroup);
 	
-	var _layerEnvironmentEnvironmentLayer = __webpack_require__(30);
+	var _layerEnvironmentEnvironmentLayer = __webpack_require__(17);
 	
 	var _layerEnvironmentEnvironmentLayer2 = _interopRequireDefault(_layerEnvironmentEnvironmentLayer);
 	
-	var _layerTileImageTileLayer = __webpack_require__(43);
+	var _layerTileImageTileLayer = __webpack_require__(21);
 	
 	var _layerTileImageTileLayer2 = _interopRequireDefault(_layerTileImageTileLayer);
 	
-	var _layerTileGeoJSONTileLayer = __webpack_require__(61);
+	var _layerTileGeoJSONTileLayer = __webpack_require__(39);
 	
 	var _layerTileGeoJSONTileLayer2 = _interopRequireDefault(_layerTileGeoJSONTileLayer);
 	
-	var _layerTileTopoJSONTileLayer = __webpack_require__(80);
+	var _layerTileTopoJSONTileLayer = __webpack_require__(61);
 	
 	var _layerTileTopoJSONTileLayer2 = _interopRequireDefault(_layerTileTopoJSONTileLayer);
 	
-	var _layerTileGeoJSONTile = __webpack_require__(62);
+	var _layerTileGeoJSONTile = __webpack_require__(40);
 	
 	var _layerTileGeoJSONTile2 = _interopRequireDefault(_layerTileGeoJSONTile);
 	
-	var _layerGeoJSONLayer = __webpack_require__(63);
+	var _layerGeoJSONLayer = __webpack_require__(41);
 	
 	var _layerGeoJSONLayer2 = _interopRequireDefault(_layerGeoJSONLayer);
 	
-	var _layerTopoJSONLayer = __webpack_require__(81);
+	var _layerTopoJSONLayer = __webpack_require__(62);
 	
 	var _layerTopoJSONLayer2 = _interopRequireDefault(_layerTopoJSONLayer);
 	
-	var _layerGeoJSONWorkerLayer = __webpack_require__(78);
+	var _layerGeoJSONWorkerLayer = __webpack_require__(56);
 	
 	var _layerGeoJSONWorkerLayer2 = _interopRequireDefault(_layerGeoJSONWorkerLayer);
 	
-	var _layerTopoJSONWorkerLayer = __webpack_require__(82);
+	var _layerTopoJSONWorkerLayer = __webpack_require__(63);
 	
 	var _layerTopoJSONWorkerLayer2 = _interopRequireDefault(_layerTopoJSONWorkerLayer);
 	
-	var _layerGeometryPolygonLayer = __webpack_require__(75);
+	var _layerGeometryPolygonLayer = __webpack_require__(53);
 	
 	var _layerGeometryPolygonLayer2 = _interopRequireDefault(_layerGeometryPolygonLayer);
 	
-	var _layerGeometryPolylineLayer = __webpack_require__(76);
+	var _layerGeometryPolylineLayer = __webpack_require__(54);
 	
 	var _layerGeometryPolylineLayer2 = _interopRequireDefault(_layerGeometryPolylineLayer);
 	
-	var _layerGeometryPointLayer = __webpack_require__(77);
+	var _layerGeometryPointLayer = __webpack_require__(55);
 	
 	var _layerGeometryPointLayer2 = _interopRequireDefault(_layerGeometryPointLayer);
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
 	var _geoPoint2 = _interopRequireDefault(_geoPoint);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
 	var _geoLatLon2 = _interopRequireDefault(_geoLatLon);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
-	var _utilIndex = __webpack_require__(83);
+	var _utilIndex = __webpack_require__(64);
 	
 	var _utilIndex2 = _interopRequireDefault(_utilIndex);
 	
@@ -197,5252 +197,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _eventemitter3 = __webpack_require__(2);
-	
-	var _eventemitter32 = _interopRequireDefault(_eventemitter3);
-	
-	var _lodashAssign = __webpack_require__(3);
-	
-	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
-	
-	var _geoGeo = __webpack_require__(4);
-	
-	var _geoGeo2 = _interopRequireDefault(_geoGeo);
-	
-	var _geoPoint = __webpack_require__(6);
-	
-	var _geoLatLon = __webpack_require__(5);
-	
-	var _engineEngine = __webpack_require__(7);
-	
-	var _engineEngine2 = _interopRequireDefault(_engineEngine);
-	
-	var _layerEnvironmentEnvironmentLayer = __webpack_require__(30);
-	
-	var _layerEnvironmentEnvironmentLayer2 = _interopRequireDefault(_layerEnvironmentEnvironmentLayer);
-	
-	var _utilWorker = __webpack_require__(34);
-	
-	var _utilWorker2 = _interopRequireDefault(_utilWorker);
-	
-	// TODO: Make sure nothing is left behind in the heap after calling destroy()
-	
-	// Pretty much any event someone using ViziCities would need will be emitted or
-	// proxied by World (eg. render events, etc)
-	
-	var World = (function (_EventEmitter) {
-	  _inherits(World, _EventEmitter);
-	
-	  function World(domId, options) {
-	    var _this = this;
-	
-	    _classCallCheck(this, World);
-	
-	    _get(Object.getPrototypeOf(World.prototype), 'constructor', this).call(this);
-	
-	    var defaults = {
-	      skybox: false,
-	      postProcessing: false
-	    };
-	
-	    this.options = (0, _lodashAssign2['default'])({}, defaults, options);
-	
-	    this._layers = [];
-	    this._controls = [];
-	
-	    this._initContainer(domId);
-	    this._initAttribution();
-	    this._initEngine();
-	
-	    this._initEnvironment().then(function () {
-	      _this._initEvents();
-	
-	      _this._pause = false;
-	
-	      // Kick off the update and render loop
-	      _this._update();
-	    });
-	  }
-	
-	  _createClass(World, [{
-	    key: 'createWorkers',
-	    value: function createWorkers(maxWorkers, workerScript) {
-	      return _utilWorker2['default'].createWorkers(maxWorkers, workerScript);
-	    }
-	  }, {
-	    key: '_initContainer',
-	    value: function _initContainer(domId) {
-	      this._container = document.getElementById(domId);
-	    }
-	  }, {
-	    key: '_initAttribution',
-	    value: function _initAttribution() {
-	      var message = '<a href="http://vizicities.com" target="_blank">ViziCities</a> | <a id="show-attr" href="#">Attribution</a>';
-	
-	      var element = document.createElement('div');
-	      element.classList.add('vizicities-attribution');
-	
-	      var additionalElem = document.createElement('div');
-	      additionalElem.id = 'attribution-container';
-	
-	      element.innerHTML = message;
-	      element.appendChild(additionalElem);
-	
-	      this._container.appendChild(element);
-	
-	      document.getElementById('show-attr').addEventListener('click', function (e) {
-	        e.currentTarget.parentNode.classList.toggle('is-visible');
-	      });
-	    }
-	  }, {
-	    key: '_initEngine',
-	    value: function _initEngine() {
-	      this._engine = new _engineEngine2['default'](this._container, this);
-	
-	      // Engine events
-	      //
-	      // Consider proxying these through events on World for public access
-	      // this._engine.on('preRender', () => {});
-	      // this._engine.on('postRender', () => {});
-	    }
-	  }, {
-	    key: '_initEnvironment',
-	    value: function _initEnvironment() {
-	      // Not sure if I want to keep this as a private API
-	      //
-	      // Makes sense to allow others to customise their environment so perhaps
-	      // add some method of disable / overriding the environment settings
-	      this._environment = new _layerEnvironmentEnvironmentLayer2['default']({
-	        skybox: this.options.skybox
-	      });
-	
-	      return this._environment.addTo(this);
-	    }
-	  }, {
-	    key: '_initEvents',
-	    value: function _initEvents() {
-	      this.on('controlsMoveEnd', this._onControlsMoveEnd);
-	    }
-	  }, {
-	    key: '_onControlsMoveEnd',
-	    value: function _onControlsMoveEnd(point) {
-	      var _point = (0, _geoPoint.point)(point.x, point.z);
-	      this._resetView(this.pointToLatLon(_point), _point);
-	    }
-	
-	    // Reset world view
-	  }, {
-	    key: '_resetView',
-	    value: function _resetView(latlon, point) {
-	      this.emit('preResetView');
-	
-	      this._moveStart();
-	      this._move(latlon, point);
-	      this._moveEnd();
-	
-	      this.emit('postResetView');
-	    }
-	  }, {
-	    key: '_moveStart',
-	    value: function _moveStart() {
-	      this.emit('moveStart');
-	    }
-	  }, {
-	    key: '_move',
-	    value: function _move(latlon, point) {
-	      this._lastPosition = latlon;
-	      this.emit('move', latlon, point);
-	    }
-	  }, {
-	    key: '_moveEnd',
-	    value: function _moveEnd() {
-	      this.emit('moveEnd');
-	    }
-	  }, {
-	    key: '_update',
-	    value: function _update() {
-	      if (this._pause) {
-	        return;
-	      }
-	
-	      var delta = this._engine.clock.getDelta();
-	
-	      // Once _update is called it will run forever, for now
-	      window.requestAnimationFrame(this._update.bind(this));
-	
-	      // Update controls
-	      // this._controls.forEach(controls => {
-	      //   controls.update(delta);
-	      // });
-	
-	      this.emit('preUpdate', delta);
-	      this._engine.update(delta);
-	      this.emit('postUpdate', delta);
-	    }
-	  }, {
-	    key: '_addAttribution',
-	    value: function _addAttribution(id, message) {
-	      var container = document.getElementById('attribution-container');
-	
-	      var span = document.createElement('p');
-	      span.dataset.layer = id;
-	      span.innerHTML = message;
-	
-	      container.appendChild(span);
-	    }
-	  }, {
-	    key: '_removeAttribution',
-	    value: function _removeAttribution(id) {
-	      var elem = document.querySelectorAll('#attribution-container [data-layer="' + id + '"]')[0];
-	      if (elem) {
-	        elem.remove();
-	      }
-	    }
-	
-	    // Set world view
-	  }, {
-	    key: 'setView',
-	    value: function setView(latlon) {
-	      // Store initial geographic coordinate for the [0,0,0] world position
-	      //
-	      // The origin point doesn't move in three.js / 3D space so only set it once
-	      // here instead of every time _resetView is called
-	      //
-	      // If it was updated every time then coorindates would shift over time and
-	      // would be out of place / context with previously-placed points (0,0 would
-	      // refer to a different point each time)
-	      this._originLatlon = latlon;
-	      this._originPoint = this.project(latlon);
-	
-	      this._resetView(latlon);
-	      return this;
-	    }
-	
-	    // Return world geographic position
-	  }, {
-	    key: 'getPosition',
-	    value: function getPosition() {
-	      return this._lastPosition;
-	    }
-	
-	    // Transform geographic coordinate to world point
-	    //
-	    // This doesn't take into account the origin offset
-	    //
-	    // For example, this takes a geographic coordinate and returns a point
-	    // relative to the origin point of the projection (not the world)
-	  }, {
-	    key: 'project',
-	    value: function project(latlon) {
-	      return _geoGeo2['default'].latLonToPoint((0, _geoLatLon.latLon)(latlon));
-	    }
-	
-	    // Transform world point to geographic coordinate
-	    //
-	    // This doesn't take into account the origin offset
-	    //
-	    // For example, this takes a point relative to the origin point of the
-	    // projection (not the world) and returns a geographic coordinate
-	  }, {
-	    key: 'unproject',
-	    value: function unproject(point) {
-	      return _geoGeo2['default'].pointToLatLon((0, _geoPoint.point)(point));
-	    }
-	
-	    // Takes into account the origin offset
-	    //
-	    // For example, this takes a geographic coordinate and returns a point
-	    // relative to the three.js / 3D origin (0,0)
-	  }, {
-	    key: 'latLonToPoint',
-	    value: function latLonToPoint(latlon) {
-	      var projectedPoint = this.project((0, _geoLatLon.latLon)(latlon));
-	      return projectedPoint._subtract(this._originPoint);
-	    }
-	
-	    // Takes into account the origin offset
-	    //
-	    // For example, this takes a point relative to the three.js / 3D origin (0,0)
-	    // and returns the exact geographic coordinate at that point
-	  }, {
-	    key: 'pointToLatLon',
-	    value: function pointToLatLon(point) {
-	      var projectedPoint = (0, _geoPoint.point)(point).add(this._originPoint);
-	      return this.unproject(projectedPoint);
-	    }
-	
-	    // Return pointscale for a given geographic coordinate
-	  }, {
-	    key: 'pointScale',
-	    value: function pointScale(latlon, accurate) {
-	      return _geoGeo2['default'].pointScale(latlon, accurate);
-	    }
-	
-	    // Convert from real meters to world units
-	    //
-	    // TODO: Would be nice not to have to pass in a pointscale here
-	  }, {
-	    key: 'metresToWorld',
-	    value: function metresToWorld(metres, pointScale, zoom) {
-	      return _geoGeo2['default'].metresToWorld(metres, pointScale, zoom);
-	    }
-	
-	    // Convert from real meters to world units
-	    //
-	    // TODO: Would be nice not to have to pass in a pointscale here
-	  }, {
-	    key: 'worldToMetres',
-	    value: function worldToMetres(worldUnits, pointScale, zoom) {
-	      return _geoGeo2['default'].worldToMetres(worldUnits, pointScale, zoom);
-	    }
-	
-	    // Unsure if it's a good idea to expose this here for components like
-	    // GridLayer to use (eg. to keep track of a frustum)
-	  }, {
-	    key: 'getCamera',
-	    value: function getCamera() {
-	      return this._engine._camera;
-	    }
-	  }, {
-	    key: 'addLayer',
-	    value: function addLayer(layer) {
-	      var _this2 = this;
-	
-	      // Is is right to assume that there will always be some other layer
-	      // managing layers with output set to false?
-	      this._layers.push(layer);
-	
-	      if (layer.isOutput() && layer.isOutputToScene()) {
-	        // Could move this into Layer but it'll do here for now
-	        this._engine._scene.add(layer._object3D);
-	        this._engine._domScene3D.add(layer._domObject3D);
-	        this._engine._domScene2D.add(layer._domObject2D);
-	      }
-	
-	      return new Promise(function (resolve, reject) {
-	        layer._addToWorld(_this2).then(function () {
-	          if (layer._options.attribution) {
-	            _this2._addAttribution(layer._options.id, layer._options.attribution);
-	          }
-	
-	          // TODO: Consider moving this so it doesn't fire for layers that are
-	          // actually managed by a parent layer (eg. tiles)
-	          _this2.emit('layerAdded', layer);
-	
-	          resolve(_this2);
-	        })['catch'](reject);
-	      });
-	    }
-	
-	    // Remove layer from world and scene but don't destroy it entirely
-	  }, {
-	    key: 'removeLayer',
-	    value: function removeLayer(layer) {
-	      var layerIndex = this._layers.indexOf(layer);
-	
-	      if (layerIndex > -1) {
-	        // Remove from this._layers
-	        this._layers.splice(layerIndex, 1);
-	      };
-	
-	      if (layer._options.attribution) {
-	        this._removeAttribution(layer._options.id);
-	      }
-	
-	      if (layer.isOutput() && layer.isOutputToScene()) {
-	        this._engine._scene.remove(layer._object3D);
-	        this._engine._domScene3D.remove(layer._domObject3D);
-	        this._engine._domScene2D.remove(layer._domObject2D);
-	      }
-	
-	      this.emit('layerRemoved');
-	
-	      return Promise.resolve(this);
-	    }
-	  }, {
-	    key: 'addControls',
-	    value: function addControls(controls) {
-	      controls._addToWorld(this);
-	
-	      this._controls.push(controls);
-	
-	      this.emit('controlsAdded', controls);
-	
-	      return Promise.resolve(this);
-	    }
-	
-	    // Remove controls from world but don't destroy them entirely
-	  }, {
-	    key: 'removeControls',
-	    value: function removeControls(controls) {
-	      var controlsIndex = this._controls.indexOf(controlsIndex);
-	
-	      if (controlsIndex > -1) {
-	        this._controls.splice(controlsIndex, 1);
-	      };
-	
-	      this.emit('controlsRemoved', controls);
-	
-	      return Promise.resolve(this);
-	    }
-	  }, {
-	    key: 'stop',
-	    value: function stop() {
-	      this._pause = true;
-	    }
-	  }, {
-	    key: 'start',
-	    value: function start() {
-	      this._pause = false;
-	      this._update();
-	    }
-	
-	    // Destroys the world(!) and removes it from the scene and memory
-	    //
-	    // TODO: World out why so much three.js stuff is left in the heap after this
-	  }, {
-	    key: 'destroy',
-	    value: function destroy() {
-	      this.stop();
-	
-	      // Remove listeners
-	      this.off('controlsMoveEnd', this._onControlsMoveEnd);
-	
-	      var i;
-	
-	      // Remove all controls
-	      var controls;
-	      for (i = this._controls.length - 1; i >= 0; i--) {
-	        controls = this._controls[0];
-	        this.removeControls(controls);
-	        controls.destroy();
-	      };
-	
-	      // Remove all layers
-	      var layer;
-	      for (i = this._layers.length - 1; i >= 0; i--) {
-	        layer = this._layers[0];
-	        this.removeLayer(layer);
-	        layer.destroy();
-	      };
-	
-	      // Environment layer is removed with the other layers
-	      this._environment = null;
-	
-	      this._engine.destroy();
-	      this._engine = null;
-	
-	      // Clean the container / remove the canvas
-	      while (this._container.firstChild) {
-	        this._container.removeChild(this._container.firstChild);
-	      }
-	
-	      this._container = null;
-	    }
-	  }]);
-	
-	  return World;
-	})(_eventemitter32['default']);
-	
-	exports['default'] = World;
-	
-	var noNew = function noNew(domId, options) {
-	  return new World(domId, options);
-	};
-	
-	// Initialise without requiring new keyword
-	exports.world = noNew;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var has = Object.prototype.hasOwnProperty;
-	
-	//
-	// We store our EE objects in a plain object whose properties are event names.
-	// If `Object.create(null)` is not supported we prefix the event names with a
-	// `~` to make sure that the built-in object properties are not overridden or
-	// used as an attack vector.
-	// We also assume that `Object.create(null)` is available when the event name
-	// is an ES6 Symbol.
-	//
-	var prefix = typeof Object.create !== 'function' ? '~' : false;
-	
-	/**
-	 * Representation of a single EventEmitter function.
-	 *
-	 * @param {Function} fn Event handler to be called.
-	 * @param {Mixed} context Context for function execution.
-	 * @param {Boolean} [once=false] Only emit once
-	 * @api private
-	 */
-	function EE(fn, context, once) {
-	  this.fn = fn;
-	  this.context = context;
-	  this.once = once || false;
-	}
-	
-	/**
-	 * Minimal EventEmitter interface that is molded against the Node.js
-	 * EventEmitter interface.
-	 *
-	 * @constructor
-	 * @api public
-	 */
-	function EventEmitter() { /* Nothing to set */ }
-	
-	/**
-	 * Hold the assigned EventEmitters by name.
-	 *
-	 * @type {Object}
-	 * @private
-	 */
-	EventEmitter.prototype._events = undefined;
-	
-	/**
-	 * Return an array listing the events for which the emitter has registered
-	 * listeners.
-	 *
-	 * @returns {Array}
-	 * @api public
-	 */
-	EventEmitter.prototype.eventNames = function eventNames() {
-	  var events = this._events
-	    , names = []
-	    , name;
-	
-	  if (!events) return names;
-	
-	  for (name in events) {
-	    if (has.call(events, name)) names.push(prefix ? name.slice(1) : name);
-	  }
-	
-	  if (Object.getOwnPropertySymbols) {
-	    return names.concat(Object.getOwnPropertySymbols(events));
-	  }
-	
-	  return names;
-	};
-	
-	/**
-	 * Return a list of assigned event listeners.
-	 *
-	 * @param {String} event The events that should be listed.
-	 * @param {Boolean} exists We only need to know if there are listeners.
-	 * @returns {Array|Boolean}
-	 * @api public
-	 */
-	EventEmitter.prototype.listeners = function listeners(event, exists) {
-	  var evt = prefix ? prefix + event : event
-	    , available = this._events && this._events[evt];
-	
-	  if (exists) return !!available;
-	  if (!available) return [];
-	  if (available.fn) return [available.fn];
-	
-	  for (var i = 0, l = available.length, ee = new Array(l); i < l; i++) {
-	    ee[i] = available[i].fn;
-	  }
-	
-	  return ee;
-	};
-	
-	/**
-	 * Emit an event to all registered event listeners.
-	 *
-	 * @param {String} event The name of the event.
-	 * @returns {Boolean} Indication if we've emitted an event.
-	 * @api public
-	 */
-	EventEmitter.prototype.emit = function emit(event, a1, a2, a3, a4, a5) {
-	  var evt = prefix ? prefix + event : event;
-	
-	  if (!this._events || !this._events[evt]) return false;
-	
-	  var listeners = this._events[evt]
-	    , len = arguments.length
-	    , args
-	    , i;
-	
-	  if ('function' === typeof listeners.fn) {
-	    if (listeners.once) this.removeListener(event, listeners.fn, undefined, true);
-	
-	    switch (len) {
-	      case 1: return listeners.fn.call(listeners.context), true;
-	      case 2: return listeners.fn.call(listeners.context, a1), true;
-	      case 3: return listeners.fn.call(listeners.context, a1, a2), true;
-	      case 4: return listeners.fn.call(listeners.context, a1, a2, a3), true;
-	      case 5: return listeners.fn.call(listeners.context, a1, a2, a3, a4), true;
-	      case 6: return listeners.fn.call(listeners.context, a1, a2, a3, a4, a5), true;
-	    }
-	
-	    for (i = 1, args = new Array(len -1); i < len; i++) {
-	      args[i - 1] = arguments[i];
-	    }
-	
-	    listeners.fn.apply(listeners.context, args);
-	  } else {
-	    var length = listeners.length
-	      , j;
-	
-	    for (i = 0; i < length; i++) {
-	      if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
-	
-	      switch (len) {
-	        case 1: listeners[i].fn.call(listeners[i].context); break;
-	        case 2: listeners[i].fn.call(listeners[i].context, a1); break;
-	        case 3: listeners[i].fn.call(listeners[i].context, a1, a2); break;
-	        default:
-	          if (!args) for (j = 1, args = new Array(len -1); j < len; j++) {
-	            args[j - 1] = arguments[j];
-	          }
-	
-	          listeners[i].fn.apply(listeners[i].context, args);
-	      }
-	    }
-	  }
-	
-	  return true;
-	};
-	
-	/**
-	 * Register a new EventListener for the given event.
-	 *
-	 * @param {String} event Name of the event.
-	 * @param {Function} fn Callback function.
-	 * @param {Mixed} [context=this] The context of the function.
-	 * @api public
-	 */
-	EventEmitter.prototype.on = function on(event, fn, context) {
-	  var listener = new EE(fn, context || this)
-	    , evt = prefix ? prefix + event : event;
-	
-	  if (!this._events) this._events = prefix ? {} : Object.create(null);
-	  if (!this._events[evt]) this._events[evt] = listener;
-	  else {
-	    if (!this._events[evt].fn) this._events[evt].push(listener);
-	    else this._events[evt] = [
-	      this._events[evt], listener
-	    ];
-	  }
-	
-	  return this;
-	};
-	
-	/**
-	 * Add an EventListener that's only called once.
-	 *
-	 * @param {String} event Name of the event.
-	 * @param {Function} fn Callback function.
-	 * @param {Mixed} [context=this] The context of the function.
-	 * @api public
-	 */
-	EventEmitter.prototype.once = function once(event, fn, context) {
-	  var listener = new EE(fn, context || this, true)
-	    , evt = prefix ? prefix + event : event;
-	
-	  if (!this._events) this._events = prefix ? {} : Object.create(null);
-	  if (!this._events[evt]) this._events[evt] = listener;
-	  else {
-	    if (!this._events[evt].fn) this._events[evt].push(listener);
-	    else this._events[evt] = [
-	      this._events[evt], listener
-	    ];
-	  }
-	
-	  return this;
-	};
-	
-	/**
-	 * Remove event listeners.
-	 *
-	 * @param {String} event The event we want to remove.
-	 * @param {Function} fn The listener that we need to find.
-	 * @param {Mixed} context Only remove listeners matching this context.
-	 * @param {Boolean} once Only remove once listeners.
-	 * @api public
-	 */
-	EventEmitter.prototype.removeListener = function removeListener(event, fn, context, once) {
-	  var evt = prefix ? prefix + event : event;
-	
-	  if (!this._events || !this._events[evt]) return this;
-	
-	  var listeners = this._events[evt]
-	    , events = [];
-	
-	  if (fn) {
-	    if (listeners.fn) {
-	      if (
-	           listeners.fn !== fn
-	        || (once && !listeners.once)
-	        || (context && listeners.context !== context)
-	      ) {
-	        events.push(listeners);
-	      }
-	    } else {
-	      for (var i = 0, length = listeners.length; i < length; i++) {
-	        if (
-	             listeners[i].fn !== fn
-	          || (once && !listeners[i].once)
-	          || (context && listeners[i].context !== context)
-	        ) {
-	          events.push(listeners[i]);
-	        }
-	      }
-	    }
-	  }
-	
-	  //
-	  // Reset the array, or remove it completely if we have no more listeners.
-	  //
-	  if (events.length) {
-	    this._events[evt] = events.length === 1 ? events[0] : events;
-	  } else {
-	    delete this._events[evt];
-	  }
-	
-	  return this;
-	};
-	
-	/**
-	 * Remove all listeners or only the listeners for the specified event.
-	 *
-	 * @param {String} event The event want to remove all listeners for.
-	 * @api public
-	 */
-	EventEmitter.prototype.removeAllListeners = function removeAllListeners(event) {
-	  if (!this._events) return this;
-	
-	  if (event) delete this._events[prefix ? prefix + event : event];
-	  else this._events = prefix ? {} : Object.create(null);
-	
-	  return this;
-	};
-	
-	//
-	// Alias methods names because people roll like that.
-	//
-	EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
-	EventEmitter.prototype.addListener = EventEmitter.prototype.on;
-	
-	//
-	// This function doesn't apply anymore.
-	//
-	EventEmitter.prototype.setMaxListeners = function setMaxListeners() {
-	  return this;
-	};
-	
-	//
-	// Expose the prefix.
-	//
-	EventEmitter.prefixed = prefix;
-	
-	//
-	// Expose the module.
-	//
-	if (true) {
-	  module.exports = EventEmitter;
-	}
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-	/**
-	 * lodash (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modularize exports="npm" -o ./`
-	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
-	 * Released under MIT license <https://lodash.com/license>
-	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-	 */
-	
-	/** Used as references for various `Number` constants. */
-	var MAX_SAFE_INTEGER = 9007199254740991;
-	
-	/** `Object#toString` result references. */
-	var argsTag = '[object Arguments]',
-	    funcTag = '[object Function]',
-	    genTag = '[object GeneratorFunction]';
-	
-	/** Used to detect unsigned integer values. */
-	var reIsUint = /^(?:0|[1-9]\d*)$/;
-	
-	/**
-	 * A faster alternative to `Function#apply`, this function invokes `func`
-	 * with the `this` binding of `thisArg` and the arguments of `args`.
-	 *
-	 * @private
-	 * @param {Function} func The function to invoke.
-	 * @param {*} thisArg The `this` binding of `func`.
-	 * @param {Array} args The arguments to invoke `func` with.
-	 * @returns {*} Returns the result of `func`.
-	 */
-	function apply(func, thisArg, args) {
-	  switch (args.length) {
-	    case 0: return func.call(thisArg);
-	    case 1: return func.call(thisArg, args[0]);
-	    case 2: return func.call(thisArg, args[0], args[1]);
-	    case 3: return func.call(thisArg, args[0], args[1], args[2]);
-	  }
-	  return func.apply(thisArg, args);
-	}
-	
-	/**
-	 * The base implementation of `_.times` without support for iteratee shorthands
-	 * or max array length checks.
-	 *
-	 * @private
-	 * @param {number} n The number of times to invoke `iteratee`.
-	 * @param {Function} iteratee The function invoked per iteration.
-	 * @returns {Array} Returns the array of results.
-	 */
-	function baseTimes(n, iteratee) {
-	  var index = -1,
-	      result = Array(n);
-	
-	  while (++index < n) {
-	    result[index] = iteratee(index);
-	  }
-	  return result;
-	}
-	
-	/**
-	 * Creates a unary function that invokes `func` with its argument transformed.
-	 *
-	 * @private
-	 * @param {Function} func The function to wrap.
-	 * @param {Function} transform The argument transform.
-	 * @returns {Function} Returns the new function.
-	 */
-	function overArg(func, transform) {
-	  return function(arg) {
-	    return func(transform(arg));
-	  };
-	}
-	
-	/** Used for built-in method references. */
-	var objectProto = Object.prototype;
-	
-	/** Used to check objects for own properties. */
-	var hasOwnProperty = objectProto.hasOwnProperty;
-	
-	/**
-	 * Used to resolve the
-	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var objectToString = objectProto.toString;
-	
-	/** Built-in value references. */
-	var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-	
-	/* Built-in method references for those with the same name as other `lodash` methods. */
-	var nativeKeys = overArg(Object.keys, Object),
-	    nativeMax = Math.max;
-	
-	/** Detect if properties shadowing those on `Object.prototype` are non-enumerable. */
-	var nonEnumShadows = !propertyIsEnumerable.call({ 'valueOf': 1 }, 'valueOf');
-	
-	/**
-	 * Creates an array of the enumerable property names of the array-like `value`.
-	 *
-	 * @private
-	 * @param {*} value The value to query.
-	 * @param {boolean} inherited Specify returning inherited property names.
-	 * @returns {Array} Returns the array of property names.
-	 */
-	function arrayLikeKeys(value, inherited) {
-	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
-	  // Safari 9 makes `arguments.length` enumerable in strict mode.
-	  var result = (isArray(value) || isArguments(value))
-	    ? baseTimes(value.length, String)
-	    : [];
-	
-	  var length = result.length,
-	      skipIndexes = !!length;
-	
-	  for (var key in value) {
-	    if ((inherited || hasOwnProperty.call(value, key)) &&
-	        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
-	      result.push(key);
-	    }
-	  }
-	  return result;
-	}
-	
-	/**
-	 * Assigns `value` to `key` of `object` if the existing value is not equivalent
-	 * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-	 * for equality comparisons.
-	 *
-	 * @private
-	 * @param {Object} object The object to modify.
-	 * @param {string} key The key of the property to assign.
-	 * @param {*} value The value to assign.
-	 */
-	function assignValue(object, key, value) {
-	  var objValue = object[key];
-	  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
-	      (value === undefined && !(key in object))) {
-	    object[key] = value;
-	  }
-	}
-	
-	/**
-	 * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
-	 *
-	 * @private
-	 * @param {Object} object The object to query.
-	 * @returns {Array} Returns the array of property names.
-	 */
-	function baseKeys(object) {
-	  if (!isPrototype(object)) {
-	    return nativeKeys(object);
-	  }
-	  var result = [];
-	  for (var key in Object(object)) {
-	    if (hasOwnProperty.call(object, key) && key != 'constructor') {
-	      result.push(key);
-	    }
-	  }
-	  return result;
-	}
-	
-	/**
-	 * The base implementation of `_.rest` which doesn't validate or coerce arguments.
-	 *
-	 * @private
-	 * @param {Function} func The function to apply a rest parameter to.
-	 * @param {number} [start=func.length-1] The start position of the rest parameter.
-	 * @returns {Function} Returns the new function.
-	 */
-	function baseRest(func, start) {
-	  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
-	  return function() {
-	    var args = arguments,
-	        index = -1,
-	        length = nativeMax(args.length - start, 0),
-	        array = Array(length);
-	
-	    while (++index < length) {
-	      array[index] = args[start + index];
-	    }
-	    index = -1;
-	    var otherArgs = Array(start + 1);
-	    while (++index < start) {
-	      otherArgs[index] = args[index];
-	    }
-	    otherArgs[start] = array;
-	    return apply(func, this, otherArgs);
-	  };
-	}
-	
-	/**
-	 * Copies properties of `source` to `object`.
-	 *
-	 * @private
-	 * @param {Object} source The object to copy properties from.
-	 * @param {Array} props The property identifiers to copy.
-	 * @param {Object} [object={}] The object to copy properties to.
-	 * @param {Function} [customizer] The function to customize copied values.
-	 * @returns {Object} Returns `object`.
-	 */
-	function copyObject(source, props, object, customizer) {
-	  object || (object = {});
-	
-	  var index = -1,
-	      length = props.length;
-	
-	  while (++index < length) {
-	    var key = props[index];
-	
-	    var newValue = customizer
-	      ? customizer(object[key], source[key], key, object, source)
-	      : undefined;
-	
-	    assignValue(object, key, newValue === undefined ? source[key] : newValue);
-	  }
-	  return object;
-	}
-	
-	/**
-	 * Creates a function like `_.assign`.
-	 *
-	 * @private
-	 * @param {Function} assigner The function to assign values.
-	 * @returns {Function} Returns the new assigner function.
-	 */
-	function createAssigner(assigner) {
-	  return baseRest(function(object, sources) {
-	    var index = -1,
-	        length = sources.length,
-	        customizer = length > 1 ? sources[length - 1] : undefined,
-	        guard = length > 2 ? sources[2] : undefined;
-	
-	    customizer = (assigner.length > 3 && typeof customizer == 'function')
-	      ? (length--, customizer)
-	      : undefined;
-	
-	    if (guard && isIterateeCall(sources[0], sources[1], guard)) {
-	      customizer = length < 3 ? undefined : customizer;
-	      length = 1;
-	    }
-	    object = Object(object);
-	    while (++index < length) {
-	      var source = sources[index];
-	      if (source) {
-	        assigner(object, source, index, customizer);
-	      }
-	    }
-	    return object;
-	  });
-	}
-	
-	/**
-	 * Checks if `value` is a valid array-like index.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
-	 * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
-	 */
-	function isIndex(value, length) {
-	  length = length == null ? MAX_SAFE_INTEGER : length;
-	  return !!length &&
-	    (typeof value == 'number' || reIsUint.test(value)) &&
-	    (value > -1 && value % 1 == 0 && value < length);
-	}
-	
-	/**
-	 * Checks if the given arguments are from an iteratee call.
-	 *
-	 * @private
-	 * @param {*} value The potential iteratee value argument.
-	 * @param {*} index The potential iteratee index or key argument.
-	 * @param {*} object The potential iteratee object argument.
-	 * @returns {boolean} Returns `true` if the arguments are from an iteratee call,
-	 *  else `false`.
-	 */
-	function isIterateeCall(value, index, object) {
-	  if (!isObject(object)) {
-	    return false;
-	  }
-	  var type = typeof index;
-	  if (type == 'number'
-	        ? (isArrayLike(object) && isIndex(index, object.length))
-	        : (type == 'string' && index in object)
-	      ) {
-	    return eq(object[index], value);
-	  }
-	  return false;
-	}
-	
-	/**
-	 * Checks if `value` is likely a prototype object.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
-	 */
-	function isPrototype(value) {
-	  var Ctor = value && value.constructor,
-	      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
-	
-	  return value === proto;
-	}
-	
-	/**
-	 * Performs a
-	 * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-	 * comparison between two values to determine if they are equivalent.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to compare.
-	 * @param {*} other The other value to compare.
-	 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
-	 * @example
-	 *
-	 * var object = { 'a': 1 };
-	 * var other = { 'a': 1 };
-	 *
-	 * _.eq(object, object);
-	 * // => true
-	 *
-	 * _.eq(object, other);
-	 * // => false
-	 *
-	 * _.eq('a', 'a');
-	 * // => true
-	 *
-	 * _.eq('a', Object('a'));
-	 * // => false
-	 *
-	 * _.eq(NaN, NaN);
-	 * // => true
-	 */
-	function eq(value, other) {
-	  return value === other || (value !== value && other !== other);
-	}
-	
-	/**
-	 * Checks if `value` is likely an `arguments` object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an `arguments` object,
-	 *  else `false`.
-	 * @example
-	 *
-	 * _.isArguments(function() { return arguments; }());
-	 * // => true
-	 *
-	 * _.isArguments([1, 2, 3]);
-	 * // => false
-	 */
-	function isArguments(value) {
-	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
-	  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
-	    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
-	}
-	
-	/**
-	 * Checks if `value` is classified as an `Array` object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an array, else `false`.
-	 * @example
-	 *
-	 * _.isArray([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isArray(document.body.children);
-	 * // => false
-	 *
-	 * _.isArray('abc');
-	 * // => false
-	 *
-	 * _.isArray(_.noop);
-	 * // => false
-	 */
-	var isArray = Array.isArray;
-	
-	/**
-	 * Checks if `value` is array-like. A value is considered array-like if it's
-	 * not a function and has a `value.length` that's an integer greater than or
-	 * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
-	 * @example
-	 *
-	 * _.isArrayLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isArrayLike(document.body.children);
-	 * // => true
-	 *
-	 * _.isArrayLike('abc');
-	 * // => true
-	 *
-	 * _.isArrayLike(_.noop);
-	 * // => false
-	 */
-	function isArrayLike(value) {
-	  return value != null && isLength(value.length) && !isFunction(value);
-	}
-	
-	/**
-	 * This method is like `_.isArrayLike` except that it also checks if `value`
-	 * is an object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an array-like object,
-	 *  else `false`.
-	 * @example
-	 *
-	 * _.isArrayLikeObject([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isArrayLikeObject(document.body.children);
-	 * // => true
-	 *
-	 * _.isArrayLikeObject('abc');
-	 * // => false
-	 *
-	 * _.isArrayLikeObject(_.noop);
-	 * // => false
-	 */
-	function isArrayLikeObject(value) {
-	  return isObjectLike(value) && isArrayLike(value);
-	}
-	
-	/**
-	 * Checks if `value` is classified as a `Function` object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a function, else `false`.
-	 * @example
-	 *
-	 * _.isFunction(_);
-	 * // => true
-	 *
-	 * _.isFunction(/abc/);
-	 * // => false
-	 */
-	function isFunction(value) {
-	  // The use of `Object#toString` avoids issues with the `typeof` operator
-	  // in Safari 8-9 which returns 'object' for typed array and other constructors.
-	  var tag = isObject(value) ? objectToString.call(value) : '';
-	  return tag == funcTag || tag == genTag;
-	}
-	
-	/**
-	 * Checks if `value` is a valid array-like length.
-	 *
-	 * **Note:** This method is loosely based on
-	 * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
-	 * @example
-	 *
-	 * _.isLength(3);
-	 * // => true
-	 *
-	 * _.isLength(Number.MIN_VALUE);
-	 * // => false
-	 *
-	 * _.isLength(Infinity);
-	 * // => false
-	 *
-	 * _.isLength('3');
-	 * // => false
-	 */
-	function isLength(value) {
-	  return typeof value == 'number' &&
-	    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-	}
-	
-	/**
-	 * Checks if `value` is the
-	 * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
-	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
-	 * @example
-	 *
-	 * _.isObject({});
-	 * // => true
-	 *
-	 * _.isObject([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObject(_.noop);
-	 * // => true
-	 *
-	 * _.isObject(null);
-	 * // => false
-	 */
-	function isObject(value) {
-	  var type = typeof value;
-	  return !!value && (type == 'object' || type == 'function');
-	}
-	
-	/**
-	 * Checks if `value` is object-like. A value is object-like if it's not `null`
-	 * and has a `typeof` result of "object".
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 * @example
-	 *
-	 * _.isObjectLike({});
-	 * // => true
-	 *
-	 * _.isObjectLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObjectLike(_.noop);
-	 * // => false
-	 *
-	 * _.isObjectLike(null);
-	 * // => false
-	 */
-	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
-	}
-	
-	/**
-	 * Assigns own enumerable string keyed properties of source objects to the
-	 * destination object. Source objects are applied from left to right.
-	 * Subsequent sources overwrite property assignments of previous sources.
-	 *
-	 * **Note:** This method mutates `object` and is loosely based on
-	 * [`Object.assign`](https://mdn.io/Object/assign).
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.10.0
-	 * @category Object
-	 * @param {Object} object The destination object.
-	 * @param {...Object} [sources] The source objects.
-	 * @returns {Object} Returns `object`.
-	 * @see _.assignIn
-	 * @example
-	 *
-	 * function Foo() {
-	 *   this.a = 1;
-	 * }
-	 *
-	 * function Bar() {
-	 *   this.c = 3;
-	 * }
-	 *
-	 * Foo.prototype.b = 2;
-	 * Bar.prototype.d = 4;
-	 *
-	 * _.assign({ 'a': 0 }, new Foo, new Bar);
-	 * // => { 'a': 1, 'c': 3 }
-	 */
-	var assign = createAssigner(function(object, source) {
-	  if (nonEnumShadows || isPrototype(source) || isArrayLike(source)) {
-	    copyObject(source, keys(source), object);
-	    return;
-	  }
-	  for (var key in source) {
-	    if (hasOwnProperty.call(source, key)) {
-	      assignValue(object, key, source[key]);
-	    }
-	  }
-	});
-	
-	/**
-	 * Creates an array of the own enumerable property names of `object`.
-	 *
-	 * **Note:** Non-object values are coerced to objects. See the
-	 * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
-	 * for more details.
-	 *
-	 * @static
-	 * @since 0.1.0
-	 * @memberOf _
-	 * @category Object
-	 * @param {Object} object The object to query.
-	 * @returns {Array} Returns the array of property names.
-	 * @example
-	 *
-	 * function Foo() {
-	 *   this.a = 1;
-	 *   this.b = 2;
-	 * }
-	 *
-	 * Foo.prototype.c = 3;
-	 *
-	 * _.keys(new Foo);
-	 * // => ['a', 'b'] (iteration order is not guaranteed)
-	 *
-	 * _.keys('hi');
-	 * // => ['0', '1']
-	 */
-	function keys(object) {
-	  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
-	}
-	
-	module.exports = assign;
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _LatLon = __webpack_require__(5);
-	
-	var _Point = __webpack_require__(6);
-	
-	var Geo = {};
-	
-	// Radius / WGS84 semi-major axis
-	Geo.R = 6378137;
-	Geo.MAX_LATITUDE = 85.0511287798;
-	
-	// WGS84 eccentricity
-	Geo.ECC = 0.081819191;
-	Geo.ECC2 = 0.081819191 * 0.081819191;
-	
-	// Multiplier is used to expand or compress the WebGL coordinate space relative
-	// to the EPSG:3857 / Pseudo-Mercator coordinate space (metres).
-	//
-	// This is useful for keeping coordinate calculations to smaller numbers and
-	// helps increase accuracy of things like the z-buffer, object intersection,
-	// and camera near and far clipping.
-	//
-	// A multiplier of 1 would mean a 1:1 mapping between WebGL and EPSG:3857
-	// coordinates (1 EPSG:3857 metre === 1 WebGL unit)
-	//
-	// A multiplier of 0.1 would mean a 1:0.1 mapping between WebGL and EPSG:3857
-	// coordinates (1 EPSG:3857 metre === 0.1 WebGL units)
-	Geo.multiplier = 0.1;
-	
-	Geo.project = function (latlon) {
-	  var d = Math.PI / 180;
-	  var max = Geo.MAX_LATITUDE;
-	  var lat = Math.max(Math.min(max, latlon.lat), -max);
-	  var sin = Math.sin(lat * d);
-	
-	  return (0, _Point.point)(Geo.R * latlon.lon * d, Geo.R * Math.log((1 + sin) / (1 - sin)) / 2);
-	}, Geo.unproject = function (point) {
-	  var d = 180 / Math.PI;
-	
-	  return (0, _LatLon.latLon)((2 * Math.atan(Math.exp(point.y / Geo.R)) - Math.PI / 2) * d, point.x * d / Geo.R);
-	};
-	
-	// Converts geo coords to pixel / WebGL ones
-	// This just reverses the Y axis to match WebGL
-	Geo.latLonToPoint = function (latlon) {
-	  var projected = Geo.project(latlon);
-	  projected.y *= -1;
-	
-	  projected.x *= Geo.multiplier;
-	  projected.y *= Geo.multiplier;
-	
-	  return projected;
-	};
-	
-	// Converts pixel / WebGL coords to geo coords
-	// This just reverses the Y axis to match WebGL
-	Geo.pointToLatLon = function (point) {
-	  var _point = (0, _Point.point)(point.x, point.y * -1);
-	
-	  _point.x /= Geo.multiplier;
-	  _point.y /= Geo.multiplier;
-	
-	  return Geo.unproject(_point);
-	};
-	
-	// Scale factor for converting between real metres and projected metres
-	//
-	// projectedMetres = realMetres * pointScale
-	// realMetres = projectedMetres / pointScale
-	//
-	// Accurate scale factor uses proper Web Mercator scaling
-	// See pg.9: http://www.hydrometronics.com/downloads/Web%20Mercator%20-%20Non-Conformal,%20Non-Mercator%20(notes).pdf
-	// See: http://jsfiddle.net/robhawkes/yws924cf/
-	Geo.pointScale = function (latlon, accurate) {
-	  var rad = Math.PI / 180;
-	
-	  var k;
-	
-	  if (!accurate) {
-	    k = 1 / Math.cos(latlon.lat * rad);
-	
-	    // [scaleX, scaleY]
-	    return [k, k];
-	  } else {
-	    var lat = latlon.lat * rad;
-	    var lon = latlon.lon * rad;
-	
-	    var a = Geo.R;
-	
-	    var sinLat = Math.sin(lat);
-	    var sinLat2 = sinLat * sinLat;
-	
-	    var cosLat = Math.cos(lat);
-	
-	    // Radius meridian
-	    var p = a * (1 - Geo.ECC2) / Math.pow(1 - Geo.ECC2 * sinLat2, 3 / 2);
-	
-	    // Radius prime meridian
-	    var v = a / Math.sqrt(1 - Geo.ECC2 * sinLat2);
-	
-	    // Scale N/S
-	    var h = a / p / cosLat;
-	
-	    // Scale E/W
-	    k = a / v / cosLat;
-	
-	    // [scaleX, scaleY]
-	    return [k, h];
-	  }
-	};
-	
-	// Convert real metres to projected units
-	//
-	// Latitude scale is chosen because it fluctuates more than longitude
-	Geo.metresToProjected = function (metres, pointScale) {
-	  return metres * pointScale[1];
-	};
-	
-	// Convert projected units to real metres
-	//
-	// Latitude scale is chosen because it fluctuates more than longitude
-	Geo.projectedToMetres = function (projectedUnits, pointScale) {
-	  return projectedUnits / pointScale[1];
-	};
-	
-	// Convert real metres to a value in world (WebGL) units
-	Geo.metresToWorld = function (metres, pointScale) {
-	  // Transform metres to projected metres using the latitude point scale
-	  //
-	  // Latitude scale is chosen because it fluctuates more than longitude
-	  var projectedMetres = Geo.metresToProjected(metres, pointScale);
-	  return projectedMetres * Geo.multiplier;
-	};
-	
-	// Convert world (WebGL) units to a value in real metres
-	Geo.worldToMetres = function (worldUnits, pointScale) {
-	  var projectedUnits = worldUnits;
-	  var realMetres = Geo.projectedToMetres(projectedUnits, pointScale);
-	
-	  return realMetres / Geo.multiplier;
-	};
-	
-	// Returns the world width in pixels for a given zoom, assuming tile dimensions
-	// of 256x256 pixels
-	Geo.scale = function (zoom) {
-	  return 256 * Math.pow(2, zoom);
-	};
-	
-	// Returns zoom level for a given scale value
-	// This only works with a scale value that is based on map pixel width
-	Geo.zoom = function (scale) {
-	  return Math.log(scale / 256) / Math.LN2;
-	};
-	
-	// Distance between two geographical points using spherical law of cosines
-	// approximation or Haversine
-	//
-	// See: http://www.movable-type.co.uk/scripts/latlong.html
-	Geo.distance = function (latlon1, latlon2, accurate) {
-	  var rad = Math.PI / 180;
-	
-	  var lat1;
-	  var lat2;
-	
-	  var a;
-	
-	  if (!accurate) {
-	    lat1 = latlon1.lat * rad;
-	    lat2 = latlon2.lat * rad;
-	
-	    a = Math.sin(lat1) * Math.sin(lat2) + Math.cos(lat1) * Math.cos(lat2) * Math.cos((latlon2.lon - latlon1.lon) * rad);
-	
-	    return Geo.R * Math.acos(Math.min(a, 1));
-	  } else {
-	    lat1 = latlon1.lat * rad;
-	    lat2 = latlon2.lat * rad;
-	
-	    var lon1 = latlon1.lon * rad;
-	    var lon2 = latlon2.lon * rad;
-	
-	    var deltaLat = lat2 - lat1;
-	    var deltaLon = lon2 - lon1;
-	
-	    var halfDeltaLat = deltaLat / 2;
-	    var halfDeltaLon = deltaLon / 2;
-	
-	    a = Math.sin(halfDeltaLat) * Math.sin(halfDeltaLat) + Math.cos(lat1) * Math.cos(lat2) * Math.sin(halfDeltaLon) * Math.sin(halfDeltaLon);
-	
-	    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-	
-	    return Geo.R * c;
-	  }
-	};
-	
-	Geo.bounds = (function () {
-	  var d = Geo.R * Math.PI * Geo.multiplier;
-	  return [[-d, -d], [d, d]];
-	})();
-	
-	exports['default'] = Geo;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	/*
-	 * LatLon is a helper class for ensuring consistent geographic coordinates.
-	 *
-	 * Based on:
-	 * https://github.com/Leaflet/Leaflet/blob/master/src/geo/LatLng.js
-	 */
-	
-	var LatLon = (function () {
-	  function LatLon(lat, lon, alt) {
-	    _classCallCheck(this, LatLon);
-	
-	    if (isNaN(lat) || isNaN(lon)) {
-	      throw new Error('Invalid LatLon object: (' + lat + ', ' + lon + ')');
-	    }
-	
-	    this.lat = +lat;
-	    this.lon = +lon;
-	
-	    if (alt !== undefined) {
-	      this.alt = +alt;
-	    }
-	  }
-	
-	  _createClass(LatLon, [{
-	    key: 'clone',
-	    value: function clone() {
-	      return new LatLon(this.lat, this.lon, this.alt);
-	    }
-	  }]);
-	
-	  return LatLon;
-	})();
-	
-	exports['default'] = LatLon;
-	
-	// Accepts (LatLon), ([lat, lon, alt]), ([lat, lon]) and (lat, lon, alt)
-	// Also converts between lng and lon
-	var noNew = function noNew(a, b, c) {
-	  if (a instanceof LatLon) {
-	    return a;
-	  }
-	  if (Array.isArray(a) && typeof a[0] !== 'object') {
-	    if (a.length === 3) {
-	      return new LatLon(a[0], a[1], a[2]);
-	    }
-	    if (a.length === 2) {
-	      return new LatLon(a[0], a[1]);
-	    }
-	    return null;
-	  }
-	  if (a === undefined || a === null) {
-	    return a;
-	  }
-	  if (typeof a === 'object' && 'lat' in a) {
-	    return new LatLon(a.lat, 'lng' in a ? a.lng : a.lon, a.alt);
-	  }
-	  if (b === undefined) {
-	    return null;
-	  }
-	  return new LatLon(a, b, c);
-	};
-	
-	// Initialise without requiring new keyword
-	exports.latLon = noNew;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	/*
-	 * Point is a helper class for ensuring consistent world positions.
-	 *
-	 * Based on:
-	 * https://github.com/Leaflet/Leaflet/blob/master/src/geo/Point.js
-	 */
-	
-	var Point = (function () {
-	  function Point(x, y, round) {
-	    _classCallCheck(this, Point);
-	
-	    this.x = round ? Math.round(x) : x;
-	    this.y = round ? Math.round(y) : y;
-	  }
-	
-	  _createClass(Point, [{
-	    key: "clone",
-	    value: function clone() {
-	      return new Point(this.x, this.y);
-	    }
-	
-	    // Non-destructive
-	  }, {
-	    key: "add",
-	    value: function add(point) {
-	      return this.clone()._add(_point(point));
-	    }
-	
-	    // Destructive
-	  }, {
-	    key: "_add",
-	    value: function _add(point) {
-	      this.x += point.x;
-	      this.y += point.y;
-	      return this;
-	    }
-	
-	    // Non-destructive
-	  }, {
-	    key: "subtract",
-	    value: function subtract(point) {
-	      return this.clone()._subtract(_point(point));
-	    }
-	
-	    // Destructive
-	  }, {
-	    key: "_subtract",
-	    value: function _subtract(point) {
-	      this.x -= point.x;
-	      this.y -= point.y;
-	      return this;
-	    }
-	  }]);
-	
-	  return Point;
-	})();
-	
-	exports["default"] = Point;
-	
-	// Accepts (point), ([x, y]) and (x, y, round)
-	var _point = function _point(x, y, round) {
-	  if (x instanceof Point) {
-	    return x;
-	  }
-	  if (Array.isArray(x)) {
-	    return new Point(x[0], x[1]);
-	  }
-	  if (x === undefined || x === null) {
-	    return x;
-	  }
-	  return new Point(x, y, round);
-	};
-	
-	// Initialise without requiring new keyword
-	exports.point = _point;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _eventemitter3 = __webpack_require__(2);
-	
-	var _eventemitter32 = _interopRequireDefault(_eventemitter3);
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _Scene = __webpack_require__(9);
-	
-	var _Scene2 = _interopRequireDefault(_Scene);
-	
-	var _DOMScene3D = __webpack_require__(10);
-	
-	var _DOMScene3D2 = _interopRequireDefault(_DOMScene3D);
-	
-	var _DOMScene2D = __webpack_require__(11);
-	
-	var _DOMScene2D2 = _interopRequireDefault(_DOMScene2D);
-	
-	var _Renderer = __webpack_require__(12);
-	
-	var _Renderer2 = _interopRequireDefault(_Renderer);
-	
-	var _DOMRenderer3D = __webpack_require__(13);
-	
-	var _DOMRenderer3D2 = _interopRequireDefault(_DOMRenderer3D);
-	
-	var _DOMRenderer2D = __webpack_require__(15);
-	
-	var _DOMRenderer2D2 = _interopRequireDefault(_DOMRenderer2D);
-	
-	var _Camera = __webpack_require__(17);
-	
-	var _Camera2 = _interopRequireDefault(_Camera);
-	
-	var _Picking = __webpack_require__(18);
-	
-	var _Picking2 = _interopRequireDefault(_Picking);
-	
-	var _EffectComposer = __webpack_require__(21);
-	
-	var _EffectComposer2 = _interopRequireDefault(_EffectComposer);
-	
-	var _vendorRenderPass = __webpack_require__(26);
-	
-	var _vendorRenderPass2 = _interopRequireDefault(_vendorRenderPass);
-	
-	var _vendorShaderPass = __webpack_require__(24);
-	
-	var _vendorShaderPass2 = _interopRequireDefault(_vendorShaderPass);
-	
-	var _vendorCopyShader = __webpack_require__(23);
-	
-	var _vendorCopyShader2 = _interopRequireDefault(_vendorCopyShader);
-	
-	var _vendorHorizontalTiltShiftShader = __webpack_require__(27);
-	
-	var _vendorHorizontalTiltShiftShader2 = _interopRequireDefault(_vendorHorizontalTiltShiftShader);
-	
-	var _vendorVerticalTiltShiftShader = __webpack_require__(28);
-	
-	var _vendorVerticalTiltShiftShader2 = _interopRequireDefault(_vendorVerticalTiltShiftShader);
-	
-	var _vendorFXAAShader = __webpack_require__(29);
-	
-	var _vendorFXAAShader2 = _interopRequireDefault(_vendorFXAAShader);
-	
-	var Engine = (function (_EventEmitter) {
-	    _inherits(Engine, _EventEmitter);
-	
-	    function Engine(container, world) {
-	        _classCallCheck(this, Engine);
-	
-	        console.log('Init Engine');
-	
-	        _get(Object.getPrototypeOf(Engine.prototype), 'constructor', this).call(this);
-	
-	        this._world = world;
-	
-	        this._scene = _Scene2['default'];
-	        this._domScene3D = _DOMScene3D2['default'];
-	        this._domScene2D = _DOMScene2D2['default'];
-	
-	        var antialias = this._world.options.postProcessing ? false : true;
-	        this._renderer = (0, _Renderer2['default'])(container, antialias);
-	        this._domRenderer3D = (0, _DOMRenderer3D2['default'])(container);
-	        this._domRenderer2D = (0, _DOMRenderer2D2['default'])(container);
-	
-	        this._camera = (0, _Camera2['default'])(container);
-	
-	        this._container = container;
-	
-	        // TODO: Make this optional
-	        this._picking = (0, _Picking2['default'])(this._world, this._renderer, this._camera);
-	
-	        this.clock = new _three2['default'].Clock();
-	
-	        this._frustum = new _three2['default'].Frustum();
-	
-	        if (this._world.options.postProcessing) {
-	            this._initPostProcessing();
-	        }
-	    }
-	
-	    // TODO: Set up composer to automatically resize on viewport change
-	    // TODO: Update passes that rely on width / height on resize
-	    // TODO: Merge default passes into a single shader / pass for performance
-	
-	    _createClass(Engine, [{
-	        key: '_initPostProcessing',
-	        value: function _initPostProcessing() {
-	            var renderPass = new _vendorRenderPass2['default'](this._scene, this._camera);
-	
-	            // TODO: Look at using @mattdesl's optimised FXAA shader
-	            // https://github.com/mattdesl/three-shader-fxaa
-	            var fxaaPass = new _vendorShaderPass2['default'](_vendorFXAAShader2['default']);
-	
-	            var hblurPass = new _vendorShaderPass2['default'](_vendorHorizontalTiltShiftShader2['default']);
-	            var vblurPass = new _vendorShaderPass2['default'](_vendorVerticalTiltShiftShader2['default']);
-	            var bluriness = 5;
-	
-	            hblurPass.uniforms.r.value = vblurPass.uniforms.r.value = 0.6;
-	
-	            var copyPass = new _vendorShaderPass2['default'](_vendorCopyShader2['default']);
-	            copyPass.renderToScreen = true;
-	
-	            this._composer = (0, _EffectComposer2['default'])(this._renderer, this._container);
-	
-	            this._composer.addPass(renderPass);
-	            this._composer.addPass(fxaaPass);
-	            this._composer.addPass(hblurPass);
-	            this._composer.addPass(vblurPass);
-	            this._composer.addPass(copyPass);
-	
-	            var self = this;
-	            var updatePostProcessingSize = function updatePostProcessingSize() {
-	                var width = self._container.clientWidth;
-	                var height = self._container.clientHeight;
-	
-	                // TODO: Re-enable this when perf issues can be solved
-	                //
-	                // Rendering double the resolution of the screen can be really slow
-	                // var pixelRatio = window.devicePixelRatio;
-	                var pixelRatio = 1;
-	
-	                fxaaPass.uniforms.resolution.value.set(1 / (width * pixelRatio), 1 / (height * pixelRatio));
-	
-	                hblurPass.uniforms.h.value = bluriness / (width * pixelRatio);
-	                vblurPass.uniforms.v.value = bluriness / (height * pixelRatio);
-	            };
-	
-	            updatePostProcessingSize();
-	            window.addEventListener('resize', updatePostProcessingSize, false);
-	        }
-	    }, {
-	        key: 'update',
-	        value: function update(delta) {
-	            this.emit('preRender');
-	
-	            if (this._world.options.postProcessing) {
-	                this._composer.render(delta);
-	            } else {
-	                this._renderer.render(this._scene, this._camera);
-	            }
-	
-	            // Render picking scene
-	            // this._renderer.render(this._picking._pickingScene, this._camera);
-	
-	            // Render DOM scenes
-	            this._domRenderer3D.render(this._domScene3D, this._camera);
-	            this._domRenderer2D.render(this._domScene2D, this._camera);
-	
-	            this.emit('postRender');
-	        }
-	    }, {
-	        key: 'destroy',
-	        value: function destroy() {
-	            // Remove any remaining objects from scene
-	            var child;
-	            for (var i = this._scene.children.length - 1; i >= 0; i--) {
-	                child = this._scene.children[i];
-	
-	                if (!child) {
-	                    continue;
-	                }
-	
-	                this._scene.remove(child);
-	
-	                if (child.geometry) {
-	                    // Dispose of mesh and materials
-	                    child.geometry.dispose();
-	                    child.geometry = null;
-	                }
-	
-	                if (child.material) {
-	                    if (child.material.map) {
-	                        child.material.map.dispose();
-	                        child.material.map = null;
-	                    }
-	
-	                    child.material.dispose();
-	                    child.material = null;
-	                }
-	            };
-	
-	            for (var i = this._domScene3D.children.length - 1; i >= 0; i--) {
-	                child = this._domScene3D.children[i];
-	
-	                if (!child) {
-	                    continue;
-	                }
-	
-	                this._domScene3D.remove(child);
-	            };
-	
-	            for (var i = this._domScene2D.children.length - 1; i >= 0; i--) {
-	                child = this._domScene2D.children[i];
-	
-	                if (!child) {
-	                    continue;
-	                }
-	
-	                this._domScene2D.remove(child);
-	            };
-	
-	            this._picking.destroy();
-	            this._picking = null;
-	
-	            this._world = null;
-	            this._scene = null;
-	            this._domScene3D = null;
-	            this._domScene2D = null;
-	
-	            this._composer = null;
-	            this._renderer = null;
-	
-	            this._domRenderer3D = null;
-	            this._domRenderer2D = null;
-	            this._camera = null;
-	            this._clock = null;
-	            this._frustum = null;
-	        }
-	    }]);
-	
-	    return Engine;
-	})(_eventemitter32['default']);
-	
-	exports['default'] = Engine;
-	
-	// // Initialise without requiring new keyword
-	// export default function(container, world) {
-	//   return new Engine(container, world);
-	// };
-	module.exports = exports['default'];
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	// This can be imported from anywhere and will still reference the same scene,
-	// though there is a helper reference in Engine.scene
-	
-	exports['default'] = (function () {
-	  var scene = new _three2['default'].Scene();
-	
-	  // TODO: Re-enable when this works with the skybox
-	  // scene.fog = new THREE.Fog(0xffffff, 1, 15000);
-	  return scene;
-	})();
-	
-	module.exports = exports['default'];
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	// This can be imported from anywhere and will still reference the same scene,
-	// though there is a helper reference in Engine.scene
-	
-	exports['default'] = (function () {
-	  var scene = new _three2['default'].Scene();
-	  return scene;
-	})();
-	
-	module.exports = exports['default'];
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	// This can be imported from anywhere and will still reference the same scene,
-	// though there is a helper reference in Engine.scene
-	
-	exports['default'] = (function () {
-	  var scene = new _three2['default'].Scene();
-	  return scene;
-	})();
-	
-	module.exports = exports['default'];
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _Scene = __webpack_require__(9);
-	
-	var _Scene2 = _interopRequireDefault(_Scene);
-	
-	// This can only be accessed from Engine.renderer if you want to reference the
-	// same scene in multiple places
-	
-	exports['default'] = function (container, antialias) {
-	  var renderer = new _three2['default'].WebGLRenderer({
-	    antialias: antialias
-	
-	    // Enabling this removes a lot of z-index intersecting but it also removes
-	    // shadows due to a bug in three.js
-	    //
-	    // See: https://github.com/mrdoob/three.js/issues/7815
-	    // logarithmicDepthBuffer: true
-	  });
-	
-	  // TODO: Re-enable when this works with the skybox
-	  // renderer.setClearColor(Scene.fog.color, 1);
-	
-	  renderer.setClearColor(0xffffff, 1);
-	
-	  // TODO: Re-enable this when perf issues can be solved
-	  //
-	  // Rendering double the resolution of the screen can be really slow
-	  // var pixelRatio = window.devicePixelRatio;
-	  var pixelRatio = 1;
-	
-	  renderer.setPixelRatio(pixelRatio);
-	
-	  // Gamma settings make things look nicer
-	  renderer.gammaInput = true;
-	  renderer.gammaOutput = true;
-	
-	  renderer.shadowMap.enabled = true;
-	
-	  // TODO: Work out which of the shadowmap types is best
-	  // https://github.com/mrdoob/three.js/blob/r56/src/Three.js#L107
-	  // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-	
-	  // TODO: Check that leaving this as default (CullFrontFace) is right
-	  // renderer.shadowMap.cullFace = THREE.CullFaceBack;
-	
-	  container.appendChild(renderer.domElement);
-	
-	  var updateSize = function updateSize() {
-	    renderer.setSize(container.clientWidth, container.clientHeight);
-	  };
-	
-	  window.addEventListener('resize', updateSize, false);
-	  updateSize();
-	
-	  return renderer;
-	};
-	
-	;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _vendorCSS3DRenderer = __webpack_require__(14);
-	
-	var _DOMScene3D = __webpack_require__(10);
-	
-	var _DOMScene3D2 = _interopRequireDefault(_DOMScene3D);
-	
-	// This can only be accessed from Engine.renderer if you want to reference the
-	// same scene in multiple places
-	
-	exports['default'] = function (container) {
-	  var renderer = new _vendorCSS3DRenderer.CSS3DRenderer();
-	
-	  renderer.domElement.style.position = 'absolute';
-	  renderer.domElement.style.top = 0;
-	
-	  container.appendChild(renderer.domElement);
-	
-	  var updateSize = function updateSize() {
-	    renderer.setSize(container.clientWidth, container.clientHeight);
-	  };
-	
-	  window.addEventListener('resize', updateSize, false);
-	  updateSize();
-	
-	  return renderer;
-	};
-	
-	;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	/**
-	 * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
-	 * @author mrdoob / http://mrdoob.com/
-	 */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var CSS3DObject = function CSS3DObject(element) {
-	
-		_three2['default'].Object3D.call(this);
-	
-		this.element = element;
-		this.element.style.position = 'absolute';
-	
-		this.addEventListener('removed', function (event) {
-	
-			if (this.element.parentNode !== null) {
-	
-				this.element.parentNode.removeChild(this.element);
-			}
-		});
-	};
-	
-	CSS3DObject.prototype = Object.create(_three2['default'].Object3D.prototype);
-	CSS3DObject.prototype.constructor = CSS3DObject;
-	
-	var CSS3DSprite = function CSS3DSprite(element) {
-	
-		CSS3DObject.call(this, element);
-	};
-	
-	CSS3DSprite.prototype = Object.create(CSS3DObject.prototype);
-	CSS3DSprite.prototype.constructor = CSS3DSprite;
-	
-	//
-	
-	var CSS3DRenderer = function CSS3DRenderer() {
-	
-		console.log('THREE.CSS3DRenderer', _three2['default'].REVISION);
-	
-		var _width, _height;
-		var _widthHalf, _heightHalf;
-	
-		var matrix = new _three2['default'].Matrix4();
-	
-		var cache = {
-			camera: { fov: 0, style: '' },
-			objects: {}
-		};
-	
-		var domElement = document.createElement('div');
-		domElement.style.overflow = 'hidden';
-	
-		domElement.style.WebkitTransformStyle = 'preserve-3d';
-		domElement.style.MozTransformStyle = 'preserve-3d';
-		domElement.style.oTransformStyle = 'preserve-3d';
-		domElement.style.transformStyle = 'preserve-3d';
-	
-		this.domElement = domElement;
-	
-		var cameraElement = document.createElement('div');
-	
-		cameraElement.style.WebkitTransformStyle = 'preserve-3d';
-		cameraElement.style.MozTransformStyle = 'preserve-3d';
-		cameraElement.style.oTransformStyle = 'preserve-3d';
-		cameraElement.style.transformStyle = 'preserve-3d';
-	
-		domElement.appendChild(cameraElement);
-	
-		this.setClearColor = function () {};
-	
-		this.getSize = function () {
-	
-			return {
-				width: _width,
-				height: _height
-			};
-		};
-	
-		this.setSize = function (width, height) {
-	
-			_width = width;
-			_height = height;
-	
-			_widthHalf = _width / 2;
-			_heightHalf = _height / 2;
-	
-			domElement.style.width = width + 'px';
-			domElement.style.height = height + 'px';
-	
-			cameraElement.style.width = width + 'px';
-			cameraElement.style.height = height + 'px';
-		};
-	
-		var epsilon = function epsilon(value) {
-	
-			return Math.abs(value) < Number.EPSILON ? 0 : value;
-		};
-	
-		var getCameraCSSMatrix = function getCameraCSSMatrix(matrix) {
-	
-			var elements = matrix.elements;
-	
-			return 'matrix3d(' + epsilon(elements[0]) + ',' + epsilon(-elements[1]) + ',' + epsilon(elements[2]) + ',' + epsilon(elements[3]) + ',' + epsilon(elements[4]) + ',' + epsilon(-elements[5]) + ',' + epsilon(elements[6]) + ',' + epsilon(elements[7]) + ',' + epsilon(elements[8]) + ',' + epsilon(-elements[9]) + ',' + epsilon(elements[10]) + ',' + epsilon(elements[11]) + ',' + epsilon(elements[12]) + ',' + epsilon(-elements[13]) + ',' + epsilon(elements[14]) + ',' + epsilon(elements[15]) + ')';
-		};
-	
-		var getObjectCSSMatrix = function getObjectCSSMatrix(matrix) {
-	
-			var elements = matrix.elements;
-	
-			return 'translate3d(-50%,-50%,0) matrix3d(' + epsilon(elements[0]) + ',' + epsilon(elements[1]) + ',' + epsilon(elements[2]) + ',' + epsilon(elements[3]) + ',' + epsilon(-elements[4]) + ',' + epsilon(-elements[5]) + ',' + epsilon(-elements[6]) + ',' + epsilon(-elements[7]) + ',' + epsilon(elements[8]) + ',' + epsilon(elements[9]) + ',' + epsilon(elements[10]) + ',' + epsilon(elements[11]) + ',' + epsilon(elements[12]) + ',' + epsilon(elements[13]) + ',' + epsilon(elements[14]) + ',' + epsilon(elements[15]) + ')';
-		};
-	
-		var renderObject = function renderObject(object, camera) {
-	
-			if (object instanceof CSS3DObject) {
-	
-				var style;
-	
-				if (object instanceof CSS3DSprite) {
-	
-					// http://swiftcoder.wordpress.com/2008/11/25/constructing-a-billboard-matrix/
-	
-					matrix.copy(camera.matrixWorldInverse);
-					matrix.transpose();
-					matrix.copyPosition(object.matrixWorld);
-					matrix.scale(object.scale);
-	
-					matrix.elements[3] = 0;
-					matrix.elements[7] = 0;
-					matrix.elements[11] = 0;
-					matrix.elements[15] = 1;
-	
-					style = getObjectCSSMatrix(matrix);
-				} else {
-	
-					style = getObjectCSSMatrix(object.matrixWorld);
-				}
-	
-				var element = object.element;
-				var cachedStyle = cache.objects[object.id];
-	
-				if (cachedStyle === undefined || cachedStyle !== style) {
-	
-					element.style.WebkitTransform = style;
-					element.style.MozTransform = style;
-					element.style.oTransform = style;
-					element.style.transform = style;
-	
-					cache.objects[object.id] = style;
-				}
-	
-				if (element.parentNode !== cameraElement) {
-	
-					cameraElement.appendChild(element);
-				}
-			}
-	
-			for (var i = 0, l = object.children.length; i < l; i++) {
-	
-				renderObject(object.children[i], camera);
-			}
-		};
-	
-		this.render = function (scene, camera) {
-	
-			var fov = 0.5 / Math.tan(_three2['default'].Math.degToRad(camera.fov * 0.5)) * _height;
-	
-			if (cache.camera.fov !== fov) {
-	
-				domElement.style.WebkitPerspective = fov + 'px';
-				domElement.style.MozPerspective = fov + 'px';
-				domElement.style.oPerspective = fov + 'px';
-				domElement.style.perspective = fov + 'px';
-	
-				cache.camera.fov = fov;
-			}
-	
-			scene.updateMatrixWorld();
-	
-			if (camera.parent === null) camera.updateMatrixWorld();
-	
-			camera.matrixWorldInverse.getInverse(camera.matrixWorld);
-	
-			var style = 'translate3d(0,0,' + fov + 'px)' + getCameraCSSMatrix(camera.matrixWorldInverse) + ' translate3d(' + _widthHalf + 'px,' + _heightHalf + 'px, 0)';
-	
-			if (cache.camera.style !== style) {
-	
-				cameraElement.style.WebkitTransform = style;
-				cameraElement.style.MozTransform = style;
-				cameraElement.style.oTransform = style;
-				cameraElement.style.transform = style;
-	
-				cache.camera.style = style;
-			}
-	
-			renderObject(scene, camera);
-		};
-	};
-	
-	exports.CSS3DObject = CSS3DObject;
-	exports.CSS3DSprite = CSS3DSprite;
-	exports.CSS3DRenderer = CSS3DRenderer;
-	
-	_three2['default'].CSS3DObject = CSS3DObject;
-	_three2['default'].CSS3DSprite = CSS3DSprite;
-	_three2['default'].CSS3DRenderer = CSS3DRenderer;
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _vendorCSS2DRenderer = __webpack_require__(16);
-	
-	var _DOMScene2D = __webpack_require__(11);
-	
-	var _DOMScene2D2 = _interopRequireDefault(_DOMScene2D);
-	
-	// This can only be accessed from Engine.renderer if you want to reference the
-	// same scene in multiple places
-	
-	exports['default'] = function (container) {
-	  var renderer = new _vendorCSS2DRenderer.CSS2DRenderer();
-	
-	  renderer.domElement.style.position = 'absolute';
-	  renderer.domElement.style.top = 0;
-	
-	  container.appendChild(renderer.domElement);
-	
-	  var updateSize = function updateSize() {
-	    renderer.setSize(container.clientWidth, container.clientHeight);
-	  };
-	
-	  window.addEventListener('resize', updateSize, false);
-	  updateSize();
-	
-	  return renderer;
-	};
-	
-	;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	/**
-	 * @author mrdoob / http://mrdoob.com/
-	 */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var CSS2DObject = function CSS2DObject(element) {
-	
-		_three2['default'].Object3D.call(this);
-	
-		this.element = element;
-		this.element.style.position = 'absolute';
-	
-		this.addEventListener('removed', function (event) {
-	
-			if (this.element.parentNode !== null) {
-	
-				this.element.parentNode.removeChild(this.element);
-			}
-		});
-	};
-	
-	CSS2DObject.prototype = Object.create(_three2['default'].Object3D.prototype);
-	CSS2DObject.prototype.constructor = CSS2DObject;
-	
-	//
-	
-	var CSS2DRenderer = function CSS2DRenderer() {
-	
-		console.log('THREE.CSS2DRenderer', _three2['default'].REVISION);
-	
-		var _width, _height;
-		var _widthHalf, _heightHalf;
-	
-		var vector = new _three2['default'].Vector3();
-		var viewMatrix = new _three2['default'].Matrix4();
-		var viewProjectionMatrix = new _three2['default'].Matrix4();
-	
-		var frustum = new _three2['default'].Frustum();
-	
-		var domElement = document.createElement('div');
-		domElement.style.overflow = 'hidden';
-	
-		this.domElement = domElement;
-	
-		this.setSize = function (width, height) {
-	
-			_width = width;
-			_height = height;
-	
-			_widthHalf = _width / 2;
-			_heightHalf = _height / 2;
-	
-			domElement.style.width = width + 'px';
-			domElement.style.height = height + 'px';
-		};
-	
-		var renderObject = function renderObject(object, camera) {
-	
-			if (object instanceof CSS2DObject) {
-	
-				vector.setFromMatrixPosition(object.matrixWorld);
-				vector.applyProjection(viewProjectionMatrix);
-	
-				var element = object.element;
-				var style = 'translate(-50%,-50%) translate(' + (vector.x * _widthHalf + _widthHalf) + 'px,' + (-vector.y * _heightHalf + _heightHalf) + 'px)';
-	
-				element.style.WebkitTransform = style;
-				element.style.MozTransform = style;
-				element.style.oTransform = style;
-				element.style.transform = style;
-	
-				if (element.parentNode !== domElement) {
-	
-					domElement.appendChild(element);
-				}
-	
-				// Hide if outside view frustum
-				if (!frustum.containsPoint(object.position)) {
-					element.style.display = 'none';
-				} else {
-					element.style.display = 'block';
-				}
-			}
-	
-			for (var i = 0, l = object.children.length; i < l; i++) {
-	
-				renderObject(object.children[i], camera);
-			}
-		};
-	
-		this.render = function (scene, camera) {
-	
-			scene.updateMatrixWorld();
-	
-			if (camera.parent === null) camera.updateMatrixWorld();
-	
-			camera.matrixWorldInverse.getInverse(camera.matrixWorld);
-	
-			viewMatrix.copy(camera.matrixWorldInverse.getInverse(camera.matrixWorld));
-			viewProjectionMatrix.multiplyMatrices(camera.projectionMatrix, viewMatrix);
-	
-			frustum.setFromMatrix(new _three2['default'].Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
-	
-			renderObject(scene, camera);
-		};
-	};
-	
-	exports.CSS2DObject = CSS2DObject;
-	exports.CSS2DRenderer = CSS2DRenderer;
-	
-	_three2['default'].CSS2DObject = CSS2DObject;
-	_three2['default'].CSS2DRenderer = CSS2DRenderer;
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	// This can only be accessed from Engine.camera if you want to reference the
-	// same scene in multiple places
-	
-	// TODO: Ensure that FOV looks natural on all aspect ratios
-	// http://stackoverflow.com/q/26655930/997339
-	
-	exports['default'] = function (container) {
-	  var camera = new _three2['default'].PerspectiveCamera(45, 1, 1, 2000000);
-	  camera.position.y = 4000;
-	  camera.position.z = 4000;
-	
-	  var updateSize = function updateSize() {
-	    camera.aspect = container.clientWidth / container.clientHeight;
-	    camera.updateProjectionMatrix();
-	  };
-	
-	  window.addEventListener('resize', updateSize, false);
-	  updateSize();
-	
-	  return camera;
-	};
-	
-	;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _geoPoint = __webpack_require__(6);
-	
-	var _PickingScene = __webpack_require__(19);
-	
-	var _PickingScene2 = _interopRequireDefault(_PickingScene);
-	
-	var _lodashThrottle = __webpack_require__(20);
-	
-	var _lodashThrottle2 = _interopRequireDefault(_lodashThrottle);
-	
-	// TODO: Look into a way of setting this up without passing in a renderer and
-	// camera from the engine
-	
-	// TODO: Add a basic indicator on or around the mouse pointer when it is over
-	// something pickable / clickable
-	//
-	// A simple transparent disc or ring at the mouse point should work to start, or
-	// even just changing the cursor to the CSS 'pointer' style
-	//
-	// Probably want this on mousemove with a throttled update as not to spam the
-	// picking method
-	//
-	// Relies upon the picking method not redrawing the scene every call due to
-	// the way TileLayer invalidates the picking scene
-	
-	var nextId = 1;
-	
-	var Picking = (function () {
-	  function Picking(world, renderer, camera) {
-	    _classCallCheck(this, Picking);
-	
-	    this._world = world;
-	    this._renderer = renderer;
-	    this._camera = camera;
-	
-	    this._raycaster = new _three2['default'].Raycaster();
-	
-	    // TODO: Match this with the line width used in the picking layers
-	    this._raycaster.linePrecision = 3;
-	
-	    this._pickingScene = _PickingScene2['default'];
-	    this._pickingTexture = new _three2['default'].WebGLRenderTarget();
-	    this._pickingTexture.texture.minFilter = _three2['default'].LinearFilter;
-	    this._pickingTexture.texture.generateMipmaps = false;
-	
-	    this._nextId = 1;
-	
-	    this._resizeTexture();
-	    this._initEvents();
-	  }
-	
-	  // Initialise without requiring new keyword
-	
-	  _createClass(Picking, [{
-	    key: '_initEvents',
-	    value: function _initEvents() {
-	      this._resizeHandler = this._resizeTexture.bind(this);
-	      window.addEventListener('resize', this._resizeHandler, false);
-	
-	      this._throttledMouseMoveHandler = (0, _lodashThrottle2['default'])(this._onMouseMove.bind(this), 50);
-	      this._mouseUpHandler = this._onMouseUp.bind(this);
-	      this._world._container.addEventListener('mouseup', this._mouseUpHandler, false);
-	      this._world._container.addEventListener('mousemove', this._throttledMouseMoveHandler, false);
-	
-	      this._world.on('move', this._onWorldMove, this);
-	    }
-	  }, {
-	    key: '_onMouseUp',
-	    value: function _onMouseUp(event) {
-	      // Only react to main button click
-	      if (event.button !== 0) {
-	        return;
-	      }
-	
-	      var point = (0, _geoPoint.point)(event.clientX - this._world._container.offsetLeft, event.clientY - this._world._container.offsetTop);
-	
-	      var normalisedPoint = (0, _geoPoint.point)(0, 0);
-	      normalisedPoint.x = point.x / this._width * 2 - 1;
-	      normalisedPoint.y = -(point.y / this._height) * 2 + 1;
-	
-	      this._pick(point, normalisedPoint);
-	    }
-	  }, {
-	    key: '_onMouseMove',
-	    value: function _onMouseMove(event) {
-	      var point = (0, _geoPoint.point)(event.clientX - this._world._container.offsetLeft, event.clientY - this._world._container.offsetTop);
-	
-	      var normalisedPoint = (0, _geoPoint.point)(0, 0);
-	      normalisedPoint.x = point.x / this._width * 2 - 1;
-	      normalisedPoint.y = -(point.y / this._height) * 2 + 1;
-	
-	      this._pick(point, normalisedPoint, true);
-	    }
-	  }, {
-	    key: '_onWorldMove',
-	    value: function _onWorldMove() {
-	      this._needUpdate = true;
-	    }
-	
-	    // TODO: Ensure this doesn't get out of sync issue with the renderer resize
-	  }, {
-	    key: '_resizeTexture',
-	    value: function _resizeTexture() {
-	      var size = this._renderer.getSize();
-	
-	      this._width = size.width;
-	      this._height = size.height;
-	
-	      this._pickingTexture.setSize(this._width, this._height);
-	      this._pixelBuffer = new Uint8Array(4 * this._width * this._height);
-	
-	      this._needUpdate = true;
-	    }
-	
-	    // TODO: Make this only re-draw the scene if both an update is needed and the
-	    // camera has moved since the last update
-	    //
-	    // Otherwise it re-draws the scene on every click due to the way LOD updates
-	    // work in TileLayer – spamming this.add() and this.remove()
-	    //
-	    // TODO: Pause updates during map move / orbit / zoom as this is unlikely to
-	    // be a point in time where the user cares for picking functionality
-	  }, {
-	    key: '_update',
-	    value: function _update() {
-	      if (this._needUpdate) {
-	        var texture = this._pickingTexture;
-	
-	        this._renderer.render(this._pickingScene, this._camera, this._pickingTexture);
-	
-	        // Read the rendering texture
-	        this._renderer.readRenderTargetPixels(texture, 0, 0, texture.width, texture.height, this._pixelBuffer);
-	
-	        this._needUpdate = false;
-	      }
-	    }
-	  }, {
-	    key: '_pick',
-	    value: function _pick(point, normalisedPoint, hover) {
-	      this._update();
-	
-	      var index = point.x + (this._pickingTexture.height - point.y) * this._pickingTexture.width;
-	
-	      // Interpret the pixel as an ID
-	      var id = this._pixelBuffer[index * 4 + 2] * 255 * 255 + this._pixelBuffer[index * 4 + 1] * 255 + this._pixelBuffer[index * 4 + 0];
-	
-	      // Skip if ID is 16646655 (white) as the background returns this
-	      if (id === 16646655) {
-	        if (hover) {
-	          this._world.emit('pick-hover-reset');
-	        } else {
-	          this._world.emit('pick-click-reset');
-	        }
-	
-	        return;
-	      }
-	
-	      this._raycaster.setFromCamera(normalisedPoint, this._camera);
-	
-	      // Perform ray intersection on picking scene
-	      //
-	      // TODO: Only perform intersection test on the relevant picking mesh
-	      var intersects = this._raycaster.intersectObjects(this._pickingScene.children, true);
-	
-	      var _point2d = point.clone();
-	
-	      var _point3d;
-	      if (intersects.length > 0) {
-	        _point3d = intersects[0].point.clone();
-	      }
-	
-	      // Pass along as much data as possible for now until we know more about how
-	      // people use the picking API and what the returned data should be
-	      //
-	      // TODO: Look into the leak potential for passing so much by reference here
-	      // this._world.emit('pick', id, _point2d, _point3d, intersects);
-	      // this._world.emit('pick-' + id, _point2d, _point3d, intersects);
-	
-	      if (hover) {
-	        this._world.emit('pick-hover', id, _point2d, _point3d, intersects);
-	        this._world.emit('pick-hover-' + id, _point2d, _point3d, intersects);
-	      } else {
-	        this._world.emit('pick-click', id, _point2d, _point3d, intersects);
-	        this._world.emit('pick-click-' + id, _point2d, _point3d, intersects);
-	      }
-	    }
-	
-	    // Add mesh to picking scene
-	    //
-	    // Picking ID should already be added as an attribute
-	  }, {
-	    key: 'add',
-	    value: function add(mesh) {
-	      this._pickingScene.add(mesh);
-	      this._needUpdate = true;
-	    }
-	
-	    // Remove mesh from picking scene
-	  }, {
-	    key: 'remove',
-	    value: function remove(mesh) {
-	      this._pickingScene.remove(mesh);
-	      this._needUpdate = true;
-	    }
-	
-	    // Returns next ID to use for picking
-	  }, {
-	    key: 'getNextId',
-	    value: function getNextId() {
-	      return nextId++;
-	    }
-	  }, {
-	    key: 'destroy',
-	    value: function destroy() {
-	      // TODO: Find a way to properly remove these listeners as they stay
-	      // active at the moment
-	      window.removeEventListener('resize', this._resizeHandler, false);
-	      this._world._container.removeEventListener('mouseup', this._mouseUpHandler, false);
-	      this._world._container.removeEventListener('mousemove', this._throttledMouseMoveHandler, false);
-	
-	      this._world.off('move', this._onWorldMove);
-	
-	      if (this._pickingScene.children) {
-	        // Remove everything else in the layer
-	        var child;
-	        for (var i = this._pickingScene.children.length - 1; i >= 0; i--) {
-	          child = this._pickingScene.children[i];
-	
-	          if (!child) {
-	            continue;
-	          }
-	
-	          this._pickingScene.remove(child);
-	
-	          // Probably not a good idea to dispose of geometry due to it being
-	          // shared with the non-picking scene
-	          // if (child.geometry) {
-	          //   // Dispose of mesh and materials
-	          //   child.geometry.dispose();
-	          //   child.geometry = null;
-	          // }
-	
-	          if (child.material) {
-	            if (child.material.map) {
-	              child.material.map.dispose();
-	              child.material.map = null;
-	            }
-	
-	            child.material.dispose();
-	            child.material = null;
-	          }
-	        }
-	      }
-	
-	      this._pickingScene = null;
-	      this._pickingTexture = null;
-	      this._pixelBuffer = null;
-	
-	      this._world = null;
-	      this._renderer = null;
-	      this._camera = null;
-	    }
-	  }]);
-	
-	  return Picking;
-	})();
-	
-	exports['default'] = function (world, renderer, camera) {
-	  return new Picking(world, renderer, camera);
-	};
-	
-	;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	// This can be imported from anywhere and will still reference the same scene,
-	// though there is a helper reference in Engine.pickingScene
-	
-	exports['default'] = (function () {
-	  var scene = new _three2['default'].Scene();
-	  return scene;
-	})();
-	
-	module.exports = exports['default'];
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {/**
-	 * lodash (Custom Build) <https://lodash.com/>
-	 * Build: `lodash modularize exports="npm" -o ./`
-	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
-	 * Released under MIT license <https://lodash.com/license>
-	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-	 */
-	
-	/** Used as the `TypeError` message for "Functions" methods. */
-	var FUNC_ERROR_TEXT = 'Expected a function';
-	
-	/** Used as references for various `Number` constants. */
-	var NAN = 0 / 0;
-	
-	/** `Object#toString` result references. */
-	var symbolTag = '[object Symbol]';
-	
-	/** Used to match leading and trailing whitespace. */
-	var reTrim = /^\s+|\s+$/g;
-	
-	/** Used to detect bad signed hexadecimal string values. */
-	var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-	
-	/** Used to detect binary string values. */
-	var reIsBinary = /^0b[01]+$/i;
-	
-	/** Used to detect octal string values. */
-	var reIsOctal = /^0o[0-7]+$/i;
-	
-	/** Built-in method references without a dependency on `root`. */
-	var freeParseInt = parseInt;
-	
-	/** Detect free variable `global` from Node.js. */
-	var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-	
-	/** Detect free variable `self`. */
-	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-	
-	/** Used as a reference to the global object. */
-	var root = freeGlobal || freeSelf || Function('return this')();
-	
-	/** Used for built-in method references. */
-	var objectProto = Object.prototype;
-	
-	/**
-	 * Used to resolve the
-	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var objectToString = objectProto.toString;
-	
-	/* Built-in method references for those with the same name as other `lodash` methods. */
-	var nativeMax = Math.max,
-	    nativeMin = Math.min;
-	
-	/**
-	 * Gets the timestamp of the number of milliseconds that have elapsed since
-	 * the Unix epoch (1 January 1970 00:00:00 UTC).
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 2.4.0
-	 * @category Date
-	 * @returns {number} Returns the timestamp.
-	 * @example
-	 *
-	 * _.defer(function(stamp) {
-	 *   console.log(_.now() - stamp);
-	 * }, _.now());
-	 * // => Logs the number of milliseconds it took for the deferred invocation.
-	 */
-	var now = function() {
-	  return root.Date.now();
-	};
-	
-	/**
-	 * Creates a debounced function that delays invoking `func` until after `wait`
-	 * milliseconds have elapsed since the last time the debounced function was
-	 * invoked. The debounced function comes with a `cancel` method to cancel
-	 * delayed `func` invocations and a `flush` method to immediately invoke them.
-	 * Provide `options` to indicate whether `func` should be invoked on the
-	 * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
-	 * with the last arguments provided to the debounced function. Subsequent
-	 * calls to the debounced function return the result of the last `func`
-	 * invocation.
-	 *
-	 * **Note:** If `leading` and `trailing` options are `true`, `func` is
-	 * invoked on the trailing edge of the timeout only if the debounced function
-	 * is invoked more than once during the `wait` timeout.
-	 *
-	 * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
-	 * until to the next tick, similar to `setTimeout` with a timeout of `0`.
-	 *
-	 * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
-	 * for details over the differences between `_.debounce` and `_.throttle`.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Function
-	 * @param {Function} func The function to debounce.
-	 * @param {number} [wait=0] The number of milliseconds to delay.
-	 * @param {Object} [options={}] The options object.
-	 * @param {boolean} [options.leading=false]
-	 *  Specify invoking on the leading edge of the timeout.
-	 * @param {number} [options.maxWait]
-	 *  The maximum time `func` is allowed to be delayed before it's invoked.
-	 * @param {boolean} [options.trailing=true]
-	 *  Specify invoking on the trailing edge of the timeout.
-	 * @returns {Function} Returns the new debounced function.
-	 * @example
-	 *
-	 * // Avoid costly calculations while the window size is in flux.
-	 * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
-	 *
-	 * // Invoke `sendMail` when clicked, debouncing subsequent calls.
-	 * jQuery(element).on('click', _.debounce(sendMail, 300, {
-	 *   'leading': true,
-	 *   'trailing': false
-	 * }));
-	 *
-	 * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
-	 * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
-	 * var source = new EventSource('/stream');
-	 * jQuery(source).on('message', debounced);
-	 *
-	 * // Cancel the trailing debounced invocation.
-	 * jQuery(window).on('popstate', debounced.cancel);
-	 */
-	function debounce(func, wait, options) {
-	  var lastArgs,
-	      lastThis,
-	      maxWait,
-	      result,
-	      timerId,
-	      lastCallTime,
-	      lastInvokeTime = 0,
-	      leading = false,
-	      maxing = false,
-	      trailing = true;
-	
-	  if (typeof func != 'function') {
-	    throw new TypeError(FUNC_ERROR_TEXT);
-	  }
-	  wait = toNumber(wait) || 0;
-	  if (isObject(options)) {
-	    leading = !!options.leading;
-	    maxing = 'maxWait' in options;
-	    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
-	    trailing = 'trailing' in options ? !!options.trailing : trailing;
-	  }
-	
-	  function invokeFunc(time) {
-	    var args = lastArgs,
-	        thisArg = lastThis;
-	
-	    lastArgs = lastThis = undefined;
-	    lastInvokeTime = time;
-	    result = func.apply(thisArg, args);
-	    return result;
-	  }
-	
-	  function leadingEdge(time) {
-	    // Reset any `maxWait` timer.
-	    lastInvokeTime = time;
-	    // Start the timer for the trailing edge.
-	    timerId = setTimeout(timerExpired, wait);
-	    // Invoke the leading edge.
-	    return leading ? invokeFunc(time) : result;
-	  }
-	
-	  function remainingWait(time) {
-	    var timeSinceLastCall = time - lastCallTime,
-	        timeSinceLastInvoke = time - lastInvokeTime,
-	        result = wait - timeSinceLastCall;
-	
-	    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
-	  }
-	
-	  function shouldInvoke(time) {
-	    var timeSinceLastCall = time - lastCallTime,
-	        timeSinceLastInvoke = time - lastInvokeTime;
-	
-	    // Either this is the first call, activity has stopped and we're at the
-	    // trailing edge, the system time has gone backwards and we're treating
-	    // it as the trailing edge, or we've hit the `maxWait` limit.
-	    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
-	      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
-	  }
-	
-	  function timerExpired() {
-	    var time = now();
-	    if (shouldInvoke(time)) {
-	      return trailingEdge(time);
-	    }
-	    // Restart the timer.
-	    timerId = setTimeout(timerExpired, remainingWait(time));
-	  }
-	
-	  function trailingEdge(time) {
-	    timerId = undefined;
-	
-	    // Only invoke if we have `lastArgs` which means `func` has been
-	    // debounced at least once.
-	    if (trailing && lastArgs) {
-	      return invokeFunc(time);
-	    }
-	    lastArgs = lastThis = undefined;
-	    return result;
-	  }
-	
-	  function cancel() {
-	    if (timerId !== undefined) {
-	      clearTimeout(timerId);
-	    }
-	    lastInvokeTime = 0;
-	    lastArgs = lastCallTime = lastThis = timerId = undefined;
-	  }
-	
-	  function flush() {
-	    return timerId === undefined ? result : trailingEdge(now());
-	  }
-	
-	  function debounced() {
-	    var time = now(),
-	        isInvoking = shouldInvoke(time);
-	
-	    lastArgs = arguments;
-	    lastThis = this;
-	    lastCallTime = time;
-	
-	    if (isInvoking) {
-	      if (timerId === undefined) {
-	        return leadingEdge(lastCallTime);
-	      }
-	      if (maxing) {
-	        // Handle invocations in a tight loop.
-	        timerId = setTimeout(timerExpired, wait);
-	        return invokeFunc(lastCallTime);
-	      }
-	    }
-	    if (timerId === undefined) {
-	      timerId = setTimeout(timerExpired, wait);
-	    }
-	    return result;
-	  }
-	  debounced.cancel = cancel;
-	  debounced.flush = flush;
-	  return debounced;
-	}
-	
-	/**
-	 * Creates a throttled function that only invokes `func` at most once per
-	 * every `wait` milliseconds. The throttled function comes with a `cancel`
-	 * method to cancel delayed `func` invocations and a `flush` method to
-	 * immediately invoke them. Provide `options` to indicate whether `func`
-	 * should be invoked on the leading and/or trailing edge of the `wait`
-	 * timeout. The `func` is invoked with the last arguments provided to the
-	 * throttled function. Subsequent calls to the throttled function return the
-	 * result of the last `func` invocation.
-	 *
-	 * **Note:** If `leading` and `trailing` options are `true`, `func` is
-	 * invoked on the trailing edge of the timeout only if the throttled function
-	 * is invoked more than once during the `wait` timeout.
-	 *
-	 * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
-	 * until to the next tick, similar to `setTimeout` with a timeout of `0`.
-	 *
-	 * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
-	 * for details over the differences between `_.throttle` and `_.debounce`.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Function
-	 * @param {Function} func The function to throttle.
-	 * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
-	 * @param {Object} [options={}] The options object.
-	 * @param {boolean} [options.leading=true]
-	 *  Specify invoking on the leading edge of the timeout.
-	 * @param {boolean} [options.trailing=true]
-	 *  Specify invoking on the trailing edge of the timeout.
-	 * @returns {Function} Returns the new throttled function.
-	 * @example
-	 *
-	 * // Avoid excessively updating the position while scrolling.
-	 * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
-	 *
-	 * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
-	 * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
-	 * jQuery(element).on('click', throttled);
-	 *
-	 * // Cancel the trailing throttled invocation.
-	 * jQuery(window).on('popstate', throttled.cancel);
-	 */
-	function throttle(func, wait, options) {
-	  var leading = true,
-	      trailing = true;
-	
-	  if (typeof func != 'function') {
-	    throw new TypeError(FUNC_ERROR_TEXT);
-	  }
-	  if (isObject(options)) {
-	    leading = 'leading' in options ? !!options.leading : leading;
-	    trailing = 'trailing' in options ? !!options.trailing : trailing;
-	  }
-	  return debounce(func, wait, {
-	    'leading': leading,
-	    'maxWait': wait,
-	    'trailing': trailing
-	  });
-	}
-	
-	/**
-	 * Checks if `value` is the
-	 * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
-	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
-	 * @example
-	 *
-	 * _.isObject({});
-	 * // => true
-	 *
-	 * _.isObject([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObject(_.noop);
-	 * // => true
-	 *
-	 * _.isObject(null);
-	 * // => false
-	 */
-	function isObject(value) {
-	  var type = typeof value;
-	  return !!value && (type == 'object' || type == 'function');
-	}
-	
-	/**
-	 * Checks if `value` is object-like. A value is object-like if it's not `null`
-	 * and has a `typeof` result of "object".
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 * @example
-	 *
-	 * _.isObjectLike({});
-	 * // => true
-	 *
-	 * _.isObjectLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObjectLike(_.noop);
-	 * // => false
-	 *
-	 * _.isObjectLike(null);
-	 * // => false
-	 */
-	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
-	}
-	
-	/**
-	 * Checks if `value` is classified as a `Symbol` primitive or object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
-	 * @example
-	 *
-	 * _.isSymbol(Symbol.iterator);
-	 * // => true
-	 *
-	 * _.isSymbol('abc');
-	 * // => false
-	 */
-	function isSymbol(value) {
-	  return typeof value == 'symbol' ||
-	    (isObjectLike(value) && objectToString.call(value) == symbolTag);
-	}
-	
-	/**
-	 * Converts `value` to a number.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to process.
-	 * @returns {number} Returns the number.
-	 * @example
-	 *
-	 * _.toNumber(3.2);
-	 * // => 3.2
-	 *
-	 * _.toNumber(Number.MIN_VALUE);
-	 * // => 5e-324
-	 *
-	 * _.toNumber(Infinity);
-	 * // => Infinity
-	 *
-	 * _.toNumber('3.2');
-	 * // => 3.2
-	 */
-	function toNumber(value) {
-	  if (typeof value == 'number') {
-	    return value;
-	  }
-	  if (isSymbol(value)) {
-	    return NAN;
-	  }
-	  if (isObject(value)) {
-	    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-	    value = isObject(other) ? (other + '') : other;
-	  }
-	  if (typeof value != 'string') {
-	    return value === 0 ? value : +value;
-	  }
-	  value = value.replace(reTrim, '');
-	  var isBinary = reIsBinary.test(value);
-	  return (isBinary || reIsOctal.test(value))
-	    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
-	    : (reIsBadHex.test(value) ? NAN : +value);
-	}
-	
-	module.exports = throttle;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _vendorEffectComposer = __webpack_require__(22);
-	
-	var _vendorEffectComposer2 = _interopRequireDefault(_vendorEffectComposer);
-	
-	exports['default'] = function (renderer, container) {
-	  var composer = new _vendorEffectComposer2['default'](renderer);
-	
-	  var updateSize = function updateSize() {
-	    // TODO: Re-enable this when perf issues can be solved
-	    //
-	    // Rendering double the resolution of the screen can be really slow
-	    // var pixelRatio = window.devicePixelRatio;
-	    var pixelRatio = 1;
-	
-	    composer.setSize(container.clientWidth * pixelRatio, container.clientHeight * pixelRatio);
-	  };
-	
-	  window.addEventListener('resize', updateSize, false);
-	  updateSize();
-	
-	  return composer;
-	};
-	
-	;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _CopyShader = __webpack_require__(23);
-	
-	var _CopyShader2 = _interopRequireDefault(_CopyShader);
-	
-	var _ShaderPass = __webpack_require__(24);
-	
-	var _ShaderPass2 = _interopRequireDefault(_ShaderPass);
-	
-	var _MaskPass = __webpack_require__(25);
-	
-	var _MaskPass2 = _interopRequireDefault(_MaskPass);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 */
-	
-	var EffectComposer = function EffectComposer(renderer, renderTarget) {
-	
-		this.renderer = renderer;
-	
-		if (renderTarget === undefined) {
-	
-			var pixelRatio = renderer.getPixelRatio();
-	
-			var width = Math.floor(renderer.context.canvas.width / pixelRatio) || 1;
-			var height = Math.floor(renderer.context.canvas.height / pixelRatio) || 1;
-			var parameters = { minFilter: _three2['default'].LinearFilter, magFilter: _three2['default'].LinearFilter, format: _three2['default'].RGBAFormat, stencilBuffer: false };
-	
-			renderTarget = new _three2['default'].WebGLRenderTarget(width, height, parameters);
-		}
-	
-		this.renderTarget1 = renderTarget;
-		this.renderTarget2 = renderTarget.clone();
-	
-		this.writeBuffer = this.renderTarget1;
-		this.readBuffer = this.renderTarget2;
-	
-		this.passes = [];
-	
-		if (_CopyShader2['default'] === undefined) console.error("EffectComposer relies on THREE.CopyShader");
-	
-		this.copyPass = new _ShaderPass2['default'](_CopyShader2['default']);
-	};
-	
-	EffectComposer.prototype = {
-	
-		swapBuffers: function swapBuffers() {
-	
-			var tmp = this.readBuffer;
-			this.readBuffer = this.writeBuffer;
-			this.writeBuffer = tmp;
-		},
-	
-		addPass: function addPass(pass) {
-	
-			this.passes.push(pass);
-		},
-	
-		insertPass: function insertPass(pass, index) {
-	
-			this.passes.splice(index, 0, pass);
-		},
-	
-		render: function render(delta) {
-	
-			this.writeBuffer = this.renderTarget1;
-			this.readBuffer = this.renderTarget2;
-	
-			var maskActive = false;
-	
-			var pass,
-			    i,
-			    il = this.passes.length;
-	
-			for (i = 0; i < il; i++) {
-	
-				pass = this.passes[i];
-	
-				if (!pass.enabled) continue;
-	
-				pass.render(this.renderer, this.writeBuffer, this.readBuffer, delta, maskActive);
-	
-				if (pass.needsSwap) {
-	
-					if (maskActive) {
-	
-						var context = this.renderer.context;
-	
-						context.stencilFunc(context.NOTEQUAL, 1, 0xffffffff);
-	
-						this.copyPass.render(this.renderer, this.writeBuffer, this.readBuffer, delta);
-	
-						context.stencilFunc(context.EQUAL, 1, 0xffffffff);
-					}
-	
-					this.swapBuffers();
-				}
-	
-				if (pass instanceof _MaskPass2['default']) {
-	
-					maskActive = true;
-				} else if (pass instanceof _MaskPass.ClearMaskPass) {
-	
-					maskActive = false;
-				}
-			}
-		},
-	
-		reset: function reset(renderTarget) {
-	
-			if (renderTarget === undefined) {
-	
-				renderTarget = this.renderTarget1.clone();
-	
-				var pixelRatio = this.renderer.getPixelRatio();
-	
-				renderTarget.setSize(Math.floor(this.renderer.context.canvas.width / pixelRatio), Math.floor(this.renderer.context.canvas.height / pixelRatio));
-			}
-	
-			this.renderTarget1.dispose();
-			this.renderTarget1 = renderTarget;
-			this.renderTarget2.dispose();
-			this.renderTarget2 = renderTarget.clone();
-	
-			this.writeBuffer = this.renderTarget1;
-			this.readBuffer = this.renderTarget2;
-		},
-	
-		setSize: function setSize(width, height) {
-	
-			this.renderTarget1.setSize(width, height);
-			this.renderTarget2.setSize(width, height);
-		}
-	
-	};
-	
-	exports['default'] = EffectComposer;
-	
-	_three2['default'].EffectComposer = EffectComposer;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-			value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 *
-	 * Full-screen textured quad shader
-	 */
-	
-	var CopyShader = {
-	
-			uniforms: {
-	
-					"tDiffuse": { type: "t", value: null },
-					"opacity": { type: "f", value: 1.0 }
-	
-			},
-	
-			vertexShader: ["varying vec2 vUv;", "void main() {", "vUv = uv;", "gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );", "}"].join("\n"),
-	
-			fragmentShader: ["uniform float opacity;", "uniform sampler2D tDiffuse;", "varying vec2 vUv;", "void main() {", "vec4 texel = texture2D( tDiffuse, vUv );", "gl_FragColor = opacity * texel;", "}"].join("\n")
-	
-	};
-	
-	exports["default"] = CopyShader;
-	
-	_three2["default"].CopyShader = CopyShader;
-	module.exports = exports["default"];
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 */
-	
-	var ShaderPass = function ShaderPass(shader, textureID) {
-	
-		this.textureID = textureID !== undefined ? textureID : "tDiffuse";
-	
-		if (shader instanceof _three2["default"].ShaderMaterial) {
-	
-			this.uniforms = shader.uniforms;
-	
-			this.material = shader;
-		} else if (shader) {
-	
-			this.uniforms = _three2["default"].UniformsUtils.clone(shader.uniforms);
-	
-			this.material = new _three2["default"].ShaderMaterial({
-	
-				defines: shader.defines || {},
-				uniforms: this.uniforms,
-				vertexShader: shader.vertexShader,
-				fragmentShader: shader.fragmentShader
-	
-			});
-		}
-	
-		this.renderToScreen = false;
-	
-		this.enabled = true;
-		this.needsSwap = true;
-		this.clear = false;
-	
-		this.camera = new _three2["default"].OrthographicCamera(-1, 1, 1, -1, 0, 1);
-		this.scene = new _three2["default"].Scene();
-	
-		this.quad = new _three2["default"].Mesh(new _three2["default"].PlaneBufferGeometry(2, 2), null);
-		this.scene.add(this.quad);
-	};
-	
-	ShaderPass.prototype = {
-	
-		render: function render(renderer, writeBuffer, readBuffer, delta) {
-	
-			if (this.uniforms[this.textureID]) {
-	
-				this.uniforms[this.textureID].value = readBuffer;
-			}
-	
-			this.quad.material = this.material;
-	
-			if (this.renderToScreen) {
-	
-				renderer.render(this.scene, this.camera);
-			} else {
-	
-				renderer.render(this.scene, this.camera, writeBuffer, this.clear);
-			}
-		}
-	
-	};
-	
-	exports["default"] = ShaderPass;
-	
-	_three2["default"].ShaderPass = ShaderPass;
-	module.exports = exports["default"];
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-			value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 */
-	
-	var MaskPass = function MaskPass(scene, camera) {
-	
-			this.scene = scene;
-			this.camera = camera;
-	
-			this.enabled = true;
-			this.clear = true;
-			this.needsSwap = false;
-	
-			this.inverse = false;
-	};
-	
-	MaskPass.prototype = {
-	
-			render: function render(renderer, writeBuffer, readBuffer, delta) {
-	
-					var context = renderer.context;
-	
-					// don't update color or depth
-	
-					context.colorMask(false, false, false, false);
-					context.depthMask(false);
-	
-					// set up stencil
-	
-					var writeValue, clearValue;
-	
-					if (this.inverse) {
-	
-							writeValue = 0;
-							clearValue = 1;
-					} else {
-	
-							writeValue = 1;
-							clearValue = 0;
-					}
-	
-					context.enable(context.STENCIL_TEST);
-					context.stencilOp(context.REPLACE, context.REPLACE, context.REPLACE);
-					context.stencilFunc(context.ALWAYS, writeValue, 0xffffffff);
-					context.clearStencil(clearValue);
-	
-					// draw into the stencil buffer
-	
-					renderer.render(this.scene, this.camera, readBuffer, this.clear);
-					renderer.render(this.scene, this.camera, writeBuffer, this.clear);
-	
-					// re-enable update of color and depth
-	
-					context.colorMask(true, true, true, true);
-					context.depthMask(true);
-	
-					// only render where stencil is set to 1
-	
-					context.stencilFunc(context.EQUAL, 1, 0xffffffff); // draw if == 1
-					context.stencilOp(context.KEEP, context.KEEP, context.KEEP);
-			}
-	
-	};
-	
-	var ClearMaskPass = function ClearMaskPass() {
-	
-			this.enabled = true;
-	};
-	
-	ClearMaskPass.prototype = {
-	
-			render: function render(renderer, writeBuffer, readBuffer, delta) {
-	
-					var context = renderer.context;
-	
-					context.disable(context.STENCIL_TEST);
-			}
-	
-	};
-	
-	exports['default'] = MaskPass;
-	exports.ClearMaskPass = ClearMaskPass;
-	
-	_three2['default'].MaskPass = MaskPass;
-	_three2['default'].ClearMaskPass = ClearMaskPass;
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-		value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 */
-	
-	var RenderPass = function RenderPass(scene, camera, overrideMaterial, clearColor, clearAlpha) {
-	
-		this.scene = scene;
-		this.camera = camera;
-	
-		this.overrideMaterial = overrideMaterial;
-	
-		this.clearColor = clearColor;
-		this.clearAlpha = clearAlpha !== undefined ? clearAlpha : 1;
-	
-		this.oldClearColor = new _three2['default'].Color();
-		this.oldClearAlpha = 1;
-	
-		this.enabled = true;
-		this.clear = true;
-		this.needsSwap = false;
-	};
-	
-	RenderPass.prototype = {
-	
-		render: function render(renderer, writeBuffer, readBuffer, delta) {
-	
-			this.scene.overrideMaterial = this.overrideMaterial;
-	
-			if (this.clearColor) {
-	
-				this.oldClearColor.copy(renderer.getClearColor());
-				this.oldClearAlpha = renderer.getClearAlpha();
-	
-				renderer.setClearColor(this.clearColor, this.clearAlpha);
-			}
-	
-			renderer.render(this.scene, this.camera, readBuffer, this.clear);
-	
-			if (this.clearColor) {
-	
-				renderer.setClearColor(this.oldClearColor, this.oldClearAlpha);
-			}
-	
-			this.scene.overrideMaterial = null;
-		}
-	
-	};
-	
-	exports['default'] = RenderPass;
-	
-	_three2['default'].RenderPass = RenderPass;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-			value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 *
-	 * Simple fake tilt-shift effect, modulating two pass Gaussian blur (see above) by vertical position
-	 *
-	 * - 9 samples per pass
-	 * - standard deviation 2.7
-	 * - "h" and "v" parameters should be set to "1 / width" and "1 / height"
-	 * - "r" parameter control where "focused" horizontal line lies
-	 */
-	
-	var HorizontalTiltShiftShader = {
-	
-			uniforms: {
-	
-					"tDiffuse": { type: "t", value: null },
-					"h": { type: "f", value: 1.0 / 512.0 },
-					"r": { type: "f", value: 0.35 }
-	
-			},
-	
-			vertexShader: ["varying vec2 vUv;", "void main() {", "vUv = uv;", "gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );", "}"].join("\n"),
-	
-			fragmentShader: ["uniform sampler2D tDiffuse;", "uniform float h;", "uniform float r;", "varying vec2 vUv;", "void main() {", "vec4 sum = vec4( 0.0 );", "float hh = h * abs( r - vUv.y );", "sum += texture2D( tDiffuse, vec2( vUv.x - 4.0 * hh, vUv.y ) ) * 0.051;", "sum += texture2D( tDiffuse, vec2( vUv.x - 3.0 * hh, vUv.y ) ) * 0.0918;", "sum += texture2D( tDiffuse, vec2( vUv.x - 2.0 * hh, vUv.y ) ) * 0.12245;", "sum += texture2D( tDiffuse, vec2( vUv.x - 1.0 * hh, vUv.y ) ) * 0.1531;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y ) ) * 0.1633;", "sum += texture2D( tDiffuse, vec2( vUv.x + 1.0 * hh, vUv.y ) ) * 0.1531;", "sum += texture2D( tDiffuse, vec2( vUv.x + 2.0 * hh, vUv.y ) ) * 0.12245;", "sum += texture2D( tDiffuse, vec2( vUv.x + 3.0 * hh, vUv.y ) ) * 0.0918;", "sum += texture2D( tDiffuse, vec2( vUv.x + 4.0 * hh, vUv.y ) ) * 0.051;", "gl_FragColor = sum;", "}"].join("\n")
-	
-	};
-	
-	exports["default"] = HorizontalTiltShiftShader;
-	
-	_three2["default"].HorizontalTiltShiftShader = HorizontalTiltShiftShader;
-	module.exports = exports["default"];
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-			value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 *
-	 * Simple fake tilt-shift effect, modulating two pass Gaussian blur (see above) by vertical position
-	 *
-	 * - 9 samples per pass
-	 * - standard deviation 2.7
-	 * - "h" and "v" parameters should be set to "1 / width" and "1 / height"
-	 * - "r" parameter control where "focused" horizontal line lies
-	 */
-	
-	var VerticalTiltShiftShader = {
-	
-			uniforms: {
-	
-					"tDiffuse": { type: "t", value: null },
-					"v": { type: "f", value: 1.0 / 512.0 },
-					"r": { type: "f", value: 0.35 }
-	
-			},
-	
-			vertexShader: ["varying vec2 vUv;", "void main() {", "vUv = uv;", "gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );", "}"].join("\n"),
-	
-			fragmentShader: ["uniform sampler2D tDiffuse;", "uniform float v;", "uniform float r;", "varying vec2 vUv;", "void main() {", "vec4 sum = vec4( 0.0 );", "float vv = v * abs( r - vUv.y );", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y - 4.0 * vv ) ) * 0.051;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y - 3.0 * vv ) ) * 0.0918;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y - 2.0 * vv ) ) * 0.12245;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y - 1.0 * vv ) ) * 0.1531;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y ) ) * 0.1633;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y + 1.0 * vv ) ) * 0.1531;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y + 2.0 * vv ) ) * 0.12245;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y + 3.0 * vv ) ) * 0.0918;", "sum += texture2D( tDiffuse, vec2( vUv.x, vUv.y + 4.0 * vv ) ) * 0.051;", "gl_FragColor = sum;", "}"].join("\n")
-	
-	};
-	
-	exports["default"] = VerticalTiltShiftShader;
-	
-	_three2["default"].VerticalTiltShiftShader = VerticalTiltShiftShader;
-	module.exports = exports["default"];
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-				value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	// jscs:disable
-	/* eslint-disable */
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	/**
-	 * @author alteredq / http://alteredqualia.com/
-	 * @author davidedc / http://www.sketchpatch.net/
-	 *
-	 * NVIDIA FXAA by Timothy Lottes
-	 * http://timothylottes.blogspot.com/2011/06/fxaa3-source-released.html
-	 * - WebGL port by @supereggbert
-	 * http://www.glge.org/demos/fxaa/
-	 */
-	
-	var FXAAShader = {
-	
-				uniforms: {
-	
-							"tDiffuse": { type: "t", value: null },
-							"resolution": { type: "v2", value: new _three2["default"].Vector2(1 / 1024, 1 / 512) }
-	
-				},
-	
-				vertexShader: ["void main() {", "gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );", "}"].join("\n"),
-	
-				fragmentShader: ["uniform sampler2D tDiffuse;", "uniform vec2 resolution;", "#define FXAA_REDUCE_MIN   (1.0/128.0)", "#define FXAA_REDUCE_MUL   (1.0/8.0)", "#define FXAA_SPAN_MAX     8.0", "void main() {", "vec3 rgbNW = texture2D( tDiffuse, ( gl_FragCoord.xy + vec2( -1.0, -1.0 ) ) * resolution ).xyz;", "vec3 rgbNE = texture2D( tDiffuse, ( gl_FragCoord.xy + vec2( 1.0, -1.0 ) ) * resolution ).xyz;", "vec3 rgbSW = texture2D( tDiffuse, ( gl_FragCoord.xy + vec2( -1.0, 1.0 ) ) * resolution ).xyz;", "vec3 rgbSE = texture2D( tDiffuse, ( gl_FragCoord.xy + vec2( 1.0, 1.0 ) ) * resolution ).xyz;", "vec4 rgbaM  = texture2D( tDiffuse,  gl_FragCoord.xy  * resolution );", "vec3 rgbM  = rgbaM.xyz;", "vec3 luma = vec3( 0.299, 0.587, 0.114 );", "float lumaNW = dot( rgbNW, luma );", "float lumaNE = dot( rgbNE, luma );", "float lumaSW = dot( rgbSW, luma );", "float lumaSE = dot( rgbSE, luma );", "float lumaM  = dot( rgbM,  luma );", "float lumaMin = min( lumaM, min( min( lumaNW, lumaNE ), min( lumaSW, lumaSE ) ) );", "float lumaMax = max( lumaM, max( max( lumaNW, lumaNE) , max( lumaSW, lumaSE ) ) );", "vec2 dir;", "dir.x = -((lumaNW + lumaNE) - (lumaSW + lumaSE));", "dir.y =  ((lumaNW + lumaSW) - (lumaNE + lumaSE));", "float dirReduce = max( ( lumaNW + lumaNE + lumaSW + lumaSE ) * ( 0.25 * FXAA_REDUCE_MUL ), FXAA_REDUCE_MIN );", "float rcpDirMin = 1.0 / ( min( abs( dir.x ), abs( dir.y ) ) + dirReduce );", "dir = min( vec2( FXAA_SPAN_MAX,  FXAA_SPAN_MAX),", "max( vec2(-FXAA_SPAN_MAX, -FXAA_SPAN_MAX),", "dir * rcpDirMin)) * resolution;", "vec4 rgbA = (1.0/2.0) * (", "texture2D(tDiffuse,  gl_FragCoord.xy  * resolution + dir * (1.0/3.0 - 0.5)) +", "texture2D(tDiffuse,  gl_FragCoord.xy  * resolution + dir * (2.0/3.0 - 0.5)));", "vec4 rgbB = rgbA * (1.0/2.0) + (1.0/4.0) * (", "texture2D(tDiffuse,  gl_FragCoord.xy  * resolution + dir * (0.0/3.0 - 0.5)) +", "texture2D(tDiffuse,  gl_FragCoord.xy  * resolution + dir * (3.0/3.0 - 0.5)));", "float lumaB = dot(rgbB, vec4(luma, 0.0));", "if ( ( lumaB < lumaMin ) || ( lumaB > lumaMax ) ) {", "gl_FragColor = rgbA;", "} else {", "gl_FragColor = rgbB;", "}", "}"].join("\n")
-	
-	};
-	
-	exports["default"] = FXAAShader;
-	
-	_three2["default"].FXAAShader = FXAAShader;
-	module.exports = exports["default"];
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _Layer2 = __webpack_require__(31);
-	
-	var _Layer3 = _interopRequireDefault(_Layer2);
-	
-	var _lodashAssign = __webpack_require__(3);
-	
-	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _Skybox = __webpack_require__(32);
-	
-	var _Skybox2 = _interopRequireDefault(_Skybox);
-	
-	// TODO: Make sure nothing is left behind in the heap after calling destroy()
-	
-	var EnvironmentLayer = (function (_Layer) {
-	  _inherits(EnvironmentLayer, _Layer);
-	
-	  function EnvironmentLayer(options) {
-	    _classCallCheck(this, EnvironmentLayer);
-	
-	    var defaults = {
-	      skybox: false
-	    };
-	
-	    var _options = (0, _lodashAssign2['default'])({}, defaults, options);
-	
-	    _get(Object.getPrototypeOf(EnvironmentLayer.prototype), 'constructor', this).call(this, _options);
-	  }
-	
-	  _createClass(EnvironmentLayer, [{
-	    key: '_onAdd',
-	    value: function _onAdd() {
-	      this._initLights();
-	
-	      if (this._options.skybox) {
-	        this._initSkybox();
-	      }
-	
-	      // this._initGrid();
-	
-	      return Promise.resolve(this);
-	    }
-	
-	    // Not fleshed out or thought through yet
-	    //
-	    // Lights could potentially be put it their own 'layer' to keep this class
-	    // much simpler and less messy
-	  }, {
-	    key: '_initLights',
-	    value: function _initLights() {
-	      // Position doesn't really matter (the angle is important), however it's
-	      // used here so the helpers look more natural.
-	
-	      if (!this._options.skybox) {
-	        var directionalLight = new _three2['default'].DirectionalLight(0xffffff, 1);
-	        directionalLight.position.x = 10000;
-	        directionalLight.position.y = 10000;
-	        directionalLight.position.z = 10000;
-	
-	        // TODO: Get shadows working in non-PBR scenes
-	
-	        // directionalLight.castShadow = true;
-	        //
-	        // var d = 100;
-	        // directionalLight.shadow.camera.left = -d;
-	        // directionalLight.shadow.camera.right = d;
-	        // directionalLight.shadow.camera.top = d;
-	        // directionalLight.shadow.camera.bottom = -d;
-	        //
-	        // directionalLight.shadow.camera.near = 10;
-	        // directionalLight.shadow.camera.far = 100;
-	        //
-	        // // TODO: Need to dial in on a good shadowmap size
-	        // directionalLight.shadow.mapSize.width = 2048;
-	        // directionalLight.shadow.mapSize.height = 2048;
-	        //
-	        // // directionalLight.shadowBias = -0.0010;
-	        // // directionalLight.shadow.darkness = 0.15;
-	
-	        var directionalLight2 = new _three2['default'].DirectionalLight(0xffffff, 0.5);
-	        directionalLight2.position.x = -10000;
-	        directionalLight2.position.y = 10000;
-	        directionalLight2.position.z = 0;
-	
-	        var directionalLight3 = new _three2['default'].DirectionalLight(0xffffff, 0.5);
-	        directionalLight3.position.x = 10000;
-	        directionalLight3.position.y = 10000;
-	        directionalLight3.position.z = -10000;
-	
-	        this.add(directionalLight);
-	        this.add(directionalLight2);
-	        this.add(directionalLight3);
-	
-	        // var helper = new THREE.DirectionalLightHelper(directionalLight, 10);
-	        // var helper2 = new THREE.DirectionalLightHelper(directionalLight2, 10);
-	        // var helper3 = new THREE.DirectionalLightHelper(directionalLight3, 10);
-	        //
-	        // this.add(helper);
-	        // this.add(helper2);
-	        // this.add(helper3);
-	      } else {
-	          // Directional light that will be projected from the sun
-	          this._skyboxLight = new _three2['default'].DirectionalLight(0xffffff, 1);
-	
-	          this._skyboxLight.castShadow = true;
-	
-	          var d = 10000;
-	          this._skyboxLight.shadow.camera.left = -d;
-	          this._skyboxLight.shadow.camera.right = d;
-	          this._skyboxLight.shadow.camera.top = d;
-	          this._skyboxLight.shadow.camera.bottom = -d;
-	
-	          this._skyboxLight.shadow.camera.near = 10000;
-	          this._skyboxLight.shadow.camera.far = 70000;
-	
-	          // TODO: Need to dial in on a good shadowmap size
-	          this._skyboxLight.shadow.mapSize.width = 2048;
-	          this._skyboxLight.shadow.mapSize.height = 2048;
-	
-	          // this._skyboxLight.shadowBias = -0.0010;
-	          // this._skyboxLight.shadow.darkness = 0.15;
-	
-	          // this._object3D.add(new THREE.CameraHelper(this._skyboxLight.shadow.camera));
-	
-	          this.add(this._skyboxLight);
-	        }
-	    }
-	  }, {
-	    key: '_initSkybox',
-	    value: function _initSkybox() {
-	      this._skybox = new _Skybox2['default'](this._world, this._skyboxLight);
-	      this.add(this._skybox._mesh);
-	    }
-	
-	    // Add grid helper for context during initial development
-	  }, {
-	    key: '_initGrid',
-	    value: function _initGrid() {
-	      var size = 4000;
-	      var step = 100;
-	
-	      var gridHelper = new _three2['default'].GridHelper(size, step);
-	      this.add(gridHelper);
-	    }
-	
-	    // Clean up environment
-	  }, {
-	    key: 'destroy',
-	    value: function destroy() {
-	      this._skyboxLight = null;
-	
-	      if (this._skybox) {
-	        this.remove(this._skybox._mesh);
-	        this._skybox.destroy();
-	        this._skybox = null;
-	      }
-	
-	      _get(Object.getPrototypeOf(EnvironmentLayer.prototype), 'destroy', this).call(this);
-	    }
-	  }]);
-	
-	  return EnvironmentLayer;
-	})(_Layer3['default']);
-	
-	exports['default'] = EnvironmentLayer;
-	
-	var noNew = function noNew(options) {
-	  return new EnvironmentLayer(options);
-	};
-	
-	// Initialise without requiring new keyword
-	exports.environmentLayer = noNew;
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _eventemitter3 = __webpack_require__(2);
-	
-	var _eventemitter32 = _interopRequireDefault(_eventemitter3);
-	
-	var _lodashAssign = __webpack_require__(3);
-	
-	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
-	
-	var _shortid = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"shortid\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	
-	var _shortid2 = _interopRequireDefault(_shortid);
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _engineScene = __webpack_require__(9);
-	
-	var _engineScene2 = _interopRequireDefault(_engineScene);
-	
-	var _vendorCSS3DRenderer = __webpack_require__(14);
-	
-	var _vendorCSS2DRenderer = __webpack_require__(16);
-	
-	// TODO: Make sure nothing is left behind in the heap after calling destroy()
-	
-	// TODO: Need a single move method that handles moving all the various object
-	// layers so that the DOM layers stay in sync with the 3D layer
-	
-	// TODO: Double check that objects within the _object3D Object3D parent are frustum
-	// culled even if the layer position stays at the default (0,0,0) and the child
-	// objects are positioned much further away
-	//
-	// Or does the layer being at (0,0,0) prevent the child objects from being
-	// culled because the layer parent is effectively always in view even if the
-	// child is actually out of camera
-	
-	var Layer = (function (_EventEmitter) {
-	  _inherits(Layer, _EventEmitter);
-	
-	  function Layer(options) {
-	    _classCallCheck(this, Layer);
-	
-	    _get(Object.getPrototypeOf(Layer.prototype), 'constructor', this).call(this);
-	
-	    var defaults = {
-	      id: _shortid2['default'].generate(),
-	      output: true,
-	      outputToScene: true
-	    };
-	
-	    this._options = (0, _lodashAssign2['default'])({}, defaults, options);
-	
-	    if (this.isOutput()) {
-	      this._object3D = new _three2['default'].Object3D();
-	
-	      this._dom3D = document.createElement('div');
-	      this._domObject3D = new _vendorCSS3DRenderer.CSS3DObject(this._dom3D);
-	
-	      this._dom2D = document.createElement('div');
-	      this._domObject2D = new _vendorCSS2DRenderer.CSS2DObject(this._dom2D);
-	    }
-	  }
-	
-	  // Add THREE object directly to layer
-	
-	  _createClass(Layer, [{
-	    key: 'add',
-	    value: function add(object) {
-	      this._object3D.add(object);
-	    }
-	
-	    // Remove THREE object from to layer
-	  }, {
-	    key: 'remove',
-	    value: function remove(object) {
-	      this._object3D.remove(object);
-	    }
-	  }, {
-	    key: 'addDOM3D',
-	    value: function addDOM3D(object) {
-	      this._domObject3D.add(object);
-	    }
-	  }, {
-	    key: 'removeDOM3D',
-	    value: function removeDOM3D(object) {
-	      this._domObject3D.remove(object);
-	    }
-	  }, {
-	    key: 'addDOM2D',
-	    value: function addDOM2D(object) {
-	      this._domObject2D.add(object);
-	    }
-	  }, {
-	    key: 'removeDOM2D',
-	    value: function removeDOM2D(object) {
-	      this._domObject2D.remove(object);
-	    }
-	
-	    // Add layer to world instance and store world reference
-	  }, {
-	    key: 'addTo',
-	    value: function addTo(world) {
-	      return world.addLayer(this);
-	    }
-	
-	    // Internal method called by World.addLayer to actually add the layer
-	  }, {
-	    key: '_addToWorld',
-	    value: function _addToWorld(world) {
-	      var _this = this;
-	
-	      this._world = world;
-	
-	      return new Promise(function (resolve, reject) {
-	        _this._onAdd(world).then(function () {
-	          _this.emit('added');
-	          resolve(_this);
-	        })['catch'](reject);
-	      });
-	    }
-	
-	    // Must return a promise
-	  }, {
-	    key: '_onAdd',
-	    value: function _onAdd(world) {
-	      return Promise.resolve(this);
-	    }
-	  }, {
-	    key: 'getPickingId',
-	    value: function getPickingId() {
-	      if (this._world._engine._picking) {
-	        return this._world._engine._picking.getNextId();
-	      }
-	
-	      return false;
-	    }
-	
-	    // TODO: Tidy this up and don't access so many private properties to work
-	  }, {
-	    key: 'addToPicking',
-	    value: function addToPicking(object) {
-	      if (!this._world._engine._picking) {
-	        return;
-	      }
-	
-	      this._world._engine._picking.add(object);
-	    }
-	  }, {
-	    key: 'removeFromPicking',
-	    value: function removeFromPicking(object) {
-	      if (!this._world._engine._picking) {
-	        return;
-	      }
-	
-	      this._world._engine._picking.remove(object);
-	    }
-	  }, {
-	    key: 'isOutput',
-	    value: function isOutput() {
-	      return this._options.output;
-	    }
-	  }, {
-	    key: 'isOutputToScene',
-	    value: function isOutputToScene() {
-	      return this._options.outputToScene;
-	    }
-	
-	    // TODO: Also hide any attached DOM layers
-	  }, {
-	    key: 'hide',
-	    value: function hide() {
-	      this._object3D.visible = false;
-	
-	      if (this._pickingMesh) {
-	        this._pickingMesh.visible = false;
-	      }
-	    }
-	
-	    // TODO: Also show any attached DOM layers
-	  }, {
-	    key: 'show',
-	    value: function show() {
-	      this._object3D.visible = true;
-	
-	      if (this._pickingMesh) {
-	        this._pickingMesh.visible = true;
-	      }
-	    }
-	
-	    // Destroys the layer and removes it from the scene and memory
-	  }, {
-	    key: 'destroy',
-	    value: function destroy() {
-	      if (this._object3D && this._object3D.children) {
-	        // Remove everything else in the layer
-	        var child;
-	        for (var i = this._object3D.children.length - 1; i >= 0; i--) {
-	          child = this._object3D.children[i];
-	
-	          if (!child) {
-	            continue;
-	          }
-	
-	          this.remove(child);
-	
-	          if (child.geometry) {
-	            // Dispose of mesh and materials
-	            child.geometry.dispose();
-	            child.geometry = null;
-	          }
-	
-	          if (child.material) {
-	            if (child.material.map) {
-	              child.material.map.dispose();
-	              child.material.map = null;
-	            }
-	
-	            child.material.dispose();
-	            child.material = null;
-	          }
-	        }
-	      }
-	
-	      if (this._domObject3D && this._domObject3D.children) {
-	        // Remove everything else in the layer
-	        var child;
-	        for (var i = this._domObject3D.children.length - 1; i >= 0; i--) {
-	          child = this._domObject3D.children[i];
-	
-	          if (!child) {
-	            continue;
-	          }
-	
-	          this.removeDOM3D(child);
-	        }
-	      }
-	
-	      if (this._domObject2D && this._domObject2D.children) {
-	        // Remove everything else in the layer
-	        var child;
-	        for (var i = this._domObject2D.children.length - 1; i >= 0; i--) {
-	          child = this._domObject2D.children[i];
-	
-	          if (!child) {
-	            continue;
-	          }
-	
-	          this.removeDOM2D(child);
-	        }
-	      }
-	
-	      this._domObject3D = null;
-	      this._domObject2D = null;
-	
-	      this._world = null;
-	      this._object3D = null;
-	    }
-	  }]);
-	
-	  return Layer;
-	})(_eventemitter32['default']);
-	
-	exports['default'] = Layer;
-	
-	var noNew = function noNew(options) {
-	  return new Layer(options);
-	};
-	
-	exports.layer = noNew;
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	var _Sky = __webpack_require__(33);
-	
-	var _Sky2 = _interopRequireDefault(_Sky);
-	
-	var _lodashThrottle = __webpack_require__(20);
-	
-	var _lodashThrottle2 = _interopRequireDefault(_lodashThrottle);
-	
-	// TODO: Make sure nothing is left behind in the heap after calling destroy()
-	
-	var cubemap = {
-	    vertexShader: ['varying vec3 vPosition;', 'void main() {', 'vPosition = position;', 'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );', '}'].join('\n'),
-	
-	    fragmentShader: ['uniform samplerCube cubemap;', 'varying vec3 vPosition;', 'void main() {', 'gl_FragColor = textureCube(cubemap, normalize(vPosition));', '}'].join('\n')
-	};
-	
-	var Skybox = (function () {
-	    function Skybox(world, light) {
-	        _classCallCheck(this, Skybox);
-	
-	        this._world = world;
-	        this._light = light;
-	
-	        this._settings = {
-	            distance: 38000,
-	            turbidity: 10,
-	            reileigh: 2,
-	            mieCoefficient: 0.005,
-	            mieDirectionalG: 0.8,
-	            luminance: 1,
-	            // 0.48 is a cracking dusk / sunset
-	            // 0.4 is a beautiful early-morning / late-afternoon
-	            // 0.2 is a nice day time
-	            inclination: 0.48, // Elevation / inclination
-	            azimuth: 0.25 };
-	
-	        // Facing front
-	        this._initSkybox();
-	        this._updateUniforms();
-	        this._initEvents();
-	    }
-	
-	    _createClass(Skybox, [{
-	        key: '_initEvents',
-	        value: function _initEvents() {
-	            // Throttled to 1 per 100ms
-	            this._throttledWorldUpdate = (0, _lodashThrottle2['default'])(this._update, 100);
-	            this._world.on('preUpdate', this._throttledWorldUpdate, this);
-	        }
-	    }, {
-	        key: '_initSkybox',
-	        value: function _initSkybox() {
-	            // Cube camera for skybox
-	            this._cubeCamera = new _three2['default'].CubeCamera(1, 20000000, 128);
-	
-	            // Cube material
-	            var cubeTarget = this._cubeCamera.renderTarget;
-	
-	            // Add Sky Mesh
-	            this._sky = new _Sky2['default']();
-	            this._skyScene = new _three2['default'].Scene();
-	            this._skyScene.add(this._sky.mesh);
-	
-	            // Add Sun Helper
-	            this._sunSphere = new _three2['default'].Mesh(new _three2['default'].SphereBufferGeometry(2000, 16, 8), new _three2['default'].MeshBasicMaterial({
-	                color: 0xffffff
-	            }));
-	
-	            // TODO: This isn't actually visible because it's not added to the layer
-	            // this._sunSphere.visible = true;
-	
-	            var skyboxUniforms = {
-	                cubemap: { type: 't', value: cubeTarget }
-	            };
-	
-	            var skyboxMat = new _three2['default'].ShaderMaterial({
-	                uniforms: skyboxUniforms,
-	                vertexShader: cubemap.vertexShader,
-	                fragmentShader: cubemap.fragmentShader,
-	                side: _three2['default'].BackSide
-	            });
-	
-	            this._mesh = new _three2['default'].Mesh(new _three2['default'].BoxGeometry(1900000, 1900000, 1900000), skyboxMat);
-	
-	            this._updateSkybox = true;
-	        }
-	    }, {
-	        key: '_updateUniforms',
-	        value: function _updateUniforms() {
-	            var settings = this._settings;
-	            var uniforms = this._sky.uniforms;
-	            uniforms.turbidity.value = settings.turbidity;
-	            uniforms.reileigh.value = settings.reileigh;
-	            uniforms.luminance.value = settings.luminance;
-	            uniforms.mieCoefficient.value = settings.mieCoefficient;
-	            uniforms.mieDirectionalG.value = settings.mieDirectionalG;
-	
-	            var theta = Math.PI * (settings.inclination - 0.5);
-	            var phi = 2 * Math.PI * (settings.azimuth - 0.5);
-	
-	            this._sunSphere.position.x = settings.distance * Math.cos(phi);
-	            this._sunSphere.position.y = settings.distance * Math.sin(phi) * Math.sin(theta);
-	            this._sunSphere.position.z = settings.distance * Math.sin(phi) * Math.cos(theta);
-	
-	            // Move directional light to sun position
-	            this._light.position.copy(this._sunSphere.position);
-	
-	            this._sky.uniforms.sunPosition.value.copy(this._sunSphere.position);
-	        }
-	    }, {
-	        key: '_update',
-	        value: function _update(delta) {
-	            if (this._updateSkybox) {
-	                this._updateSkybox = false;
-	            } else {
-	                return;
-	            }
-	
-	            // if (!this._angle) {
-	            //   this._angle = 0;
-	            // }
-	            //
-	            // // Animate inclination
-	            // this._angle += Math.PI * delta;
-	            // this._settings.inclination = 0.5 * (Math.sin(this._angle) / 2 + 0.5);
-	
-	            // Update light intensity depending on elevation of sun (day to night)
-	            this._light.intensity = 1 - 0.95 * (this._settings.inclination / 0.5);
-	
-	            // // console.log(delta, this._angle, this._settings.inclination);
-	            //
-	            // TODO: Only do this when the uniforms have been changed
-	            this._updateUniforms();
-	
-	            // TODO: Only do this when the cubemap has actually changed
-	            this._cubeCamera.updateCubeMap(this._world._engine._renderer, this._skyScene);
-	        }
-	    }, {
-	        key: 'getRenderTarget',
-	        value: function getRenderTarget() {
-	            return this._cubeCamera.renderTarget;
-	        }
-	    }, {
-	        key: 'setInclination',
-	        value: function setInclination(inclination) {
-	            this._settings.inclination = inclination;
-	            this._updateSkybox = true;
-	        }
-	
-	        // Destroy the skybox and remove it from memory
-	    }, {
-	        key: 'destroy',
-	        value: function destroy() {
-	            this._world.off('preUpdate', this._throttledWorldUpdate);
-	            this._throttledWorldUpdate = null;
-	
-	            this._world = null;
-	            this._light = null;
-	
-	            this._cubeCamera = null;
-	
-	            this._sky.mesh.geometry.dispose();
-	            this._sky.mesh.geometry = null;
-	
-	            if (this._sky.mesh.material.map) {
-	                this._sky.mesh.material.map.dispose();
-	                this._sky.mesh.material.map = null;
-	            }
-	
-	            this._sky.mesh.material.dispose();
-	            this._sky.mesh.material = null;
-	
-	            this._sky.mesh = null;
-	            this._sky = null;
-	
-	            this._skyScene = null;
-	
-	            this._sunSphere.geometry.dispose();
-	            this._sunSphere.geometry = null;
-	
-	            if (this._sunSphere.material.map) {
-	                this._sunSphere.material.map.dispose();
-	                this._sunSphere.material.map = null;
-	            }
-	
-	            this._sunSphere.material.dispose();
-	            this._sunSphere.material = null;
-	
-	            this._sunSphere = null;
-	
-	            this._mesh.geometry.dispose();
-	            this._mesh.geometry = null;
-	
-	            if (this._mesh.material.map) {
-	                this._mesh.material.map.dispose();
-	                this._mesh.material.map = null;
-	            }
-	
-	            this._mesh.material.dispose();
-	            this._mesh.material = null;
-	        }
-	    }]);
-	
-	    return Skybox;
-	})();
-	
-	exports['default'] = Skybox;
-	
-	var noNew = function noNew(world, light) {
-	    return new Skybox(world, light);
-	};
-	
-	// Initialise without requiring new keyword
-	exports.skybox = noNew;
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-				value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	// jscs:disable
-	/*eslint eqeqeq:0*/
-	
-	/**
-	 * @author zz85 / https://github.com/zz85
-	 *
-	 * Based on 'A Practical Analytic Model for Daylight'
-	 * aka The Preetham Model, the de facto standard analytic skydome model
-	 * http://www.cs.utah.edu/~shirley/papers/sunsky/sunsky.pdf
-	 *
-	 * First implemented by Simon Wallner
-	 * http://www.simonwallner.at/projects/atmospheric-scattering
-	 *
-	 * Improved by Martin Upitis
-	 * http://blenderartists.org/forum/showthread.php?245954-preethams-sky-impementation-HDR
-	 *
-	 * Three.js integration by zz85 http://twitter.com/blurspline
-	*/
-	
-	var _three = __webpack_require__(8);
-	
-	var _three2 = _interopRequireDefault(_three);
-	
-	_three2['default'].ShaderLib['sky'] = {
-	
-				uniforms: {
-	
-							luminance: { type: 'f', value: 1 },
-							turbidity: { type: 'f', value: 2 },
-							reileigh: { type: 'f', value: 1 },
-							mieCoefficient: { type: 'f', value: 0.005 },
-							mieDirectionalG: { type: 'f', value: 0.8 },
-							sunPosition: { type: 'v3', value: new _three2['default'].Vector3() }
-	
-				},
-	
-				vertexShader: ['varying vec3 vWorldPosition;', 'void main() {', 'vec4 worldPosition = modelMatrix * vec4( position, 1.0 );', 'vWorldPosition = worldPosition.xyz;', 'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );', '}'].join('\n'),
-	
-				fragmentShader: ['uniform sampler2D skySampler;', 'uniform vec3 sunPosition;', 'varying vec3 vWorldPosition;', 'vec3 cameraPos = vec3(0., 0., 0.);', '// uniform sampler2D sDiffuse;', '// const float turbidity = 10.0; //', '// const float reileigh = 2.; //', '// const float luminance = 1.0; //', '// const float mieCoefficient = 0.005;', '// const float mieDirectionalG = 0.8;', 'uniform float luminance;', 'uniform float turbidity;', 'uniform float reileigh;', 'uniform float mieCoefficient;', 'uniform float mieDirectionalG;', '// constants for atmospheric scattering', 'const float e = 2.71828182845904523536028747135266249775724709369995957;', 'const float pi = 3.141592653589793238462643383279502884197169;', 'const float n = 1.0003; // refractive index of air', 'const float N = 2.545E25; // number of molecules per unit volume for air at', '// 288.15K and 1013mb (sea level -45 celsius)', 'const float pn = 0.035;	// depolatization factor for standard air', '// wavelength of used primaries, according to preetham', 'const vec3 lambda = vec3(680E-9, 550E-9, 450E-9);', '// mie stuff', '// K coefficient for the primaries', 'const vec3 K = vec3(0.686, 0.678, 0.666);', 'const float v = 4.0;', '// optical length at zenith for molecules', 'const float rayleighZenithLength = 8.4E3;', 'const float mieZenithLength = 1.25E3;', 'const vec3 up = vec3(0.0, 1.0, 0.0);', 'const float EE = 1000.0;', 'const float sunAngularDiameterCos = 0.999956676946448443553574619906976478926848692873900859324;', '// 66 arc seconds -> degrees, and the cosine of that', '// earth shadow hack', 'const float cutoffAngle = pi/1.95;', 'const float steepness = 1.5;', 'vec3 totalRayleigh(vec3 lambda)', '{', 'return (8.0 * pow(pi, 3.0) * pow(pow(n, 2.0) - 1.0, 2.0) * (6.0 + 3.0 * pn)) / (3.0 * N * pow(lambda, vec3(4.0)) * (6.0 - 7.0 * pn));', '}',
-	
-				// see http://blenderartists.org/forum/showthread.php?321110-Shaders-and-Skybox-madness
-				'// A simplied version of the total Reayleigh scattering to works on browsers that use ANGLE', 'vec3 simplifiedRayleigh()', '{', 'return 0.0005 / vec3(94, 40, 18);',
-				// return 0.00054532832366 / (3.0 * 2.545E25 * pow(vec3(680E-9, 550E-9, 450E-9), vec3(4.0)) * 6.245);
-				'}', 'float rayleighPhase(float cosTheta)', '{	 ', 'return (3.0 / (16.0*pi)) * (1.0 + pow(cosTheta, 2.0));', '//	return (1.0 / (3.0*pi)) * (1.0 + pow(cosTheta, 2.0));', '//	return (3.0 / 4.0) * (1.0 + pow(cosTheta, 2.0));', '}', 'vec3 totalMie(vec3 lambda, vec3 K, float T)', '{', 'float c = (0.2 * T ) * 10E-18;', 'return 0.434 * c * pi * pow((2.0 * pi) / lambda, vec3(v - 2.0)) * K;', '}', 'float hgPhase(float cosTheta, float g)', '{', 'return (1.0 / (4.0*pi)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0*g*cosTheta + pow(g, 2.0), 1.5));', '}', 'float sunIntensity(float zenithAngleCos)', '{', 'return EE * max(0.0, 1.0 - exp(-((cutoffAngle - acos(zenithAngleCos))/steepness)));', '}', '// float logLuminance(vec3 c)', '// {', '// 	return log(c.r * 0.2126 + c.g * 0.7152 + c.b * 0.0722);', '// }', '// Filmic ToneMapping http://filmicgames.com/archives/75', 'float A = 0.15;', 'float B = 0.50;', 'float C = 0.10;', 'float D = 0.20;', 'float E = 0.02;', 'float F = 0.30;', 'float W = 1000.0;', 'vec3 Uncharted2Tonemap(vec3 x)', '{', 'return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F;', '}', 'void main() ', '{', 'float sunfade = 1.0-clamp(1.0-exp((sunPosition.y/450000.0)),0.0,1.0);', '// luminance =  1.0 ;// vWorldPosition.y / 450000. + 0.5; //sunPosition.y / 450000. * 1. + 0.5;', '// gl_FragColor = vec4(sunfade, sunfade, sunfade, 1.0);', 'float reileighCoefficient = reileigh - (1.0* (1.0-sunfade));', 'vec3 sunDirection = normalize(sunPosition);', 'float sunE = sunIntensity(dot(sunDirection, up));', '// extinction (absorbtion + out scattering) ', '// rayleigh coefficients',
-	
-				// 'vec3 betaR = totalRayleigh(lambda) * reileighCoefficient;',
-				'vec3 betaR = simplifiedRayleigh() * reileighCoefficient;', '// mie coefficients', 'vec3 betaM = totalMie(lambda, K, turbidity) * mieCoefficient;', '// optical length', '// cutoff angle at 90 to avoid singularity in next formula.', 'float zenithAngle = acos(max(0.0, dot(up, normalize(vWorldPosition - cameraPos))));', 'float sR = rayleighZenithLength / (cos(zenithAngle) + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / pi), -1.253));', 'float sM = mieZenithLength / (cos(zenithAngle) + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / pi), -1.253));', '// combined extinction factor	', 'vec3 Fex = exp(-(betaR * sR + betaM * sM));', '// in scattering', 'float cosTheta = dot(normalize(vWorldPosition - cameraPos), sunDirection);', 'float rPhase = rayleighPhase(cosTheta*0.5+0.5);', 'vec3 betaRTheta = betaR * rPhase;', 'float mPhase = hgPhase(cosTheta, mieDirectionalG);', 'vec3 betaMTheta = betaM * mPhase;', 'vec3 Lin = pow(sunE * ((betaRTheta + betaMTheta) / (betaR + betaM)) * (1.0 - Fex),vec3(1.5));', 'Lin *= mix(vec3(1.0),pow(sunE * ((betaRTheta + betaMTheta) / (betaR + betaM)) * Fex,vec3(1.0/2.0)),clamp(pow(1.0-dot(up, sunDirection),5.0),0.0,1.0));', '//nightsky', 'vec3 direction = normalize(vWorldPosition - cameraPos);', 'float theta = acos(direction.y); // elevation --> y-axis, [-pi/2, pi/2]', 'float phi = atan(direction.z, direction.x); // azimuth --> x-axis [-pi/2, pi/2]', 'vec2 uv = vec2(phi, theta) / vec2(2.0*pi, pi) + vec2(0.5, 0.0);', '// vec3 L0 = texture2D(skySampler, uv).rgb+0.1 * Fex;', 'vec3 L0 = vec3(0.1) * Fex;', '// composition + solar disc', '//if (cosTheta > sunAngularDiameterCos)', 'float sundisk = smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);', '// if (normalize(vWorldPosition - cameraPos).y>0.0)', 'L0 += (sunE * 19000.0 * Fex)*sundisk;', 'vec3 whiteScale = 1.0/Uncharted2Tonemap(vec3(W));', 'vec3 texColor = (Lin+L0);   ', 'texColor *= 0.04 ;', 'texColor += vec3(0.0,0.001,0.0025)*0.3;', 'float g_fMaxLuminance = 1.0;', 'float fLumScaled = 0.1 / luminance;     ', 'float fLumCompressed = (fLumScaled * (1.0 + (fLumScaled / (g_fMaxLuminance * g_fMaxLuminance)))) / (1.0 + fLumScaled); ', 'float ExposureBias = fLumCompressed;', 'vec3 curr = Uncharted2Tonemap((log2(2.0/pow(luminance,4.0)))*texColor);', 'vec3 color = curr*whiteScale;', 'vec3 retColor = pow(color,vec3(1.0/(1.2+(1.2*sunfade))));', 'gl_FragColor.rgb = retColor;', 'gl_FragColor.a = 1.0;', '}'].join('\n')
-	
-	};
-	
-	var Sky = function Sky() {
-	
-				var skyShader = _three2['default'].ShaderLib['sky'];
-				var skyUniforms = _three2['default'].UniformsUtils.clone(skyShader.uniforms);
-	
-				var skyMat = new _three2['default'].ShaderMaterial({
-							fragmentShader: skyShader.fragmentShader,
-							vertexShader: skyShader.vertexShader,
-							uniforms: skyUniforms,
-							side: _three2['default'].BackSide
-				});
-	
-				var skyGeo = new _three2['default'].SphereBufferGeometry(450000, 32, 15);
-				var skyMesh = new _three2['default'].Mesh(skyGeo, skyMat);
-	
-				// Expose variables
-				this.mesh = skyMesh;
-				this.uniforms = skyUniforms;
-	};
-	
-	exports['default'] = Sky;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _WorkerPool = __webpack_require__(35);
-	
-	var _WorkerPool2 = _interopRequireDefault(_WorkerPool);
-	
-	var Worker = (function () {
-	  var _maxWorkers = 2;
-	  var pool;
-	
-	  var createWorkers = function createWorkers(maxWorkers, workerScript) {
-	    pool = new _WorkerPool2['default']({
-	      numThreads: maxWorkers ? maxWorkers : _maxWorkers,
-	      workerScript: workerScript ? workerScript : 'vizicities-worker.js'
-	    });
-	
-	    return pool.createWorkers();
-	  };
-	
-	  var exec = function exec(method, args, transferrables) {
-	    return pool.exec(method, args, transferrables);
-	  };
-	
-	  return {
-	    createWorkers: createWorkers,
-	    exec: exec
-	  };
-	})();
-	
-	exports['default'] = Worker;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	var _WorkerPoolWorker = __webpack_require__(36);
-	
-	var _WorkerPoolWorker2 = _interopRequireDefault(_WorkerPoolWorker);
-	
-	var DEBUG = false;
-	
-	// Polyfill for Array.find
-	if (!Array.prototype.find) {
-	  Object.defineProperty(Array.prototype, 'find', {
-	    value: function value(predicate) {
-	      'use strict';
-	      if (this == null) {
-	        throw new TypeError('Array.prototype.find called on null or undefined');
-	      }
-	      if (typeof predicate !== 'function') {
-	        throw new TypeError('predicate must be a function');
-	      }
-	      var list = Object(this);
-	      var length = list.length >>> 0;
-	      var thisArg = arguments[1];
-	      var value;
-	
-	      for (var i = 0; i < length; i++) {
-	        value = list[i];
-	        if (predicate.call(thisArg, value, i, list)) {
-	          return value;
-	        }
-	      }
-	      return undefined;
-	    }
-	  });
-	}
-	
-	var WorkerPool = (function () {
-	  function WorkerPool(options) {
-	    _classCallCheck(this, WorkerPool);
-	
-	    this.numThreads = options.numThreads || 2;
-	    this.workerScript = options.workerScript;
-	
-	    this.workers = [];
-	    this.tasks = [];
-	  }
-	
-	  _createClass(WorkerPool, [{
-	    key: 'createWorkers',
-	    value: function createWorkers() {
-	      var _this = this;
-	
-	      return new Promise(function (resolve, reject) {
-	        var workerPromises = [];
-	
-	        for (var i = 0; i < _this.numThreads; i++) {
-	          workerPromises.push(_this.createWorker());
-	        }
-	
-	        Promise.all(workerPromises).then(function () {
-	          if (DEBUG) {
-	            console.log('All workers ready', (performance || Date).now());
-	          }
-	          resolve();
-	        })['catch'](reject);
-	      });
-	    }
-	  }, {
-	    key: 'createWorker',
-	    value: function createWorker() {
-	      var _this2 = this;
-	
-	      return new Promise(function (resolve, reject) {
-	        // Initialise worker
-	        var worker = new _WorkerPoolWorker2['default']({
-	          workerScript: _this2.workerScript
-	        });
-	
-	        // Start worker and wait for it to be ready
-	        return worker.start().then(function () {
-	          if (DEBUG) {
-	            console.log('Worker ready', (performance || Date).now());
-	          }
-	
-	          // Add worker to pool
-	          _this2.workers.push(worker);
-	
-	          resolve();
-	        })['catch'](reject);
-	      });
-	    }
-	  }, {
-	    key: 'getFreeWorker',
-	    value: function getFreeWorker() {
-	      return this.workers.find(function (worker) {
-	        return !worker.busy;
-	      });
-	    }
-	
-	    // Execute task on a worker
-	  }, {
-	    key: 'exec',
-	    value: function exec(method, args, transferrables) {
-	      var deferred = Promise.deferred();
-	
-	      // Create task
-	      var task = {
-	        method: method,
-	        args: args,
-	        transferrables: transferrables,
-	        deferred: deferred
-	      };
-	
-	      // Add task to queue
-	      this.tasks.push(task);
-	
-	      // Trigger task processing
-	      this.processTasks();
-	
-	      // Return task promise
-	      return task.deferred.promise;
-	    }
-	  }, {
-	    key: 'processTasks',
-	    value: function processTasks() {
-	      var _this3 = this;
-	
-	      if (DEBUG) {
-	        console.log('Processing tasks');
-	      }
-	
-	      if (this.tasks.length === 0) {
-	        return;
-	      }
-	
-	      // Find free worker
-	      var worker = this.getFreeWorker();
-	
-	      if (!worker) {
-	        if (DEBUG) {
-	          console.log('No workers free');
-	        }
-	        return;
-	      }
-	
-	      // Get oldest task
-	      var task = this.tasks.shift();
-	
-	      // Execute task on worker
-	      worker.exec(task.method, task.args, task.transferrables).then(function (result) {
-	        // Trigger task processing
-	        _this3.processTasks();
-	
-	        // Return result in deferred task promise
-	        task.deferred.resolve(result);
-	      })['catch'](function (err) {
-	        // Trigger task processing
-	        _this3.processTasks();
-	
-	        task.deferred.reject(err);
-	      });
-	    }
-	  }]);
-	
-	  return WorkerPool;
-	})();
-	
-	exports['default'] = WorkerPool;
-	
-	// Quick shim to create deferred native promises
-	Promise.deferred = function () {
-	  var result = {};
-	
-	  result.promise = new Promise(function (resolve, reject) {
-	    result.resolve = resolve;
-	    result.reject = reject;
-	  });
-	
-	  return result;
-	};
-	module.exports = exports['default'];
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	var DEBUG = false;
-	
-	var WorkerPoolWorker = (function () {
-	  function WorkerPoolWorker(options) {
-	    _classCallCheck(this, WorkerPoolWorker);
-	
-	    this.workerScript = options.workerScript;
-	
-	    this.ready = false;
-	    this.busy = false;
-	    this.deferred = null;
-	  }
-	
-	  _createClass(WorkerPoolWorker, [{
-	    key: 'start',
-	    value: function start() {
-	      var _this = this;
-	
-	      return new Promise(function (resolve, reject) {
-	        _this.worker = new Worker(_this.workerScript);
-	
-	        var onStartup = function onStartup(event) {
-	          if (!event.data || event.data.type !== 'startup') {
-	            reject();
-	            return;
-	          }
-	
-	          _this.ready = true;
-	
-	          // Remove temporary message handler
-	          _this.worker.removeEventListener('message', onStartup);
-	
-	          // Set up listener to respond to normal events now
-	          _this.worker.addEventListener('message', function (event) {
-	            _this.onMessage(event);
-	          });
-	
-	          // Resolve once worker is ready
-	          resolve();
-	        };
-	
-	        // Set up temporary event listener for warmup
-	        _this.worker.addEventListener('message', onStartup);
-	      });
-	    }
-	  }, {
-	    key: 'exec',
-	    value: function exec(method, args, transferrables) {
-	      if (DEBUG) {
-	        console.log('Execute', method, args, transferrables);
-	      }
-	
-	      var deferred = Promise.deferred();
-	
-	      this.busy = true;
-	      this.deferred = deferred;
-	
-	      this.worker.postMessage({
-	        method: method,
-	        args: args
-	      }, transferrables);
-	
-	      return deferred.promise;
-	    }
-	  }, {
-	    key: 'onMessage',
-	    value: function onMessage(event) {
-	      if (DEBUG) {
-	        console.log('Message received from worker', (performance || Date).now());
-	      }
-	
-	      this.busy = false;
-	
-	      if (!event.data || event.data.type === 'error' || event.data.type !== 'result') {
-	        this.deferred.reject(event.data.payload);
-	        return;
-	      }
-	
-	      this.deferred.resolve(event.data.payload);
-	    }
-	  }]);
-	
-	  return WorkerPoolWorker;
-	})();
-	
-	exports['default'] = WorkerPoolWorker;
-	
-	// Quick shim to create deferred native promises
-	Promise.deferred = function () {
-	  var result = {};
-	
-	  result.promise = new Promise(function (resolve, reject) {
-	    result.resolve = resolve;
-	    result.reject = reject;
-	  });
-	
-	  return result;
-	};
-	module.exports = exports['default'];
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _ControlsOrbit = __webpack_require__(38);
+	var _ControlsOrbit = __webpack_require__(2);
 	
 	var _ControlsOrbit2 = _interopRequireDefault(_ControlsOrbit);
 	
@@ -5455,7 +212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 38 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -5472,19 +229,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _eventemitter3 = __webpack_require__(2);
+	var _eventemitter3 = __webpack_require__(3);
 	
 	var _eventemitter32 = _interopRequireDefault(_eventemitter3);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _vendorOrbitControls = __webpack_require__(39);
+	var _vendorOrbitControls = __webpack_require__(5);
 	
 	var _vendorOrbitControls2 = _interopRequireDefault(_vendorOrbitControls);
 	
-	var _TweenLite = __webpack_require__(41);
+	var _TweenLite = __webpack_require__(7);
 	
 	var _TweenLite2 = _interopRequireDefault(_TweenLite);
 	
@@ -5859,7 +616,308 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.orbit = noNew;
 
 /***/ }),
-/* 39 */
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var has = Object.prototype.hasOwnProperty;
+	
+	//
+	// We store our EE objects in a plain object whose properties are event names.
+	// If `Object.create(null)` is not supported we prefix the event names with a
+	// `~` to make sure that the built-in object properties are not overridden or
+	// used as an attack vector.
+	// We also assume that `Object.create(null)` is available when the event name
+	// is an ES6 Symbol.
+	//
+	var prefix = typeof Object.create !== 'function' ? '~' : false;
+	
+	/**
+	 * Representation of a single EventEmitter function.
+	 *
+	 * @param {Function} fn Event handler to be called.
+	 * @param {Mixed} context Context for function execution.
+	 * @param {Boolean} [once=false] Only emit once
+	 * @api private
+	 */
+	function EE(fn, context, once) {
+	  this.fn = fn;
+	  this.context = context;
+	  this.once = once || false;
+	}
+	
+	/**
+	 * Minimal EventEmitter interface that is molded against the Node.js
+	 * EventEmitter interface.
+	 *
+	 * @constructor
+	 * @api public
+	 */
+	function EventEmitter() { /* Nothing to set */ }
+	
+	/**
+	 * Hold the assigned EventEmitters by name.
+	 *
+	 * @type {Object}
+	 * @private
+	 */
+	EventEmitter.prototype._events = undefined;
+	
+	/**
+	 * Return an array listing the events for which the emitter has registered
+	 * listeners.
+	 *
+	 * @returns {Array}
+	 * @api public
+	 */
+	EventEmitter.prototype.eventNames = function eventNames() {
+	  var events = this._events
+	    , names = []
+	    , name;
+	
+	  if (!events) return names;
+	
+	  for (name in events) {
+	    if (has.call(events, name)) names.push(prefix ? name.slice(1) : name);
+	  }
+	
+	  if (Object.getOwnPropertySymbols) {
+	    return names.concat(Object.getOwnPropertySymbols(events));
+	  }
+	
+	  return names;
+	};
+	
+	/**
+	 * Return a list of assigned event listeners.
+	 *
+	 * @param {String} event The events that should be listed.
+	 * @param {Boolean} exists We only need to know if there are listeners.
+	 * @returns {Array|Boolean}
+	 * @api public
+	 */
+	EventEmitter.prototype.listeners = function listeners(event, exists) {
+	  var evt = prefix ? prefix + event : event
+	    , available = this._events && this._events[evt];
+	
+	  if (exists) return !!available;
+	  if (!available) return [];
+	  if (available.fn) return [available.fn];
+	
+	  for (var i = 0, l = available.length, ee = new Array(l); i < l; i++) {
+	    ee[i] = available[i].fn;
+	  }
+	
+	  return ee;
+	};
+	
+	/**
+	 * Emit an event to all registered event listeners.
+	 *
+	 * @param {String} event The name of the event.
+	 * @returns {Boolean} Indication if we've emitted an event.
+	 * @api public
+	 */
+	EventEmitter.prototype.emit = function emit(event, a1, a2, a3, a4, a5) {
+	  var evt = prefix ? prefix + event : event;
+	
+	  if (!this._events || !this._events[evt]) return false;
+	
+	  var listeners = this._events[evt]
+	    , len = arguments.length
+	    , args
+	    , i;
+	
+	  if ('function' === typeof listeners.fn) {
+	    if (listeners.once) this.removeListener(event, listeners.fn, undefined, true);
+	
+	    switch (len) {
+	      case 1: return listeners.fn.call(listeners.context), true;
+	      case 2: return listeners.fn.call(listeners.context, a1), true;
+	      case 3: return listeners.fn.call(listeners.context, a1, a2), true;
+	      case 4: return listeners.fn.call(listeners.context, a1, a2, a3), true;
+	      case 5: return listeners.fn.call(listeners.context, a1, a2, a3, a4), true;
+	      case 6: return listeners.fn.call(listeners.context, a1, a2, a3, a4, a5), true;
+	    }
+	
+	    for (i = 1, args = new Array(len -1); i < len; i++) {
+	      args[i - 1] = arguments[i];
+	    }
+	
+	    listeners.fn.apply(listeners.context, args);
+	  } else {
+	    var length = listeners.length
+	      , j;
+	
+	    for (i = 0; i < length; i++) {
+	      if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
+	
+	      switch (len) {
+	        case 1: listeners[i].fn.call(listeners[i].context); break;
+	        case 2: listeners[i].fn.call(listeners[i].context, a1); break;
+	        case 3: listeners[i].fn.call(listeners[i].context, a1, a2); break;
+	        default:
+	          if (!args) for (j = 1, args = new Array(len -1); j < len; j++) {
+	            args[j - 1] = arguments[j];
+	          }
+	
+	          listeners[i].fn.apply(listeners[i].context, args);
+	      }
+	    }
+	  }
+	
+	  return true;
+	};
+	
+	/**
+	 * Register a new EventListener for the given event.
+	 *
+	 * @param {String} event Name of the event.
+	 * @param {Function} fn Callback function.
+	 * @param {Mixed} [context=this] The context of the function.
+	 * @api public
+	 */
+	EventEmitter.prototype.on = function on(event, fn, context) {
+	  var listener = new EE(fn, context || this)
+	    , evt = prefix ? prefix + event : event;
+	
+	  if (!this._events) this._events = prefix ? {} : Object.create(null);
+	  if (!this._events[evt]) this._events[evt] = listener;
+	  else {
+	    if (!this._events[evt].fn) this._events[evt].push(listener);
+	    else this._events[evt] = [
+	      this._events[evt], listener
+	    ];
+	  }
+	
+	  return this;
+	};
+	
+	/**
+	 * Add an EventListener that's only called once.
+	 *
+	 * @param {String} event Name of the event.
+	 * @param {Function} fn Callback function.
+	 * @param {Mixed} [context=this] The context of the function.
+	 * @api public
+	 */
+	EventEmitter.prototype.once = function once(event, fn, context) {
+	  var listener = new EE(fn, context || this, true)
+	    , evt = prefix ? prefix + event : event;
+	
+	  if (!this._events) this._events = prefix ? {} : Object.create(null);
+	  if (!this._events[evt]) this._events[evt] = listener;
+	  else {
+	    if (!this._events[evt].fn) this._events[evt].push(listener);
+	    else this._events[evt] = [
+	      this._events[evt], listener
+	    ];
+	  }
+	
+	  return this;
+	};
+	
+	/**
+	 * Remove event listeners.
+	 *
+	 * @param {String} event The event we want to remove.
+	 * @param {Function} fn The listener that we need to find.
+	 * @param {Mixed} context Only remove listeners matching this context.
+	 * @param {Boolean} once Only remove once listeners.
+	 * @api public
+	 */
+	EventEmitter.prototype.removeListener = function removeListener(event, fn, context, once) {
+	  var evt = prefix ? prefix + event : event;
+	
+	  if (!this._events || !this._events[evt]) return this;
+	
+	  var listeners = this._events[evt]
+	    , events = [];
+	
+	  if (fn) {
+	    if (listeners.fn) {
+	      if (
+	           listeners.fn !== fn
+	        || (once && !listeners.once)
+	        || (context && listeners.context !== context)
+	      ) {
+	        events.push(listeners);
+	      }
+	    } else {
+	      for (var i = 0, length = listeners.length; i < length; i++) {
+	        if (
+	             listeners[i].fn !== fn
+	          || (once && !listeners[i].once)
+	          || (context && listeners[i].context !== context)
+	        ) {
+	          events.push(listeners[i]);
+	        }
+	      }
+	    }
+	  }
+	
+	  //
+	  // Reset the array, or remove it completely if we have no more listeners.
+	  //
+	  if (events.length) {
+	    this._events[evt] = events.length === 1 ? events[0] : events;
+	  } else {
+	    delete this._events[evt];
+	  }
+	
+	  return this;
+	};
+	
+	/**
+	 * Remove all listeners or only the listeners for the specified event.
+	 *
+	 * @param {String} event The event want to remove all listeners for.
+	 * @api public
+	 */
+	EventEmitter.prototype.removeAllListeners = function removeAllListeners(event) {
+	  if (!this._events) return this;
+	
+	  if (event) delete this._events[prefix ? prefix + event : event];
+	  else this._events = prefix ? {} : Object.create(null);
+	
+	  return this;
+	};
+	
+	//
+	// Alias methods names because people roll like that.
+	//
+	EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
+	EventEmitter.prototype.addListener = EventEmitter.prototype.on;
+	
+	//
+	// This function doesn't apply anymore.
+	//
+	EventEmitter.prototype.setMaxListeners = function setMaxListeners() {
+	  return this;
+	};
+	
+	//
+	// Expose the prefix.
+	//
+	EventEmitter.prefixed = prefix;
+	
+	//
+	// Expose the module.
+	//
+	if (true) {
+	  module.exports = EventEmitter;
+	}
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -5871,11 +929,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	// jscs:disable
 	/* eslint-disable */
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _hammerjs = __webpack_require__(40);
+	var _hammerjs = __webpack_require__(6);
 	
 	var _hammerjs2 = _interopRequireDefault(_hammerjs);
 	
@@ -7083,7 +2141,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 40 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
@@ -9732,13 +4790,387 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 41 */
+/* 7 */
 /***/ (function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_41__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 
 /***/ }),
-/* 42 */
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _LatLon = __webpack_require__(9);
+	
+	var _Point = __webpack_require__(10);
+	
+	var Geo = {};
+	
+	// Radius / WGS84 semi-major axis
+	Geo.R = 6378137;
+	Geo.MAX_LATITUDE = 85.0511287798;
+	
+	// WGS84 eccentricity
+	Geo.ECC = 0.081819191;
+	Geo.ECC2 = 0.081819191 * 0.081819191;
+	
+	// Multiplier is used to expand or compress the WebGL coordinate space relative
+	// to the EPSG:3857 / Pseudo-Mercator coordinate space (metres).
+	//
+	// This is useful for keeping coordinate calculations to smaller numbers and
+	// helps increase accuracy of things like the z-buffer, object intersection,
+	// and camera near and far clipping.
+	//
+	// A multiplier of 1 would mean a 1:1 mapping between WebGL and EPSG:3857
+	// coordinates (1 EPSG:3857 metre === 1 WebGL unit)
+	//
+	// A multiplier of 0.1 would mean a 1:0.1 mapping between WebGL and EPSG:3857
+	// coordinates (1 EPSG:3857 metre === 0.1 WebGL units)
+	Geo.multiplier = 0.1;
+	
+	Geo.project = function (latlon) {
+	  var d = Math.PI / 180;
+	  var max = Geo.MAX_LATITUDE;
+	  var lat = Math.max(Math.min(max, latlon.lat), -max);
+	  var sin = Math.sin(lat * d);
+	
+	  return (0, _Point.point)(Geo.R * latlon.lon * d, Geo.R * Math.log((1 + sin) / (1 - sin)) / 2);
+	}, Geo.unproject = function (point) {
+	  var d = 180 / Math.PI;
+	
+	  return (0, _LatLon.latLon)((2 * Math.atan(Math.exp(point.y / Geo.R)) - Math.PI / 2) * d, point.x * d / Geo.R);
+	};
+	
+	// Converts geo coords to pixel / WebGL ones
+	// This just reverses the Y axis to match WebGL
+	Geo.latLonToPoint = function (latlon) {
+	  var projected = Geo.project(latlon);
+	  projected.y *= -1;
+	
+	  projected.x *= Geo.multiplier;
+	  projected.y *= Geo.multiplier;
+	
+	  return projected;
+	};
+	
+	// Converts pixel / WebGL coords to geo coords
+	// This just reverses the Y axis to match WebGL
+	Geo.pointToLatLon = function (point) {
+	  var _point = (0, _Point.point)(point.x, point.y * -1);
+	
+	  _point.x /= Geo.multiplier;
+	  _point.y /= Geo.multiplier;
+	
+	  return Geo.unproject(_point);
+	};
+	
+	// Scale factor for converting between real metres and projected metres
+	//
+	// projectedMetres = realMetres * pointScale
+	// realMetres = projectedMetres / pointScale
+	//
+	// Accurate scale factor uses proper Web Mercator scaling
+	// See pg.9: http://www.hydrometronics.com/downloads/Web%20Mercator%20-%20Non-Conformal,%20Non-Mercator%20(notes).pdf
+	// See: http://jsfiddle.net/robhawkes/yws924cf/
+	Geo.pointScale = function (latlon, accurate) {
+	  var rad = Math.PI / 180;
+	
+	  var k;
+	
+	  if (!accurate) {
+	    k = 1 / Math.cos(latlon.lat * rad);
+	
+	    // [scaleX, scaleY]
+	    return [k, k];
+	  } else {
+	    var lat = latlon.lat * rad;
+	    var lon = latlon.lon * rad;
+	
+	    var a = Geo.R;
+	
+	    var sinLat = Math.sin(lat);
+	    var sinLat2 = sinLat * sinLat;
+	
+	    var cosLat = Math.cos(lat);
+	
+	    // Radius meridian
+	    var p = a * (1 - Geo.ECC2) / Math.pow(1 - Geo.ECC2 * sinLat2, 3 / 2);
+	
+	    // Radius prime meridian
+	    var v = a / Math.sqrt(1 - Geo.ECC2 * sinLat2);
+	
+	    // Scale N/S
+	    var h = a / p / cosLat;
+	
+	    // Scale E/W
+	    k = a / v / cosLat;
+	
+	    // [scaleX, scaleY]
+	    return [k, h];
+	  }
+	};
+	
+	// Convert real metres to projected units
+	//
+	// Latitude scale is chosen because it fluctuates more than longitude
+	Geo.metresToProjected = function (metres, pointScale) {
+	  return metres * pointScale[1];
+	};
+	
+	// Convert projected units to real metres
+	//
+	// Latitude scale is chosen because it fluctuates more than longitude
+	Geo.projectedToMetres = function (projectedUnits, pointScale) {
+	  return projectedUnits / pointScale[1];
+	};
+	
+	// Convert real metres to a value in world (WebGL) units
+	Geo.metresToWorld = function (metres, pointScale) {
+	  // Transform metres to projected metres using the latitude point scale
+	  //
+	  // Latitude scale is chosen because it fluctuates more than longitude
+	  var projectedMetres = Geo.metresToProjected(metres, pointScale);
+	  return projectedMetres * Geo.multiplier;
+	};
+	
+	// Convert world (WebGL) units to a value in real metres
+	Geo.worldToMetres = function (worldUnits, pointScale) {
+	  var projectedUnits = worldUnits;
+	  var realMetres = Geo.projectedToMetres(projectedUnits, pointScale);
+	
+	  return realMetres / Geo.multiplier;
+	};
+	
+	// Returns the world width in pixels for a given zoom, assuming tile dimensions
+	// of 256x256 pixels
+	Geo.scale = function (zoom) {
+	  return 256 * Math.pow(2, zoom);
+	};
+	
+	// Returns zoom level for a given scale value
+	// This only works with a scale value that is based on map pixel width
+	Geo.zoom = function (scale) {
+	  return Math.log(scale / 256) / Math.LN2;
+	};
+	
+	// Distance between two geographical points using spherical law of cosines
+	// approximation or Haversine
+	//
+	// See: http://www.movable-type.co.uk/scripts/latlong.html
+	Geo.distance = function (latlon1, latlon2, accurate) {
+	  var rad = Math.PI / 180;
+	
+	  var lat1;
+	  var lat2;
+	
+	  var a;
+	
+	  if (!accurate) {
+	    lat1 = latlon1.lat * rad;
+	    lat2 = latlon2.lat * rad;
+	
+	    a = Math.sin(lat1) * Math.sin(lat2) + Math.cos(lat1) * Math.cos(lat2) * Math.cos((latlon2.lon - latlon1.lon) * rad);
+	
+	    return Geo.R * Math.acos(Math.min(a, 1));
+	  } else {
+	    lat1 = latlon1.lat * rad;
+	    lat2 = latlon2.lat * rad;
+	
+	    var lon1 = latlon1.lon * rad;
+	    var lon2 = latlon2.lon * rad;
+	
+	    var deltaLat = lat2 - lat1;
+	    var deltaLon = lon2 - lon1;
+	
+	    var halfDeltaLat = deltaLat / 2;
+	    var halfDeltaLon = deltaLon / 2;
+	
+	    a = Math.sin(halfDeltaLat) * Math.sin(halfDeltaLat) + Math.cos(lat1) * Math.cos(lat2) * Math.sin(halfDeltaLon) * Math.sin(halfDeltaLon);
+	
+	    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+	
+	    return Geo.R * c;
+	  }
+	};
+	
+	Geo.bounds = (function () {
+	  var d = Geo.R * Math.PI * Geo.multiplier;
+	  return [[-d, -d], [d, d]];
+	})();
+	
+	exports['default'] = Geo;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	/*
+	 * LatLon is a helper class for ensuring consistent geographic coordinates.
+	 *
+	 * Based on:
+	 * https://github.com/Leaflet/Leaflet/blob/master/src/geo/LatLng.js
+	 */
+	
+	var LatLon = (function () {
+	  function LatLon(lat, lon, alt) {
+	    _classCallCheck(this, LatLon);
+	
+	    if (isNaN(lat) || isNaN(lon)) {
+	      throw new Error('Invalid LatLon object: (' + lat + ', ' + lon + ')');
+	    }
+	
+	    this.lat = +lat;
+	    this.lon = +lon;
+	
+	    if (alt !== undefined) {
+	      this.alt = +alt;
+	    }
+	  }
+	
+	  _createClass(LatLon, [{
+	    key: 'clone',
+	    value: function clone() {
+	      return new LatLon(this.lat, this.lon, this.alt);
+	    }
+	  }]);
+	
+	  return LatLon;
+	})();
+	
+	exports['default'] = LatLon;
+	
+	// Accepts (LatLon), ([lat, lon, alt]), ([lat, lon]) and (lat, lon, alt)
+	// Also converts between lng and lon
+	var noNew = function noNew(a, b, c) {
+	  if (a instanceof LatLon) {
+	    return a;
+	  }
+	  if (Array.isArray(a) && typeof a[0] !== 'object') {
+	    if (a.length === 3) {
+	      return new LatLon(a[0], a[1], a[2]);
+	    }
+	    if (a.length === 2) {
+	      return new LatLon(a[0], a[1]);
+	    }
+	    return null;
+	  }
+	  if (a === undefined || a === null) {
+	    return a;
+	  }
+	  if (typeof a === 'object' && 'lat' in a) {
+	    return new LatLon(a.lat, 'lng' in a ? a.lng : a.lon, a.alt);
+	  }
+	  if (b === undefined) {
+	    return null;
+	  }
+	  return new LatLon(a, b, c);
+	};
+	
+	// Initialise without requiring new keyword
+	exports.latLon = noNew;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	/*
+	 * Point is a helper class for ensuring consistent world positions.
+	 *
+	 * Based on:
+	 * https://github.com/Leaflet/Leaflet/blob/master/src/geo/Point.js
+	 */
+	
+	var Point = (function () {
+	  function Point(x, y, round) {
+	    _classCallCheck(this, Point);
+	
+	    this.x = round ? Math.round(x) : x;
+	    this.y = round ? Math.round(y) : y;
+	  }
+	
+	  _createClass(Point, [{
+	    key: "clone",
+	    value: function clone() {
+	      return new Point(this.x, this.y);
+	    }
+	
+	    // Non-destructive
+	  }, {
+	    key: "add",
+	    value: function add(point) {
+	      return this.clone()._add(_point(point));
+	    }
+	
+	    // Destructive
+	  }, {
+	    key: "_add",
+	    value: function _add(point) {
+	      this.x += point.x;
+	      this.y += point.y;
+	      return this;
+	    }
+	
+	    // Non-destructive
+	  }, {
+	    key: "subtract",
+	    value: function subtract(point) {
+	      return this.clone()._subtract(_point(point));
+	    }
+	
+	    // Destructive
+	  }, {
+	    key: "_subtract",
+	    value: function _subtract(point) {
+	      this.x -= point.x;
+	      this.y -= point.y;
+	      return this;
+	    }
+	  }]);
+	
+	  return Point;
+	})();
+	
+	exports["default"] = Point;
+	
+	// Accepts (point), ([x, y]) and (x, y, round)
+	var _point = function _point(x, y, round) {
+	  if (x instanceof Point) {
+	    return x;
+	  }
+	  if (Array.isArray(x)) {
+	    return new Point(x[0], x[1]);
+	  }
+	  if (x === undefined || x === null) {
+	    return x;
+	  }
+	  return new Point(x, y, round);
+	};
+	
+	// Initialise without requiring new keyword
+	exports.point = _point;
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -9755,11 +5187,1322 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _Layer2 = __webpack_require__(31);
+	var _eventemitter3 = __webpack_require__(3);
+	
+	var _eventemitter32 = _interopRequireDefault(_eventemitter3);
+	
+	var _lodashAssign = __webpack_require__(12);
+	
+	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
+	
+	var _shortid = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"shortid\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _shortid2 = _interopRequireDefault(_shortid);
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	var _engineScene = __webpack_require__(13);
+	
+	var _engineScene2 = _interopRequireDefault(_engineScene);
+	
+	var _vendorCSS3DRenderer = __webpack_require__(14);
+	
+	var _vendorCSS2DRenderer = __webpack_require__(15);
+	
+	// TODO: Make sure nothing is left behind in the heap after calling destroy()
+	
+	// TODO: Need a single move method that handles moving all the various object
+	// layers so that the DOM layers stay in sync with the 3D layer
+	
+	// TODO: Double check that objects within the _object3D Object3D parent are frustum
+	// culled even if the layer position stays at the default (0,0,0) and the child
+	// objects are positioned much further away
+	//
+	// Or does the layer being at (0,0,0) prevent the child objects from being
+	// culled because the layer parent is effectively always in view even if the
+	// child is actually out of camera
+	
+	var Layer = (function (_EventEmitter) {
+	  _inherits(Layer, _EventEmitter);
+	
+	  function Layer(options) {
+	    _classCallCheck(this, Layer);
+	
+	    _get(Object.getPrototypeOf(Layer.prototype), 'constructor', this).call(this);
+	
+	    var defaults = {
+	      id: _shortid2['default'].generate(),
+	      output: true,
+	      outputToScene: true
+	    };
+	
+	    this._options = (0, _lodashAssign2['default'])({}, defaults, options);
+	
+	    if (this.isOutput()) {
+	      this._object3D = new _three2['default'].Object3D();
+	
+	      this._dom3D = document.createElement('div');
+	      this._domObject3D = new _vendorCSS3DRenderer.CSS3DObject(this._dom3D);
+	
+	      this._dom2D = document.createElement('div');
+	      this._domObject2D = new _vendorCSS2DRenderer.CSS2DObject(this._dom2D);
+	    }
+	  }
+	
+	  // Add THREE object directly to layer
+	
+	  _createClass(Layer, [{
+	    key: 'add',
+	    value: function add(object) {
+	      this._object3D.add(object);
+	    }
+	
+	    // Remove THREE object from to layer
+	  }, {
+	    key: 'remove',
+	    value: function remove(object) {
+	      this._object3D.remove(object);
+	    }
+	  }, {
+	    key: 'addDOM3D',
+	    value: function addDOM3D(object) {
+	      this._domObject3D.add(object);
+	    }
+	  }, {
+	    key: 'removeDOM3D',
+	    value: function removeDOM3D(object) {
+	      this._domObject3D.remove(object);
+	    }
+	  }, {
+	    key: 'addDOM2D',
+	    value: function addDOM2D(object) {
+	      this._domObject2D.add(object);
+	    }
+	  }, {
+	    key: 'removeDOM2D',
+	    value: function removeDOM2D(object) {
+	      this._domObject2D.remove(object);
+	    }
+	
+	    // Add layer to world instance and store world reference
+	  }, {
+	    key: 'addTo',
+	    value: function addTo(world) {
+	      return world.addLayer(this);
+	    }
+	
+	    // Internal method called by World.addLayer to actually add the layer
+	  }, {
+	    key: '_addToWorld',
+	    value: function _addToWorld(world) {
+	      var _this = this;
+	
+	      this._world = world;
+	
+	      return new Promise(function (resolve, reject) {
+	        _this._onAdd(world).then(function () {
+	          _this.emit('added');
+	          resolve(_this);
+	        })['catch'](reject);
+	      });
+	    }
+	
+	    // Must return a promise
+	  }, {
+	    key: '_onAdd',
+	    value: function _onAdd(world) {
+	      return Promise.resolve(this);
+	    }
+	  }, {
+	    key: 'getPickingId',
+	    value: function getPickingId() {
+	      if (this._world._engine._picking) {
+	        return this._world._engine._picking.getNextId();
+	      }
+	
+	      return false;
+	    }
+	
+	    // TODO: Tidy this up and don't access so many private properties to work
+	  }, {
+	    key: 'addToPicking',
+	    value: function addToPicking(object) {
+	      if (!this._world._engine._picking) {
+	        return;
+	      }
+	
+	      this._world._engine._picking.add(object);
+	    }
+	  }, {
+	    key: 'removeFromPicking',
+	    value: function removeFromPicking(object) {
+	      if (!this._world._engine._picking) {
+	        return;
+	      }
+	
+	      this._world._engine._picking.remove(object);
+	    }
+	  }, {
+	    key: 'isOutput',
+	    value: function isOutput() {
+	      return this._options.output;
+	    }
+	  }, {
+	    key: 'isOutputToScene',
+	    value: function isOutputToScene() {
+	      return this._options.outputToScene;
+	    }
+	
+	    // TODO: Also hide any attached DOM layers
+	  }, {
+	    key: 'hide',
+	    value: function hide() {
+	      this._object3D.visible = false;
+	
+	      if (this._pickingMesh) {
+	        this._pickingMesh.visible = false;
+	      }
+	    }
+	
+	    // TODO: Also show any attached DOM layers
+	  }, {
+	    key: 'show',
+	    value: function show() {
+	      this._object3D.visible = true;
+	
+	      if (this._pickingMesh) {
+	        this._pickingMesh.visible = true;
+	      }
+	    }
+	
+	    // Destroys the layer and removes it from the scene and memory
+	  }, {
+	    key: 'destroy',
+	    value: function destroy() {
+	      if (this._object3D && this._object3D.children) {
+	        // Remove everything else in the layer
+	        var child;
+	        for (var i = this._object3D.children.length - 1; i >= 0; i--) {
+	          child = this._object3D.children[i];
+	
+	          if (!child) {
+	            continue;
+	          }
+	
+	          this.remove(child);
+	
+	          if (child.geometry) {
+	            // Dispose of mesh and materials
+	            child.geometry.dispose();
+	            child.geometry = null;
+	          }
+	
+	          if (child.material) {
+	            if (child.material.map) {
+	              child.material.map.dispose();
+	              child.material.map = null;
+	            }
+	
+	            child.material.dispose();
+	            child.material = null;
+	          }
+	        }
+	      }
+	
+	      if (this._domObject3D && this._domObject3D.children) {
+	        // Remove everything else in the layer
+	        var child;
+	        for (var i = this._domObject3D.children.length - 1; i >= 0; i--) {
+	          child = this._domObject3D.children[i];
+	
+	          if (!child) {
+	            continue;
+	          }
+	
+	          this.removeDOM3D(child);
+	        }
+	      }
+	
+	      if (this._domObject2D && this._domObject2D.children) {
+	        // Remove everything else in the layer
+	        var child;
+	        for (var i = this._domObject2D.children.length - 1; i >= 0; i--) {
+	          child = this._domObject2D.children[i];
+	
+	          if (!child) {
+	            continue;
+	          }
+	
+	          this.removeDOM2D(child);
+	        }
+	      }
+	
+	      this._domObject3D = null;
+	      this._domObject2D = null;
+	
+	      this._world = null;
+	      this._object3D = null;
+	    }
+	  }]);
+	
+	  return Layer;
+	})(_eventemitter32['default']);
+	
+	exports['default'] = Layer;
+	
+	var noNew = function noNew(options) {
+	  return new Layer(options);
+	};
+	
+	exports.layer = noNew;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	/**
+	 * lodash (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+	 * Released under MIT license <https://lodash.com/license>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 */
+	
+	/** Used as references for various `Number` constants. */
+	var MAX_SAFE_INTEGER = 9007199254740991;
+	
+	/** `Object#toString` result references. */
+	var argsTag = '[object Arguments]',
+	    funcTag = '[object Function]',
+	    genTag = '[object GeneratorFunction]';
+	
+	/** Used to detect unsigned integer values. */
+	var reIsUint = /^(?:0|[1-9]\d*)$/;
+	
+	/**
+	 * A faster alternative to `Function#apply`, this function invokes `func`
+	 * with the `this` binding of `thisArg` and the arguments of `args`.
+	 *
+	 * @private
+	 * @param {Function} func The function to invoke.
+	 * @param {*} thisArg The `this` binding of `func`.
+	 * @param {Array} args The arguments to invoke `func` with.
+	 * @returns {*} Returns the result of `func`.
+	 */
+	function apply(func, thisArg, args) {
+	  switch (args.length) {
+	    case 0: return func.call(thisArg);
+	    case 1: return func.call(thisArg, args[0]);
+	    case 2: return func.call(thisArg, args[0], args[1]);
+	    case 3: return func.call(thisArg, args[0], args[1], args[2]);
+	  }
+	  return func.apply(thisArg, args);
+	}
+	
+	/**
+	 * The base implementation of `_.times` without support for iteratee shorthands
+	 * or max array length checks.
+	 *
+	 * @private
+	 * @param {number} n The number of times to invoke `iteratee`.
+	 * @param {Function} iteratee The function invoked per iteration.
+	 * @returns {Array} Returns the array of results.
+	 */
+	function baseTimes(n, iteratee) {
+	  var index = -1,
+	      result = Array(n);
+	
+	  while (++index < n) {
+	    result[index] = iteratee(index);
+	  }
+	  return result;
+	}
+	
+	/**
+	 * Creates a unary function that invokes `func` with its argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+	
+	/** Used for built-in method references. */
+	var objectProto = Object.prototype;
+	
+	/** Used to check objects for own properties. */
+	var hasOwnProperty = objectProto.hasOwnProperty;
+	
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+	
+	/** Built-in value references. */
+	var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+	
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeKeys = overArg(Object.keys, Object),
+	    nativeMax = Math.max;
+	
+	/** Detect if properties shadowing those on `Object.prototype` are non-enumerable. */
+	var nonEnumShadows = !propertyIsEnumerable.call({ 'valueOf': 1 }, 'valueOf');
+	
+	/**
+	 * Creates an array of the enumerable property names of the array-like `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @param {boolean} inherited Specify returning inherited property names.
+	 * @returns {Array} Returns the array of property names.
+	 */
+	function arrayLikeKeys(value, inherited) {
+	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+	  // Safari 9 makes `arguments.length` enumerable in strict mode.
+	  var result = (isArray(value) || isArguments(value))
+	    ? baseTimes(value.length, String)
+	    : [];
+	
+	  var length = result.length,
+	      skipIndexes = !!length;
+	
+	  for (var key in value) {
+	    if ((inherited || hasOwnProperty.call(value, key)) &&
+	        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+	      result.push(key);
+	    }
+	  }
+	  return result;
+	}
+	
+	/**
+	 * Assigns `value` to `key` of `object` if the existing value is not equivalent
+	 * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+	 * for equality comparisons.
+	 *
+	 * @private
+	 * @param {Object} object The object to modify.
+	 * @param {string} key The key of the property to assign.
+	 * @param {*} value The value to assign.
+	 */
+	function assignValue(object, key, value) {
+	  var objValue = object[key];
+	  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
+	      (value === undefined && !(key in object))) {
+	    object[key] = value;
+	  }
+	}
+	
+	/**
+	 * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the array of property names.
+	 */
+	function baseKeys(object) {
+	  if (!isPrototype(object)) {
+	    return nativeKeys(object);
+	  }
+	  var result = [];
+	  for (var key in Object(object)) {
+	    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+	      result.push(key);
+	    }
+	  }
+	  return result;
+	}
+	
+	/**
+	 * The base implementation of `_.rest` which doesn't validate or coerce arguments.
+	 *
+	 * @private
+	 * @param {Function} func The function to apply a rest parameter to.
+	 * @param {number} [start=func.length-1] The start position of the rest parameter.
+	 * @returns {Function} Returns the new function.
+	 */
+	function baseRest(func, start) {
+	  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
+	  return function() {
+	    var args = arguments,
+	        index = -1,
+	        length = nativeMax(args.length - start, 0),
+	        array = Array(length);
+	
+	    while (++index < length) {
+	      array[index] = args[start + index];
+	    }
+	    index = -1;
+	    var otherArgs = Array(start + 1);
+	    while (++index < start) {
+	      otherArgs[index] = args[index];
+	    }
+	    otherArgs[start] = array;
+	    return apply(func, this, otherArgs);
+	  };
+	}
+	
+	/**
+	 * Copies properties of `source` to `object`.
+	 *
+	 * @private
+	 * @param {Object} source The object to copy properties from.
+	 * @param {Array} props The property identifiers to copy.
+	 * @param {Object} [object={}] The object to copy properties to.
+	 * @param {Function} [customizer] The function to customize copied values.
+	 * @returns {Object} Returns `object`.
+	 */
+	function copyObject(source, props, object, customizer) {
+	  object || (object = {});
+	
+	  var index = -1,
+	      length = props.length;
+	
+	  while (++index < length) {
+	    var key = props[index];
+	
+	    var newValue = customizer
+	      ? customizer(object[key], source[key], key, object, source)
+	      : undefined;
+	
+	    assignValue(object, key, newValue === undefined ? source[key] : newValue);
+	  }
+	  return object;
+	}
+	
+	/**
+	 * Creates a function like `_.assign`.
+	 *
+	 * @private
+	 * @param {Function} assigner The function to assign values.
+	 * @returns {Function} Returns the new assigner function.
+	 */
+	function createAssigner(assigner) {
+	  return baseRest(function(object, sources) {
+	    var index = -1,
+	        length = sources.length,
+	        customizer = length > 1 ? sources[length - 1] : undefined,
+	        guard = length > 2 ? sources[2] : undefined;
+	
+	    customizer = (assigner.length > 3 && typeof customizer == 'function')
+	      ? (length--, customizer)
+	      : undefined;
+	
+	    if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+	      customizer = length < 3 ? undefined : customizer;
+	      length = 1;
+	    }
+	    object = Object(object);
+	    while (++index < length) {
+	      var source = sources[index];
+	      if (source) {
+	        assigner(object, source, index, customizer);
+	      }
+	    }
+	    return object;
+	  });
+	}
+	
+	/**
+	 * Checks if `value` is a valid array-like index.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+	 * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+	 */
+	function isIndex(value, length) {
+	  length = length == null ? MAX_SAFE_INTEGER : length;
+	  return !!length &&
+	    (typeof value == 'number' || reIsUint.test(value)) &&
+	    (value > -1 && value % 1 == 0 && value < length);
+	}
+	
+	/**
+	 * Checks if the given arguments are from an iteratee call.
+	 *
+	 * @private
+	 * @param {*} value The potential iteratee value argument.
+	 * @param {*} index The potential iteratee index or key argument.
+	 * @param {*} object The potential iteratee object argument.
+	 * @returns {boolean} Returns `true` if the arguments are from an iteratee call,
+	 *  else `false`.
+	 */
+	function isIterateeCall(value, index, object) {
+	  if (!isObject(object)) {
+	    return false;
+	  }
+	  var type = typeof index;
+	  if (type == 'number'
+	        ? (isArrayLike(object) && isIndex(index, object.length))
+	        : (type == 'string' && index in object)
+	      ) {
+	    return eq(object[index], value);
+	  }
+	  return false;
+	}
+	
+	/**
+	 * Checks if `value` is likely a prototype object.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+	 */
+	function isPrototype(value) {
+	  var Ctor = value && value.constructor,
+	      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+	
+	  return value === proto;
+	}
+	
+	/**
+	 * Performs a
+	 * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+	 * comparison between two values to determine if they are equivalent.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to compare.
+	 * @param {*} other The other value to compare.
+	 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+	 * @example
+	 *
+	 * var object = { 'a': 1 };
+	 * var other = { 'a': 1 };
+	 *
+	 * _.eq(object, object);
+	 * // => true
+	 *
+	 * _.eq(object, other);
+	 * // => false
+	 *
+	 * _.eq('a', 'a');
+	 * // => true
+	 *
+	 * _.eq('a', Object('a'));
+	 * // => false
+	 *
+	 * _.eq(NaN, NaN);
+	 * // => true
+	 */
+	function eq(value, other) {
+	  return value === other || (value !== value && other !== other);
+	}
+	
+	/**
+	 * Checks if `value` is likely an `arguments` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isArguments(function() { return arguments; }());
+	 * // => true
+	 *
+	 * _.isArguments([1, 2, 3]);
+	 * // => false
+	 */
+	function isArguments(value) {
+	  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+	  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+	    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+	}
+	
+	/**
+	 * Checks if `value` is classified as an `Array` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+	 * @example
+	 *
+	 * _.isArray([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArray(document.body.children);
+	 * // => false
+	 *
+	 * _.isArray('abc');
+	 * // => false
+	 *
+	 * _.isArray(_.noop);
+	 * // => false
+	 */
+	var isArray = Array.isArray;
+	
+	/**
+	 * Checks if `value` is array-like. A value is considered array-like if it's
+	 * not a function and has a `value.length` that's an integer greater than or
+	 * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+	 * @example
+	 *
+	 * _.isArrayLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLike(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLike('abc');
+	 * // => true
+	 *
+	 * _.isArrayLike(_.noop);
+	 * // => false
+	 */
+	function isArrayLike(value) {
+	  return value != null && isLength(value.length) && !isFunction(value);
+	}
+	
+	/**
+	 * This method is like `_.isArrayLike` except that it also checks if `value`
+	 * is an object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an array-like object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * _.isArrayLikeObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject(document.body.children);
+	 * // => true
+	 *
+	 * _.isArrayLikeObject('abc');
+	 * // => false
+	 *
+	 * _.isArrayLikeObject(_.noop);
+	 * // => false
+	 */
+	function isArrayLikeObject(value) {
+	  return isObjectLike(value) && isArrayLike(value);
+	}
+	
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+	  var tag = isObject(value) ? objectToString.call(value) : '';
+	  return tag == funcTag || tag == genTag;
+	}
+	
+	/**
+	 * Checks if `value` is a valid array-like length.
+	 *
+	 * **Note:** This method is loosely based on
+	 * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+	 * @example
+	 *
+	 * _.isLength(3);
+	 * // => true
+	 *
+	 * _.isLength(Number.MIN_VALUE);
+	 * // => false
+	 *
+	 * _.isLength(Infinity);
+	 * // => false
+	 *
+	 * _.isLength('3');
+	 * // => false
+	 */
+	function isLength(value) {
+	  return typeof value == 'number' &&
+	    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+	}
+	
+	/**
+	 * Checks if `value` is the
+	 * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+	
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+	
+	/**
+	 * Assigns own enumerable string keyed properties of source objects to the
+	 * destination object. Source objects are applied from left to right.
+	 * Subsequent sources overwrite property assignments of previous sources.
+	 *
+	 * **Note:** This method mutates `object` and is loosely based on
+	 * [`Object.assign`](https://mdn.io/Object/assign).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.10.0
+	 * @category Object
+	 * @param {Object} object The destination object.
+	 * @param {...Object} [sources] The source objects.
+	 * @returns {Object} Returns `object`.
+	 * @see _.assignIn
+	 * @example
+	 *
+	 * function Foo() {
+	 *   this.a = 1;
+	 * }
+	 *
+	 * function Bar() {
+	 *   this.c = 3;
+	 * }
+	 *
+	 * Foo.prototype.b = 2;
+	 * Bar.prototype.d = 4;
+	 *
+	 * _.assign({ 'a': 0 }, new Foo, new Bar);
+	 * // => { 'a': 1, 'c': 3 }
+	 */
+	var assign = createAssigner(function(object, source) {
+	  if (nonEnumShadows || isPrototype(source) || isArrayLike(source)) {
+	    copyObject(source, keys(source), object);
+	    return;
+	  }
+	  for (var key in source) {
+	    if (hasOwnProperty.call(source, key)) {
+	      assignValue(object, key, source[key]);
+	    }
+	  }
+	});
+	
+	/**
+	 * Creates an array of the own enumerable property names of `object`.
+	 *
+	 * **Note:** Non-object values are coerced to objects. See the
+	 * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+	 * for more details.
+	 *
+	 * @static
+	 * @since 0.1.0
+	 * @memberOf _
+	 * @category Object
+	 * @param {Object} object The object to query.
+	 * @returns {Array} Returns the array of property names.
+	 * @example
+	 *
+	 * function Foo() {
+	 *   this.a = 1;
+	 *   this.b = 2;
+	 * }
+	 *
+	 * Foo.prototype.c = 3;
+	 *
+	 * _.keys(new Foo);
+	 * // => ['a', 'b'] (iteration order is not guaranteed)
+	 *
+	 * _.keys('hi');
+	 * // => ['0', '1']
+	 */
+	function keys(object) {
+	  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+	}
+	
+	module.exports = assign;
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	// This can be imported from anywhere and will still reference the same scene,
+	// though there is a helper reference in Engine.scene
+	
+	exports['default'] = (function () {
+	  var scene = new _three2['default'].Scene();
+	
+	  // TODO: Re-enable when this works with the skybox
+	  // scene.fog = new THREE.Fog(0xffffff, 1, 15000);
+	  return scene;
+	})();
+	
+	module.exports = exports['default'];
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	// jscs:disable
+	/* eslint-disable */
+	
+	/**
+	 * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
+	 * @author mrdoob / http://mrdoob.com/
+	 */
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	var CSS3DObject = function CSS3DObject(element) {
+	
+		_three2['default'].Object3D.call(this);
+	
+		this.element = element;
+		this.element.style.position = 'absolute';
+	
+		this.addEventListener('removed', function (event) {
+	
+			if (this.element.parentNode !== null) {
+	
+				this.element.parentNode.removeChild(this.element);
+			}
+		});
+	};
+	
+	CSS3DObject.prototype = Object.create(_three2['default'].Object3D.prototype);
+	CSS3DObject.prototype.constructor = CSS3DObject;
+	
+	var CSS3DSprite = function CSS3DSprite(element) {
+	
+		CSS3DObject.call(this, element);
+	};
+	
+	CSS3DSprite.prototype = Object.create(CSS3DObject.prototype);
+	CSS3DSprite.prototype.constructor = CSS3DSprite;
+	
+	//
+	
+	var CSS3DRenderer = function CSS3DRenderer() {
+	
+		console.log('THREE.CSS3DRenderer', _three2['default'].REVISION);
+	
+		var _width, _height;
+		var _widthHalf, _heightHalf;
+	
+		var matrix = new _three2['default'].Matrix4();
+	
+		var cache = {
+			camera: { fov: 0, style: '' },
+			objects: {}
+		};
+	
+		var domElement = document.createElement('div');
+		domElement.style.overflow = 'hidden';
+	
+		domElement.style.WebkitTransformStyle = 'preserve-3d';
+		domElement.style.MozTransformStyle = 'preserve-3d';
+		domElement.style.oTransformStyle = 'preserve-3d';
+		domElement.style.transformStyle = 'preserve-3d';
+	
+		this.domElement = domElement;
+	
+		var cameraElement = document.createElement('div');
+	
+		cameraElement.style.WebkitTransformStyle = 'preserve-3d';
+		cameraElement.style.MozTransformStyle = 'preserve-3d';
+		cameraElement.style.oTransformStyle = 'preserve-3d';
+		cameraElement.style.transformStyle = 'preserve-3d';
+	
+		domElement.appendChild(cameraElement);
+	
+		this.setClearColor = function () {};
+	
+		this.getSize = function () {
+	
+			return {
+				width: _width,
+				height: _height
+			};
+		};
+	
+		this.setSize = function (width, height) {
+	
+			_width = width;
+			_height = height;
+	
+			_widthHalf = _width / 2;
+			_heightHalf = _height / 2;
+	
+			domElement.style.width = width + 'px';
+			domElement.style.height = height + 'px';
+	
+			cameraElement.style.width = width + 'px';
+			cameraElement.style.height = height + 'px';
+		};
+	
+		var epsilon = function epsilon(value) {
+	
+			return Math.abs(value) < Number.EPSILON ? 0 : value;
+		};
+	
+		var getCameraCSSMatrix = function getCameraCSSMatrix(matrix) {
+	
+			var elements = matrix.elements;
+	
+			return 'matrix3d(' + epsilon(elements[0]) + ',' + epsilon(-elements[1]) + ',' + epsilon(elements[2]) + ',' + epsilon(elements[3]) + ',' + epsilon(elements[4]) + ',' + epsilon(-elements[5]) + ',' + epsilon(elements[6]) + ',' + epsilon(elements[7]) + ',' + epsilon(elements[8]) + ',' + epsilon(-elements[9]) + ',' + epsilon(elements[10]) + ',' + epsilon(elements[11]) + ',' + epsilon(elements[12]) + ',' + epsilon(-elements[13]) + ',' + epsilon(elements[14]) + ',' + epsilon(elements[15]) + ')';
+		};
+	
+		var getObjectCSSMatrix = function getObjectCSSMatrix(matrix) {
+	
+			var elements = matrix.elements;
+	
+			return 'translate3d(-50%,-50%,0) matrix3d(' + epsilon(elements[0]) + ',' + epsilon(elements[1]) + ',' + epsilon(elements[2]) + ',' + epsilon(elements[3]) + ',' + epsilon(-elements[4]) + ',' + epsilon(-elements[5]) + ',' + epsilon(-elements[6]) + ',' + epsilon(-elements[7]) + ',' + epsilon(elements[8]) + ',' + epsilon(elements[9]) + ',' + epsilon(elements[10]) + ',' + epsilon(elements[11]) + ',' + epsilon(elements[12]) + ',' + epsilon(elements[13]) + ',' + epsilon(elements[14]) + ',' + epsilon(elements[15]) + ')';
+		};
+	
+		var renderObject = function renderObject(object, camera) {
+	
+			if (object instanceof CSS3DObject) {
+	
+				var style;
+	
+				if (object instanceof CSS3DSprite) {
+	
+					// http://swiftcoder.wordpress.com/2008/11/25/constructing-a-billboard-matrix/
+	
+					matrix.copy(camera.matrixWorldInverse);
+					matrix.transpose();
+					matrix.copyPosition(object.matrixWorld);
+					matrix.scale(object.scale);
+	
+					matrix.elements[3] = 0;
+					matrix.elements[7] = 0;
+					matrix.elements[11] = 0;
+					matrix.elements[15] = 1;
+	
+					style = getObjectCSSMatrix(matrix);
+				} else {
+	
+					style = getObjectCSSMatrix(object.matrixWorld);
+				}
+	
+				var element = object.element;
+				var cachedStyle = cache.objects[object.id];
+	
+				if (cachedStyle === undefined || cachedStyle !== style) {
+	
+					element.style.WebkitTransform = style;
+					element.style.MozTransform = style;
+					element.style.oTransform = style;
+					element.style.transform = style;
+	
+					cache.objects[object.id] = style;
+				}
+	
+				if (element.parentNode !== cameraElement) {
+	
+					cameraElement.appendChild(element);
+				}
+			}
+	
+			for (var i = 0, l = object.children.length; i < l; i++) {
+	
+				renderObject(object.children[i], camera);
+			}
+		};
+	
+		this.render = function (scene, camera) {
+	
+			var fov = 0.5 / Math.tan(_three2['default'].Math.degToRad(camera.fov * 0.5)) * _height;
+	
+			if (cache.camera.fov !== fov) {
+	
+				domElement.style.WebkitPerspective = fov + 'px';
+				domElement.style.MozPerspective = fov + 'px';
+				domElement.style.oPerspective = fov + 'px';
+				domElement.style.perspective = fov + 'px';
+	
+				cache.camera.fov = fov;
+			}
+	
+			scene.updateMatrixWorld();
+	
+			if (camera.parent === null) camera.updateMatrixWorld();
+	
+			camera.matrixWorldInverse.getInverse(camera.matrixWorld);
+	
+			var style = 'translate3d(0,0,' + fov + 'px)' + getCameraCSSMatrix(camera.matrixWorldInverse) + ' translate3d(' + _widthHalf + 'px,' + _heightHalf + 'px, 0)';
+	
+			if (cache.camera.style !== style) {
+	
+				cameraElement.style.WebkitTransform = style;
+				cameraElement.style.MozTransform = style;
+				cameraElement.style.oTransform = style;
+				cameraElement.style.transform = style;
+	
+				cache.camera.style = style;
+			}
+	
+			renderObject(scene, camera);
+		};
+	};
+	
+	exports.CSS3DObject = CSS3DObject;
+	exports.CSS3DSprite = CSS3DSprite;
+	exports.CSS3DRenderer = CSS3DRenderer;
+	
+	_three2['default'].CSS3DObject = CSS3DObject;
+	_three2['default'].CSS3DSprite = CSS3DSprite;
+	_three2['default'].CSS3DRenderer = CSS3DRenderer;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	// jscs:disable
+	/* eslint-disable */
+	
+	/**
+	 * @author mrdoob / http://mrdoob.com/
+	 */
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	var CSS2DObject = function CSS2DObject(element) {
+	
+		_three2['default'].Object3D.call(this);
+	
+		this.element = element;
+		this.element.style.position = 'absolute';
+	
+		this.addEventListener('removed', function (event) {
+	
+			if (this.element.parentNode !== null) {
+	
+				this.element.parentNode.removeChild(this.element);
+			}
+		});
+	};
+	
+	CSS2DObject.prototype = Object.create(_three2['default'].Object3D.prototype);
+	CSS2DObject.prototype.constructor = CSS2DObject;
+	
+	//
+	
+	var CSS2DRenderer = function CSS2DRenderer() {
+	
+		console.log('THREE.CSS2DRenderer', _three2['default'].REVISION);
+	
+		var _width, _height;
+		var _widthHalf, _heightHalf;
+	
+		var vector = new _three2['default'].Vector3();
+		var viewMatrix = new _three2['default'].Matrix4();
+		var viewProjectionMatrix = new _three2['default'].Matrix4();
+	
+		var frustum = new _three2['default'].Frustum();
+	
+		var domElement = document.createElement('div');
+		domElement.style.overflow = 'hidden';
+	
+		this.domElement = domElement;
+	
+		this.setSize = function (width, height) {
+	
+			_width = width;
+			_height = height;
+	
+			_widthHalf = _width / 2;
+			_heightHalf = _height / 2;
+	
+			domElement.style.width = width + 'px';
+			domElement.style.height = height + 'px';
+		};
+	
+		var renderObject = function renderObject(object, camera) {
+	
+			if (object instanceof CSS2DObject) {
+	
+				vector.setFromMatrixPosition(object.matrixWorld);
+				vector.applyProjection(viewProjectionMatrix);
+	
+				var element = object.element;
+				var style = 'translate(-50%,-50%) translate(' + (vector.x * _widthHalf + _widthHalf) + 'px,' + (-vector.y * _heightHalf + _heightHalf) + 'px)';
+	
+				element.style.WebkitTransform = style;
+				element.style.MozTransform = style;
+				element.style.oTransform = style;
+				element.style.transform = style;
+	
+				if (element.parentNode !== domElement) {
+	
+					domElement.appendChild(element);
+				}
+	
+				// Hide if outside view frustum
+				if (!frustum.containsPoint(object.position)) {
+					element.style.display = 'none';
+				} else {
+					element.style.display = 'block';
+				}
+			}
+	
+			for (var i = 0, l = object.children.length; i < l; i++) {
+	
+				renderObject(object.children[i], camera);
+			}
+		};
+	
+		this.render = function (scene, camera) {
+	
+			scene.updateMatrixWorld();
+	
+			if (camera.parent === null) camera.updateMatrixWorld();
+	
+			camera.matrixWorldInverse.getInverse(camera.matrixWorld);
+	
+			viewMatrix.copy(camera.matrixWorldInverse.getInverse(camera.matrixWorld));
+			viewProjectionMatrix.multiplyMatrices(camera.projectionMatrix, viewMatrix);
+	
+			frustum.setFromMatrix(new _three2['default'].Matrix4().multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse));
+	
+			renderObject(scene, camera);
+		};
+	};
+	
+	exports.CSS2DObject = CSS2DObject;
+	exports.CSS2DRenderer = CSS2DRenderer;
+	
+	_three2['default'].CSS2DObject = CSS2DObject;
+	_three2['default'].CSS2DRenderer = CSS2DRenderer;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _Layer2 = __webpack_require__(11);
 	
 	var _Layer3 = _interopRequireDefault(_Layer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -9833,7 +6576,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.layerGroup = noNew;
 
 /***/ }),
-/* 43 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -9850,15 +6593,972 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _TileLayer2 = __webpack_require__(44);
+	var _Layer2 = __webpack_require__(11);
+	
+	var _Layer3 = _interopRequireDefault(_Layer2);
+	
+	var _lodashAssign = __webpack_require__(12);
+	
+	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	var _Skybox = __webpack_require__(18);
+	
+	var _Skybox2 = _interopRequireDefault(_Skybox);
+	
+	// TODO: Make sure nothing is left behind in the heap after calling destroy()
+	
+	var EnvironmentLayer = (function (_Layer) {
+	  _inherits(EnvironmentLayer, _Layer);
+	
+	  function EnvironmentLayer(options) {
+	    _classCallCheck(this, EnvironmentLayer);
+	
+	    var defaults = {
+	      skybox: false
+	    };
+	
+	    var _options = (0, _lodashAssign2['default'])({}, defaults, options);
+	
+	    _get(Object.getPrototypeOf(EnvironmentLayer.prototype), 'constructor', this).call(this, _options);
+	  }
+	
+	  _createClass(EnvironmentLayer, [{
+	    key: '_onAdd',
+	    value: function _onAdd() {
+	      this._initLights();
+	
+	      if (this._options.skybox) {
+	        this._initSkybox();
+	      }
+	
+	      // this._initGrid();
+	
+	      return Promise.resolve(this);
+	    }
+	
+	    // Not fleshed out or thought through yet
+	    //
+	    // Lights could potentially be put it their own 'layer' to keep this class
+	    // much simpler and less messy
+	  }, {
+	    key: '_initLights',
+	    value: function _initLights() {
+	      // Position doesn't really matter (the angle is important), however it's
+	      // used here so the helpers look more natural.
+	
+	      if (!this._options.skybox) {
+	        var directionalLight = new _three2['default'].DirectionalLight(0xffffff, 1);
+	        directionalLight.position.x = 10000;
+	        directionalLight.position.y = 10000;
+	        directionalLight.position.z = 10000;
+	
+	        // TODO: Get shadows working in non-PBR scenes
+	
+	        // directionalLight.castShadow = true;
+	        //
+	        // var d = 100;
+	        // directionalLight.shadow.camera.left = -d;
+	        // directionalLight.shadow.camera.right = d;
+	        // directionalLight.shadow.camera.top = d;
+	        // directionalLight.shadow.camera.bottom = -d;
+	        //
+	        // directionalLight.shadow.camera.near = 10;
+	        // directionalLight.shadow.camera.far = 100;
+	        //
+	        // // TODO: Need to dial in on a good shadowmap size
+	        // directionalLight.shadow.mapSize.width = 2048;
+	        // directionalLight.shadow.mapSize.height = 2048;
+	        //
+	        // // directionalLight.shadowBias = -0.0010;
+	        // // directionalLight.shadow.darkness = 0.15;
+	
+	        var directionalLight2 = new _three2['default'].DirectionalLight(0xffffff, 0.5);
+	        directionalLight2.position.x = -10000;
+	        directionalLight2.position.y = 10000;
+	        directionalLight2.position.z = 0;
+	
+	        var directionalLight3 = new _three2['default'].DirectionalLight(0xffffff, 0.5);
+	        directionalLight3.position.x = 10000;
+	        directionalLight3.position.y = 10000;
+	        directionalLight3.position.z = -10000;
+	
+	        this.add(directionalLight);
+	        this.add(directionalLight2);
+	        this.add(directionalLight3);
+	
+	        // var helper = new THREE.DirectionalLightHelper(directionalLight, 10);
+	        // var helper2 = new THREE.DirectionalLightHelper(directionalLight2, 10);
+	        // var helper3 = new THREE.DirectionalLightHelper(directionalLight3, 10);
+	        //
+	        // this.add(helper);
+	        // this.add(helper2);
+	        // this.add(helper3);
+	      } else {
+	          // Directional light that will be projected from the sun
+	          this._skyboxLight = new _three2['default'].DirectionalLight(0xffffff, 1);
+	
+	          this._skyboxLight.castShadow = true;
+	
+	          var d = 10000;
+	          this._skyboxLight.shadow.camera.left = -d;
+	          this._skyboxLight.shadow.camera.right = d;
+	          this._skyboxLight.shadow.camera.top = d;
+	          this._skyboxLight.shadow.camera.bottom = -d;
+	
+	          this._skyboxLight.shadow.camera.near = 10000;
+	          this._skyboxLight.shadow.camera.far = 70000;
+	
+	          // TODO: Need to dial in on a good shadowmap size
+	          this._skyboxLight.shadow.mapSize.width = 2048;
+	          this._skyboxLight.shadow.mapSize.height = 2048;
+	
+	          // this._skyboxLight.shadowBias = -0.0010;
+	          // this._skyboxLight.shadow.darkness = 0.15;
+	
+	          // this._object3D.add(new THREE.CameraHelper(this._skyboxLight.shadow.camera));
+	
+	          this.add(this._skyboxLight);
+	        }
+	    }
+	  }, {
+	    key: '_initSkybox',
+	    value: function _initSkybox() {
+	      this._skybox = new _Skybox2['default'](this._world, this._skyboxLight);
+	      this.add(this._skybox._mesh);
+	    }
+	
+	    // Add grid helper for context during initial development
+	  }, {
+	    key: '_initGrid',
+	    value: function _initGrid() {
+	      var size = 4000;
+	      var step = 100;
+	
+	      var gridHelper = new _three2['default'].GridHelper(size, step);
+	      this.add(gridHelper);
+	    }
+	
+	    // Clean up environment
+	  }, {
+	    key: 'destroy',
+	    value: function destroy() {
+	      this._skyboxLight = null;
+	
+	      if (this._skybox) {
+	        this.remove(this._skybox._mesh);
+	        this._skybox.destroy();
+	        this._skybox = null;
+	      }
+	
+	      _get(Object.getPrototypeOf(EnvironmentLayer.prototype), 'destroy', this).call(this);
+	    }
+	  }]);
+	
+	  return EnvironmentLayer;
+	})(_Layer3['default']);
+	
+	exports['default'] = EnvironmentLayer;
+	
+	var noNew = function noNew(options) {
+	  return new EnvironmentLayer(options);
+	};
+	
+	// Initialise without requiring new keyword
+	exports.environmentLayer = noNew;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	var _Sky = __webpack_require__(19);
+	
+	var _Sky2 = _interopRequireDefault(_Sky);
+	
+	var _lodashThrottle = __webpack_require__(20);
+	
+	var _lodashThrottle2 = _interopRequireDefault(_lodashThrottle);
+	
+	// TODO: Make sure nothing is left behind in the heap after calling destroy()
+	
+	var cubemap = {
+	    vertexShader: ['varying vec3 vPosition;', 'void main() {', 'vPosition = position;', 'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );', '}'].join('\n'),
+	
+	    fragmentShader: ['uniform samplerCube cubemap;', 'varying vec3 vPosition;', 'void main() {', 'gl_FragColor = textureCube(cubemap, normalize(vPosition));', '}'].join('\n')
+	};
+	
+	var Skybox = (function () {
+	    function Skybox(world, light) {
+	        _classCallCheck(this, Skybox);
+	
+	        this._world = world;
+	        this._light = light;
+	
+	        this._settings = {
+	            distance: 38000,
+	            turbidity: 10,
+	            reileigh: 2,
+	            mieCoefficient: 0.005,
+	            mieDirectionalG: 0.8,
+	            luminance: 1,
+	            // 0.48 is a cracking dusk / sunset
+	            // 0.4 is a beautiful early-morning / late-afternoon
+	            // 0.2 is a nice day time
+	            inclination: 0.48, // Elevation / inclination
+	            azimuth: 0.25 };
+	
+	        // Facing front
+	        this._initSkybox();
+	        this._updateUniforms();
+	        this._initEvents();
+	    }
+	
+	    _createClass(Skybox, [{
+	        key: '_initEvents',
+	        value: function _initEvents() {
+	            // Throttled to 1 per 100ms
+	            this._throttledWorldUpdate = (0, _lodashThrottle2['default'])(this._update, 100);
+	            this._world.on('preUpdate', this._throttledWorldUpdate, this);
+	        }
+	    }, {
+	        key: '_initSkybox',
+	        value: function _initSkybox() {
+	            // Cube camera for skybox
+	            this._cubeCamera = new _three2['default'].CubeCamera(1, 20000000, 128);
+	
+	            // Cube material
+	            var cubeTarget = this._cubeCamera.renderTarget;
+	
+	            // Add Sky Mesh
+	            this._sky = new _Sky2['default']();
+	            this._skyScene = new _three2['default'].Scene();
+	            this._skyScene.add(this._sky.mesh);
+	
+	            // Add Sun Helper
+	            this._sunSphere = new _three2['default'].Mesh(new _three2['default'].SphereBufferGeometry(2000, 16, 8), new _three2['default'].MeshBasicMaterial({
+	                color: 0xffffff
+	            }));
+	
+	            // TODO: This isn't actually visible because it's not added to the layer
+	            // this._sunSphere.visible = true;
+	
+	            var skyboxUniforms = {
+	                cubemap: { type: 't', value: cubeTarget }
+	            };
+	
+	            var skyboxMat = new _three2['default'].ShaderMaterial({
+	                uniforms: skyboxUniforms,
+	                vertexShader: cubemap.vertexShader,
+	                fragmentShader: cubemap.fragmentShader,
+	                side: _three2['default'].BackSide
+	            });
+	
+	            this._mesh = new _three2['default'].Mesh(new _three2['default'].BoxGeometry(1900000, 1900000, 1900000), skyboxMat);
+	
+	            this._updateSkybox = true;
+	        }
+	    }, {
+	        key: '_updateUniforms',
+	        value: function _updateUniforms() {
+	            var settings = this._settings;
+	            var uniforms = this._sky.uniforms;
+	            uniforms.turbidity.value = settings.turbidity;
+	            uniforms.reileigh.value = settings.reileigh;
+	            uniforms.luminance.value = settings.luminance;
+	            uniforms.mieCoefficient.value = settings.mieCoefficient;
+	            uniforms.mieDirectionalG.value = settings.mieDirectionalG;
+	
+	            var theta = Math.PI * (settings.inclination - 0.5);
+	            var phi = 2 * Math.PI * (settings.azimuth - 0.5);
+	
+	            this._sunSphere.position.x = settings.distance * Math.cos(phi);
+	            this._sunSphere.position.y = settings.distance * Math.sin(phi) * Math.sin(theta);
+	            this._sunSphere.position.z = settings.distance * Math.sin(phi) * Math.cos(theta);
+	
+	            // Move directional light to sun position
+	            this._light.position.copy(this._sunSphere.position);
+	
+	            this._sky.uniforms.sunPosition.value.copy(this._sunSphere.position);
+	        }
+	    }, {
+	        key: '_update',
+	        value: function _update(delta) {
+	            if (this._updateSkybox) {
+	                this._updateSkybox = false;
+	            } else {
+	                return;
+	            }
+	
+	            // if (!this._angle) {
+	            //   this._angle = 0;
+	            // }
+	            //
+	            // // Animate inclination
+	            // this._angle += Math.PI * delta;
+	            // this._settings.inclination = 0.5 * (Math.sin(this._angle) / 2 + 0.5);
+	
+	            // Update light intensity depending on elevation of sun (day to night)
+	            this._light.intensity = 1 - 0.95 * (this._settings.inclination / 0.5);
+	
+	            // // console.log(delta, this._angle, this._settings.inclination);
+	            //
+	            // TODO: Only do this when the uniforms have been changed
+	            this._updateUniforms();
+	
+	            // TODO: Only do this when the cubemap has actually changed
+	            this._cubeCamera.updateCubeMap(this._world._engine._renderer, this._skyScene);
+	        }
+	    }, {
+	        key: 'getRenderTarget',
+	        value: function getRenderTarget() {
+	            return this._cubeCamera.renderTarget;
+	        }
+	    }, {
+	        key: 'setInclination',
+	        value: function setInclination(inclination) {
+	            this._settings.inclination = inclination;
+	            this._updateSkybox = true;
+	        }
+	
+	        // Destroy the skybox and remove it from memory
+	    }, {
+	        key: 'destroy',
+	        value: function destroy() {
+	            this._world.off('preUpdate', this._throttledWorldUpdate);
+	            this._throttledWorldUpdate = null;
+	
+	            this._world = null;
+	            this._light = null;
+	
+	            this._cubeCamera = null;
+	
+	            this._sky.mesh.geometry.dispose();
+	            this._sky.mesh.geometry = null;
+	
+	            if (this._sky.mesh.material.map) {
+	                this._sky.mesh.material.map.dispose();
+	                this._sky.mesh.material.map = null;
+	            }
+	
+	            this._sky.mesh.material.dispose();
+	            this._sky.mesh.material = null;
+	
+	            this._sky.mesh = null;
+	            this._sky = null;
+	
+	            this._skyScene = null;
+	
+	            this._sunSphere.geometry.dispose();
+	            this._sunSphere.geometry = null;
+	
+	            if (this._sunSphere.material.map) {
+	                this._sunSphere.material.map.dispose();
+	                this._sunSphere.material.map = null;
+	            }
+	
+	            this._sunSphere.material.dispose();
+	            this._sunSphere.material = null;
+	
+	            this._sunSphere = null;
+	
+	            this._mesh.geometry.dispose();
+	            this._mesh.geometry = null;
+	
+	            if (this._mesh.material.map) {
+	                this._mesh.material.map.dispose();
+	                this._mesh.material.map = null;
+	            }
+	
+	            this._mesh.material.dispose();
+	            this._mesh.material = null;
+	        }
+	    }]);
+	
+	    return Skybox;
+	})();
+	
+	exports['default'] = Skybox;
+	
+	var noNew = function noNew(world, light) {
+	    return new Skybox(world, light);
+	};
+	
+	// Initialise without requiring new keyword
+	exports.skybox = noNew;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+				value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	// jscs:disable
+	/*eslint eqeqeq:0*/
+	
+	/**
+	 * @author zz85 / https://github.com/zz85
+	 *
+	 * Based on 'A Practical Analytic Model for Daylight'
+	 * aka The Preetham Model, the de facto standard analytic skydome model
+	 * http://www.cs.utah.edu/~shirley/papers/sunsky/sunsky.pdf
+	 *
+	 * First implemented by Simon Wallner
+	 * http://www.simonwallner.at/projects/atmospheric-scattering
+	 *
+	 * Improved by Martin Upitis
+	 * http://blenderartists.org/forum/showthread.php?245954-preethams-sky-impementation-HDR
+	 *
+	 * Three.js integration by zz85 http://twitter.com/blurspline
+	*/
+	
+	var _three = __webpack_require__(4);
+	
+	var _three2 = _interopRequireDefault(_three);
+	
+	_three2['default'].ShaderLib['sky'] = {
+	
+				uniforms: {
+	
+							luminance: { type: 'f', value: 1 },
+							turbidity: { type: 'f', value: 2 },
+							reileigh: { type: 'f', value: 1 },
+							mieCoefficient: { type: 'f', value: 0.005 },
+							mieDirectionalG: { type: 'f', value: 0.8 },
+							sunPosition: { type: 'v3', value: new _three2['default'].Vector3() }
+	
+				},
+	
+				vertexShader: ['varying vec3 vWorldPosition;', 'void main() {', 'vec4 worldPosition = modelMatrix * vec4( position, 1.0 );', 'vWorldPosition = worldPosition.xyz;', 'gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );', '}'].join('\n'),
+	
+				fragmentShader: ['uniform sampler2D skySampler;', 'uniform vec3 sunPosition;', 'varying vec3 vWorldPosition;', 'vec3 cameraPos = vec3(0., 0., 0.);', '// uniform sampler2D sDiffuse;', '// const float turbidity = 10.0; //', '// const float reileigh = 2.; //', '// const float luminance = 1.0; //', '// const float mieCoefficient = 0.005;', '// const float mieDirectionalG = 0.8;', 'uniform float luminance;', 'uniform float turbidity;', 'uniform float reileigh;', 'uniform float mieCoefficient;', 'uniform float mieDirectionalG;', '// constants for atmospheric scattering', 'const float e = 2.71828182845904523536028747135266249775724709369995957;', 'const float pi = 3.141592653589793238462643383279502884197169;', 'const float n = 1.0003; // refractive index of air', 'const float N = 2.545E25; // number of molecules per unit volume for air at', '// 288.15K and 1013mb (sea level -45 celsius)', 'const float pn = 0.035;	// depolatization factor for standard air', '// wavelength of used primaries, according to preetham', 'const vec3 lambda = vec3(680E-9, 550E-9, 450E-9);', '// mie stuff', '// K coefficient for the primaries', 'const vec3 K = vec3(0.686, 0.678, 0.666);', 'const float v = 4.0;', '// optical length at zenith for molecules', 'const float rayleighZenithLength = 8.4E3;', 'const float mieZenithLength = 1.25E3;', 'const vec3 up = vec3(0.0, 1.0, 0.0);', 'const float EE = 1000.0;', 'const float sunAngularDiameterCos = 0.999956676946448443553574619906976478926848692873900859324;', '// 66 arc seconds -> degrees, and the cosine of that', '// earth shadow hack', 'const float cutoffAngle = pi/1.95;', 'const float steepness = 1.5;', 'vec3 totalRayleigh(vec3 lambda)', '{', 'return (8.0 * pow(pi, 3.0) * pow(pow(n, 2.0) - 1.0, 2.0) * (6.0 + 3.0 * pn)) / (3.0 * N * pow(lambda, vec3(4.0)) * (6.0 - 7.0 * pn));', '}',
+	
+				// see http://blenderartists.org/forum/showthread.php?321110-Shaders-and-Skybox-madness
+				'// A simplied version of the total Reayleigh scattering to works on browsers that use ANGLE', 'vec3 simplifiedRayleigh()', '{', 'return 0.0005 / vec3(94, 40, 18);',
+				// return 0.00054532832366 / (3.0 * 2.545E25 * pow(vec3(680E-9, 550E-9, 450E-9), vec3(4.0)) * 6.245);
+				'}', 'float rayleighPhase(float cosTheta)', '{	 ', 'return (3.0 / (16.0*pi)) * (1.0 + pow(cosTheta, 2.0));', '//	return (1.0 / (3.0*pi)) * (1.0 + pow(cosTheta, 2.0));', '//	return (3.0 / 4.0) * (1.0 + pow(cosTheta, 2.0));', '}', 'vec3 totalMie(vec3 lambda, vec3 K, float T)', '{', 'float c = (0.2 * T ) * 10E-18;', 'return 0.434 * c * pi * pow((2.0 * pi) / lambda, vec3(v - 2.0)) * K;', '}', 'float hgPhase(float cosTheta, float g)', '{', 'return (1.0 / (4.0*pi)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0*g*cosTheta + pow(g, 2.0), 1.5));', '}', 'float sunIntensity(float zenithAngleCos)', '{', 'return EE * max(0.0, 1.0 - exp(-((cutoffAngle - acos(zenithAngleCos))/steepness)));', '}', '// float logLuminance(vec3 c)', '// {', '// 	return log(c.r * 0.2126 + c.g * 0.7152 + c.b * 0.0722);', '// }', '// Filmic ToneMapping http://filmicgames.com/archives/75', 'float A = 0.15;', 'float B = 0.50;', 'float C = 0.10;', 'float D = 0.20;', 'float E = 0.02;', 'float F = 0.30;', 'float W = 1000.0;', 'vec3 Uncharted2Tonemap(vec3 x)', '{', 'return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F;', '}', 'void main() ', '{', 'float sunfade = 1.0-clamp(1.0-exp((sunPosition.y/450000.0)),0.0,1.0);', '// luminance =  1.0 ;// vWorldPosition.y / 450000. + 0.5; //sunPosition.y / 450000. * 1. + 0.5;', '// gl_FragColor = vec4(sunfade, sunfade, sunfade, 1.0);', 'float reileighCoefficient = reileigh - (1.0* (1.0-sunfade));', 'vec3 sunDirection = normalize(sunPosition);', 'float sunE = sunIntensity(dot(sunDirection, up));', '// extinction (absorbtion + out scattering) ', '// rayleigh coefficients',
+	
+				// 'vec3 betaR = totalRayleigh(lambda) * reileighCoefficient;',
+				'vec3 betaR = simplifiedRayleigh() * reileighCoefficient;', '// mie coefficients', 'vec3 betaM = totalMie(lambda, K, turbidity) * mieCoefficient;', '// optical length', '// cutoff angle at 90 to avoid singularity in next formula.', 'float zenithAngle = acos(max(0.0, dot(up, normalize(vWorldPosition - cameraPos))));', 'float sR = rayleighZenithLength / (cos(zenithAngle) + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / pi), -1.253));', 'float sM = mieZenithLength / (cos(zenithAngle) + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / pi), -1.253));', '// combined extinction factor	', 'vec3 Fex = exp(-(betaR * sR + betaM * sM));', '// in scattering', 'float cosTheta = dot(normalize(vWorldPosition - cameraPos), sunDirection);', 'float rPhase = rayleighPhase(cosTheta*0.5+0.5);', 'vec3 betaRTheta = betaR * rPhase;', 'float mPhase = hgPhase(cosTheta, mieDirectionalG);', 'vec3 betaMTheta = betaM * mPhase;', 'vec3 Lin = pow(sunE * ((betaRTheta + betaMTheta) / (betaR + betaM)) * (1.0 - Fex),vec3(1.5));', 'Lin *= mix(vec3(1.0),pow(sunE * ((betaRTheta + betaMTheta) / (betaR + betaM)) * Fex,vec3(1.0/2.0)),clamp(pow(1.0-dot(up, sunDirection),5.0),0.0,1.0));', '//nightsky', 'vec3 direction = normalize(vWorldPosition - cameraPos);', 'float theta = acos(direction.y); // elevation --> y-axis, [-pi/2, pi/2]', 'float phi = atan(direction.z, direction.x); // azimuth --> x-axis [-pi/2, pi/2]', 'vec2 uv = vec2(phi, theta) / vec2(2.0*pi, pi) + vec2(0.5, 0.0);', '// vec3 L0 = texture2D(skySampler, uv).rgb+0.1 * Fex;', 'vec3 L0 = vec3(0.1) * Fex;', '// composition + solar disc', '//if (cosTheta > sunAngularDiameterCos)', 'float sundisk = smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);', '// if (normalize(vWorldPosition - cameraPos).y>0.0)', 'L0 += (sunE * 19000.0 * Fex)*sundisk;', 'vec3 whiteScale = 1.0/Uncharted2Tonemap(vec3(W));', 'vec3 texColor = (Lin+L0);   ', 'texColor *= 0.04 ;', 'texColor += vec3(0.0,0.001,0.0025)*0.3;', 'float g_fMaxLuminance = 1.0;', 'float fLumScaled = 0.1 / luminance;     ', 'float fLumCompressed = (fLumScaled * (1.0 + (fLumScaled / (g_fMaxLuminance * g_fMaxLuminance)))) / (1.0 + fLumScaled); ', 'float ExposureBias = fLumCompressed;', 'vec3 curr = Uncharted2Tonemap((log2(2.0/pow(luminance,4.0)))*texColor);', 'vec3 color = curr*whiteScale;', 'vec3 retColor = pow(color,vec3(1.0/(1.2+(1.2*sunfade))));', 'gl_FragColor.rgb = retColor;', 'gl_FragColor.a = 1.0;', '}'].join('\n')
+	
+	};
+	
+	var Sky = function Sky() {
+	
+				var skyShader = _three2['default'].ShaderLib['sky'];
+				var skyUniforms = _three2['default'].UniformsUtils.clone(skyShader.uniforms);
+	
+				var skyMat = new _three2['default'].ShaderMaterial({
+							fragmentShader: skyShader.fragmentShader,
+							vertexShader: skyShader.vertexShader,
+							uniforms: skyUniforms,
+							side: _three2['default'].BackSide
+				});
+	
+				var skyGeo = new _three2['default'].SphereBufferGeometry(450000, 32, 15);
+				var skyMesh = new _three2['default'].Mesh(skyGeo, skyMat);
+	
+				// Expose variables
+				this.mesh = skyMesh;
+				this.uniforms = skyUniforms;
+	};
+	
+	exports['default'] = Sky;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {/**
+	 * lodash (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modularize exports="npm" -o ./`
+	 * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+	 * Released under MIT license <https://lodash.com/license>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 */
+	
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+	
+	/** Used as references for various `Number` constants. */
+	var NAN = 0 / 0;
+	
+	/** `Object#toString` result references. */
+	var symbolTag = '[object Symbol]';
+	
+	/** Used to match leading and trailing whitespace. */
+	var reTrim = /^\s+|\s+$/g;
+	
+	/** Used to detect bad signed hexadecimal string values. */
+	var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+	
+	/** Used to detect binary string values. */
+	var reIsBinary = /^0b[01]+$/i;
+	
+	/** Used to detect octal string values. */
+	var reIsOctal = /^0o[0-7]+$/i;
+	
+	/** Built-in method references without a dependency on `root`. */
+	var freeParseInt = parseInt;
+	
+	/** Detect free variable `global` from Node.js. */
+	var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+	
+	/** Detect free variable `self`. */
+	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+	
+	/** Used as a reference to the global object. */
+	var root = freeGlobal || freeSelf || Function('return this')();
+	
+	/** Used for built-in method references. */
+	var objectProto = Object.prototype;
+	
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+	
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeMax = Math.max,
+	    nativeMin = Math.min;
+	
+	/**
+	 * Gets the timestamp of the number of milliseconds that have elapsed since
+	 * the Unix epoch (1 January 1970 00:00:00 UTC).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 2.4.0
+	 * @category Date
+	 * @returns {number} Returns the timestamp.
+	 * @example
+	 *
+	 * _.defer(function(stamp) {
+	 *   console.log(_.now() - stamp);
+	 * }, _.now());
+	 * // => Logs the number of milliseconds it took for the deferred invocation.
+	 */
+	var now = function() {
+	  return root.Date.now();
+	};
+	
+	/**
+	 * Creates a debounced function that delays invoking `func` until after `wait`
+	 * milliseconds have elapsed since the last time the debounced function was
+	 * invoked. The debounced function comes with a `cancel` method to cancel
+	 * delayed `func` invocations and a `flush` method to immediately invoke them.
+	 * Provide `options` to indicate whether `func` should be invoked on the
+	 * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+	 * with the last arguments provided to the debounced function. Subsequent
+	 * calls to the debounced function return the result of the last `func`
+	 * invocation.
+	 *
+	 * **Note:** If `leading` and `trailing` options are `true`, `func` is
+	 * invoked on the trailing edge of the timeout only if the debounced function
+	 * is invoked more than once during the `wait` timeout.
+	 *
+	 * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+	 * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+	 *
+	 * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+	 * for details over the differences between `_.debounce` and `_.throttle`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Function
+	 * @param {Function} func The function to debounce.
+	 * @param {number} [wait=0] The number of milliseconds to delay.
+	 * @param {Object} [options={}] The options object.
+	 * @param {boolean} [options.leading=false]
+	 *  Specify invoking on the leading edge of the timeout.
+	 * @param {number} [options.maxWait]
+	 *  The maximum time `func` is allowed to be delayed before it's invoked.
+	 * @param {boolean} [options.trailing=true]
+	 *  Specify invoking on the trailing edge of the timeout.
+	 * @returns {Function} Returns the new debounced function.
+	 * @example
+	 *
+	 * // Avoid costly calculations while the window size is in flux.
+	 * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+	 *
+	 * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+	 * jQuery(element).on('click', _.debounce(sendMail, 300, {
+	 *   'leading': true,
+	 *   'trailing': false
+	 * }));
+	 *
+	 * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+	 * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+	 * var source = new EventSource('/stream');
+	 * jQuery(source).on('message', debounced);
+	 *
+	 * // Cancel the trailing debounced invocation.
+	 * jQuery(window).on('popstate', debounced.cancel);
+	 */
+	function debounce(func, wait, options) {
+	  var lastArgs,
+	      lastThis,
+	      maxWait,
+	      result,
+	      timerId,
+	      lastCallTime,
+	      lastInvokeTime = 0,
+	      leading = false,
+	      maxing = false,
+	      trailing = true;
+	
+	  if (typeof func != 'function') {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  wait = toNumber(wait) || 0;
+	  if (isObject(options)) {
+	    leading = !!options.leading;
+	    maxing = 'maxWait' in options;
+	    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+	    trailing = 'trailing' in options ? !!options.trailing : trailing;
+	  }
+	
+	  function invokeFunc(time) {
+	    var args = lastArgs,
+	        thisArg = lastThis;
+	
+	    lastArgs = lastThis = undefined;
+	    lastInvokeTime = time;
+	    result = func.apply(thisArg, args);
+	    return result;
+	  }
+	
+	  function leadingEdge(time) {
+	    // Reset any `maxWait` timer.
+	    lastInvokeTime = time;
+	    // Start the timer for the trailing edge.
+	    timerId = setTimeout(timerExpired, wait);
+	    // Invoke the leading edge.
+	    return leading ? invokeFunc(time) : result;
+	  }
+	
+	  function remainingWait(time) {
+	    var timeSinceLastCall = time - lastCallTime,
+	        timeSinceLastInvoke = time - lastInvokeTime,
+	        result = wait - timeSinceLastCall;
+	
+	    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+	  }
+	
+	  function shouldInvoke(time) {
+	    var timeSinceLastCall = time - lastCallTime,
+	        timeSinceLastInvoke = time - lastInvokeTime;
+	
+	    // Either this is the first call, activity has stopped and we're at the
+	    // trailing edge, the system time has gone backwards and we're treating
+	    // it as the trailing edge, or we've hit the `maxWait` limit.
+	    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+	      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+	  }
+	
+	  function timerExpired() {
+	    var time = now();
+	    if (shouldInvoke(time)) {
+	      return trailingEdge(time);
+	    }
+	    // Restart the timer.
+	    timerId = setTimeout(timerExpired, remainingWait(time));
+	  }
+	
+	  function trailingEdge(time) {
+	    timerId = undefined;
+	
+	    // Only invoke if we have `lastArgs` which means `func` has been
+	    // debounced at least once.
+	    if (trailing && lastArgs) {
+	      return invokeFunc(time);
+	    }
+	    lastArgs = lastThis = undefined;
+	    return result;
+	  }
+	
+	  function cancel() {
+	    if (timerId !== undefined) {
+	      clearTimeout(timerId);
+	    }
+	    lastInvokeTime = 0;
+	    lastArgs = lastCallTime = lastThis = timerId = undefined;
+	  }
+	
+	  function flush() {
+	    return timerId === undefined ? result : trailingEdge(now());
+	  }
+	
+	  function debounced() {
+	    var time = now(),
+	        isInvoking = shouldInvoke(time);
+	
+	    lastArgs = arguments;
+	    lastThis = this;
+	    lastCallTime = time;
+	
+	    if (isInvoking) {
+	      if (timerId === undefined) {
+	        return leadingEdge(lastCallTime);
+	      }
+	      if (maxing) {
+	        // Handle invocations in a tight loop.
+	        timerId = setTimeout(timerExpired, wait);
+	        return invokeFunc(lastCallTime);
+	      }
+	    }
+	    if (timerId === undefined) {
+	      timerId = setTimeout(timerExpired, wait);
+	    }
+	    return result;
+	  }
+	  debounced.cancel = cancel;
+	  debounced.flush = flush;
+	  return debounced;
+	}
+	
+	/**
+	 * Creates a throttled function that only invokes `func` at most once per
+	 * every `wait` milliseconds. The throttled function comes with a `cancel`
+	 * method to cancel delayed `func` invocations and a `flush` method to
+	 * immediately invoke them. Provide `options` to indicate whether `func`
+	 * should be invoked on the leading and/or trailing edge of the `wait`
+	 * timeout. The `func` is invoked with the last arguments provided to the
+	 * throttled function. Subsequent calls to the throttled function return the
+	 * result of the last `func` invocation.
+	 *
+	 * **Note:** If `leading` and `trailing` options are `true`, `func` is
+	 * invoked on the trailing edge of the timeout only if the throttled function
+	 * is invoked more than once during the `wait` timeout.
+	 *
+	 * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+	 * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+	 *
+	 * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+	 * for details over the differences between `_.throttle` and `_.debounce`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Function
+	 * @param {Function} func The function to throttle.
+	 * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+	 * @param {Object} [options={}] The options object.
+	 * @param {boolean} [options.leading=true]
+	 *  Specify invoking on the leading edge of the timeout.
+	 * @param {boolean} [options.trailing=true]
+	 *  Specify invoking on the trailing edge of the timeout.
+	 * @returns {Function} Returns the new throttled function.
+	 * @example
+	 *
+	 * // Avoid excessively updating the position while scrolling.
+	 * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+	 *
+	 * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+	 * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+	 * jQuery(element).on('click', throttled);
+	 *
+	 * // Cancel the trailing throttled invocation.
+	 * jQuery(window).on('popstate', throttled.cancel);
+	 */
+	function throttle(func, wait, options) {
+	  var leading = true,
+	      trailing = true;
+	
+	  if (typeof func != 'function') {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  if (isObject(options)) {
+	    leading = 'leading' in options ? !!options.leading : leading;
+	    trailing = 'trailing' in options ? !!options.trailing : trailing;
+	  }
+	  return debounce(func, wait, {
+	    'leading': leading,
+	    'maxWait': wait,
+	    'trailing': trailing
+	  });
+	}
+	
+	/**
+	 * Checks if `value` is the
+	 * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+	 * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(_.noop);
+	 * // => true
+	 *
+	 * _.isObject(null);
+	 * // => false
+	 */
+	function isObject(value) {
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+	
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+	
+	/**
+	 * Checks if `value` is classified as a `Symbol` primitive or object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+	 * @example
+	 *
+	 * _.isSymbol(Symbol.iterator);
+	 * // => true
+	 *
+	 * _.isSymbol('abc');
+	 * // => false
+	 */
+	function isSymbol(value) {
+	  return typeof value == 'symbol' ||
+	    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+	}
+	
+	/**
+	 * Converts `value` to a number.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to process.
+	 * @returns {number} Returns the number.
+	 * @example
+	 *
+	 * _.toNumber(3.2);
+	 * // => 3.2
+	 *
+	 * _.toNumber(Number.MIN_VALUE);
+	 * // => 5e-324
+	 *
+	 * _.toNumber(Infinity);
+	 * // => Infinity
+	 *
+	 * _.toNumber('3.2');
+	 * // => 3.2
+	 */
+	function toNumber(value) {
+	  if (typeof value == 'number') {
+	    return value;
+	  }
+	  if (isSymbol(value)) {
+	    return NAN;
+	  }
+	  if (isObject(value)) {
+	    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+	    value = isObject(other) ? (other + '') : other;
+	  }
+	  if (typeof value != 'string') {
+	    return value === 0 ? value : +value;
+	  }
+	  value = value.replace(reTrim, '');
+	  var isBinary = reIsBinary.test(value);
+	  return (isBinary || reIsOctal.test(value))
+	    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+	    : (reIsBadHex.test(value) ? NAN : +value);
+	}
+	
+	module.exports = throttle;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _TileLayer2 = __webpack_require__(22);
 	
 	var _TileLayer3 = _interopRequireDefault(_TileLayer2);
 	
-	var _ImageTile = __webpack_require__(57);
+	var _ImageTile = __webpack_require__(35);
 	
 	var _ImageTile2 = _interopRequireDefault(_ImageTile);
 	
-	var _ImageTileLayerBaseMaterial = __webpack_require__(60);
+	var _ImageTileLayerBaseMaterial = __webpack_require__(38);
 	
 	var _ImageTileLayerBaseMaterial2 = _interopRequireDefault(_ImageTileLayerBaseMaterial);
 	
@@ -9866,11 +7566,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _lodashThrottle2 = _interopRequireDefault(_lodashThrottle);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -10064,7 +7764,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.imageTileLayer = noNew;
 
 /***/ }),
-/* 44 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -10081,19 +7781,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _Layer2 = __webpack_require__(31);
+	var _Layer2 = __webpack_require__(11);
 	
 	var _Layer3 = _interopRequireDefault(_Layer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _TileCache = __webpack_require__(45);
+	var _TileCache = __webpack_require__(23);
 	
 	var _TileCache2 = _interopRequireDefault(_TileCache);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -10537,7 +8237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 45 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -10550,7 +8250,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _lruCache = __webpack_require__(46);
+	var _lruCache = __webpack_require__(24);
 	
 	var _lruCache2 = _interopRequireDefault(_lruCache);
 	
@@ -10618,7 +8318,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.tileCache = noNew;
 
 /***/ }),
-/* 46 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict'
@@ -10627,11 +8327,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// This will be a proper iterable 'Map' in engines that support it,
 	// or a fakey-fake PseudoMap in older versions.
-	var Map = __webpack_require__(48)
-	var util = __webpack_require__(50)
+	var Map = __webpack_require__(26)
+	var util = __webpack_require__(28)
 	
 	// A linked list to keep track of recently-used-ness
-	var Yallist = __webpack_require__(56)
+	var Yallist = __webpack_require__(34)
 	
 	// use symbols if possible, otherwise just _props
 	var hasSymbol = typeof Symbol === 'function' && process.env._nodeLRUCacheForceNoSymbol !== '1'
@@ -11090,10 +8790,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.maxAge = maxAge || 0
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(47)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
-/* 47 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	// shim for using process in browser
@@ -11283,7 +8983,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 48 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {if (process.env.npm_package_name === 'pseudomap' &&
@@ -11293,13 +8993,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof Map === 'function' && !process.env.TEST_PSEUDOMAP) {
 	  module.exports = Map
 	} else {
-	  module.exports = __webpack_require__(49)
+	  module.exports = __webpack_require__(27)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(47)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
-/* 49 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	var hasOwnProperty = Object.prototype.hasOwnProperty
@@ -11418,7 +9118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 50 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -11880,7 +9580,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// NOTE: These type checking functions intentionally don't use `instanceof`
 	// because it is fragile and can be easily faked with `Object.create()`.
-	exports.types = __webpack_require__(51);
+	exports.types = __webpack_require__(29);
 	
 	function isArray(ar) {
 	  return Array.isArray(ar);
@@ -11961,7 +9661,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	exports.isPrimitive = isPrimitive;
 	
-	exports.isBuffer = __webpack_require__(52);
+	exports.isBuffer = __webpack_require__(30);
 	
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -12005,7 +9705,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(55);
+	exports.inherits = __webpack_require__(33);
 	
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -12130,10 +9830,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	exports.callbackify = callbackify;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(47)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
-/* 51 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// Currently in sync with Node.js lib/internal/util/types.js
@@ -12141,10 +9841,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	'use strict';
 	
-	var isBuffer = __webpack_require__(52);
+	var isBuffer = __webpack_require__(30);
 	
-	var isArgumentsObject = __webpack_require__(53);
-	var isGeneratorFunction = __webpack_require__(54);
+	var isArgumentsObject = __webpack_require__(31);
+	var isGeneratorFunction = __webpack_require__(32);
 	
 	function uncurryThis(f) {
 	  return f.call.bind(f);
@@ -12561,7 +10261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 52 */
+/* 30 */
 /***/ (function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -12572,7 +10272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ }),
-/* 53 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -12609,7 +10309,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 54 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -12647,7 +10347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 55 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -12676,7 +10376,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 56 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	module.exports = Yallist
@@ -13052,7 +10752,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 57 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -13069,15 +10769,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _Tile2 = __webpack_require__(58);
+	var _Tile2 = __webpack_require__(36);
 	
 	var _Tile3 = _interopRequireDefault(_Tile2);
 	
-	var _vendorBoxHelper = __webpack_require__(59);
+	var _vendorBoxHelper = __webpack_require__(37);
 	
 	var _vendorBoxHelper2 = _interopRequireDefault(_vendorBoxHelper);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -13304,7 +11004,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.imageTile = noNew;
 
 /***/ }),
-/* 58 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -13317,11 +11017,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -13577,7 +11277,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 59 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -13589,7 +11289,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// jscs:disable
 	/* eslint-disable */
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -13667,7 +11367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 60 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -13676,7 +11376,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -13730,7 +11430,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 61 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -13747,15 +11447,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _TileLayer2 = __webpack_require__(44);
+	var _TileLayer2 = __webpack_require__(22);
 	
 	var _TileLayer3 = _interopRequireDefault(_TileLayer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _GeoJSONTile = __webpack_require__(62);
+	var _GeoJSONTile = __webpack_require__(40);
 	
 	var _GeoJSONTile2 = _interopRequireDefault(_GeoJSONTile);
 	
@@ -13763,7 +11463,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _lodashThrottle2 = _interopRequireDefault(_lodashThrottle);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -13935,7 +11635,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.geoJSONTileLayer = noNew;
 
 /***/ }),
-/* 62 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -13952,45 +11652,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _Tile2 = __webpack_require__(58);
+	var _Tile2 = __webpack_require__(36);
 	
 	var _Tile3 = _interopRequireDefault(_Tile2);
 	
-	var _GeoJSONLayer = __webpack_require__(63);
+	var _GeoJSONLayer = __webpack_require__(41);
 	
-	var _GeoJSONWorkerLayer = __webpack_require__(78);
+	var _GeoJSONWorkerLayer = __webpack_require__(56);
 	
-	var _vendorBoxHelper = __webpack_require__(59);
+	var _vendorBoxHelper = __webpack_require__(37);
 	
 	var _vendorBoxHelper2 = _interopRequireDefault(_vendorBoxHelper);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _reqwest = __webpack_require__(64);
+	var _reqwest = __webpack_require__(42);
 	
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
 	// import Offset from 'polygon-offset';
 	
-	var _utilGeoJSON = __webpack_require__(66);
+	var _utilGeoJSON = __webpack_require__(44);
 	
 	var _utilGeoJSON2 = _interopRequireDefault(_utilGeoJSON);
 	
-	var _utilBuffer = __webpack_require__(72);
+	var _utilBuffer = __webpack_require__(50);
 	
 	var _utilBuffer2 = _interopRequireDefault(_utilBuffer);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
@@ -14383,7 +12083,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.geoJSONTile = noNew;
 
 /***/ }),
-/* 63 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -14408,39 +12108,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	// For example, only allow polygons to be interactive via a polygonInteractive
 	// option
 	
-	var _LayerGroup2 = __webpack_require__(42);
+	var _LayerGroup2 = __webpack_require__(16);
 	
 	var _LayerGroup3 = _interopRequireDefault(_LayerGroup2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _reqwest = __webpack_require__(64);
+	var _reqwest = __webpack_require__(42);
 	
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 	
-	var _utilGeoJSON = __webpack_require__(66);
+	var _utilGeoJSON = __webpack_require__(44);
 	
 	var _utilGeoJSON2 = _interopRequireDefault(_utilGeoJSON);
 	
-	var _utilBuffer = __webpack_require__(72);
+	var _utilBuffer = __webpack_require__(50);
 	
 	var _utilBuffer2 = _interopRequireDefault(_utilBuffer);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
-	var _geometryPolygonLayer = __webpack_require__(75);
+	var _geometryPolygonLayer = __webpack_require__(53);
 	
 	var _geometryPolygonLayer2 = _interopRequireDefault(_geometryPolygonLayer);
 	
-	var _geometryPolylineLayer = __webpack_require__(76);
+	var _geometryPolylineLayer = __webpack_require__(54);
 	
 	var _geometryPolylineLayer2 = _interopRequireDefault(_geometryPolylineLayer);
 	
-	var _geometryPointLayer = __webpack_require__(77);
+	var _geometryPointLayer = __webpack_require__(55);
 	
 	var _geometryPointLayer2 = _interopRequireDefault(_geometryPointLayer);
 	
@@ -14901,7 +12601,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.geoJSONLayer = noNew;
 
 /***/ }),
-/* 64 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14925,7 +12625,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  } else {
 	    var XHR2
 	    try {
-	      XHR2 = __webpack_require__(65)
+	      XHR2 = __webpack_require__(43)
 	    } catch (ex) {
 	      throw new Error('Peer dependency `xhr2` required! Please npm install xhr2')
 	    }
@@ -15537,13 +13237,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 65 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	/* (ignored) */
 
 /***/ }),
-/* 66 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -15558,23 +13258,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * GeoJSON helpers for handling data and generating objects
 	 */
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _topojson2 = __webpack_require__(67);
+	var _topojson2 = __webpack_require__(45);
 	
 	var topojson = _interopRequireWildcard(_topojson2);
 	
-	var _geojsonMerge = __webpack_require__(68);
+	var _geojsonMerge = __webpack_require__(46);
 	
 	var _geojsonMerge2 = _interopRequireDefault(_geojsonMerge);
 	
-	var _earcut = __webpack_require__(70);
+	var _earcut = __webpack_require__(48);
 	
 	var _earcut2 = _interopRequireDefault(_earcut);
 	
-	var _extrudePolygon = __webpack_require__(71);
+	var _extrudePolygon = __webpack_require__(49);
 	
 	var _extrudePolygon2 = _interopRequireDefault(_extrudePolygon);
 	
@@ -15825,7 +13525,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 67 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -16377,10 +14077,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	})));
 
 /***/ }),
-/* 68 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var normalize = __webpack_require__(69);
+	var normalize = __webpack_require__(47);
 	
 	module.exports = function(inputs) {
 	    return {
@@ -16393,7 +14093,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 69 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	module.exports = normalize;
@@ -16442,7 +14142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 70 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -17098,7 +14798,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ }),
-/* 71 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -17114,7 +14814,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * https://github.com/freeman-lab/extrude
 	 */
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -17197,7 +14897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 72 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -17210,7 +14910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * BufferGeometry helpers
 	 */
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
@@ -17582,7 +15282,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 73 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -17591,11 +15291,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _PickingShader = __webpack_require__(74);
+	var _PickingShader = __webpack_require__(52);
 	
 	var _PickingShader2 = _interopRequireDefault(_PickingShader);
 	
@@ -17637,7 +15337,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 74 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -17661,7 +15361,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 75 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -17694,39 +15394,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	// TODO: Allow _setBufferAttributes to use a custom function passed in to
 	// generate a custom mesh
 	
-	var _Layer2 = __webpack_require__(31);
+	var _Layer2 = __webpack_require__(11);
 	
 	var _Layer3 = _interopRequireDefault(_Layer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _geoGeo = __webpack_require__(4);
+	var _geoGeo = __webpack_require__(8);
 	
 	var _geoGeo2 = _interopRequireDefault(_geoGeo);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
-	var _earcut2 = __webpack_require__(70);
+	var _earcut2 = __webpack_require__(48);
 	
 	var _earcut3 = _interopRequireDefault(_earcut2);
 	
-	var _utilExtrudePolygon = __webpack_require__(71);
+	var _utilExtrudePolygon = __webpack_require__(49);
 	
 	var _utilExtrudePolygon2 = _interopRequireDefault(_utilExtrudePolygon);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
-	var _utilBuffer = __webpack_require__(72);
+	var _utilBuffer = __webpack_require__(50);
 	
 	var _utilBuffer2 = _interopRequireDefault(_utilBuffer);
 	
@@ -18463,7 +16163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.polygonLayer = noNew;
 
 /***/ }),
-/* 76 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -18498,31 +16198,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	// TODO: Allow _setBufferAttributes to use a custom function passed in to
 	// generate a custom mesh
 	
-	var _Layer2 = __webpack_require__(31);
+	var _Layer2 = __webpack_require__(11);
 	
 	var _Layer3 = _interopRequireDefault(_Layer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _geoGeo = __webpack_require__(4);
+	var _geoGeo = __webpack_require__(8);
 	
 	var _geoGeo2 = _interopRequireDefault(_geoGeo);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
-	var _utilBuffer = __webpack_require__(72);
+	var _utilBuffer = __webpack_require__(50);
 	
 	var _utilBuffer2 = _interopRequireDefault(_utilBuffer);
 	
@@ -18965,7 +16665,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.polylineLayer = noNew;
 
 /***/ }),
-/* 77 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -19006,35 +16706,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	// How much control should this layer support? Perhaps a different or custom
 	// layer would be better suited for animation, for example.
 	
-	var _Layer2 = __webpack_require__(31);
+	var _Layer2 = __webpack_require__(11);
 	
 	var _Layer3 = _interopRequireDefault(_Layer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _three = __webpack_require__(8);
+	var _three = __webpack_require__(4);
 	
 	var _three2 = _interopRequireDefault(_three);
 	
-	var _geoGeo = __webpack_require__(4);
+	var _geoGeo = __webpack_require__(8);
 	
 	var _geoGeo2 = _interopRequireDefault(_geoGeo);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
-	var _utilBuffer = __webpack_require__(72);
+	var _utilBuffer = __webpack_require__(50);
 	
 	var _utilBuffer2 = _interopRequireDefault(_utilBuffer);
 	
-	var _PolygonLayer = __webpack_require__(75);
+	var _PolygonLayer = __webpack_require__(53);
 	
 	var _PolygonLayer2 = _interopRequireDefault(_PolygonLayer);
 	
@@ -19441,7 +17141,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.pointLayer = noNew;
 
 /***/ }),
-/* 78 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -19460,55 +17160,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _Layer2 = __webpack_require__(31);
+	var _Layer2 = __webpack_require__(11);
 	
 	var _Layer3 = _interopRequireDefault(_Layer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
-	var _reqwest = __webpack_require__(64);
+	var _reqwest = __webpack_require__(42);
 	
 	var _reqwest2 = _interopRequireDefault(_reqwest);
 	
-	var _utilGeoJSON = __webpack_require__(66);
+	var _utilGeoJSON = __webpack_require__(44);
 	
 	var _utilGeoJSON2 = _interopRequireDefault(_utilGeoJSON);
 	
-	var _utilWorker = __webpack_require__(34);
+	var _utilWorker = __webpack_require__(57);
 	
 	var _utilWorker2 = _interopRequireDefault(_utilWorker);
 	
-	var _utilBuffer = __webpack_require__(72);
+	var _utilBuffer = __webpack_require__(50);
 	
 	var _utilBuffer2 = _interopRequireDefault(_utilBuffer);
 	
-	var _utilStringify = __webpack_require__(79);
+	var _utilStringify = __webpack_require__(60);
 	
 	var _utilStringify2 = _interopRequireDefault(_utilStringify);
 	
-	var _geometryPolygonLayer = __webpack_require__(75);
+	var _geometryPolygonLayer = __webpack_require__(53);
 	
 	var _geometryPolygonLayer2 = _interopRequireDefault(_geometryPolygonLayer);
 	
-	var _geometryPolylineLayer = __webpack_require__(76);
+	var _geometryPolylineLayer = __webpack_require__(54);
 	
 	var _geometryPolylineLayer2 = _interopRequireDefault(_geometryPolylineLayer);
 	
-	var _geometryPointLayer = __webpack_require__(77);
+	var _geometryPointLayer = __webpack_require__(55);
 	
 	var _geometryPointLayer2 = _interopRequireDefault(_geometryPointLayer);
 	
-	var _geoLatLon = __webpack_require__(5);
+	var _geoLatLon = __webpack_require__(9);
 	
-	var _geoPoint = __webpack_require__(6);
+	var _geoPoint = __webpack_require__(10);
 	
-	var _geoGeo = __webpack_require__(4);
+	var _geoGeo = __webpack_require__(8);
 	
 	var _geoGeo2 = _interopRequireDefault(_geoGeo);
 	
-	var _enginePickingMaterial = __webpack_require__(73);
+	var _enginePickingMaterial = __webpack_require__(51);
 	
 	var _enginePickingMaterial2 = _interopRequireDefault(_enginePickingMaterial);
 	
@@ -20678,7 +18378,352 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.geoJSONWorkerLayer = noNew;
 
 /***/ }),
-/* 79 */
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _WorkerPool = __webpack_require__(58);
+	
+	var _WorkerPool2 = _interopRequireDefault(_WorkerPool);
+	
+	var Worker = (function () {
+	  var _maxWorkers = 2;
+	  var pool;
+	
+	  var createWorkers = function createWorkers(maxWorkers, workerScript) {
+	    pool = new _WorkerPool2['default']({
+	      numThreads: maxWorkers ? maxWorkers : _maxWorkers,
+	      workerScript: workerScript ? workerScript : 'vizicities-worker.js'
+	    });
+	
+	    return pool.createWorkers();
+	  };
+	
+	  var exec = function exec(method, args, transferrables) {
+	    return pool.exec(method, args, transferrables);
+	  };
+	
+	  return {
+	    createWorkers: createWorkers,
+	    exec: exec
+	  };
+	})();
+	
+	exports['default'] = Worker;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var _WorkerPoolWorker = __webpack_require__(59);
+	
+	var _WorkerPoolWorker2 = _interopRequireDefault(_WorkerPoolWorker);
+	
+	var DEBUG = false;
+	
+	// Polyfill for Array.find
+	if (!Array.prototype.find) {
+	  Object.defineProperty(Array.prototype, 'find', {
+	    value: function value(predicate) {
+	      'use strict';
+	      if (this == null) {
+	        throw new TypeError('Array.prototype.find called on null or undefined');
+	      }
+	      if (typeof predicate !== 'function') {
+	        throw new TypeError('predicate must be a function');
+	      }
+	      var list = Object(this);
+	      var length = list.length >>> 0;
+	      var thisArg = arguments[1];
+	      var value;
+	
+	      for (var i = 0; i < length; i++) {
+	        value = list[i];
+	        if (predicate.call(thisArg, value, i, list)) {
+	          return value;
+	        }
+	      }
+	      return undefined;
+	    }
+	  });
+	}
+	
+	var WorkerPool = (function () {
+	  function WorkerPool(options) {
+	    _classCallCheck(this, WorkerPool);
+	
+	    this.numThreads = options.numThreads || 2;
+	    this.workerScript = options.workerScript;
+	
+	    this.workers = [];
+	    this.tasks = [];
+	  }
+	
+	  _createClass(WorkerPool, [{
+	    key: 'createWorkers',
+	    value: function createWorkers() {
+	      var _this = this;
+	
+	      return new Promise(function (resolve, reject) {
+	        var workerPromises = [];
+	
+	        for (var i = 0; i < _this.numThreads; i++) {
+	          workerPromises.push(_this.createWorker());
+	        }
+	
+	        Promise.all(workerPromises).then(function () {
+	          if (DEBUG) {
+	            console.log('All workers ready', (performance || Date).now());
+	          }
+	          resolve();
+	        })['catch'](reject);
+	      });
+	    }
+	  }, {
+	    key: 'createWorker',
+	    value: function createWorker() {
+	      var _this2 = this;
+	
+	      return new Promise(function (resolve, reject) {
+	        // Initialise worker
+	        var worker = new _WorkerPoolWorker2['default']({
+	          workerScript: _this2.workerScript
+	        });
+	
+	        // Start worker and wait for it to be ready
+	        return worker.start().then(function () {
+	          if (DEBUG) {
+	            console.log('Worker ready', (performance || Date).now());
+	          }
+	
+	          // Add worker to pool
+	          _this2.workers.push(worker);
+	
+	          resolve();
+	        })['catch'](reject);
+	      });
+	    }
+	  }, {
+	    key: 'getFreeWorker',
+	    value: function getFreeWorker() {
+	      return this.workers.find(function (worker) {
+	        return !worker.busy;
+	      });
+	    }
+	
+	    // Execute task on a worker
+	  }, {
+	    key: 'exec',
+	    value: function exec(method, args, transferrables) {
+	      var deferred = Promise.deferred();
+	
+	      // Create task
+	      var task = {
+	        method: method,
+	        args: args,
+	        transferrables: transferrables,
+	        deferred: deferred
+	      };
+	
+	      // Add task to queue
+	      this.tasks.push(task);
+	
+	      // Trigger task processing
+	      this.processTasks();
+	
+	      // Return task promise
+	      return task.deferred.promise;
+	    }
+	  }, {
+	    key: 'processTasks',
+	    value: function processTasks() {
+	      var _this3 = this;
+	
+	      if (DEBUG) {
+	        console.log('Processing tasks');
+	      }
+	
+	      if (this.tasks.length === 0) {
+	        return;
+	      }
+	
+	      // Find free worker
+	      var worker = this.getFreeWorker();
+	
+	      if (!worker) {
+	        if (DEBUG) {
+	          console.log('No workers free');
+	        }
+	        return;
+	      }
+	
+	      // Get oldest task
+	      var task = this.tasks.shift();
+	
+	      // Execute task on worker
+	      worker.exec(task.method, task.args, task.transferrables).then(function (result) {
+	        // Trigger task processing
+	        _this3.processTasks();
+	
+	        // Return result in deferred task promise
+	        task.deferred.resolve(result);
+	      })['catch'](function (err) {
+	        // Trigger task processing
+	        _this3.processTasks();
+	
+	        task.deferred.reject(err);
+	      });
+	    }
+	  }]);
+	
+	  return WorkerPool;
+	})();
+	
+	exports['default'] = WorkerPool;
+	
+	// Quick shim to create deferred native promises
+	Promise.deferred = function () {
+	  var result = {};
+	
+	  result.promise = new Promise(function (resolve, reject) {
+	    result.resolve = resolve;
+	    result.reject = reject;
+	  });
+	
+	  return result;
+	};
+	module.exports = exports['default'];
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var DEBUG = false;
+	
+	var WorkerPoolWorker = (function () {
+	  function WorkerPoolWorker(options) {
+	    _classCallCheck(this, WorkerPoolWorker);
+	
+	    this.workerScript = options.workerScript;
+	
+	    this.ready = false;
+	    this.busy = false;
+	    this.deferred = null;
+	  }
+	
+	  _createClass(WorkerPoolWorker, [{
+	    key: 'start',
+	    value: function start() {
+	      var _this = this;
+	
+	      return new Promise(function (resolve, reject) {
+	        _this.worker = new Worker(_this.workerScript);
+	
+	        var onStartup = function onStartup(event) {
+	          if (!event.data || event.data.type !== 'startup') {
+	            reject();
+	            return;
+	          }
+	
+	          _this.ready = true;
+	
+	          // Remove temporary message handler
+	          _this.worker.removeEventListener('message', onStartup);
+	
+	          // Set up listener to respond to normal events now
+	          _this.worker.addEventListener('message', function (event) {
+	            _this.onMessage(event);
+	          });
+	
+	          // Resolve once worker is ready
+	          resolve();
+	        };
+	
+	        // Set up temporary event listener for warmup
+	        _this.worker.addEventListener('message', onStartup);
+	      });
+	    }
+	  }, {
+	    key: 'exec',
+	    value: function exec(method, args, transferrables) {
+	      if (DEBUG) {
+	        console.log('Execute', method, args, transferrables);
+	      }
+	
+	      var deferred = Promise.deferred();
+	
+	      this.busy = true;
+	      this.deferred = deferred;
+	
+	      this.worker.postMessage({
+	        method: method,
+	        args: args
+	      }, transferrables);
+	
+	      return deferred.promise;
+	    }
+	  }, {
+	    key: 'onMessage',
+	    value: function onMessage(event) {
+	      if (DEBUG) {
+	        console.log('Message received from worker', (performance || Date).now());
+	      }
+	
+	      this.busy = false;
+	
+	      if (!event.data || event.data.type === 'error' || event.data.type !== 'result') {
+	        this.deferred.reject(event.data.payload);
+	        return;
+	      }
+	
+	      this.deferred.resolve(event.data.payload);
+	    }
+	  }]);
+	
+	  return WorkerPoolWorker;
+	})();
+	
+	exports['default'] = WorkerPoolWorker;
+	
+	// Quick shim to create deferred native promises
+	Promise.deferred = function () {
+	  var result = {};
+	
+	  result.promise = new Promise(function (resolve, reject) {
+	    result.resolve = resolve;
+	    result.reject = reject;
+	  });
+	
+	  return result;
+	};
+	module.exports = exports['default'];
+
+/***/ }),
+/* 60 */
 /***/ (function(module, exports) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -20713,7 +18758,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 80 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -20728,11 +18773,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _GeoJSONTileLayer2 = __webpack_require__(61);
+	var _GeoJSONTileLayer2 = __webpack_require__(39);
 	
 	var _GeoJSONTileLayer3 = _interopRequireDefault(_GeoJSONTileLayer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -20763,7 +18808,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.topoJSONTileLayer = noNew;
 
 /***/ }),
-/* 81 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -20778,11 +18823,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _GeoJSONLayer2 = __webpack_require__(63);
+	var _GeoJSONLayer2 = __webpack_require__(41);
 	
 	var _GeoJSONLayer3 = _interopRequireDefault(_GeoJSONLayer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -20814,7 +18859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.topoJSONLayer = noNew;
 
 /***/ }),
-/* 82 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -20829,11 +18874,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var _GeoJSONWorkerLayer2 = __webpack_require__(78);
+	var _GeoJSONWorkerLayer2 = __webpack_require__(56);
 	
 	var _GeoJSONWorkerLayer3 = _interopRequireDefault(_GeoJSONWorkerLayer2);
 	
-	var _lodashAssign = __webpack_require__(3);
+	var _lodashAssign = __webpack_require__(12);
 	
 	var _lodashAssign2 = _interopRequireDefault(_lodashAssign);
 	
@@ -20865,7 +18910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.topoJSONWorkerLayer = noNew;
 
 /***/ }),
-/* 83 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
@@ -20876,27 +18921,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// TODO: A lot of these utils don't need to be in separate, tiny files
 	
-	var _wrapNum = __webpack_require__(84);
+	var _wrapNum = __webpack_require__(65);
 	
 	var _wrapNum2 = _interopRequireDefault(_wrapNum);
 	
-	var _extrudePolygon = __webpack_require__(71);
+	var _extrudePolygon = __webpack_require__(49);
 	
 	var _extrudePolygon2 = _interopRequireDefault(_extrudePolygon);
 	
-	var _GeoJSON = __webpack_require__(66);
+	var _GeoJSON = __webpack_require__(44);
 	
 	var _GeoJSON2 = _interopRequireDefault(_GeoJSON);
 	
-	var _Buffer = __webpack_require__(72);
+	var _Buffer = __webpack_require__(50);
 	
 	var _Buffer2 = _interopRequireDefault(_Buffer);
 	
-	var _Worker = __webpack_require__(34);
+	var _Worker = __webpack_require__(57);
 	
 	var _Worker2 = _interopRequireDefault(_Worker);
 	
-	var _Stringify = __webpack_require__(79);
+	var _Stringify = __webpack_require__(60);
 	
 	var _Stringify2 = _interopRequireDefault(_Stringify);
 	
@@ -20913,7 +18958,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ }),
-/* 84 */
+/* 65 */
 /***/ (function(module, exports) {
 
 	Object.defineProperty(exports, "__esModule", {
