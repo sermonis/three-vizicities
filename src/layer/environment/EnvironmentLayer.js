@@ -137,6 +137,13 @@ class EnvironmentLayer extends Layer {
 
     super.destroy();
   }
+
+  // Proxy for destroy()
+  terminate () {
+
+     this.destroy()
+
+  }
 }
 
 export default EnvironmentLayer;
@@ -146,4 +153,4 @@ var noNew = function(options) {
 };
 
 // Initialise without requiring new keyword
-export {noNew as environmentLayer};
+export { noNew as environmentLayer };

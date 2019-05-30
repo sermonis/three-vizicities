@@ -1,21 +1,26 @@
-import * as THREE from 'three';
-import EffectComposer from '../vendor/EffectComposer';
+import * as THREE from 'three'
+import EffectComposer from '../vendor/EffectComposer'
 
-export default function(renderer, container) {
-  var composer = new EffectComposer(renderer);
+export default function (renderer, container) {
 
-  var updateSize = function() {
-    // TODO: Re-enable this when perf issues can be solved
-    //
-    // Rendering double the resolution of the screen can be really slow
-    // var pixelRatio = window.devicePixelRatio;
-    var pixelRatio = 1;
+    var composer = new EffectComposer(renderer)
 
-    composer.setSize(container.clientWidth * pixelRatio, container.clientHeight * pixelRatio);
-  };
+    var updateSize = () => {
 
-  window.addEventListener('resize', updateSize, false);
-  updateSize();
+        // TODO: Re-enable this when perf issues can be solved
+        //
+        // Rendering double the resolution of the screen can be really slow
+        // var pixelRatio = window.devicePixelRatio
+        var pixelRatio = 1
 
-  return composer;
-};
+        composer.setSize(container.clientWidth * pixelRatio, container.clientHeight * pixelRatio)
+
+    }
+
+    window.addEventListener('resize', updateSize, false)
+    
+    updateSize()
+
+    return composer
+
+}

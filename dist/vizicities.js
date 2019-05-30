@@ -3655,6 +3655,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	
 	    window.addEventListener('resize', updateSize, false);
+	
 	    updateSize();
 	
 	    return camera;
@@ -4432,7 +4433,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, '__esModule', {
-	  value: true
+	    value: true
 	});
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -4448,25 +4449,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _vendorEffectComposer2 = _interopRequireDefault(_vendorEffectComposer);
 	
 	exports['default'] = function (renderer, container) {
-	  var composer = new _vendorEffectComposer2['default'](renderer);
 	
-	  var updateSize = function updateSize() {
-	    // TODO: Re-enable this when perf issues can be solved
-	    //
-	    // Rendering double the resolution of the screen can be really slow
-	    // var pixelRatio = window.devicePixelRatio;
-	    var pixelRatio = 1;
+	    var composer = new _vendorEffectComposer2['default'](renderer);
 	
-	    composer.setSize(container.clientWidth * pixelRatio, container.clientHeight * pixelRatio);
-	  };
+	    var updateSize = function updateSize() {
 	
-	  window.addEventListener('resize', updateSize, false);
-	  updateSize();
+	        // TODO: Re-enable this when perf issues can be solved
+	        //
+	        // Rendering double the resolution of the screen can be really slow
+	        // var pixelRatio = window.devicePixelRatio
+	        var pixelRatio = 1;
 	
-	  return composer;
+	        composer.setSize(container.clientWidth * pixelRatio, container.clientHeight * pixelRatio);
+	    };
+	
+	    window.addEventListener('resize', updateSize, false);
+	
+	    updateSize();
+	
+	    return composer;
 	};
 	
-	;
 	module.exports = exports['default'];
 
 /***/ }),
@@ -5256,6 +5259,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	
 	      _get(Object.getPrototypeOf(EnvironmentLayer.prototype), 'destroy', this).call(this);
+	    }
+	
+	    // Proxy for destroy()
+	  }, {
+	    key: 'terminate',
+	    value: function terminate() {
+	
+	      this.destroy();
 	    }
 	  }]);
 	
