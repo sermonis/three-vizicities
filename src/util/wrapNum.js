@@ -12,6 +12,6 @@ var wrapNum = function(x, range, includeMax) {
 
     return x === max && includeMax ? x : ((x - min) % d + d) % d + min
 
-};
+}
 
 export default wrapNum

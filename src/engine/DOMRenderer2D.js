@@ -20,6 +20,7 @@ export default function (container) {
     }
 
     window.addEventListener('resize', updateSize, false)
+    
     updateSize()
 
     return renderer

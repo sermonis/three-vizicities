@@ -12,6 +12,7 @@ var world = VIZI.world('world', {
 // Add controls
 VIZI.Controls.orbit().addTo(world)
 
+
 // How to move from city to city?
 // https://github.com/UDST/vizicities/issues/134
 
@@ -24,6 +25,10 @@ VIZI.imageTileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}
     attribution: null,
 
 }).addTo(world)
+
+// console.dir(world)
+
+// VIZI.Controls.orbit().flyToPoint({ x: 20000, y: 20000, z: 20000 }, 10, 5)
 
 // Chroma scale for height-based colours
 var colorScale = chroma.scale('YlOrBr').domain([0,350])
@@ -85,18 +90,98 @@ VIZI.geoJSONLayer('https://gist.github.com/sermonis/0ca99dc8e4e4c4078402f35abceb
 
             if (intersects[0]) {
 
+                // material = new THREE.MeshBasicMaterial({
+                //   color: 0xff0000,
+                //   // TODO: Remove this by implementing logic to make points clockwise
+                //   side: THREE.BackSide,
+                //   depthWrite: false,
+                //   transparent: true
+                // })
+
+                // console.dir(layer)
+
                 // console.log('hover', 'object', 'material', intersects[0].object.material)
                 // console.log('hover', 'object', 'material', intersects[0].object.material.wrapRGB)
 
                 // intersects[0].object.visible = false
                 // console.dir(world._engine._scene)
-                console.log('hover', 'object', 'defaultAttributeValues', intersects[0].object.material.defaultAttributeValues)
+                // console.log('hover', 'object', 'defaultAttributeValues', intersects[0].object.material.defaultAttributeValues)
                 // intersects[0].object.material.defaultAttributeValues.color = [0, 0, 0]
-                // intersects[0].object.material = null
+                // console.log('hover', 'object', 'geometry', intersects[0].object.geometry)
+                // console.log('hover', 'object', 'geometry', intersects[0].object.geometry)
+                // console.log('hover', 'object', 'geometry', intersects[0].object)
+
+                // -------------------------------
+                // -------------------------------
+                // -------------------------------
+
+                // TODO: change material directly in _scene.childen
+
+                // -------------------------------
+                // -------------------------------
+                // -------------------------------
+
+                // let geometry = intersects[0].object.geometry.clone()
+                // let material = VIZI.Util.Color.material()
+                // let mesh = VIZI.Util.Color.mesh(geometry, material)
+
+                // -------------------------------
+                // -------------------------------
+                // -------------------------------
+
+                // mesh.position.set(intersects[0].object.position.x, intersects[0].object.position.y, intersects[0].object.position.z)
+
+                // mesh.position.copy(intersects[0].object.position);
+                // mesh.scale.copy(intersects[0].object.scale);
+                // mesh.updateMatrix()
+                //
+                // world._engine._scene.add(mesh)
+                //
+                // console.log('hover', 'object', 'mesh', mesh)
+
+                // -------------------------------
+                // -------------------------------
+                // -------------------------------
+
+                // intersects[0].object.position.x += 20
+                // intersects[0].object.position.y += 20
+                // intersects[0].object.position.z += 20
+                //
+                // intersects[0].object.scale += 20
+                //
+                // intersects[0].object.updateMatrix()
+
+                // -------------------------------
+                // -------------------------------
+                // -------------------------------
+
+                // world._engine._scene.remove(intersects[0].object)
+
+                // console.dir(world._engine)
+                // world._engine._renderer.state.reset()
+                // world._engine._renderer.render()
+
+                // world._engine.update()
+
+                // console.log(world._engine)
+                // console.log(world._engine._domScene3D)
+
+                // let $_obj = world._engine._scene.children.find(item => console.dir(item))
+                // let $_obj = world._engine._scene.children[1].chifind(item => console.dir(item))
+
+                // ._scene.children
+                // world._update()
+
+                // intersects[0].object.material = VIZI.Util.Color.material()
+                // intersects[0].object.updateMatrix()
+
                 // console.log('hover', 'object', 'material.uniforms', intersects[0].object.material.uniforms)
 
                 // intersects[0].object.material.opacity = 0
                 // intersects[0].object.material.color.set('#000')
+
+                // mesh.matrixAutoUpdate && mesh.updateMatrix()
+                // combinedGeom.merge(mesh.geometry, mesh.matrix)
 
             }
 
