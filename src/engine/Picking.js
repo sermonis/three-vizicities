@@ -204,7 +204,7 @@ class Picking {
     // Picking ID should already be added as an attribute
     add (mesh) {
 
-        console.log('add (mesh)', mesh)
+        // console.log('add (mesh)', mesh)
 
         this._pickingScene.add(mesh)
         this._needUpdate = true
@@ -226,55 +226,70 @@ class Picking {
 
     }
 
-  destroy() {
-    // TODO: Find a way to properly remove these listeners as they stay
-    // active at the moment
-    window.removeEventListener('resize', this._resizeHandler, false);
-    this._world._container.removeEventListener('mouseup', this._mouseUpHandler, false);
-    this._world._container.removeEventListener('mousemove', this._throttledMouseMoveHandler, false);
+    destroy () {
 
-    this._world.off('move', this._onWorldMove);
+        // TODO: Find a way to properly remove these listeners as they stay
+        // active at the moment
+        window.removeEventListener('resize', this._resizeHandler, false)
 
-    if (this._pickingScene.children) {
-      // Remove everything else in the layer
-      var child;
-      for (var i = this._pickingScene.children.length - 1; i >= 0; i--) {
-        child = this._pickingScene.children[i];
+        this._world._container.removeEventListener('mouseup', this._mouseUpHandler, false)
+        this._world._container.removeEventListener('mousemove', this._throttledMouseMoveHandler, false)
 
-        if (!child) {
-          continue;
+        this._world.off('move', this._onWorldMove)
+
+        if (this._pickingScene.children) {
+
+            // Remove everything else in the layer
+            var child
+
+            for (var i = this._pickingScene.children.length - 1; i >= 0; i--) {
+
+                child = this._pickingScene.children[i]
+
+                if (!child) {
+
+                    continue
+
+                }
+
+                this._pickingScene.remove(child)
+
+                // Probably not a good idea to dispose of geometry due to it being
+                // shared with the non-picking scene
+                // if (child.geometry) {
+                //   // Dispose of mesh and materials
+                //   child.geometry.dispose()
+                //   child.geometry = null
+                // }
+
+                if (child.material) {
+
+                    if (child.material.map) {
+
+                        child.material.map.dispose()
+                        child.material.map = null
+
+                    }
+
+                    child.material.dispose()
+                    child.material = null
+
+                }
+
+            }
+
         }
 
-        this._pickingScene.remove(child);
+        this._pickingScene = null
+        this._pickingTexture = null
+        this._pixelBuffer = null
 
-        // Probably not a good idea to dispose of geometry due to it being
-        // shared with the non-picking scene
-        // if (child.geometry) {
-        //   // Dispose of mesh and materials
-        //   child.geometry.dispose();
-        //   child.geometry = null;
-        // }
+        this._world = null
+        this._renderer = null
+        this._camera = null
 
-        if (child.material) {
-          if (child.material.map) {
-            child.material.map.dispose();
-            child.material.map = null;
-          }
-
-          child.material.dispose();
-          child.material = null;
-        }
-      }
     }
 
-    this._pickingScene = null;
-    this._pickingTexture = null;
-    this._pixelBuffer = null;
-
-    this._world = null;
-    this._renderer = null;
-    this._camera = null;
-  }
 }
 
 // Initialise without requiring new keyword
