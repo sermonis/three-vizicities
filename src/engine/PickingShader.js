@@ -1,8 +1,9 @@
 // FROM: https://github.com/brianxu/GPUPicker/blob/master/GPUPicker.js
-
 var PickingShader = {
-  vertexShader: [
-		'attribute float pickingId;',
+
+    vertexShader: [
+
+        'attribute float pickingId;',
 		// '',
 		// 'uniform float size;',
 		// 'uniform float scale;',
@@ -17,9 +18,11 @@ var PickingShader = {
 		'  worldId = vec4(a,1);',
 		'  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );',
 		'}'
+
 	].join('\n'),
 
-  fragmentShader: [
+    fragmentShader: [
+
 		'#ifdef GL_ES\n',
 		'precision highp float;\n',
 		'#endif\n',
@@ -29,7 +32,9 @@ var PickingShader = {
 		'void main() {',
 		'  gl_FragColor = worldId;',
 		'}'
-	].join('\n')
-};
 
-export default PickingShader;
+	].join('\n')
+
+}
+
+export default PickingShader

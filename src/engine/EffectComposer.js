@@ -7,7 +7,7 @@ export default function (renderer, container) {
 
     var updateSize = () => {
 
-        // TODO: Re-enable this when perf issues can be solved
+        // TODO: Re-enable this when performance issues can be solved
         //
         // Rendering double the resolution of the screen can be really slow
         // var pixelRatio = window.devicePixelRatio
@@ -18,7 +18,7 @@ export default function (renderer, container) {
     }
 
     window.addEventListener('resize', updateSize, false)
-    
+
     updateSize()
 
     return composer

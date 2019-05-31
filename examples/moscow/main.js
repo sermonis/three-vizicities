@@ -83,7 +83,15 @@ VIZI.geoJSONLayer('https://gist.github.com/sermonis/0ca99dc8e4e4c4078402f35abceb
 
             if (intersects[0]) {
 
-                console.log('hover', 'object', 'material', intersects[0].object.material)
+                // console.log('hover', 'object', 'material', intersects[0].object.material)
+                // console.log('hover', 'object', 'material', intersects[0].object.material.wrapRGB)
+
+                // intersects[0].object.visible = false
+                // console.dir(world._engine._scene)
+                console.log('hover', 'object', 'defaultAttributeValues', intersects[0].object.material.defaultAttributeValues)
+                // intersects[0].object.material.defaultAttributeValues.color = [0, 0, 0]
+                // intersects[0].object.material = null
+                // console.log('hover', 'object', 'material.uniforms', intersects[0].object.material.uniforms)
 
                 // intersects[0].object.material.opacity = 0
                 // intersects[0].object.material.color.set('#000')

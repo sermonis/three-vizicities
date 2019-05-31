@@ -30,6 +30,7 @@ class Engine extends EventEmitter {
     this._domScene2D = DOMScene2D;
 
     var antialias = (this._world.options.postProcessing) ? false : true;
+    
     this._renderer = Renderer(container, antialias);
     this._domRenderer3D = DOMRenderer3D(container);
     this._domRenderer2D = DOMRenderer2D(container);
@@ -192,7 +193,7 @@ class Engine extends EventEmitter {
      this.destroy()
 
   }
-  
+
 }
 
 
