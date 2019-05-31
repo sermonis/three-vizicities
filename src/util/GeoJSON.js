@@ -3,9 +3,10 @@
  */
 import * as THREE from 'three'
 import * as topojson from 'topojson'
+
+import extrudePolygon from './extrudePolygon'
 import geojsonMerge from 'geojson-merge'
 import earcut from 'earcut'
-import extrudePolygon from './extrudePolygon'
 
 // TODO: Make it so height can be per-coordinate / point but connected together
 // as a linestring (eg. GPS points with an elevation at each point)
@@ -34,8 +35,8 @@ var GeoJSON = (function() {
         lineTransparent: false,
         lineColor: '#ffffff',
         lineWidth: 1,
-        lineBlending: THREE.NormalBlending
-        
+        lineBlending: THREE.NormalBlending,
+
     };
 
   // Attempts to merge together multiple GeoJSON Features or FeatureCollections

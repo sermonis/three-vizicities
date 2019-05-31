@@ -37,13 +37,15 @@ VIZI.geoJSONLayer('https://gist.github.com/sermonis/0ca99dc8e4e4c4078402f35abceb
     interactive: true,
     style: ( feature ) => {
 
-        var value = feature.properties.OKATO
-        var color = colorScale(value).hex()
+        let value = feature.properties.OKATO
+        // var color = colorScale(value).hex()
+        // var color = '#4B70F5'
+        let color = VIZI.Util.Color.random()
 
         return {
 
-            // color: color,
-            color: '#4B70F5',
+            color: color,
+            // color: '#4B70F5',
             opacity: 0.1,
             transparent: true,
             outline: true,
