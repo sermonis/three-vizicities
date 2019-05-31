@@ -1,16 +1,22 @@
-import Tile from './Tile';
-import {geoJSONLayer as GeoJSONLayer} from '../GeoJSONLayer';
-import {geoJSONWorkerLayer as GeoJSONWorkerLayer} from '../GeoJSONWorkerLayer';
-import BoxHelper from '../../vendor/BoxHelper';
-import * as THREE from 'three';
-import reqwest from 'reqwest';
-import {point as Point} from '../../geo/Point';
-import {latLon as LatLon} from '../../geo/LatLon';
-import extend from 'lodash.assign';
+import Tile from './Tile'
+
+import {geoJSONLayer as GeoJSONLayer} from '../GeoJSONLayer'
+import {geoJSONWorkerLayer as GeoJSONWorkerLayer} from '../GeoJSONWorkerLayer'
+
+import * as THREE from 'three'
+
+import reqwest from 'reqwest'
+import extend from 'lodash.assign'
+
+import {point as Point} from '../../geo/Point'
+import {latLon as LatLon} from '../../geo/LatLon'
+
 // import Offset from 'polygon-offset';
-import GeoJSON from '../../util/GeoJSON';
-import Buffer from '../../util/Buffer';
-import PickingMaterial from '../../engine/PickingMaterial';
+import GeoJSON from '../../util/GeoJSON'
+import Buffer from '../../util/Buffer'
+import BoxHelper from '../../vendor/BoxHelper'
+
+import PickingMaterial from '../../engine/PickingMaterial'
 
 // TODO: Map picking IDs to some reference within the tile data / geometry so
 // that something useful can be done when an object is picked / clicked on
@@ -282,7 +288,7 @@ class GeoJSONTile extends Tile {
         this.destroyMesh(this._mesh);
       }
 
-      // TOSO: Work out if the picking mesh needs destroying here
+      // TODO: Work out if the picking mesh needs destroying here
       // this.destroyMesh(this._pickingMesh);
 
       this._mesh.add(this._geojsonLayer._object3D);
@@ -354,24 +360,33 @@ class GeoJSONTile extends Tile {
     });
   }
 
-  _abortRequest() {
-    if ((!this._request && !this._options.workers) || this._ready) {
-      return;
+    _abortRequest() {
+
+        if ((!this._request && !this._options.workers) || this._ready) {
+
+            return
+
+        }
+
+        this._aborted = true
+
+        if (this._request) {
+
+            this._request.abort()
+
+        }
+
     }
 
-    this._aborted = true;
-
-    if (this._request) {
-      this._request.abort();
-    }
-  }
 }
 
-export default GeoJSONTile;
+export default GeoJSONTile
 
 var noNew = function(quadcode, path, layer, options) {
-  return new GeoJSONTile(quadcode, path, layer, options);
-};
+
+    return new GeoJSONTile(quadcode, path, layer, options)
+
+}
 
 // Initialise without requiring new keyword
-export {noNew as geoJSONTile};
+export { noNew as geoJSONTile }

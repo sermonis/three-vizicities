@@ -1,8 +1,10 @@
-import TileLayer from './TileLayer';
-import extend from 'lodash.assign';
-import GeoJSONTile from './GeoJSONTile';
-import throttle from 'lodash.throttle';
-import * as THREE from 'three';
+import TileLayer from './TileLayer'
+import GeoJSONTile from './GeoJSONTile'
+
+import extend from 'lodash.assign'
+import throttle from 'lodash.throttle'
+
+import * as THREE from 'three'
 
 // TODO: Offer on-the-fly slicing of static, non-tile-based GeoJSON files into a
 // tile grid using geojson-vt
@@ -12,7 +14,7 @@ import * as THREE from 'three';
 // TODO: Make sure nothing is left behind in the heap after calling destroy()
 
 // TODO: Consider pausing per-frame output during movement so there's little to
-// no jank caused by previous tiles still processing
+// no junk caused by previous tiles still processing
 
 // This tile layer only updates the quadtree after world movement has occurred
 //
@@ -35,115 +37,154 @@ import * as THREE from 'three';
 // processing is added
 
 class GeoJSONTileLayer extends TileLayer {
-  constructor(path, options) {
-    var defaults = {
-      maxLOD: 14,
-      distance: 30000,
-      workers: false
-    };
 
-    options = extend({}, defaults, options);
+    constructor (path, options) {
 
-    super(options);
+        var defaults = {
 
-    this.defaults = defaults;
+            maxLOD: 14,
+            distance: 30000,
+            workers: false,
 
-    this._path = path;
-  }
+        }
 
-  _onAdd(world) {
-    return new Promise((resolve, reject) => {
-      super._onAdd(world).then(() => {
-        // Trigger initial quadtree calculation on the next frame
+        options = extend({}, defaults, options)
+
+        super(options)
+
+        this.defaults = defaults
+
+        this._path = path
+
+    }
+
+    _onAdd (world) {
+
+        return new Promise((resolve, reject) => {
+
+            super._onAdd(world).then(() => {
+
+                // Trigger initial quadtree calculation on the next frame
+                //
+                // TODO: This is a hack to ensure the camera is all set up - a better
+                // solution should be found
+                setTimeout(() => {
+
+                    this._calculateLOD()
+                    this._initEvents()
+
+                }, 0)
+
+                resolve(this)
+
+            }).catch(reject)
+
+        })
+
+    }
+
+    _initEvents () {
+
+        // Run LOD calculations based on render calls
         //
-        // TODO: This is a hack to ensure the camera is all set up - a better
-        // solution should be found
-        setTimeout(() => {
-          this._calculateLOD();
-          this._initEvents();
-        }, 0);
+        // Throttled to 1 LOD calculation per 100ms
+        this._throttledWorldUpdate = throttle(this._onWorldUpdate, 100)
 
-        resolve(this);
-      }).catch(reject);
-    });
-  }
+        this._world.on('preUpdate', this._throttledWorldUpdate, this)
+        this._world.on('move', this._onWorldMove, this)
+        this._world.on('controlsMove', this._onControlsMove, this)
 
-  _initEvents() {
-    // Run LOD calculations based on render calls
-    //
-    // Throttled to 1 LOD calculation per 100ms
-    this._throttledWorldUpdate = throttle(this._onWorldUpdate, 100);
-
-    this._world.on('preUpdate', this._throttledWorldUpdate, this);
-    this._world.on('move', this._onWorldMove, this);
-    this._world.on('controlsMove', this._onControlsMove, this);
-  }
-
-  // Update and output tiles each frame (throttled)
-  _onWorldUpdate() {
-    if (this._pauseOutput || this._disableOutput) {
-      return;
     }
 
-    this._outputTiles();
-  }
+    // Update and output tiles each frame (throttled)
+    _onWorldUpdate () {
 
-  // Update tiles grid after world move, but don't output them
-  _onWorldMove(latlon, point) {
-    if (this._disableOutput) {
-      return;
+        if (this._pauseOutput || this._disableOutput) {
+
+            return
+
+        }
+
+        this._outputTiles()
+
     }
 
-    this._pauseOutput = false;
-    this._calculateLOD();
-  }
+    // Update tiles grid after world move, but don't output them
+    _onWorldMove (latlon, point) {
 
-  // Pause updates during control movement for less visual jank
-  _onControlsMove() {
-    if (this._disableOutput) {
-      return;
+        if (this._disableOutput) {
+
+            return
+
+        }
+
+        this._pauseOutput = false
+        this._calculateLOD()
+
     }
 
-    this._pauseOutput = true;
-  }
+    // Pause updates during control movement for less visual jank
+    _onControlsMove () {
 
-  _createTile(quadcode, layer) {
-    var newOptions = extend({}, this.defaults, this._options, {
-      outputToScene: false
-    });
+        if (this._disableOutput) {
 
-    delete newOptions.attribution;
+            return
 
-    return new GeoJSONTile(quadcode, this._path, layer, newOptions);
-  }
+        }
 
-  hide() {
-    this._pauseOutput = true;
-    super.hide();
-  }
+        this._pauseOutput = true
 
-  show() {
-    this._pauseOutput = false;
-    super.show();
-  }
+    }
 
-  // Destroys the layer and removes it from the scene and memory
-  destroy() {
-    this._world.off('preUpdate', this._throttledWorldUpdate);
-    this._world.off('move', this._onWorldMove);
+    _createTile (quadcode, layer) {
 
-    this._throttledWorldUpdate = null;
+        var newOptions = extend({}, this.defaults, this._options, {
 
-    // Run common destruction logic from parent
-    super.destroy();
-  }
+            outputToScene: false,
+
+        })
+
+        delete newOptions.attribution
+
+        return new GeoJSONTile(quadcode, this._path, layer, newOptions)
+
+    }
+
+    hide () {
+
+        this._pauseOutput = true
+        super.hide()
+
+    }
+
+    show () {
+
+        this._pauseOutput = false
+        super.show()
+
+    }
+
+    // Destroys the layer and removes it from the scene and memory
+    destroy () {
+
+        this._world.off('preUpdate', this._throttledWorldUpdate)
+        this._world.off('move', this._onWorldMove)
+
+        this._throttledWorldUpdate = null
+
+        // Run common destruction logic from parent
+        super.destroy()
+    }
+
 }
 
-export default GeoJSONTileLayer;
+export default GeoJSONTileLayer
 
-var noNew = function(path, options) {
-  return new GeoJSONTileLayer(path, options);
-};
+var noNew = function (path, options) {
+
+    return new GeoJSONTileLayer(path, options)
+
+}
 
 // Initialise without requiring new keyword
-export {noNew as geoJSONTileLayer};
+export { noNew as geoJSONTileLayer }

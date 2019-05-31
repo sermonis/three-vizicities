@@ -1,5 +1,5 @@
 import GeoJSONTileLayer from './GeoJSONTileLayer'
-import extend from 'lodash.assign'
+import extend from 'lodash.assign' 
 
 class TopoJSONTileLayer extends GeoJSONTileLayer {
 

@@ -1,7 +1,8 @@
-import Layer from '../Layer';
-import extend from 'lodash.assign';
-import TileCache from './TileCache';
-import * as THREE from 'three';
+import Layer from '../Layer'
+import TileCache from './TileCache'
+
+import extend from 'lodash.assign'
+import * as THREE from 'three'
 
 // TODO: Consider removing picking from TileLayer instances as there aren't
 // (m)any situations where it would be practical

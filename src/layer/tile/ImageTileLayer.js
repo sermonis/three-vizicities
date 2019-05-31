@@ -1,9 +1,10 @@
-import TileLayer from './TileLayer';
-import ImageTile from './ImageTile';
-import ImageTileLayerBaseMaterial from './ImageTileLayerBaseMaterial';
-import throttle from 'lodash.throttle';
-import * as THREE from 'three';
-import extend from 'lodash.assign';
+import TileLayer from './TileLayer'
+import ImageTile from './ImageTile'
+import ImageTileLayerBaseMaterial from './ImageTileLayerBaseMaterial'
+
+import * as THREE from 'three'
+import throttle from 'lodash.throttle'
+import extend from 'lodash.assign'
 
 // TODO: Make sure nothing is left behind in the heap after calling destroy()
 
@@ -57,121 +58,150 @@ import extend from 'lodash.assign';
 // refresh and update during movement, which is an arguably better experience
 
 class ImageTileLayer extends TileLayer {
-  constructor(path, options) {
-    var defaults = {
-      distance: 300000
-    };
 
-    options = extend({}, defaults, options);
+    constructor (path, options) {
 
-    super(options);
+        var defaults = {
 
-    this._path = path;
-  }
+            distance: 300000
 
-  _onAdd(world) {
-    return new Promise((resolve, reject) => {
-      super._onAdd(world).then(() => {
-        // TODO: Removed because it causes depth buffer intersection issues
-        // with layer on top for some reason. Need to work out why and fix.
+        }
+
+        options = extend({}, defaults, options)
+
+        super(options)
+
+        this._path = path
+
+    }
+
+    _onAdd (world) {
+
+        return new Promise((resolve, reject) => {
+
+            super._onAdd(world).then(() => {
+
+                // TODO: Removed because it causes depth buffer intersection issues
+                // with layer on top for some reason. Need to work out why and fix.
+                //
+                // Add base layer
+                // var geom = new THREE.PlaneBufferGeometry(2000000, 2000000, 1);
+
+                // var baseMaterial;
+                // if (this._world._environment._skybox) {
+                //   baseMaterial = ImageTileLayerBaseMaterial('#f5f5f3', this._world._environment._skybox.getRenderTarget());
+                // } else {
+                //   baseMaterial = ImageTileLayerBaseMaterial('#f5f5f3');
+                // }
+
+                // var mesh = new THREE.Mesh(geom, baseMaterial);
+
+                // // Setting this causes a depth-buffer intersection issue on the
+                // // all-the-things example
+                // // mesh.renderOrder = -1;
+
+                // mesh.rotation.x = -90 * Math.PI / 180;
+
+                // // TODO: It might be overkill to receive a shadow on the base layer as it's
+                // // rarely seen (good to have if performance difference is negligible)
+                // mesh.receiveShadow = true;
+
+                // this._baseLayer = mesh;
+                // this.add(mesh);
+
+                // Trigger initial quadtree calculation on the next frame
+                //
+                // TODO: This is a hack to ensure the camera is all set up - a better
+                // solution should be found
+                setTimeout(() => {
+
+                    this._calculateLOD()
+                    this._initEvents()
+                    
+                    resolve(this)
+
+                }, 0)
+
+            }).catch(reject)
+
+        })
+
+    }
+
+    _initEvents () {
+
+        // Run LOD calculations based on render calls
         //
-        // Add base layer
-        // var geom = new THREE.PlaneBufferGeometry(2000000, 2000000, 1);
+        // Throttled to 1 LOD calculation per 100ms
+        this._throttledWorldUpdate = throttle(this._onWorldUpdate, 100)
 
-        // var baseMaterial;
-        // if (this._world._environment._skybox) {
-        //   baseMaterial = ImageTileLayerBaseMaterial('#f5f5f3', this._world._environment._skybox.getRenderTarget());
-        // } else {
-        //   baseMaterial = ImageTileLayerBaseMaterial('#f5f5f3');
+        this._world.on('preUpdate', this._throttledWorldUpdate, this)
+        // this._world.on('move', this._onWorldMove, this);
+
+    }
+
+    _onWorldUpdate () {
+
+        this._calculateLOD()
+        this._outputTiles()
+
+    }
+
+    _onWorldMove (latlon, point) {
+
+        // this._moveBaseLayer(point);
+
+    }
+
+    _moveBaseLayer (point) {
+
+        this._baseLayer.position.x = point.x
+        this._baseLayer.position.z = point.y
+
+    }
+
+    _createTile (quadcode, layer) {
+
+        return new ImageTile(quadcode, this._path, layer)
+
+    }
+
+    // Destroys the layer and removes it from the scene and memory
+    destroy () {
+
+        this._world.off('preUpdate', this._throttledWorldUpdate)
+        this._world.off('move', this._onWorldMove)
+
+        this._throttledWorldUpdate = null
+
+        // Dispose of mesh and materials
+        // this._baseLayer.geometry.dispose()
+        // this._baseLayer.geometry = null
+
+        // if (this._baseLayer.material.map) {
+        //   this._baseLayer.material.map.dispose()
+        //   this._baseLayer.material.map = null
         // }
 
-        // var mesh = new THREE.Mesh(geom, baseMaterial);
+        // this._baseLayer.material.dispose()
+        // this._baseLayer.material = null
 
-        // // Setting this causes a depth-buffer intersection issue on the
-        // // all-the-things example
-        // // mesh.renderOrder = -1;
+        // this._baseLayer = null
 
-        // mesh.rotation.x = -90 * Math.PI / 180;
+        // Run common destruction logic from parent
+        super.destroy()
 
-        // // TODO: It might be overkill to receive a shadow on the base layer as it's
-        // // rarely seen (good to have if performance difference is negligible)
-        // mesh.receiveShadow = true;
+    }
 
-        // this._baseLayer = mesh;
-        // this.add(mesh);
-
-        // Trigger initial quadtree calculation on the next frame
-        //
-        // TODO: This is a hack to ensure the camera is all set up - a better
-        // solution should be found
-        setTimeout(() => {
-          this._calculateLOD();
-          this._initEvents();
-          resolve(this);
-        }, 0);
-      }).catch(reject);
-    });
-  }
-
-  _initEvents() {
-    // Run LOD calculations based on render calls
-    //
-    // Throttled to 1 LOD calculation per 100ms
-    this._throttledWorldUpdate = throttle(this._onWorldUpdate, 100);
-
-    this._world.on('preUpdate', this._throttledWorldUpdate, this);
-    // this._world.on('move', this._onWorldMove, this);
-  }
-
-  _onWorldUpdate() {
-    this._calculateLOD();
-    this._outputTiles();
-  }
-
-  _onWorldMove(latlon, point) {
-    // this._moveBaseLayer(point);
-  }
-
-  _moveBaseLayer(point) {
-    this._baseLayer.position.x = point.x;
-    this._baseLayer.position.z = point.y;
-  }
-
-  _createTile(quadcode, layer) {
-    return new ImageTile(quadcode, this._path, layer);
-  }
-
-  // Destroys the layer and removes it from the scene and memory
-  destroy() {
-    this._world.off('preUpdate', this._throttledWorldUpdate);
-    this._world.off('move', this._onWorldMove);
-
-    this._throttledWorldUpdate = null;
-
-    // Dispose of mesh and materials
-    // this._baseLayer.geometry.dispose();
-    // this._baseLayer.geometry = null;
-
-    // if (this._baseLayer.material.map) {
-    //   this._baseLayer.material.map.dispose();
-    //   this._baseLayer.material.map = null;
-    // }
-
-    // this._baseLayer.material.dispose();
-    // this._baseLayer.material = null;
-
-    // this._baseLayer = null;
-
-    // Run common destruction logic from parent
-    super.destroy();
-  }
 }
 
-export default ImageTileLayer;
+export default ImageTileLayer
 
-var noNew = function(path, options) {
-  return new ImageTileLayer(path, options);
-};
+var noNew = function (path, options) {
+
+    return new ImageTileLayer(path, options)
+
+}
 
 // Initialise without requiring new keyword
-export {noNew as imageTileLayer};
+export { noNew as imageTileLayer }
