@@ -67,50 +67,62 @@ VIZI.geoJSONLayer('https://gist.github.com/sermonis/0ca99dc8e4e4c4078402f35abceb
 
         })
 
-        // layer.on('hover', (layer, point2d, point3d, intersects) => {
-        //
-        //     // console.dir(layer)
-        //     // console.dir(point2d)
-        //     // console.dir(point3d)
-        //     // console.dir(intersects)
-        //
-        //     console.dir(intersects[0])
-        //
-        //     let mesh = intersects[0].object
-        //
-        //     console.dir(mesh)
-        //     mesh.visible = false
-        //
-        //     // intersects[0].object.material.transparent = true
-        //     // intersects[0].object.material.color = 'red'
-        //     // intersects[0].object.material.opacity = 0
-        //
-        //     // intersects[0].object.material.needsUpdate = true
-        //
-        //     // intersects[0].object.material.color = 'red'
-        //
-        //     // intersects[0].object.material.setHex(0xff0000)
-        //     // intersects[0].object.material.emissive.setHex( 0xff0000 );
-        //
-        //     // world.terminate()
-        //
-        //     // console.dir(intersects[0].object)
-        //     // intersects[0].object.visible = false
-        //
-        //     // console.dir(intersects[0].object.material.emissive)
-        //
-        //     // layer._options.style.transparent = false
-        //     // layer.hide();
-        //     // console.dir(intersects)
-        //
-        //     let id = layer.feature.properties.NAME
-        //     // var id = layer.feature.properties.ABBREV
-        //     let value = layer.feature.properties.OKATO
-        //
-        //     // console.log(id + '!!!!!: ' + value, layer, point2d, point3d, intersects)
-        //     // console.log(id + '!!!!!: ')
-        //
-        // })
+        layer.on('hover', (layer, point2d, point3d, intersects) => {
+
+            // console.dir(layer)
+            // console.dir(point2d)
+            // console.dir(point3d)
+            // console.dir(intersects)
+
+            // console.dir(intersects[0])
+            //
+            // let mesh = intersects[0].object
+            //
+            // console.dir(mesh)
+            // mesh.visible = false
+
+            if (intersects[0]) {
+
+                console.log('hover', 'object', 'material', intersects[0].object.material)
+
+                // intersects[0].object.material.opacity = 0
+                // intersects[0].object.material.color.set('#000')
+
+            }
+
+            // intersects[0].object.material.transparent = true
+            // intersects[0].object.material.color = 'red'
+            // intersects[0].object.material.opacity = 0
+
+            // intersects[0].object.material.needsUpdate = true
+
+            // intersects[0].object.material.color = 'red'
+
+            // intersects[0].object.material.setHex(0xff0000)
+            // intersects[0].object.material.emissive.setHex( 0xff0000 );
+
+            // world.terminate()
+
+            // console.dir(intersects[0].object)
+            // intersects[0].object.visible = false
+
+            // console.dir(intersects[0].object.material.emissive)
+
+            // layer._options.style.transparent = false
+            // layer.hide();
+            // console.dir(intersects)
+
+            // let id = layer.feature.properties.NAME
+            // var id = layer.feature.properties.ABBREV
+            // let value = layer.feature.properties.OKATO
+
+            console.log('hover', 'feature', 'NAME', layer.feature.properties.NAME)
+            console.log('hover', 'feature', 'OKATO', layer.feature.properties.OKATO)
+
+            // console.log(id + '!!!!!: ' + value, layer, point2d, point3d, intersects)
+            // console.log(id + '!!!!!: ')
+
+        })
 
     }
 
