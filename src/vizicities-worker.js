@@ -1,12 +1,12 @@
-import Geo from './geo/Geo.js'
-import Layer, {layer} from './layer/Layer'
-import GeoJSONWorkerLayer, {geoJSONWorkerLayer} from './layer/GeoJSONWorkerLayer'
-import PolygonLayer, {polygonLayer} from './layer/geometry/PolygonLayer'
+import Geo from './geo/Geo.js';
+import Layer, {layer} from './layer/Layer';
+import GeoJSONWorkerLayer, {geoJSONWorkerLayer} from './layer/GeoJSONWorkerLayer';
+import PolygonLayer, {polygonLayer} from './layer/geometry/PolygonLayer';
 
-import Point, {point} from './geo/Point'
-import LatLon, {latLon} from './geo/LatLon'
+import Point, {point} from './geo/Point';
+import LatLon, {latLon} from './geo/LatLon';
 
-import Util from './util/index'
+import Util from './util/index';
 
 const VIZI = {
 
@@ -25,6 +25,6 @@ const VIZI = {
     latLon: latLon,
     Util: Util,
 
-}
+};
 
-export default VIZI
+export default VIZI;

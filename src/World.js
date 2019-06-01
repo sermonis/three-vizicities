@@ -1,13 +1,13 @@
-import EventEmitter from 'eventemitter3'
-import extend from 'lodash.assign'
+import EventEmitter from 'eventemitter3';
+import extend from 'lodash.assign';
 
-import { point as Point } from './geo/Point'
-import { latLon as LatLon } from './geo/LatLon'
+import { point as Point } from './geo/Point';
+import { latLon as LatLon } from './geo/LatLon';
 
-import Geo from './geo/Geo'
-import Engine from './engine/Engine'
-import EnvironmentLayer from './layer/environment/EnvironmentLayer'
-import Worker from './util/Worker'
+import Geo from './geo/Geo';
+import Engine from './engine/Engine';
+import EnvironmentLayer from './layer/environment/EnvironmentLayer';
+import Worker from './util/Worker';
 
 /**
  * TODO: Make sure nothing is left behind
