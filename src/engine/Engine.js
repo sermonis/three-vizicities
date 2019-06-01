@@ -19,7 +19,7 @@ import FXAAShader from '../vendor/FXAAShader';
 class Engine extends EventEmitter {
 
   constructor (container, world) {
-    console.log('Init Engine');
+    console.log('Init', 'Engine');
 
     super();
 

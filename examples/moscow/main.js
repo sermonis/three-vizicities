@@ -33,6 +33,13 @@ VIZI.imageTileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}
 // Chroma scale for height-based colours
 var colorScale = chroma.scale('YlOrBr').domain([0,350])
 
+document.getElementById('debugButton').addEventListener('click', (e) => {
+
+    alert('Debug')
+    // world.destroyDebug()
+
+})
+
 // Moscow administrative boundary polygons
 // VIZI.geoJSONLayer('https://gist.github.com/sermonis/640e1902c850d49fe05c46f9a1eb23fc/raw/cff7940eeeaee4c94b895cc1fc8a738c2729fe52/moscow-ao.geojson', {
 // Moscow munitipal boundary polygons

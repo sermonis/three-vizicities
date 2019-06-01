@@ -174,6 +174,8 @@ class Layer extends EventEmitter {
     }
 
   // Destroys the layer and removes it from the scene and memory
+  // TODO: remove event listeners. World.destroy() and World.removeLayer()
+  // do not removes layer events!!!
   destroy() {
     if (this._object3D && this._object3D.children) {
       // Remove everything else in the layer
@@ -238,6 +240,13 @@ class Layer extends EventEmitter {
 
     this._world = null;
     this._object3D = null;
+  }
+
+  // Proxy for destroy()
+  terminate () {
+
+      this.destroy()
+
   }
 }
 

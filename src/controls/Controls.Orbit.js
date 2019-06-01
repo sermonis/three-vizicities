@@ -428,6 +428,13 @@ class Orbit extends EventEmitter {
 
     }
 
+    // Proxy for destroy()
+    terminate () {
+
+        this.destroy()
+
+    }
+
 }
 
 export default Orbit
