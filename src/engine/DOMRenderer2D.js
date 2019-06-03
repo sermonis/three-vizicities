@@ -1,28 +1,30 @@
-import * as THREE from 'three'
-import { CSS2DRenderer } from '../vendor/CSS2DRenderer'
-import DOMScene2D from './DOMScene2D'
+import * as THREE from 'three';
+import { CSS2DRenderer } from '../vendor/CSS2DRenderer';
+import DOMScene2D from './DOMScene2D';
 
-// This can only be accessed from Engine.renderer if you want to reference the
-// same scene in multiple places
-export default function (container) {
+/**
+ * This can only be accessed from Engine.renderer
+ * if you want to reference the same scene in multiple places.
+ */
+export default function ( container ) {
 
-    var renderer = new CSS2DRenderer()
+    let _renderer = new CSS2DRenderer();
 
-    renderer.domElement.style.position = 'absolute'
-    renderer.domElement.style.top = 0;
+    _renderer.domElement.style.position = 'absolute';
+    _renderer.domElement.style.top = 0;
 
-    container.appendChild(renderer.domElement)
+    container.appendChild( _renderer.domElement );
 
-    var updateSize = () => {
+    let _updateSize = () => {
 
-        renderer.setSize(container.clientWidth, container.clientHeight)
+        _renderer.setSize( container.clientWidth, container.clientHeight );
 
     }
 
-    window.addEventListener('resize', updateSize, false)
-    
-    updateSize()
+    window.addEventListener( 'resize', _updateSize, false );
 
-    return renderer
+    _updateSize()
 
-}
+    return _renderer;
+
+};

@@ -85,7 +85,7 @@ class ImageTile extends Tile {
 
             material.roughness = 1
             material.metalness = 0.1
-            
+
             material.envMap = this._world._environment._skybox.getRenderTarget()
 
         }

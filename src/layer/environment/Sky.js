@@ -9,26 +9,25 @@
  * http://www.cs.utah.edu/~shirley/papers/sunsky/sunsky.pdf
  *
  * First implemented by Simon Wallner
- * http://www.simonwallner.at/projects/atmospheric-scattering
+ * http://simonwallner.at/project/atmospheric-scattering/
  *
  * Improved by Martin Upitis
  * http://blenderartists.org/forum/showthread.php?245954-preethams-sky-impementation-HDR
  *
  * Three.js integration by zz85 http://twitter.com/blurspline
-*/
-
+ */
 import * as THREE from 'three';
 
 THREE.ShaderLib[ 'sky' ] = {
 
 	uniforms: {
 
-		luminance:	 { type: 'f', value: 1 },
-		turbidity:	 { type: 'f', value: 2 },
-		reileigh:	 { type: 'f', value: 1 },
-		mieCoefficient:	 { type: 'f', value: 0.005 },
-		mieDirectionalG: { type: 'f', value: 0.8 },
-		sunPosition: 	 { type: 'v3', value: new THREE.Vector3() }
+		luminance:    { type: 'f', value: 1 },
+		turbidity:    { type: 'f', value: 2 },
+		reileigh:     { type: 'f', value: 1 },
+		mieCoefficient:   { type: 'f', value: 0.005 },
+		mieDirectionalG:  { type: 'f', value: 0.8 },
+		sunPosition:      { type: 'v3', value: new THREE.Vector3() }
 
 	},
 
@@ -183,8 +182,6 @@ THREE.ShaderLib[ 'sky' ] = {
 			'float sR = rayleighZenithLength / (cos(zenithAngle) + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / pi), -1.253));',
 			'float sM = mieZenithLength / (cos(zenithAngle) + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / pi), -1.253));',
 
-
-
 			'// combined extinction factor	',
 			'vec3 Fex = exp(-(betaR * sR + betaM * sM));',
 
@@ -197,11 +194,10 @@ THREE.ShaderLib[ 'sky' ] = {
 			'float mPhase = hgPhase(cosTheta, mieDirectionalG);',
 			'vec3 betaMTheta = betaM * mPhase;',
 
-
 			'vec3 Lin = pow(sunE * ((betaRTheta + betaMTheta) / (betaR + betaM)) * (1.0 - Fex),vec3(1.5));',
 			'Lin *= mix(vec3(1.0),pow(sunE * ((betaRTheta + betaMTheta) / (betaR + betaM)) * Fex,vec3(1.0/2.0)),clamp(pow(1.0-dot(up, sunDirection),5.0),0.0,1.0));',
 
-			'//nightsky',
+			'// nightsky',
 			'vec3 direction = normalize(vWorldPosition - cameraPos);',
 			'float theta = acos(direction.y); // elevation --> y-axis, [-pi/2, pi/2]',
 			'float phi = atan(direction.z, direction.x); // azimuth --> x-axis [-pi/2, pi/2]',
@@ -214,7 +210,6 @@ THREE.ShaderLib[ 'sky' ] = {
 			'float sundisk = smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);',
 			'// if (normalize(vWorldPosition - cameraPos).y>0.0)',
 			'L0 += (sunE * 19000.0 * Fex)*sundisk;',
-
 
 			'vec3 whiteScale = 1.0/Uncharted2Tonemap(vec3(W));',
 
@@ -233,10 +228,10 @@ THREE.ShaderLib[ 'sky' ] = {
 
 			'vec3 retColor = pow(color,vec3(1.0/(1.2+(1.2*sunfade))));',
 
-
 			'gl_FragColor.rgb = retColor;',
 
 			'gl_FragColor.a = 1.0;',
+
 		'}',
 
 	].join( '\n' )
@@ -249,15 +244,16 @@ var Sky = function () {
 	var skyUniforms = THREE.UniformsUtils.clone( skyShader.uniforms );
 
 	var skyMat = new THREE.ShaderMaterial( {
+
 		fragmentShader: skyShader.fragmentShader,
 		vertexShader: skyShader.vertexShader,
 		uniforms: skyUniforms,
-		side: THREE.BackSide
+		side: THREE.BackSide,
+
 	} );
 
 	var skyGeo = new THREE.SphereBufferGeometry( 450000, 32, 15 );
 	var skyMesh = new THREE.Mesh( skyGeo, skyMat );
-
 
 	// Expose variables
 	this.mesh = skyMesh;

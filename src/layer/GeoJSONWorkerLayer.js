@@ -1,62 +1,89 @@
-import Layer from './Layer';
 import extend from 'lodash.assign';
 import reqwest from 'reqwest';
+
+import Layer from './Layer';
+
 import GeoJSON from '../util/GeoJSON';
 import Worker from '../util/Worker';
 import Buffer from '../util/Buffer';
 import Stringify from '../util/Stringify';
+
 import PolygonLayer from './geometry/PolygonLayer';
 import PolylineLayer from './geometry/PolylineLayer';
 import PointLayer from './geometry/PointLayer';
-import {latLon as LatLon} from '../geo/LatLon';
-import {point as Point} from '../geo/Point';
+
+import { latLon as LatLon } from '../geo/LatLon';
+import { point as Point } from '../geo/Point';
+
 import Geo from '../geo/Geo';
 import PickingMaterial from '../engine/PickingMaterial';
 
-// TODO: Allow filter method to be run inside a worker to improve performance
-// TODO: Allow onEachFeature method to be run inside a worker to improve performance
-
+/**
+ * TODO: Allow filter method to be run inside a worker to improve performance.
+ * TODO: TODO: Allow onEachFeature method to be run inside a worker to improve performance.
+ */
 class GeoJSONWorkerLayer extends Layer {
-  constructor(geojson, options) {
-    var defaults = {
-      topojson: false,
-      style: GeoJSON.defaultStyle,
-      onEachFeature: null,
-      onEachFeatureWorker: null,
-      onAddAttributes: null,
-      interactive: false,
-      pointGeometry: null,
-      onClick: null,
-      headers: {}
-    };
 
-    var _options = extend({}, defaults, options);
+    /**
+     *
+     */
+    constructor(geojson, options) {
 
-    if (typeof options.style === 'object') {
-      _options.style = extend({}, defaults.style, options.style);
+        let _defaults = {
+
+            topojson: false,
+            style: GeoJSON.defaultStyle,
+            onEachFeature: null,
+            onEachFeatureWorker: null,
+            onAddAttributes: null,
+            interactive: false,
+            pointGeometry: null,
+            onClick: null,
+            headers: {},
+
+        };
+
+        let _options = extend( {}, _defaults, options );
+
+        if (typeof options.style === 'object') {
+
+            _options.style = extend( {}, _defaults.style, options.style );
+
+        }
+
+        super( _options );
+
+        this._aborted = false;
+        this._geojson = geojson;
+
     }
 
-    super(_options);
+    /**
+     *
+     */
+    _onAdd( world ) {
 
-    this._aborted = false;
-    this._geojson = geojson;
-  }
+        if ( this._options.interactive ) {
 
-  _onAdd(world) {
-    if (this._options.interactive) {
-      // Worker layer always controls output to add a picking mesh
-      this._pickingMesh = new THREE.Object3D();
+            // Worker layer always controls output to add a picking mesh
+            this._pickingMesh = new THREE.Object3D();
+
+        }
+
+        // Process GeoJSON
+        return this._process( this._geojson ).catch( ( err ) => {
+
+            console.error( err );
+
+        } );
     }
 
-    // Process GeoJSON
-    return this._process(this._geojson).catch((err) => {
-      console.error(err);
-    });
-  }
+    /**
+     * Use workers to request and process GeoJSON, returning data structure
+     * containing geometry and any supplementary data for output.
+     */
+    _process( _geojson ) {
 
-  // Use workers to request and process GeoJSON, returning data structure
-  // containing geometry and any supplementary data for output
-  _process(_geojson) {
     return new Promise((resolve, reject) => {
       var style = this._options.style;
 
@@ -117,9 +144,14 @@ class GeoJSONWorkerLayer extends Layer {
         }).catch(reject);
       }
     });
-  }
 
-  _execWorker(geojson, topojson, headers, originPoint, style, interactive, pointGeometry, transferrables) {
+    }
+
+    /**
+     *
+     */
+    _execWorker( geojson, topojson, headers, originPoint, style, interactive, pointGeometry, transferrables ) {
+
     return new Promise((resolve, reject) => {
       // console.time('Worker round trip');
 
@@ -156,8 +188,12 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  // TODO: Dedupe with polyline method
-  _processPolygonResults(results) {
+    // TODO: Dedupe with polyline method
+    /**
+     *
+     */
+    _processPolygonResults( results ) {
+
     return new Promise((resolve, reject) => {
       var splitPositions = Buffer.splitFloat32Array(results.attributes.positions);
       var splitNormals = Buffer.splitFloat32Array(results.attributes.normals);
@@ -339,8 +375,12 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  // TODO: Dedupe with polygon method
-  _processPolylineResults(results) {
+    // TODO: Dedupe with polygon method
+    /**
+     *
+     */
+    _processPolylineResults( results ) {
+
     return new Promise((resolve, reject) => {
       var splitPositions = Buffer.splitFloat32Array(results.attributes.positions);
       var splitColors = Buffer.splitFloat32Array(results.attributes.colors);
@@ -448,7 +488,11 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  _processPointResults(results) {
+    /**
+     *
+     */
+    _processPointResults( results ) {
+
     return new Promise((resolve, reject) => {
       var splitPositions = Buffer.splitFloat32Array(results.attributes.positions);
       var splitNormals = Buffer.splitFloat32Array(results.attributes.normals);
@@ -559,16 +603,20 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  // TODO: At some point this needs to return all the features to the main thread
-  // so it can generate meshes and output to the scene, as well as perhaps creating
-  // individual layers / components for each feature to track things like picking
-  // and properties
-  //
-  // TODO: Find a way so the origin point isn't needed to be passed in as it
-  // feels a bit messy and against the idea of a static Geo class
-  //
-  // TODO: Support passing custom geometry for point layers
-  static Process(geojson, topojson, headers, originPoint, _style, _properties, _pointGeometry) {
+    // TODO: At some point this needs to return all the features to the main thread
+    // so it can generate meshes and output to the scene, as well as perhaps creating
+    // individual layers / components for each feature to track things like picking
+    // and properties
+    //
+    // TODO: Find a way so the origin point isn't needed to be passed in as it
+    // feels a bit messy and against the idea of a static Geo class
+    //
+    // TODO: Support passing custom geometry for point layers
+    /**
+     *
+     */
+    static Process(geojson, topojson, headers, originPoint, _style, _properties, _pointGeometry) {
+
     return new Promise((resolve, reject) => {
       GeoJSONWorkerLayer.ProcessGeoJSON(geojson, headers).then((res) => {
         // Collects features into a single FeatureCollection
@@ -781,7 +829,10 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  static ProcessPolygons(polygonPromises, polygons, _properties) {
+    /**
+     *
+     */
+    static ProcessPolygons( polygonPromises, polygons, _properties ) {
     return new Promise((resolve, reject) => {
       Promise.all(polygonPromises).then((results) => {
         var transferrables = [];
@@ -895,7 +946,11 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  static ProcessPolylines(polylinePromises, polylines, _properties) {
+    /**
+     *
+     */
+    static ProcessPolylines( polylinePromises, polylines, _properties ) {
+
     return new Promise((resolve, reject) => {
       Promise.all(polylinePromises).then((results) => {
         var transferrables = [];
@@ -974,8 +1029,12 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  // TODO: Dedupe with ProcessPolygons as they are identical
-  static ProcessPoints(pointPromises, points, _properties) {
+    // TODO: Dedupe with ProcessPolygons as they are identical
+    /**
+     *
+     */
+    static ProcessPoints(pointPromises, points, _properties) {
+
     return new Promise((resolve, reject) => {
       Promise.all(pointPromises).then((results) => {
         var transferrables = [];
@@ -1060,7 +1119,10 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  static ProcessGeoJSON(geojson, headers) {
+    /**
+     *
+     */
+    static ProcessGeoJSON( geojson, headers ) {
     if (typeof geojson === 'string') {
       return GeoJSONWorkerLayer.RequestGeoJSON(geojson, headers);
     } else {
@@ -1068,7 +1130,10 @@ class GeoJSONWorkerLayer extends Layer {
     }
   }
 
-  static RequestGeoJSON(path, headers) {
+    /**
+     *
+     */
+    static RequestGeoJSON( path, headers ) {
     return reqwest({
       url: path,
       type: 'json',
@@ -1077,10 +1142,13 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  // Create and store mesh from buffer attributes
-  //
-  // Could make this an abstract method for each geometry layer
-  _setPolygonMesh(attributes, attributeLengths, style, flat) {
+    // Create and store mesh from buffer attributes
+    //
+    // Could make this an abstract method for each geometry layer
+    /**
+     *
+     */
+    _setPolygonMesh(attributes, attributeLengths, style, flat) {
     if (!this._world) {
       return Promise.reject();
     }
@@ -1088,7 +1156,11 @@ class GeoJSONWorkerLayer extends Layer {
     return PolygonLayer.SetMesh(attributes, attributeLengths, flat, style, this._options, this._world._environment._skybox);
   }
 
-  _setPolylineMesh(attributes, attributeLengths, style, flat) {
+
+    /**
+     *
+     */
+    _setPolylineMesh(attributes, attributeLengths, style, flat) {
     if (!this._world) {
       return Promise.reject();
     }
@@ -1096,7 +1168,10 @@ class GeoJSONWorkerLayer extends Layer {
     return PolylineLayer.SetMesh(attributes, attributeLengths, flat, style, this._options);
   }
 
-  _setPointMesh(attributes, attributeLengths, style, flat) {
+    /**
+     *
+     */
+    _setPointMesh(attributes, attributeLengths, style, flat) {
     if (!this._world) {
       return Promise.reject();
     }
@@ -1104,8 +1179,11 @@ class GeoJSONWorkerLayer extends Layer {
     return PointLayer.SetMesh(attributes, attributeLengths, flat, style, this._options, this._world._environment._skybox);
   }
 
-  // Set up and re-emit interaction events
-  _addPicking(pickingId, properties) {
+    // Set up and re-emit interaction events
+    /**
+     *
+     */
+    _addPicking(pickingId, properties) {
     this._world.on('pick-click-' + pickingId, (pickingId, point2d, point3d, intersects) => {
       this._world.emit('click', this, properties, point2d, point3d);
     });
@@ -1115,17 +1193,36 @@ class GeoJSONWorkerLayer extends Layer {
     });
   }
 
-  // TODO: Finish cleanup
-  destroy() {
-    // Run common destruction logic from parent
-    super.destroy();
-  }
+    // TODO: Finish cleanup
+    /**
+     *
+     */
+    destroy() {
+
+        // Run common destruction logic from parent
+        super.destroy();
+
+    }
+
+    /**
+     * Proxy to destroy().
+     */
+    terminate() {
+
+        this.destroy();
+
+    }
 }
 
 export default GeoJSONWorkerLayer;
 
-var noNew = function(geojson, options) {
-  return new GeoJSONWorkerLayer(geojson, options);
+var noNew = function( geojson, options ) {
+
+    return new GeoJSONWorkerLayer( geojson, options );
+
 };
 
-export {noNew as geoJSONWorkerLayer};
+/**
+ * Initialise without requiring new keyword.
+ */
+export { noNew as geoJSONWorkerLayer };

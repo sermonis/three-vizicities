@@ -1,5 +1,5 @@
-import {latLon as LatLon} from './LatLon';
-import {point as Point} from './Point';
+import { latLon as LatLon } from './LatLon';
+import { point as Point } from './Point';
 
 var Geo = {};
 
