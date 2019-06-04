@@ -1,6 +1,7 @@
 import * as THREE from 'three';
-import Sky from './Sky';
 import throttle from 'lodash.throttle';
+
+import Sky from './Sky';
 
 /**
  * TODO: Make sure nothing is left behind
@@ -72,7 +73,7 @@ class Skybox {
      */
     _initEvents() {
 
-        // Throttled to 1 per 100ms
+        // Throttled to 1 per 100ms.
         this._throttledWorldUpdate = throttle( this._update, 100 );
         this._world.on( 'preUpdate', this._throttledWorldUpdate, this );
 
@@ -83,18 +84,18 @@ class Skybox {
      */
     _initSkybox() {
 
-        // Cube camera for skybox
+        // Cube camera for skybox.
         this._cubeCamera = new THREE.CubeCamera( 1, 20000000, 128 );
 
-        // Cube material
+        // Cube material.
         var cubeTarget = this._cubeCamera.renderTarget;
 
-        // Add Sky Mesh
+        // Add Sky Mesh.
         this._sky = new Sky();
         this._skyScene = new THREE.Scene();
         this._skyScene.add( this._sky.mesh );
 
-        // Add Sun Helper
+        // Add Sun Helper.
         this._sunSphere = new THREE.Mesh(
 
             new THREE.SphereBufferGeometry(2000, 16, 8),
@@ -108,8 +109,10 @@ class Skybox {
 
         // this._skyScene.add(this._sunSphere)
 
-        // TODO: This isn't actually visible because it's not added to the layer
-        // this._sunSphere.visible = true;
+        /**
+         * TODO: This isn't actually visible because it's not added to the layer.
+         * this._sunSphere.visible = true;
+         */
         var skyboxUniforms = {
 
             cubemap: { type: 't', value: cubeTarget },
@@ -152,9 +155,8 @@ class Skybox {
         this._sunSphere.position.y = settings.distance * Math.sin( phi ) * Math.sin( theta );
         this._sunSphere.position.z = settings.distance * Math.sin( phi ) * Math.cos( theta );
 
-        // Move directional light to sun position
+        // Move directional light to sun position.
         this._light.position.copy( this._sunSphere.position );
-
         this._sky.uniforms.sunPosition.value.copy( this._sunSphere.position );
 
     }
@@ -179,20 +181,24 @@ class Skybox {
         //     this._angle = 0;
         //
         // }
-        //
-        // // Animate inclination
+
+        // // Animate inclination.
         // this._angle += Math.PI * delta;
         // this._settings.inclination = 0.5 * ( Math.sin( this._angle ) / 2 + 0.5 );
 
-        // Update light intensity depending on elevation of sun (day to night)
+        // Update light intensity depending on elevation of sun (day to night).
         this._light.intensity = 1 - 0.95 * ( this._settings.inclination / 0.5 );
 
-        // // console.log(delta, this._angle, this._settings.inclination);
-        //
-        // TODO: Only do this when the uniforms have been changed
+        // console.log(delta, this._angle, this._settings.inclination);
+
+        /**
+         * TODO: Only do this when the uniforms have been changed.
+         */
         this._updateUniforms();
 
-        // TODO: Only do this when the cubemap has actually changed
+        /**
+         * TODO: Only do this when the cubemap has actually changed.
+         */
         this._cubeCamera.updateCubeMap( this._world._engine._renderer, this._skyScene );
 
     }
