@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { CSS3DRenderer } from '../vendor/CSS3DRenderer';
-import DOMScene3D from './DOMScene3D';
+
+import DOMScene3D from './DOMScene3D'; // ???
 
 /**
  * This can only be accessed from Engine.renderer
@@ -27,4 +28,4 @@ export default function ( container ) {
 
     return _renderer;
 
-}
+};

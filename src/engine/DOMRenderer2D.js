@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { CSS2DRenderer } from '../vendor/CSS2DRenderer';
-import DOMScene2D from './DOMScene2D';
+
+import DOMScene2D from './DOMScene2D'; // ???
 
 /**
  * This can only be accessed from Engine.renderer

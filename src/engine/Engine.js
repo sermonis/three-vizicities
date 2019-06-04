@@ -45,7 +45,7 @@ class Engine extends EventEmitter {
 
         this._container = container;
 
-        // TODO: Make this optional
+        // TODO: Make this optional.
         this._picking = Picking( this._world, this._renderer, this._camera );
 
         this.clock = new THREE.Clock();
@@ -136,10 +136,10 @@ class Engine extends EventEmitter {
 
         // console.log('Engine', 'update', 'delta', delta)
 
-        // Render picking scene
+        // Render picking scene.
         // this._renderer.render(this._picking._pickingScene, this._camera);
 
-        // Render DOM scenes
+        // Render DOM scenes.
         this._domRenderer3D.render( this._domScene3D, this._camera );
         this._domRenderer2D.render( this._domScene2D, this._camera );
 
@@ -152,7 +152,7 @@ class Engine extends EventEmitter {
      */
     destroy () {
 
-        // Remove any remaining objects from scene
+        // Remove any remaining objects from scene.
         var child;
 
         for ( var i = this._scene.children.length - 1; i >= 0; i-- ) {
@@ -169,7 +169,7 @@ class Engine extends EventEmitter {
 
             if ( child.geometry ) {
 
-                // Dispose of mesh and materials
+                // Dispose of mesh and materials.
                 child.geometry.dispose();
                 child.geometry = null;
 
