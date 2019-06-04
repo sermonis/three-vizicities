@@ -1,35 +1,35 @@
-import WorkerPool from './WorkerPool'
+import WorkerPool from './WorkerPool';
 
-var Worker = (function() {
+var Worker = ( function() {
 
-    var _maxWorkers = 2
-    var pool
+    var _maxWorkers = 2;
+    var pool;
 
-    var createWorkers = function (maxWorkers, workerScript) {
+    var createWorkers = function ( maxWorkers, workerScript ) {
 
-        pool = new WorkerPool({
+        pool = new WorkerPool( {
 
-            numThreads: (maxWorkers) ? maxWorkers : _maxWorkers,
-            workerScript: (workerScript) ? workerScript : 'vizicities-worker.js',
+            numThreads: ( maxWorkers ) ? maxWorkers : _maxWorkers,
+            workerScript: ( workerScript ) ? workerScript : 'vizicities-worker.js',
 
-        })
+        });
 
-        return pool.createWorkers()
+        return pool.createWorkers();
     }
 
-    var exec = function (method, args, transferrables) {
+    var exec = function ( method, args, transferrables ) {
 
-        return pool.exec(method, args, transferrables);
+        return pool.exec( method, args, transferrables );
 
-    }
+    };
 
     return {
 
         createWorkers: createWorkers,
         exec: exec,
 
-    }
+    };
 
-})()
+} )()
 
-export default Worker
+export default Worker;
