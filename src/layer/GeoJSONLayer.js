@@ -83,14 +83,14 @@ class GeoJSONLayer extends LayerGroup {
 
         }
 
-        // Request data from URL if needed
+        // Request data from URL if needed.
         if ( typeof this._geojson === 'string' ) {
 
             return this._requestData( this._geojson );
 
         } else {
 
-            // Process and add GeoJSON to layer
+            // Process and add GeoJSON to layer.
             return this._processData( this._geojson );
 
         }
@@ -112,7 +112,7 @@ class GeoJSONLayer extends LayerGroup {
 
             } ).then( res => {
 
-                // Clear request reference
+                // Clear request reference.
                 this._request = null;
                 this._processData( res ).then( () => {
 
@@ -124,7 +124,7 @@ class GeoJSONLayer extends LayerGroup {
 
                 console.error( err );
 
-                // Clear request reference
+                // Clear request reference.
                 this._request = null;
                 reject( err );
 
@@ -136,10 +136,10 @@ class GeoJSONLayer extends LayerGroup {
 
     /**
      * TODO: Wrap into a helper method so this isn't
-     * duplicated in the tiled GeoJSON output layer
+     * duplicated in the tiled GeoJSON output layer.
      *
      * Need to be careful as to not make it impossible to fork
-     * this off into a worker script at a later stage
+     * this off into a worker script at a later stage.
      */
     _processData( data ) {
 
@@ -156,7 +156,7 @@ class GeoJSONLayer extends LayerGroup {
              */
             var features = this._geojson.features;
 
-            // Run filter, if provided
+            // Run filter, if provided.
             if ( this._options.filter ) {
 
                 features = this._geojson.features.filter( this._options.filter );
@@ -165,7 +165,7 @@ class GeoJSONLayer extends LayerGroup {
 
             var defaults = {};
 
-            // Assume that a style won't be set per feature
+            // Assume that a style won't be set per feature.
             var style = this._options.style;
 
             var layerPromises = [];
@@ -174,7 +174,7 @@ class GeoJSONLayer extends LayerGroup {
 
             features.forEach( feature => {
 
-                // Get per-feature style object, if provided
+                // Get per-feature style object, if provided.
                 if ( typeof this._options.style === 'function' ) {
 
                     style = extend( {}, GeoJSON.defaultStyle, this._options.style( feature ) );
@@ -466,7 +466,7 @@ class GeoJSONLayer extends LayerGroup {
     /**
      * Create and store mesh from buffer attributes.
      *
-     * TODO: Probably remove this and call static method directly as it's just a proxy
+     * TODO: Probably remove this and call static method directly as it's just a proxy.
      */
     _setPolygonMesh( attributes, attributeLengths, style, flat ) {
 
@@ -493,7 +493,7 @@ class GeoJSONLayer extends LayerGroup {
     }
 
     /**
-     * TODO: Support all GeoJSON geometry types
+     * TODO: Support all GeoJSON geometry types.
      */
     _featureToLayer( feature, options ) {
 
@@ -508,7 +508,7 @@ class GeoJSONLayer extends LayerGroup {
 
         if ( geometry.type === 'Polygon' || geometry.type === 'MultiPolygon' ) {
 
-            // Get material instance to use for polygon, if provided
+            // Get material instance to use for polygon, if provided.
             if ( typeof this._options.polygonMaterial === 'function' ) {
 
                 options.polygonMaterial = this._options.polygonMaterial( feature );
@@ -521,7 +521,7 @@ class GeoJSONLayer extends LayerGroup {
 
             }
 
-            // Pass onBufferAttributes callback, if defined
+            // Pass onBufferAttributes callback, if defined.
             if ( typeof this._options.onPolygonBufferAttributes === 'function' ) {
 
                 options.onBufferAttributes = this._options.onPolygonBufferAttributes;
@@ -534,7 +534,7 @@ class GeoJSONLayer extends LayerGroup {
 
         if ( geometry.type === 'LineString' || geometry.type === 'MultiLineString' ) {
 
-            // Get material instance to use for line, if provided
+            // Get material instance to use for line, if provided.
             if ( typeof this._options.lineMaterial === 'function' ) {
 
                 options.lineMaterial = this._options.lineMaterial( feature );
@@ -547,7 +547,7 @@ class GeoJSONLayer extends LayerGroup {
 
             }
 
-            // Pass onBufferAttributes callback, if defined
+            // Pass onBufferAttributes callback, if defined.
             if ( typeof this._options.onPolylineBufferAttributes === 'function' ) {
 
                 options.onBufferAttributes = this._options.onPolylineBufferAttributes;
@@ -560,14 +560,14 @@ class GeoJSONLayer extends LayerGroup {
 
         if ( geometry.type === 'Point' || geometry.type === 'MultiPoint' ) {
 
-            // Get geometry object to use for point, if provided
+            // Get geometry object to use for point, if provided.
             if ( typeof this._options.pointGeometry === 'function' ) {
 
                 options.pointGeometry = this._options.pointGeometry( feature );
 
             }
 
-            // Get material instance to use for point, if provided
+            // Get material instance to use for point, if provided.
             if ( typeof this._options.pointMaterial === 'function' ) {
 
                 options.pointMaterial = this._options.pointMaterial( feature );
@@ -602,14 +602,14 @@ class GeoJSONLayer extends LayerGroup {
     }
 
     /**
-     * Destroy the layers and remove them from the scene and memory
+     * Destroy the layers and remove them from the scene and memory.
      */
     destroy() {
 
-        // Cancel any pending requests
+        // Cancel any pending requests.
         this._abortRequest();
 
-        // Clear request reference
+        // Clear request reference.
         this._request = null;
 
         this._geojson = null;
@@ -617,7 +617,7 @@ class GeoJSONLayer extends LayerGroup {
         if ( this._pickingMesh ) {
 
             /**
-             * TODO: Properly dispose of picking mesh
+             * TODO: Properly dispose of picking mesh.
              */
             this._pickingMesh = null;
 
@@ -641,7 +641,7 @@ class GeoJSONLayer extends LayerGroup {
 
         }
 
-        // Run common destruction logic from parent
+        // Run common destruction logic from parent.
         super.destroy();
 
     }
