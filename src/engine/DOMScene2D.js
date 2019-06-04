@@ -9,4 +9,4 @@ export default ( function() {
     let _scene = new THREE.Scene();
     return _scene;
 
-})();
+} )();
