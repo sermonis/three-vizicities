@@ -28,8 +28,8 @@ import extend from 'lodash.assign';
 import Layer from '../Layer';
 import Geo from '../../geo/Geo';
 
-import {latLon as LatLon} from '../../geo/LatLon';
-import {point as Point} from '../../geo/Point';
+import { latLon as LatLon } from '../../geo/LatLon';
+import { point as Point } from '../../geo/Point';
 
 import PickingMaterial from '../../engine/PickingMaterial';
 import Buffer from '../../util/Buffer';
@@ -447,7 +447,7 @@ class PointLayer extends Layer {
             pickingMesh: pickingMesh,
 
         } );
-        
+
     }
 
     /**
@@ -554,6 +554,15 @@ class PointLayer extends Layer {
 
         // Run common destruction logic from parent.
         super.destroy();
+
+    }
+
+    /**
+     * Proxy to destroy().
+     */
+    terminate() {
+
+        this.destroy();
 
     }
 
