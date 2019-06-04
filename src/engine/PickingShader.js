@@ -1,4 +1,6 @@
-// FROM: https://github.com/brianxu/GPUPicker/blob/master/GPUPicker.js
+/**
+ * FROM: https://github.com/brianxu/GPUPicker/blob/master/GPUPicker.js
+ */
 var PickingShader = {
 
     vertexShader: [
@@ -35,6 +37,6 @@ var PickingShader = {
 
 	].join('\n')
 
-}
+};
 
-export default PickingShader
+export default PickingShader;
