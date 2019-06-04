@@ -41,7 +41,7 @@ class LayerGroup extends Layer {
 
         if ( layerIndex > -1 ) {
 
-            // Remove from this._layers
+            // Remove from this._layers.
             this._layers.splice( layerIndex, 1 );
 
         };
