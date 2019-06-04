@@ -16,4 +16,4 @@ export default ( function() {
     scene.fog = new THREE.Fog( 0xffffff, 1, 45000 );
     return scene;
 
-})()
+} )();

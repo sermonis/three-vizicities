@@ -342,7 +342,7 @@ class Picking {
 
     }
 
-}
+};
 
 /**
  * Initialise without requiring new keyword.
@@ -351,4 +351,4 @@ export default function ( world, renderer, camera ) {
 
     return new Picking( world, renderer, camera )
 
-}
+};
