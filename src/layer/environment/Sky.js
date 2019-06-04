@@ -5,13 +5,13 @@
  * @author zz85 / https://github.com/zz85
  *
  * Based on 'A Practical Analytic Model for Daylight'
- * aka The Preetham Model, the de facto standard analytic skydome model
+ * aka The Preetham Model, the de facto standard analytic skydome model.
  * http://www.cs.utah.edu/~shirley/papers/sunsky/sunsky.pdf
  *
- * First implemented by Simon Wallner
+ * First implemented by Simon Wallner.
  * http://simonwallner.at/project/atmospheric-scattering/
  *
- * Improved by Martin Upitis
+ * Improved by Martin Upitis.
  * http://blenderartists.org/forum/showthread.php?245954-preethams-sky-impementation-HDR
  *
  * Three.js integration by zz85 http://twitter.com/blurspline
@@ -255,7 +255,7 @@ var Sky = function () {
 	var skyGeo = new THREE.SphereBufferGeometry( 450000, 32, 15 );
 	var skyMesh = new THREE.Mesh( skyGeo, skyMat );
 
-	// Expose variables
+	// Expose variables.
 	this.mesh = skyMesh;
 	this.uniforms = skyUniforms;
 
