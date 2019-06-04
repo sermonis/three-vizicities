@@ -1,7 +1,8 @@
-import Layer from '../Layer';
-import extend from 'lodash.assign';
 import * as THREE from 'three';
+import extend from 'lodash.assign';
+
 import Skybox from './Skybox';
+import Layer from './../Layer';
 
 /**
  * TODO: Make sure nothing is left behind
@@ -49,7 +50,7 @@ class EnvironmentLayer extends Layer {
      * Not fleshed out or thought through yet.
      *
      * Lights could potentially be put it their own 'layer'
-     * to keep this class much simpler and less messy
+     * to keep this class much simpler and less messy.
      */
     _initLights() {
 
@@ -60,6 +61,7 @@ class EnvironmentLayer extends Layer {
         if ( !this._options.skybox ) {
 
             var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
+
             directionalLight.position.x = 10000;
             directionalLight.position.y = 10000;
             directionalLight.position.z = 10000;
@@ -90,11 +92,13 @@ class EnvironmentLayer extends Layer {
             // // directionalLight.shadow.darkness = 0.15;
 
             var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+
             directionalLight2.position.x = -10000;
             directionalLight2.position.y = 10000;
             directionalLight2.position.z = 0;
 
             var directionalLight3 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+
             directionalLight3.position.x = 10000;
             directionalLight3.position.y = 10000;
             directionalLight3.position.z = -10000;
@@ -103,7 +107,7 @@ class EnvironmentLayer extends Layer {
             this.add(directionalLight2);
             this.add(directionalLight3);
 
-            // Debug lights
+            // Debug lights.
             // var helper = new THREE.DirectionalLightHelper(directionalLight, 10);
             // var helper2 = new THREE.DirectionalLightHelper(directionalLight2, 10);
             // var helper3 = new THREE.DirectionalLightHelper(directionalLight3, 10);
@@ -114,7 +118,7 @@ class EnvironmentLayer extends Layer {
 
         } else {
 
-            // Directional light that will be projected from the sun
+            // Directional light that will be projected from the sun.
             this._skyboxLight = new THREE.DirectionalLight( 0xffffff, 1 );
             this._skyboxLight.castShadow = true;
 
@@ -127,7 +131,7 @@ class EnvironmentLayer extends Layer {
             this._skyboxLight.shadow.camera.near = 10000;
             this._skyboxLight.shadow.camera.far = 70000;
 
-            // TODO: Need to dial in on a good shadowmap size
+            // TODO: Need to dial in on a good shadowmap size.
             this._skyboxLight.shadow.mapSize.width = 2048;
             this._skyboxLight.shadow.mapSize.height = 2048;
 
