@@ -1,10 +1,12 @@
-import * as THREE from 'three'
-import PickingShader from './PickingShader'
+import * as THREE from 'three';
+import PickingShader from './PickingShader';
 
-// FROM: https://github.com/brianxu/GPUPicker/blob/master/GPUPicker.js
+/**
+ * FROM: https://github.com/brianxu/GPUPicker/blob/master/GPUPicker.js
+ */
 var PickingMaterial = function () {
 
-    THREE.ShaderMaterial.call(this, {
+    THREE.ShaderMaterial.call( this, {
 
         uniforms: {
 
@@ -24,30 +26,31 @@ var PickingMaterial = function () {
             }
 
         },
+        
         // attributes: ['position', 'id'],
         vertexShader: PickingShader.vertexShader,
-        fragmentShader: PickingShader.fragmentShader
+        fragmentShader: PickingShader.fragmentShader,
 
-    })
+    } );
 
-    this.linePadding = 2
+    this.linePadding = 2;
 
-}
+};
 
-PickingMaterial.prototype = Object.create(THREE.ShaderMaterial.prototype)
+PickingMaterial.prototype = Object.create( THREE.ShaderMaterial.prototype );
 
-PickingMaterial.prototype.constructor = PickingMaterial
+PickingMaterial.prototype.constructor = PickingMaterial;
 
-PickingMaterial.prototype.setPointSize = function (size) {
+PickingMaterial.prototype.setPointSize = function ( size ) {
 
-    this.uniforms.size.value = size
+    this.uniforms.size.value = size;
 
-}
+};
 
-PickingMaterial.prototype.setPointScale = function (scale) {
+PickingMaterial.prototype.setPointScale = function ( scale ) {
 
-    this.uniforms.scale.value = scale
+    this.uniforms.scale.value = scale;
 
-}
+};
 
-export default PickingMaterial
+export default PickingMaterial;
