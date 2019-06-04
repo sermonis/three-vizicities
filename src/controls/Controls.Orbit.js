@@ -14,7 +14,7 @@ class Orbit extends EventEmitter {
         super()
 
         /**
-         * Prevent animation from pausing when tab is inactive
+         * Prevent animation from pausing when tab is inactive.
          */
         TweenLite.lagSmoothing(0);
 
@@ -53,21 +53,21 @@ class Orbit extends EventEmitter {
             // Did controls change?
             var changed = false;
 
-            // Panned
+            // Panned.
             if ( Math.abs( endPosition.distanceTo( this.startPosition ) ) > 0 ) {
 
                 changed = true;
 
             }
 
-            // Tilted
+            // Tilted.
             if ( Math.abs( endPolar - this.startPolar ) > 0 ) {
 
                 changed = true;
 
             }
 
-            // Obited
+            // Obited.
             if ( Math.abs( endAzimuth - this.startAzimuth ) > 0 ) {
 
                 changed = true;
@@ -187,8 +187,10 @@ class Orbit extends EventEmitter {
 
     }
 
-    // Rotate (left and right)
-    // Right is positive, left negative
+    /**
+     * Rotate (left and right).
+     * Right is positive, left negative.
+     */
     rotateTo( angle, animate ) {
 
         var controls = this._controls;
@@ -233,12 +235,12 @@ class Orbit extends EventEmitter {
      */
     flyToPoint( point, duration, zoom ) {
 
-        // Animation time in seconds
+        // Animation time in seconds.
         var animationTime = duration || 2;
 
         this._flyTarget = new THREE.Vector3( point.x, 0, point.y );
 
-        // Calculate delta from current position to fly target
+        // Calculate delta from current position to fly target.
         var diff = new THREE.Vector3().subVectors( this._controls.target, this._flyTarget );
 
         this._flyTween = new TweenLite(
@@ -271,11 +273,11 @@ class Orbit extends EventEmitter {
 
                     var controls = this._controls;
 
-                    // Work out difference since last frame
+                    // Work out difference since last frame.
                     var deltaX = tween.target.x - tween.target.prev.x;
                     var deltaZ = tween.target.z - tween.target.prev.z;
 
-                    // Move some fraction toward the target point
+                    // Move some fraction toward the target point.
                     controls.panLeft( deltaX, controls.object.matrix );
                     controls.panUp( deltaZ, controls.object.matrix );
 
@@ -447,11 +449,11 @@ class Orbit extends EventEmitter {
 
         this._world = world;
 
-        // TODO: Override panLeft and panUp methods to prevent panning on Y axis
+        // TODO: Override panLeft and panUp methods to prevent panning on Y axis.
         // See: http://stackoverflow.com/a/26188674/997339
         this._controls = new OrbitControls( world._engine._camera, world._container );
 
-        // 89 degrees
+        // 89 degrees.
         this._controls.maxPolarAngle = 1.5533;
 
         // this._controls.enableDamping = true
