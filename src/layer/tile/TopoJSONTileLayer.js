@@ -1,9 +1,12 @@
-import GeoJSONTileLayer from './GeoJSONTileLayer'
-import extend from 'lodash.assign' 
+import GeoJSONTileLayer from './GeoJSONTileLayer';
+import extend from 'lodash.assign';
 
 class TopoJSONTileLayer extends GeoJSONTileLayer {
 
-    constructor (path, options) {
+    /**
+     *
+     */
+    constructor ( path, options ) {
 
         var defaults = {
 
@@ -11,20 +14,20 @@ class TopoJSONTileLayer extends GeoJSONTileLayer {
 
         }
 
-        options = extend({}, defaults, options)
+        options = extend( {}, defaults, options );
 
-        super(path, options)
+        super( path, options );
 
     }
 
-}
+};
 
-export default TopoJSONTileLayer
+export default TopoJSONTileLayer;
 
-var noNew = function (path, options) {
+var noNew = function ( path, options ) {
 
-    return new TopoJSONTileLayer(path, options)
+    return new TopoJSONTileLayer( path, options );
 
-}
+};
 
-export { noNew as topoJSONTileLayer }
+export { noNew as topoJSONTileLayer };
