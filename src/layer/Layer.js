@@ -262,7 +262,7 @@ class Layer extends EventEmitter {
 
         if ( this._object3D && this._object3D.children ) {
 
-            // Remove everything else in the layer
+            // Remove everything else in the layer.
             let _child;
 
             for ( var i = this._object3D.children.length - 1; i >= 0; i-- ) {
@@ -279,7 +279,7 @@ class Layer extends EventEmitter {
 
                 if ( _child.geometry ) {
 
-                    // Dispose of mesh and materials
+                    // Dispose of mesh and materials.
                     _child.geometry.dispose();
                     _child.geometry = null;
 
@@ -305,7 +305,7 @@ class Layer extends EventEmitter {
 
         if (this._domObject3D && this._domObject3D.children) {
 
-            // Remove everything else in the layer
+            // Remove everything else in the layer.
             let _child;
 
             for ( var i = this._domObject3D.children.length - 1; i >= 0; i-- ) {
@@ -326,7 +326,7 @@ class Layer extends EventEmitter {
 
         if ( this._domObject2D && this._domObject2D.children ) {
 
-            // Remove everything else in the layer
+            // Remove everything else in the layer.
             let _child;
 
             for ( var i = this._domObject2D.children.length - 1; i >= 0; i-- ) {
