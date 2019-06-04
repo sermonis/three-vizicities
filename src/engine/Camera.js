@@ -1,14 +1,14 @@
 import * as THREE from 'three';
 
 /**
- * This can only be accessed from Engine.camera 
+ * This can only be accessed from Engine.camera
  * if you want to reference the same scene in multiple places.
  */
 
- /**
-  * TODO: Ensure that FOV looks natural on all aspect ratios.
-  * http://stackoverflow.com/q/26655930/997339
-  */
+/**
+ * TODO: Ensure that FOV looks natural on all aspect ratios.
+ * http://stackoverflow.com/q/26655930/997339
+ */
 export default function( container ) {
 
     let _camera = new THREE.PerspectiveCamera( 45, 1, 1, 2000000 );

@@ -9,9 +9,9 @@ export default ( function() {
     var scene = new THREE.Scene();
 
     /**
-     * TODO: Re-enable when this works with the skybox
-     * TODO: Move fog to somewere else engine / world
-     * TODO: Make fog settings optional
+     * TODO: Re-enable when this works with the skybox.
+     * TODO: Move fog to somewere else engine / world.
+     * TODO: Make fog settings optional.
      */
     scene.fog = new THREE.Fog( 0xffffff, 1, 45000 );
     return scene;
