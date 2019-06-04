@@ -349,7 +349,7 @@ class PolygonLayer extends Layer {
 
                 };
 
-                if (options.style.outline) {
+                if ( options.style.outline ) {
 
                     var outlineColour = new THREE.Color();
                     outlineColour.set( options.style.outlineColor || 0x000000 );
@@ -358,7 +358,7 @@ class PolygonLayer extends Layer {
 
                 }
 
-                if (options.interactive && options.pickingId) {
+                if ( options.interactive && options.pickingId ) {
 
                     // Inject picking ID.
                     polygon.pickingId = options.pickingId;
@@ -696,8 +696,8 @@ class PolygonLayer extends Layer {
             for ( var j = 0; j < coordinates[ i ].length; j++ ) {
 
                 // for ( var d = 0; d < dim; d++ ) {
-                result.vertices.push(coordinates[ i ][ j ].x);
-                result.vertices.push(coordinates[ i ][ j ].y);
+                result.vertices.push( coordinates[ i ][ j ].x );
+                result.vertices.push( coordinates[ i ][ j ].y );
                 // }
 
             }
@@ -712,6 +712,7 @@ class PolygonLayer extends Layer {
         }
 
         return result;
+
     }
 
     /**
@@ -729,7 +730,7 @@ class PolygonLayer extends Layer {
 
         }
 
-        // console.timeEnd('earcut');
+        // console.timeEnd( 'earcut' );
         return result;
 
     }
@@ -813,8 +814,10 @@ class PolygonLayer extends Layer {
             var c3 = _colour[ i ][ 2 ];
             var t3 = _tops[ i ][ 2 ];
 
-            // Flat face normals.
-            // From: http://threejs.org/examples/webgl_buffergeometry.html
+            /**
+             * Flat face normals.
+             * From: http://threejs.org/examples/webgl_buffergeometry.html
+             */
             pA.set( ax, ay, az );
             pB.set( bx, by, bz );
             pC.set( cx, cy, cz );
@@ -829,53 +832,56 @@ class PolygonLayer extends Layer {
             var ny = cb.y;
             var nz = cb.z;
 
-          positions[lastIndex * 9 + 0] = ax;
-          positions[lastIndex * 9 + 1] = ay;
-          positions[lastIndex * 9 + 2] = az;
+            positions[ lastIndex * 9 + 0 ] = ax;
+            positions[ lastIndex * 9 + 1 ] = ay;
+            positions[ lastIndex * 9 + 2 ] = az;
 
-          normals[lastIndex * 9 + 0] = nx;
-          normals[lastIndex * 9 + 1] = ny;
-          normals[lastIndex * 9 + 2] = nz;
+            normals[ lastIndex * 9 + 0 ] = nx;
+            normals[ lastIndex * 9 + 1 ] = ny;
+            normals[ lastIndex * 9 + 2 ] = nz;
 
-          colours[lastIndex * 9 + 0] = c1[0];
-          colours[lastIndex * 9 + 1] = c1[1];
-          colours[lastIndex * 9 + 2] = c1[2];
+            colours[ lastIndex * 9 + 0 ] = c1[ 0 ];
+            colours[ lastIndex * 9 + 1 ] = c1[ 1 ];
+            colours[ lastIndex * 9 + 2 ] = c1[ 2 ];
 
-          positions[lastIndex * 9 + 3] = bx;
-          positions[lastIndex * 9 + 4] = by;
-          positions[lastIndex * 9 + 5] = bz;
+            positions[ lastIndex * 9 + 3 ] = bx;
+            positions[ lastIndex * 9 + 4 ] = by;
+            positions[ lastIndex * 9 + 5 ] = bz;
 
-          normals[lastIndex * 9 + 3] = nx;
-          normals[lastIndex * 9 + 4] = ny;
-          normals[lastIndex * 9 + 5] = nz;
+            normals[ lastIndex * 9 + 3 ] = nx;
+            normals[ lastIndex * 9 + 4 ] = ny;
+            normals[ lastIndex * 9 + 5 ] = nz;
 
-          colours[lastIndex * 9 + 3] = c2[0];
-          colours[lastIndex * 9 + 4] = c2[1];
-          colours[lastIndex * 9 + 5] = c2[2];
+            colours[ lastIndex * 9 + 3 ] = c2[ 0 ];
+            colours[ lastIndex * 9 + 4 ] = c2[ 1 ];
+            colours[ lastIndex * 9 + 5 ] = c2[ 2 ];
 
-          positions[lastIndex * 9 + 6] = cx;
-          positions[lastIndex * 9 + 7] = cy;
-          positions[lastIndex * 9 + 8] = cz;
+            positions[ lastIndex * 9 + 6 ] = cx;
+            positions[ lastIndex * 9 + 7 ] = cy;
+            positions[ lastIndex * 9 + 8 ] = cz;
 
-          normals[lastIndex * 9 + 6] = nx;
-          normals[lastIndex * 9 + 7] = ny;
-          normals[lastIndex * 9 + 8] = nz;
+            normals[ lastIndex * 9 + 6 ] = nx;
+            normals[ lastIndex * 9 + 7 ] = ny;
+            normals[ lastIndex * 9 + 8 ] = nz;
 
-          colours[lastIndex * 9 + 6] = c3[0];
-          colours[lastIndex * 9 + 7] = c3[1];
-          colours[lastIndex * 9 + 8] = c3[2];
+            colours[ lastIndex * 9 + 6 ] = c3[ 0 ];
+            colours[ lastIndex * 9 + 7 ] = c3[ 1 ];
+            colours[ lastIndex * 9 + 8 ] = c3[ 2 ];
 
-          tops[lastIndex * 3 + 0] = t1;
-          tops[lastIndex * 3 + 1] = t2;
-          tops[lastIndex * 3 + 2] = t3;
+            tops[ lastIndex * 3 + 0 ] = t1;
+            tops[ lastIndex * 3 + 1 ] = t2;
+            tops[ lastIndex * 3 + 2 ] = t3;
 
-          if (pickingIds) {
-            pickingIds[lastIndex * 3 + 0] = _pickingId;
-            pickingIds[lastIndex * 3 + 1] = _pickingId;
-            pickingIds[lastIndex * 3 + 2] = _pickingId;
-          }
+            if ( pickingIds ) {
 
-          lastIndex++;
+                pickingIds[ lastIndex * 3 + 0 ] = _pickingId;
+                pickingIds[ lastIndex * 3 + 1 ] = _pickingId;
+                pickingIds[ lastIndex * 3 + 2 ] = _pickingId;
+
+            }
+
+            lastIndex++;
+
         }
 
         var attributes = {
@@ -897,37 +903,67 @@ class PolygonLayer extends Layer {
 
     }
 
-  // Returns true if the polygon is flat (has no height)
-  isFlat() {
-    return this._flat;
-  }
+    /**
+     * Returns true if the polygon is flat (has no height).
+     */
+    isFlat() {
 
-  // Returns true if coordinates refer to a single geometry
-  //
-  // For example, not coordinates for a MultiPolygon GeoJSON feature
-  static isSingle(coordinates) {
-    return !Array.isArray(coordinates[0][0][0]);
-  }
+        return this._flat;
 
-  // TODO: Make sure this is cleaning everything
-  destroy() {
-    if (this._pickingMesh) {
-      // TODO: Properly dispose of picking mesh
-      this._pickingMesh = null;
     }
 
-    this.clearCoordinates();
-    this.clearBufferAttributes();
+    /**
+     *  Returns true if coordinates refer to a single geometry.
+     *  For example, not coordinates for a MultiPolygon GeoJSON feature.
+     */
+    static isSingle( coordinates ) {
 
-    // Run common destruction logic from parent
-    super.destroy();
-  }
+        return !Array.isArray( coordinates[ 0 ][ 0 ][ 0 ] );
+
+    }
+
+    /**
+     *  TODO: Make sure this is cleaning everything.
+     */
+    destroy() {
+
+        if (this._pickingMesh) {
+
+            /**
+             *  TODO: Properly dispose of picking mesh.
+             */
+            this._pickingMesh = null;
+
+        }
+
+        this.clearCoordinates();
+        this.clearBufferAttributes();
+
+        // Run common destruction logic from parent.
+        super.destroy();
+
+    }
+
+    /**
+     *  Proxy to destroy().
+     */
+    terminate() {
+
+        this.destroy();
+
+    }
+
 }
 
 export default PolygonLayer;
 
-var noNew = function(coordinates, options) {
-  return new PolygonLayer(coordinates, options);
+var noNew = function( coordinates, options ) {
+
+    return new PolygonLayer( coordinates, options );
+
 };
 
-export {noNew as polygonLayer};
+/**
+ *  Initialise without requiring new keyword.
+ */
+export { noNew as polygonLayer };
