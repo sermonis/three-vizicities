@@ -55,7 +55,7 @@ export default LatLon;
  * Accepts (LatLon), ([lat, lon, alt]), ([lat, lon]) and (lat, lon, alt).
  * Also converts between lng and lon.
  */
-var noNew = function( a, b, c ) {
+var noNew = function ( a, b, c ) {
 
     if ( a instanceof LatLon ) {
 

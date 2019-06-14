@@ -9,7 +9,7 @@ import * as THREE from 'three';
  * TODO: Ensure that FOV looks natural on all aspect ratios.
  * http://stackoverflow.com/q/26655930/997339
  */
-export default function( container ) {
+export default function ( container ) {
 
     let _camera = new THREE.PerspectiveCamera( 45, 1, 1, 2000000 );
 

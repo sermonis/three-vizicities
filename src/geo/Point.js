@@ -84,7 +84,7 @@ export default Point;
 /**
  * Accepts (point), ([x, y]) and (x, y, round).
  */
-var _point = function( x, y, round ) {
+var _point = function ( x, y, round ) {
 
     if ( x instanceof Point ) {
 

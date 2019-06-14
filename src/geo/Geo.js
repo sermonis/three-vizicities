@@ -39,7 +39,7 @@ Geo.multiplier = 0.1;
 /**
  *
  */
-Geo.project = function( latlon ) {
+Geo.project = function ( latlon ) {
 
     let _d = Math.PI / 180;
     let _max = Geo.MAX_LATITUDE;
@@ -58,7 +58,7 @@ Geo.project = function( latlon ) {
 /**
  *
  */
-Geo.unproject = function( point ) {
+Geo.unproject = function ( point ) {
 
     let _d = 180 / Math.PI;
 
@@ -75,7 +75,7 @@ Geo.unproject = function( point ) {
  * Converts geo coords to pixel / WebGL ones.
  * This just reverses the Y axis to match WebGL.
  */
-Geo.latLonToPoint = function( latlon ) {
+Geo.latLonToPoint = function ( latlon ) {
 
     let _projected = Geo.project( latlon );
 
@@ -92,7 +92,7 @@ Geo.latLonToPoint = function( latlon ) {
  * Converts pixel / WebGL coords to geo coords.
  * This just reverses the Y axis to match WebGL.
  */
-Geo.pointToLatLon = function( point ) {
+Geo.pointToLatLon = function ( point ) {
 
     let _point = Point( point.x, point.y * -1 );
 
@@ -113,7 +113,7 @@ Geo.pointToLatLon = function( point ) {
  * See pg.9: http://www.hydrometronics.com/downloads/Web%20Mercator%20-%20Non-Conformal,%20Non-Mercator%20(notes).pdf
  * See: http://jsfiddle.net/robhawkes/yws924cf/
  */
-Geo.pointScale = function( latlon, accurate ) {
+Geo.pointScale = function ( latlon, accurate ) {
 
     var rad = Math.PI / 180;
 
@@ -161,7 +161,7 @@ Geo.pointScale = function( latlon, accurate ) {
  * Convert real metres to projected units.
  * Latitude scale is chosen because it fluctuates more than longitude.
  */
-Geo.metresToProjected = function( metres, pointScale ) {
+Geo.metresToProjected = function ( metres, pointScale ) {
 
     return metres * pointScale[ 1 ];
 
@@ -171,7 +171,7 @@ Geo.metresToProjected = function( metres, pointScale ) {
  * Convert projected units to real metres.
  * Latitude scale is chosen because it fluctuates more than longitude.
  */
-Geo.projectedToMetres = function( projectedUnits, pointScale ) {
+Geo.projectedToMetres = function ( projectedUnits, pointScale ) {
 
     return projectedUnits / pointScale[ 1 ];
 
@@ -180,7 +180,7 @@ Geo.projectedToMetres = function( projectedUnits, pointScale ) {
 /**
  * Convert real metres to a value in world (WebGL) units.
  */
-Geo.metresToWorld = function( metres, pointScale ) {
+Geo.metresToWorld = function ( metres, pointScale ) {
 
     /**
      * Transform metres to projected metres using the latitude point scale.
@@ -194,7 +194,7 @@ Geo.metresToWorld = function( metres, pointScale ) {
 /**
  * Convert world (WebGL) units to a value in real metres.
  */
-Geo.worldToMetres = function( worldUnits, pointScale ) {
+Geo.worldToMetres = function ( worldUnits, pointScale ) {
 
     let _projectedUnits = worldUnits;
     let _realMetres = Geo.projectedToMetres( _projectedUnits, pointScale );
@@ -207,7 +207,7 @@ Geo.worldToMetres = function( worldUnits, pointScale ) {
  * Returns the world width in pixels for a given zoom,
  * assuming tile dimensions of 256x256 pixels.
  */
-Geo.scale = function( zoom ) {
+Geo.scale = function ( zoom ) {
 
     return 256 * Math.pow( 2, zoom );
 
@@ -217,7 +217,7 @@ Geo.scale = function( zoom ) {
  * Returns zoom level for a given scale value.
  * This only works with a scale value that is based on map pixel width.
  */
-Geo.zoom = function( scale ) {
+Geo.zoom = function ( scale ) {
 
     return Math.log( scale / 256 ) / Math.LN2;
 
@@ -229,7 +229,7 @@ Geo.zoom = function( scale ) {
  *
  * See: http://www.movable-type.co.uk/scripts/latlong.html
  */
-Geo.distance = function( latlon1, latlon2, accurate ) {
+Geo.distance = function ( latlon1, latlon2, accurate ) {
 
     var rad = Math.PI / 180;
 

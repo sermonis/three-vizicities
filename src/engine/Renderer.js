@@ -5,7 +5,7 @@ import Scene from './Scene';
  * This can only be accessed from Engine.renderer
  * if you want to reference the same scene in multiple places.
  */
-export default function( container, antialias ) {
+export default function ( container, antialias ) {
 
     var renderer = new THREE.WebGLRenderer( {
 
@@ -56,7 +56,7 @@ export default function( container, antialias ) {
 
     container.appendChild( renderer.domElement );
 
-    var updateSize = function() {
+    var updateSize = function () {
 
         renderer.setSize( container.clientWidth, container.clientHeight );
 

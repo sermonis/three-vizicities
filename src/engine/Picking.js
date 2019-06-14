@@ -29,7 +29,7 @@ class Picking {
     /**
      *
      */
-    constructor ( world, renderer, camera ) {
+    constructor( world, renderer, camera ) {
 
         this._world = world;
         this._renderer = renderer;
@@ -55,7 +55,7 @@ class Picking {
     /**
      *
      */
-    _initEvents () {
+    _initEvents() {
 
         this._resizeHandler = this._resizeTexture.bind( this );
         window.addEventListener( 'resize', this._resizeHandler, false );
@@ -73,7 +73,7 @@ class Picking {
     /**
      *
      */
-    _onMouseUp ( event ) {
+    _onMouseUp( event ) {
 
         // Only react to main button click.
         if ( event.button !== 0 ) {
@@ -96,7 +96,7 @@ class Picking {
     /**
      *
      */
-    _onMouseMove ( event ) {
+    _onMouseMove( event ) {
 
         var point = Point( event.clientX - this._world._container.offsetLeft, event.clientY - this._world._container.offsetTop );
         var normalisedPoint = Point( 0, 0 );
@@ -111,14 +111,14 @@ class Picking {
     /**
      *
      */
-    _onWorldMove () {
+    _onWorldMove() {
 
         this._needUpdate = true;
 
     }
 
     // TODO: Ensure this doesn't get out of sync issue with the renderer resize.
-    _resizeTexture () {
+    _resizeTexture() {
 
         var size = this._renderer.getSize();
 
@@ -142,7 +142,7 @@ class Picking {
      * TODO: Pause updates during map move / orbit / zoom as this is unlikely to
      * be a point in time where the user cares for picking functionality.
      */
-    _update () {
+    _update() {
 
         if ( this._needUpdate ) {
 
@@ -162,7 +162,7 @@ class Picking {
     /**
      *
      */
-    _pick ( point, normalisedPoint, hover ) {
+    _pick( point, normalisedPoint, hover ) {
 
         this._update();
 
@@ -232,7 +232,7 @@ class Picking {
      * Add mesh to picking scene.
      * Picking ID should already be added as an attribute.
      */
-    add ( mesh ) {
+    add( mesh ) {
 
         // console.log('add ( mesh )', mesh)
         this._pickingScene.add( mesh );
@@ -243,7 +243,7 @@ class Picking {
     /**
      * Remove mesh from picking scene
      */
-    remove ( mesh ) {
+    remove( mesh ) {
 
         this._pickingScene.remove( mesh );
         this._needUpdate = true;
@@ -253,7 +253,7 @@ class Picking {
     /**
      * Returns next ID to use for picking.
      */
-    getNextId () {
+    getNextId() {
 
         return nextId++;
 
@@ -262,7 +262,7 @@ class Picking {
     /**
      *
      */
-    destroy () {
+    destroy() {
 
         /**
          * TODO: Find a way to properly remove these listeners

@@ -17,7 +17,7 @@ class EnvironmentLayer extends Layer {
 
         var defaults = {
 
-            skybox: false
+            skybox: false,
 
         };
 

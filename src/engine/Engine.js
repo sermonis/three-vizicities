@@ -23,7 +23,7 @@ class Engine extends EventEmitter {
     /**
      *
      */
-    constructor ( container, world ) {
+    constructor( container, world ) {
 
         console.log( 'Init', 'Engine' );
 
@@ -65,7 +65,7 @@ class Engine extends EventEmitter {
      * TODO: Update passes that rely on width / height on resize.
      * TODO: Merge default passes into a single shader / pass for performance.
      */
-    _initPostProcessing () {
+    _initPostProcessing() {
 
         var renderPass = new RenderPass( this._scene, this._camera );
 
@@ -120,7 +120,7 @@ class Engine extends EventEmitter {
     /**
      *
      */
-    update ( delta ) {
+    update( delta ) {
 
         this.emit( 'preRender' );
 
@@ -150,7 +150,7 @@ class Engine extends EventEmitter {
     /**
      *
      */
-    destroy () {
+    destroy() {
 
         // Remove any remaining objects from scene.
         var child;
