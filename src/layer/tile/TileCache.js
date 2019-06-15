@@ -1,19 +1,30 @@
-import LRUCache from 'lru-cache'
+import LRUCache from 'lru-cache';
 
-// TODO: Make sure nothing is left behind in the heap after calling destroy()
+/**
+ * SEE: https://github.com/isaacs/node-lru-cache
+ * SEE: https://habr.com/ru/post/136758/
+ * SEE: https://habr.com/ru/company/surfingbird/blog/306252/
+ *
+ * TODO: Make sure nothing is left behind in the heap after calling destroy().
+ */
 
-// This process is based on a similar approach taken by OpenWebGlobe
-// See: https://github.com/OpenWebGlobe/WebViewer/blob/master/source/core/globecache.js
+/**
+ * This process is based on a similar approach taken by OpenWebGlobe.
+ * SEE: https://github.com/OpenWebGlobe/WebViewer/blob/master/source/core/globecache.js
+ */
 class TileCache {
 
-    constructor (cacheLimit, onDestroyTile) {
+    /**
+     *
+     */
+    constructor ( cacheLimit, onDestroyTile ) {
 
-        this._cache = LRUCache({
+        this._cache = LRUCache( {
 
             max: cacheLimit,
-            dispose: (key, tile) => {
+            dispose: ( key, tile ) => {
 
-                onDestroyTile(tile)
+                onDestroyTile( tile );
 
             }
 
@@ -21,47 +32,57 @@ class TileCache {
 
     }
 
-    // Returns true if all specified tile providers are ready to be used
-    // Otherwise, returns false
-    isReady () {
+    /**
+     * Returns true if all specified tile providers are ready to be used.
+     * Otherwise, returns false.
+     */
+    isReady() {
 
-        return false
-
-    }
-
-    // Get a cached tile without requesting a new one
-    getTile (quadcode) {
-
-        return this._cache.get(quadcode)
+        return false;
 
     }
 
-    // Add tile to cache
-    setTile (quadcode, tile) {
+    /**
+     * Get a cached tile without requesting a new one.
+     */
+    getTile( quadcode ) {
 
-        this._cache.set(quadcode, tile)
+        return this._cache.get( quadcode );
 
     }
 
-    // Destroy the cache and remove it from memory
-    //
-    // TODO: Call destroy method on items in cache
-    destroy () {
+    /**
+     * Add tile to cache.
+     */
+    setTile( quadcode, tile ) {
 
-        this._cache.reset()
-        this._cache = null
+        this._cache.set( quadcode, tile );
+
+    }
+
+    /**
+     * Destroy the cache and remove it from memory.
+     *
+     * TODO: Call destroy method on items in cache.
+     */
+    destroy() {
+
+        this._cache.reset();
+        this._cache = null;
 
     }
 
 }
 
-export default TileCache
+export default TileCache;
 
-var noNew = function (cacheLimit, onDestroyTile) {
+var noNew = function ( cacheLimit, onDestroyTile ) {
 
-    return new TileCache(cacheLimit, onDestroyTile)
+    return new TileCache( cacheLimit, onDestroyTile );
 
-}
+};
 
-// Initialise without requiring new keyword
-export { noNew as tileCache }
+/**
+ * Initialise without requiring new keyword.
+ */
+export { noNew as tileCache };

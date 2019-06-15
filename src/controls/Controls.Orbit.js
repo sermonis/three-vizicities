@@ -4,6 +4,9 @@ import EventEmitter from './../engine/EventEmitter';
 import OrbitControls from './../vendor/OrbitControls';
 import TweenLite from 'TweenLite';
 
+/**
+ * 
+ */
 class Orbit extends EventEmitter {
 
     /**

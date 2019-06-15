@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import EffectComposer from '../vendor/EffectComposer';
 
+/**
+ *
+ */
 export default function ( renderer, container ) {
 
     let _composer = new EffectComposer( renderer );

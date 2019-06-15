@@ -32,6 +32,9 @@ var cubemap = {
 
 };
 
+/**
+ *
+ */
 class Skybox {
 
     /**

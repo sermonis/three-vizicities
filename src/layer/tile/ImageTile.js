@@ -1,256 +1,281 @@
-import Tile from './Tile'
-import BoxHelper from '../../vendor/BoxHelper'
+import Tile from './Tile';
+import BoxHelper from '../../vendor/BoxHelper';
 
-import * as THREE from 'three'
+import * as THREE from 'three';
 
-// TODO: Make sure nothing is left behind in the heap after calling destroy()
-
+/**
+ * TODO: Make sure nothing is left behind in the heap after calling destroy().
+ */
 class ImageTile extends Tile {
 
-    constructor (quadcode, path, layer) {
+    /**
+     *
+     */
+    constructor ( quadcode, path, layer ) {
 
-        super(quadcode, path, layer)
+        super( quadcode, path, layer );
 
     }
 
-    // Request data for the tile
-    requestTileAsync () {
+    /**
+     * Request data for the tile.
+     */
+    requestTileAsync() {
 
-        // Making this asynchronous really speeds up the LOD framerate
-        setTimeout(() => {
+        // Making this asynchronous really speeds up the LOD framerate.
+        setTimeout( () => {
 
-            if (!this._mesh) {
+            if ( !this._mesh ) {
 
-                this._mesh = this._createMesh()
+                this._mesh = this._createMesh();
 
             }
 
-            this._requestTile()
+            this._requestTile();
 
-        }, 0)
+        }, 0 );
     }
 
-    destroy () {
+    /**
+     *
+     */
+    destroy() {
 
-        // Cancel any pending requests
-        this._abortRequest()
+        // Cancel any pending requests.
+        this._abortRequest();
 
-        // Clear image reference
-        this._image = null
+        // Clear image reference.
+        this._image = null;
 
-        super.destroy()
+        super.destroy();
 
     }
 
-    _createMesh () {
+    /**
+     *
+     */
+    _createMesh() {
 
-        // Something went wrong and the tile
-        //
-        // Possibly removed by the cache before loaded
-        if (!this._center) {
+        /**
+         * Something went wrong and the tile.
+         * Possibly removed by the cache before loaded.
+         */
+        if ( !this._center ) {
 
-            return
+            return;
 
         }
 
-        var mesh = new THREE.Object3D()
-        var geom = new THREE.PlaneBufferGeometry(this._side, this._side, 1)
+        var mesh = new THREE.Object3D();
+        var geom = new THREE.PlaneBufferGeometry( this._side, this._side, 1 );
 
-        var material
+        var material;
 
-        if (!this._world._environment._skybox) {
+        if ( !this._world._environment._skybox ) {
 
-            material = new THREE.MeshBasicMaterial({
-
-                depthWrite: false
-
-            })
-
-            // var material = new THREE.MeshPhongMaterial({
-            //   depthWrite: false
-            // });
-
-        } else {
-
-            // Other MeshStandardMaterial settings
-            //
-            // material.envMapIntensity will change the amount of colour reflected(?)
-            // from the environment map – can be greater than 1 for more intensity
-
-            material = new THREE.MeshStandardMaterial({
+            // material = new THREE.MeshPhongMaterial( {
+            material = new THREE.MeshBasicMaterial( {
 
                 depthWrite: false,
 
-            })
+            } );
 
-            material.roughness = 1
-            material.metalness = 0.1
+        } else {
 
-            material.envMap = this._world._environment._skybox.getRenderTarget()
+            /**
+             * Other MeshStandardMaterial settings.
+             * material.envMapIntensity will change the amount of color reflected(?)
+             * from the environment map – can be greater than 1 for more intensity.
+             */
+            material = new THREE.MeshStandardMaterial( {
+
+                depthWrite: false,
+
+            } );
+
+            material.roughness = 1;
+            material.metalness = 0.1;
+
+            material.envMap = this._world._environment._skybox.getRenderTarget();
 
         }
 
-        var localMesh = new THREE.Mesh(geom, material)
-        localMesh.rotation.x = -90 * Math.PI / 180
+        var localMesh = new THREE.Mesh( geom, material );
+        localMesh.rotation.x = -90 * Math.PI / 180;
 
-        localMesh.receiveShadow = true
+        localMesh.receiveShadow = true;
 
-        // Setting this causes a depth-buffer intersection issue on the
-        // all-the-things example
-        // localMesh.renderOrder = 2
+        /**
+         * Setting this causes a depth-buffer intersection issue on the
+         * all-the-things example.
+         * localMesh.renderOrder = 2;
+         */
+        mesh.add(localMesh);
 
-        mesh.add(localMesh)
-
-        // Setting this causes a depth-buffer intersection issue on the
-        // all-the-things example
-        // mesh.renderOrder = 2
-
-        mesh.position.x = this._center[0]
-        mesh.position.z = this._center[1]
+        /**
+         * Setting this causes a depth-buffer intersection issue on the
+         * all-the-things example.
+         * mesh.renderOrder = 2;
+         */
+        mesh.position.x = this._center[ 0 ];
+        mesh.position.z = this._center[ 1 ];
 
         // Debug
-        // var box = new BoxHelper(localMesh)
+        // var box = new BoxHelper(localMesh);
         //
-        // mesh.add(box)
-        // mesh.add(this._createDebugMesh())
+        // mesh.add(box);
+        // mesh.add(this._createDebugMesh());
 
-        return mesh
+        return mesh;
 
     }
 
-    _createDebugMesh () {
+    /**
+     *
+     */
+    _createDebugMesh() {
 
-        var canvas = document.createElement('canvas')
+        var canvas = document.createElement( 'canvas' );
 
-        canvas.width = 256
-        canvas.height = 256
+        canvas.width = 256;
+        canvas.height = 256;
 
-        var context = canvas.getContext('2d')
+        var context = canvas.getContext( '2d' );
 
-        context.font = 'Bold 20px Helvetica Neue, Verdana, Arial'
-        context.fillStyle = '#ff0000'
+        context.font = 'Bold 20px Helvetica Neue, Verdana, Arial';
+        context.fillStyle = '#ff0000';
 
-        context.fillText(this._quadcode, 20, canvas.width / 2 - 5)
-        context.fillText(this._tile.toString(), 20, canvas.width / 2 + 25)
-        // context.fillText('Перекур?', 20, canvas.width / 2 + 25)
+        context.fillText( this._quadcode, 20, canvas.width / 2 - 5 );
+        context.fillText( this._tile.toString(), 20, canvas.width / 2 + 25 );
+        // context.fillText( 'Перекур?', 20, canvas.width / 2 + 25 );
 
-        var texture = new THREE.Texture(canvas)
+        var texture = new THREE.Texture( canvas );
 
-        // Silky smooth images when tilted
-        texture.magFilter = THREE.LinearFilter
-        texture.minFilter = THREE.LinearMipMapLinearFilter
+        // Silky smooth images when tilted.
+        texture.magFilter = THREE.LinearFilter;
+        texture.minFilter = THREE.LinearMipMapLinearFilter;
 
-        // TODO: Set this to renderer.getMaxAnisotropy() / 4
-        texture.anisotropy = 4
+        // TODO: Set this to renderer.getMaxAnisotropy() / 4.
+        texture.anisotropy = 4;
 
-        texture.needsUpdate = true
+        texture.needsUpdate = true;
 
-        var material = new THREE.MeshBasicMaterial({
+        var material = new THREE.MeshBasicMaterial( {
 
             map: texture,
             transparent: true,
             depthWrite: false,
 
-        })
+        } );
 
-        var geom = new THREE.PlaneBufferGeometry(this._side, this._side, 1)
-        var mesh = new THREE.Mesh(geom, material)
+        var geom = new THREE.PlaneBufferGeometry( this._side, this._side, 1 );
+        var mesh = new THREE.Mesh( geom, material );
 
-        mesh.rotation.x = -90 * Math.PI / 180
-        mesh.position.y = 0.1
+        mesh.rotation.x = -90 * Math.PI / 180;
+        mesh.position.y = 0.1;
 
-        return mesh
+        return mesh;
 
     }
 
-    _requestTile () {
+    /**
+     *
+     */
+    _requestTile() {
 
         var urlParams = {
 
-            x: this._tile[0],
-            y: this._tile[1],
-            z: this._tile[2],
+            x: this._tile[ 0 ],
+            y: this._tile[ 1 ],
+            z: this._tile[ 2 ],
 
-        }
+        };
 
-        var url = this._getTileURL(urlParams)
+        var url = this._getTileURL( urlParams );
 
-        var image = document.createElement('img')
+        var image = document.createElement( 'img' );
 
-        this._aborted = false
+        this._aborted = false;
 
-        image.addEventListener('load', event => {
+        image.addEventListener( 'load', event => {
 
-            if (this.isAborted()) {
+            if ( this.isAborted() ) {
 
-                return
-
-            }
-
-            var texture = new THREE.Texture()
-
-            texture.image = image
-            texture.needsUpdate = true
-
-            // Silky smooth images when tilted
-            texture.magFilter = THREE.LinearFilter
-            texture.minFilter = THREE.LinearMipMapLinearFilter
-
-            // TODO: Set this to renderer.getMaxAnisotropy() / 4
-            texture.anisotropy = 4
-
-            texture.needsUpdate = true
-
-            // Something went wrong and the tile or its material is missing
-            //
-            // Possibly removed by the cache before the image loaded
-            if (!this._mesh || !this._mesh.children[0] || !this._mesh.children[0].material) {
-
-                return
+                return;
 
             }
 
-            this._mesh.children[0].material.map = texture
-            this._mesh.children[0].material.needsUpdate = true
+            var texture = new THREE.Texture();
 
-            this._texture = texture
-            this._ready = true
+            texture.image = image;
+            texture.needsUpdate = true;
 
-        }, false)
+            // Silky smooth images when tilted.
+            texture.magFilter = THREE.LinearFilter;
+            texture.minFilter = THREE.LinearMipMapLinearFilter;
 
-        // image.addEventListener('progress', event => {}, false);
-        // image.addEventListener('error', event => {}, false);
+            // TODO: Set this to renderer.getMaxAnisotropy() / 4.
+            texture.anisotropy = 4;
 
-        image.crossOrigin = ''
+            texture.needsUpdate = true;
 
-        // Load image
-        image.src = url
-        this._image = image
+            /**
+             * Something went wrong and the tile or it's material is missing.
+             * Possibly removed by the cache before the image loaded.
+             */
+            if ( !this._mesh || !this._mesh.children[ 0 ] || !this._mesh.children[ 0 ].material ) {
+
+                return;
+
+            }
+
+            this._mesh.children[ 0 ].material.map = texture;
+            this._mesh.children[ 0 ].material.needsUpdate = true;
+
+            this._texture = texture;
+            this._ready = true;
+
+        }, false );
+
+        // image.addEventListener( 'progress', event => {}, false );
+        // image.addEventListener( 'error', event => {}, false );
+
+        // TODO: Anonimous.
+        image.crossOrigin = '';
+
+        // Load image.
+        image.src = url;
+        this._image = image;
 
     }
 
-    _abortRequest () {
+    /**
+     *
+     */
+    _abortRequest() {
 
-        if (!this._image || this._ready) {
+        if ( !this._image || this._ready ) {
 
-            return
+            return;
 
         }
 
-        this._aborted = true
-        this._image.src = ''
+        this._aborted = true;
+        this._image.src = '';
 
     }
 
 }
 
-export default ImageTile
+export default ImageTile;
 
-var noNew = function (quadcode, path, layer) {
+var noNew = function ( quadcode, path, layer ) {
 
-    return new ImageTile(quadcode, path, layer)
+    return new ImageTile( quadcode, path, layer );
 
-}
+};
 
-// Initialise without requiring new keyword
-export { noNew as imageTile }
+/**
+ * Initialise without requiring new keyword.
+ */
+export { noNew as imageTile };

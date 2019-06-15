@@ -1,6 +1,9 @@
 import GeoJSONTileLayer from './GeoJSONTileLayer';
 import extend from 'lodash.assign';
 
+/**
+ *
+ */
 class TopoJSONTileLayer extends GeoJSONTileLayer {
 
     /**
@@ -30,4 +33,7 @@ var noNew = function ( path, options ) {
 
 };
 
+/**
+ * Initialise without requiring new keyword.
+ */
 export { noNew as topoJSONTileLayer };

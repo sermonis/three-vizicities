@@ -18,6 +18,9 @@
  */
 import * as THREE from 'three';
 
+/**
+ *
+ */
 THREE.ShaderLib[ 'sky' ] = {
 
 	uniforms: {
@@ -238,6 +241,9 @@ THREE.ShaderLib[ 'sky' ] = {
 
 };
 
+/**
+ *
+ */
 var Sky = function () {
 
 	var skyShader = THREE.ShaderLib[ 'sky' ];

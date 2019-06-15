@@ -35,6 +35,9 @@ import PickingMaterial from '../../engine/PickingMaterial';
 import Buffer from '../../util/Buffer';
 import PolygonLayer from './PolygonLayer';
 
+/**
+ *
+ */
 class PointLayer extends Layer {
 
     /**
@@ -577,6 +580,6 @@ var noNew = function ( coordinates, options ) {
 };
 
 /**
- *  Initialise without requiring new keyword.
+ * Initialise without requiring new keyword.
  */
 export { noNew as pointLayer };

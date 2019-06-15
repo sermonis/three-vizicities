@@ -31,6 +31,9 @@ import { point as Point } from '../../geo/Point';
 import PickingMaterial from '../../engine/PickingMaterial';
 import Buffer from '../../util/Buffer';
 
+/**
+ *
+ */
 class PolylineLayer extends Layer {
 
     /**
@@ -603,6 +606,6 @@ var noNew = function ( coordinates, options ) {
 };
 
 /**
- *  Initialise without requiring new keyword.
+ * Initialise without requiring new keyword.
  */
 export { noNew as polylineLayer };

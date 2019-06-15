@@ -24,6 +24,9 @@ import PickingScene from './PickingScene';
  */
 var nextId = 1;
 
+/**
+ *
+ */
 class Picking {
 
     /**

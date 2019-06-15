@@ -18,6 +18,9 @@ import HorizontalTiltShiftShader from '../vendor/HorizontalTiltShiftShader';
 import VerticalTiltShiftShader from '../vendor/VerticalTiltShiftShader';
 import FXAAShader from '../vendor/FXAAShader';
 
+/**
+ * 
+ */
 class Engine extends EventEmitter {
 
     /**

@@ -122,7 +122,7 @@ class GeoJSONWorkerLayer extends Layer {
 
                 GeoJSONWorkerLayer.RequestGeoJSON( geojson ).then( ( res ) => {
 
-                    // if (this._aborted) {
+                    // if ( this._aborted ) {
                     //   resolve();
                     //   return;
                     // }

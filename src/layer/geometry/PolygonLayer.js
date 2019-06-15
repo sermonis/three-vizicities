@@ -32,6 +32,9 @@ import extrudePolygon from '../../util/extrudePolygon';
 import PickingMaterial from '../../engine/PickingMaterial';
 import Buffer from '../../util/Buffer';
 
+/**
+ *
+ */
 class PolygonLayer extends Layer {
 
     /**
@@ -964,6 +967,6 @@ var noNew = function ( coordinates, options ) {
 };
 
 /**
- *  Initialise without requiring new keyword.
+ * Initialise without requiring new keyword.
  */
 export { noNew as polygonLayer };
