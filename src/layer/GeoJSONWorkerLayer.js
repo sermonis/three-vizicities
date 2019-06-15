@@ -21,6 +21,7 @@ import PickingMaterial from '../engine/PickingMaterial';
 /**
  * TODO: Allow filter method to be run inside a worker to improve performance.
  * TODO: Allow onEachFeature method to be run inside a worker to improve performance.
+ * TODO: Use Operative (https://github.com/padolsey/operative).
  */
 class GeoJSONWorkerLayer extends Layer {
 
@@ -538,6 +539,7 @@ class GeoJSONWorkerLayer extends Layer {
                 obj = {
 
                     attributes: [ {
+
                         positions: splitPositions[ i ],
                         colors: splitColors[ i ],
 
@@ -731,7 +733,7 @@ class GeoJSONWorkerLayer extends Layer {
                  */
                 if ( typeof this._options.onAddAttributes === 'function' ) {
 
-                    var customAttributes = this._options.onAddAttributes( obj.attributes[ 0 ], properties);
+                    var customAttributes = this._options.onAddAttributes( obj.attributes[ 0 ], properties );
                     var customAttribute;
 
                     for ( var key in customAttributes ) {
@@ -774,7 +776,7 @@ class GeoJSONWorkerLayer extends Layer {
                 /**
                  * TODO: Make this work when style is a function per feature.
                  */
-                var style = ( typeof this._options.style === 'function' ) ? this._options.style( objects[0] ) : this._options.style;
+                var style = ( typeof this._options.style === 'function' ) ? this._options.style( objects[ 0 ] ) : this._options.style;
                 style = extend( {}, GeoJSON.defaultStyle, style );
 
                 this._setPointMesh( mergedPointAttributes, pointAttributeLengths, style, pointFlat ).then( ( result ) => {
@@ -943,6 +945,7 @@ class GeoJSONWorkerLayer extends Layer {
                         }
 
                         polygons.push( polygon );
+
                     }
 
                     if ( geometry.type === 'LineString' || geometry.type === 'MultiLineString' ) {
@@ -1598,13 +1601,13 @@ class GeoJSONWorkerLayer extends Layer {
 
             this._world.emit( 'click', this, properties, point2d, point3d );
 
-        });
+        } );
 
         this._world.on( 'pick-hover-' + pickingId, ( pickingId, point2d, point3d, intersects ) => {
 
             this._world.emit( 'hover', this, properties, point2d, point3d );
 
-        });
+        } );
 
     }
 
