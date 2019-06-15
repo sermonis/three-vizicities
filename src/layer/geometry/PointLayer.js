@@ -570,10 +570,13 @@ class PointLayer extends Layer {
 
 export default PointLayer;
 
-var noNew = function( coordinates, options ) {
+var noNew = function ( coordinates, options ) {
 
     return new PointLayer( coordinates, options );
 
 };
 
+/**
+ *  Initialise without requiring new keyword.
+ */
 export { noNew as pointLayer };

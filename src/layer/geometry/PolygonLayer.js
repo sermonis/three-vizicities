@@ -957,7 +957,7 @@ class PolygonLayer extends Layer {
 
 export default PolygonLayer;
 
-var noNew = function( coordinates, options ) {
+var noNew = function ( coordinates, options ) {
 
     return new PolygonLayer( coordinates, options );
 
