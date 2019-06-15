@@ -1,6 +1,9 @@
 import GeoJSONLayer from './GeoJSONLayer';
 import extend from 'lodash.assign';
 
+/**
+ *
+ */
 class TopoJSONLayer extends GeoJSONLayer {
 
     /**

@@ -1,6 +1,9 @@
 import Layer from './Layer';
 import extend from 'lodash.assign';
 
+/**
+ *
+ */
 class LayerGroup extends Layer {
 
     /**

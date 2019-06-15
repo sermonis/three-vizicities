@@ -135,9 +135,9 @@ class Layer extends EventEmitter {
                 this.emit( 'added' );
                 resolve( this );
 
-            }).catch( reject );
+            } ).catch( reject );
 
-        });
+        } );
 
     }
 
@@ -267,7 +267,7 @@ class Layer extends EventEmitter {
 
             for ( var i = this._object3D.children.length - 1; i >= 0; i-- ) {
 
-                _child = this._object3D.children[i];
+                _child = this._object3D.children[ i ];
 
                 if ( !_child ) {
 
@@ -303,14 +303,14 @@ class Layer extends EventEmitter {
 
         }
 
-        if (this._domObject3D && this._domObject3D.children) {
+        if ( this._domObject3D && this._domObject3D.children ) {
 
             // Remove everything else in the layer.
             let _child;
 
             for ( var i = this._domObject3D.children.length - 1; i >= 0; i-- ) {
 
-                _child = this._domObject3D.children[i];
+                _child = this._domObject3D.children[ i ];
 
                 if ( !_child ) {
 
@@ -331,7 +331,7 @@ class Layer extends EventEmitter {
 
             for ( var i = this._domObject2D.children.length - 1; i >= 0; i-- ) {
 
-                _child = this._domObject2D.children[i];
+                _child = this._domObject2D.children[ i ];
 
                 if ( !_child ) {
 
@@ -373,6 +373,6 @@ var noNew = function( options ) {
 };
 
 /**
- *  Initialise without requiring new keyword.
+ * Initialise without requiring new keyword.
  */
 export { noNew as layer };

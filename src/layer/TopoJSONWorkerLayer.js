@@ -1,6 +1,9 @@
 import GeoJSONWorkerLayer from './GeoJSONWorkerLayer';
 import extend from 'lodash.assign';
 
+/**
+ *
+ */
 class TopoJSONWorkerLayer extends GeoJSONWorkerLayer {
 
     /**
@@ -16,7 +19,7 @@ class TopoJSONWorkerLayer extends GeoJSONWorkerLayer {
 
         let _options = extend( {}, _defaults, options );
 
-        super(topojson, _options);
+        super( topojson, _options );
 
     }
 
