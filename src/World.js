@@ -443,9 +443,9 @@ class World extends EventEmitter {
 
                 resolve( this );
 
-            }).catch( reject );
+            } ).catch( reject );
 
-        })
+        } )
 
     }
 
@@ -614,7 +614,7 @@ class World extends EventEmitter {
              */
             controls.destroy();
 
-        })
+        } )
 
         /**
          *  Remove all layers.
@@ -629,7 +629,7 @@ class World extends EventEmitter {
              */
             layer.destroy();
 
-        });
+        } );
 
         /**
          *  Environment layer is removed with the other layers.
@@ -672,6 +672,6 @@ var noNew = function ( domId, options ) {
 }
 
 /**
- *  Initialise without requiring new keyword.
+ * Initialise without requiring new keyword.
  */
 export { noNew as world };
