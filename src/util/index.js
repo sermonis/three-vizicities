@@ -1,5 +1,5 @@
 /**
- * TODO: A lot of these utils don't need to be in separate, tiny files
+ * TODO: A lot of these utils don't need to be in separate, tiny files.
  */
 import wrapNum from './wrapNum';
 import extrudePolygon from './extrudePolygon';

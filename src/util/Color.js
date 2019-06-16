@@ -1,5 +1,5 @@
 /*
- * Color helpers
+ * Color helpers.
  */
 import * as THREE from 'three';
 
@@ -23,7 +23,7 @@ var Color = ( function () {
             side: THREE.BackSide,
             depthWrite: false,
             transparent: true,
-            
+
         } );
 
     };
@@ -43,6 +43,6 @@ var Color = ( function () {
 
     };
 
-})();
+} )();
 
 export default Color;

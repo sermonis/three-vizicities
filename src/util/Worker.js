@@ -1,6 +1,9 @@
 import WorkerPool from './WorkerPool';
 
-var Worker = ( function() {
+/**
+ * TODO: Use Operative (https://github.com/padolsey/operative).
+ */
+var Worker = ( function () {
 
     var _maxWorkers = 2;
     var pool;
@@ -12,7 +15,7 @@ var Worker = ( function() {
             numThreads: ( maxWorkers ) ? maxWorkers : _maxWorkers,
             workerScript: ( workerScript ) ? workerScript : 'vizicities-worker.js',
 
-        });
+        } );
 
         return pool.createWorkers();
     }
