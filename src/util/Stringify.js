@@ -1,4 +1,5 @@
 /*
+ * SEE: Tangram JS
  * SEE: https://github.com/tangrams/tangram
  */
 var Stringify = ( function () {

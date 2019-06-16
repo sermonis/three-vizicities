@@ -28,7 +28,7 @@
  * done on the main thread regardless so the worker should try to do as much as
  * possible with as few dependencies as possible.
  *
- * Have a look at how this is done in Tangram before implementing anything as
+ * Have a look at how this is done in Tangram (Tangram JS) before implementing anything as
  * the approach there is pretty similar and robust.
  * SEE: https://github.com/tangrams
  */
