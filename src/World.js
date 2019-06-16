@@ -429,9 +429,15 @@ class World extends EventEmitter {
 
             layer._addToWorld( this ).then( () => {
 
-                if ( layer._options.attribution ) {
+                // if ( layer._options.attribution ) {
+                //
+                //     this._addAttribution( layer._options.id, layer._options.attribution );
+                //
+                // }
 
-                    this._addAttribution( layer._options.id, layer._options.attribution );
+                if ( this.options.attribution ) {
+
+                    this._addAttribution( layer._options.id, this.options.attribution );
 
                 }
 
