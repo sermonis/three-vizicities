@@ -17,8 +17,7 @@ var ShaderPass = function( shader, textureID ) {
 
 		this.material = shader;
 
-	}
-	else if ( shader ) {
+	} else if ( shader ) {
 
 		this.uniforms = THREE.UniformsUtils.clone( shader.uniforms );
 

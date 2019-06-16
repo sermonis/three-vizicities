@@ -8,6 +8,9 @@
 
 import * as THREE from 'three';
 
+/**
+ *
+ */
 var CSS3DObject = function ( element ) {
 
 	THREE.Object3D.call( this );
@@ -30,6 +33,9 @@ var CSS3DObject = function ( element ) {
 CSS3DObject.prototype = Object.create( THREE.Object3D.prototype );
 CSS3DObject.prototype.constructor = CSS3DObject;
 
+/**
+ *
+ */
 var CSS3DSprite = function ( element ) {
 
 	CSS3DObject.call( this, element );
@@ -39,8 +45,9 @@ var CSS3DSprite = function ( element ) {
 CSS3DSprite.prototype = Object.create( CSS3DObject.prototype );
 CSS3DSprite.prototype.constructor = CSS3DSprite;
 
-//
-
+/**
+ *
+ */
 var CSS3DRenderer = function () {
 
 	console.log( 'THREE.CSS3DRenderer', THREE.REVISION );
@@ -51,8 +58,10 @@ var CSS3DRenderer = function () {
 	var matrix = new THREE.Matrix4();
 
 	var cache = {
+
 		camera: { fov: 0, style: '' },
-		objects: {}
+		objects: {},
+
 	};
 
 	var domElement = document.createElement( 'div' );
@@ -70,17 +79,28 @@ var CSS3DRenderer = function () {
 
 	var isIE = /Trident/i.test( navigator.userAgent );
 
+	/**
+	 *
+	 */
 	this.setClearColor = function () {};
 
+	/**
+	 *
+	 */
 	this.getSize = function () {
 
 		return {
+
 			width: _width,
-			height: _height
+			height: _height,
+
 		};
 
 	};
 
+	/**
+	 *
+	 */
 	this.setSize = function ( width, height ) {
 
 		_width = width;
@@ -96,12 +116,18 @@ var CSS3DRenderer = function () {
 
 	};
 
+	/**
+	 *
+	 */
 	function epsilon( value ) {
 
 		return Math.abs( value ) < 1e-10 ? 0 : value;
 
 	}
 
+	/**
+	 *
+	 */
 	function getCameraCSSMatrix( matrix ) {
 
 		var elements = matrix.elements;
@@ -127,6 +153,9 @@ var CSS3DRenderer = function () {
 
 	}
 
+	/**
+	 *
+	 */
 	function getObjectCSSMatrix( matrix, cameraCSSMatrix ) {
 
 		var elements = matrix.elements;
@@ -162,6 +191,9 @@ var CSS3DRenderer = function () {
 
 	}
 
+	/**
+	 *
+	 */
 	function renderObject( object, camera, cameraCSSMatrix ) {
 
 		if ( object instanceof THREE.CSS3DObject ) {
@@ -225,11 +257,17 @@ var CSS3DRenderer = function () {
 
 	}
 
+	/**
+	 *
+	 */
 	var getDistanceToSquared = function () {
 
 		var a = new THREE.Vector3();
 		var b = new THREE.Vector3();
 
+		/**
+		 *
+		 */
 		return function ( object1, object2 ) {
 
 			a.setFromMatrixPosition( object1.matrixWorld );
@@ -241,6 +279,9 @@ var CSS3DRenderer = function () {
 
 	}();
 
+	/**
+	 *
+	 */
 	function zOrder( scene ) {
 
 		var order = Object.keys( cache.objects ).sort( function ( a, b ) {
@@ -248,6 +289,7 @@ var CSS3DRenderer = function () {
 			return cache.objects[ a ].distanceToCameraSquared - cache.objects[ b ].distanceToCameraSquared;
 
 		} );
+
 		var zMax = order.length;
 
 		scene.traverse( function ( object ) {
@@ -264,6 +306,9 @@ var CSS3DRenderer = function () {
 
 	}
 
+	/**
+	 *
+	 */
 	this.render = function ( scene, camera ) {
 
 		var fov = 0.5 / Math.tan( THREE.Math.degToRad( camera.getEffectiveFOV() * 0.5 ) ) * _height;
@@ -280,7 +325,11 @@ var CSS3DRenderer = function () {
 
 		scene.updateMatrixWorld();
 
-		if ( camera.parent === null ) camera.updateMatrixWorld();
+		if ( camera.parent === null ) {
+
+			camera.updateMatrixWorld();
+
+		}
 
 		camera.matrixWorldInverse.getInverse( camera.matrixWorld );
 
@@ -304,10 +353,13 @@ var CSS3DRenderer = function () {
 
 		if ( isIE ) {
 
-			// IE10 and 11 does not support 'preserve-3d'.
-			// Thus, z-order in 3D will not work.
-			// We have to calc z-order manually and set CSS z-index for IE.
-			// FYI: z-index can't handle object intersection
+			/**
+			 * IE10 and 11 does not support 'preserve-3d'.
+			 * Thus, z-order in 3D will not work.
+			 *
+			 * We have to calc z-order manually and set CSS z-index for IE.
+			 * FYI: z-index can't handle object intersection
+			 */
 			zOrder( scene );
 
 		}
@@ -316,9 +368,9 @@ var CSS3DRenderer = function () {
 
 };
 
-export {CSS3DObject as CSS3DObject};
-export {CSS3DSprite as CSS3DSprite};
-export {CSS3DRenderer as CSS3DRenderer};
+export { CSS3DObject as CSS3DObject };
+export { CSS3DSprite as CSS3DSprite };
+export { CSS3DRenderer as CSS3DRenderer };
 
 THREE.CSS3DObject = CSS3DObject;
 THREE.CSS3DSprite = CSS3DSprite;

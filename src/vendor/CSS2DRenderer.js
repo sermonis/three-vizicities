@@ -7,6 +7,9 @@
 
 import * as THREE from 'three';
 
+/**
+ *
+ */
 var CSS2DObject = function ( element ) {
 
 	THREE.Object3D.call( this );
@@ -29,8 +32,9 @@ var CSS2DObject = function ( element ) {
 CSS2DObject.prototype = Object.create( THREE.Object3D.prototype );
 CSS2DObject.prototype.constructor = CSS2DObject;
 
-//
-
+/**
+ *
+ */
 var CSS2DRenderer = function () {
 
 	console.log( 'THREE.CSS2DRenderer', THREE.REVISION );
@@ -60,6 +64,9 @@ var CSS2DRenderer = function () {
 
 	};
 
+	/**
+	 *
+	 */
 	var renderObject = function ( object, camera ) {
 
 		if ( object instanceof THREE.CSS2DObject ) {
@@ -91,6 +98,9 @@ var CSS2DRenderer = function () {
 
 	};
 
+	/**
+	 *
+	 */
 	this.render = function ( scene, camera ) {
 
 		scene.updateMatrixWorld();
@@ -108,8 +118,8 @@ var CSS2DRenderer = function () {
 
 };
 
-export {CSS2DObject as CSS2DObject};
-export {CSS2DRenderer as CSS2DRenderer};
+export { CSS2DObject as CSS2DObject };
+export { CSS2DRenderer as CSS2DRenderer };
 
 THREE.CSS2DObject = CSS2DObject;
 THREE.CSS2DRenderer = CSS2DRenderer;

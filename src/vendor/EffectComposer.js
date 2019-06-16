@@ -34,8 +34,11 @@ var EffectComposer = function ( renderer, renderTarget ) {
 
 	this.passes = [];
 
-	if ( CopyShader === undefined )
+	if ( CopyShader === undefined ) {
+
 		console.error( "EffectComposer relies on THREE.CopyShader" );
+
+	}
 
 	this.copyPass = new ShaderPass( CopyShader );
 
@@ -43,7 +46,7 @@ var EffectComposer = function ( renderer, renderTarget ) {
 
 EffectComposer.prototype = {
 
-	swapBuffers: function() {
+	swapBuffers: function () {
 
 		var tmp = this.readBuffer;
 		this.readBuffer = this.writeBuffer;
@@ -76,7 +79,11 @@ EffectComposer.prototype = {
 
 			pass = this.passes[ i ];
 
-			if ( ! pass.enabled ) continue;
+			if ( ! pass.enabled ) {
+
+				continue;
+
+			}
 
 			pass.render( this.renderer, this.writeBuffer, this.readBuffer, delta, maskActive );
 

@@ -91,7 +91,7 @@ ClearMaskPass.prototype = {
 };
 
 export default MaskPass;
-export {ClearMaskPass as ClearMaskPass};
+export { ClearMaskPass as ClearMaskPass };
 
 THREE.MaskPass = MaskPass;
 THREE.ClearMaskPass = ClearMaskPass;
