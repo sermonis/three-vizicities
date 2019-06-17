@@ -60,11 +60,11 @@ class EnvironmentLayer extends Layer {
          */
         if ( !this._options.skybox ) {
 
-            var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
+            let _directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
 
-            directionalLight.position.x = 10000;
-            directionalLight.position.y = 10000;
-            directionalLight.position.z = 10000;
+            _directionalLight.position.x = 10000;
+            _directionalLight.position.y = 10000;
+            _directionalLight.position.z = 10000;
 
             /**
              * Physically based rendering (PBR).
@@ -73,48 +73,48 @@ class EnvironmentLayer extends Layer {
              * TODO: Get shadows working in non-PBR scenes.
              */
 
-            // directionalLight.castShadow = true;
+            // _directionalLight.castShadow = true;
             //
             // var d = 100;
-            // directionalLight.shadow.camera.left = -d;
-            // directionalLight.shadow.camera.right = d;
-            // directionalLight.shadow.camera.top = d;
-            // directionalLight.shadow.camera.bottom = -d;
+            // _directionalLight.shadow.camera.left = -d;
+            // _directionalLight.shadow.camera.right = d;
+            // _directionalLight.shadow.camera.top = d;
+            // _directionalLight.shadow.camera.bottom = -d;
             //
-            // directionalLight.shadow.camera.near = 10;
-            // directionalLight.shadow.camera.far = 100;
+            // _directionalLight.shadow.camera.near = 10;
+            // _directionalLight.shadow.camera.far = 100;
             //
             // // TODO: Need to dial in on a good shadowmap size
-            // directionalLight.shadow.mapSize.width = 2048;
-            // directionalLight.shadow.mapSize.height = 2048;
+            // _directionalLight.shadow.mapSize.width = 2048;
+            // _directionalLight.shadow.mapSize.height = 2048;
             //
-            // // directionalLight.shadowBias = -0.0010;
-            // // directionalLight.shadow.darkness = 0.15;
+            // // _directionalLight.shadowBias = -0.0010;
+            // // _directionalLight.shadow.darkness = 0.15;
 
-            var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+            let _directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.5 );
 
-            directionalLight2.position.x = -10000;
-            directionalLight2.position.y = 10000;
-            directionalLight2.position.z = 0;
+            _directionalLight2.position.x = -10000;
+            _directionalLight2.position.y = 10000;
+            _directionalLight2.position.z = 0;
 
-            var directionalLight3 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+            let _directionalLight3 = new THREE.DirectionalLight( 0xffffff, 0.5 );
 
-            directionalLight3.position.x = 10000;
-            directionalLight3.position.y = 10000;
-            directionalLight3.position.z = -10000;
+            _directionalLight3.position.x = 10000;
+            _directionalLight3.position.y = 10000;
+            _directionalLight3.position.z = -10000;
 
-            this.add(directionalLight);
-            this.add(directionalLight2);
-            this.add(directionalLight3);
+            this.add(_directionalLight);
+            this.add(_directionalLight2);
+            this.add(_directionalLight3);
 
             // Debug lights.
-            // var helper = new THREE.DirectionalLightHelper(directionalLight, 10);
-            // var helper2 = new THREE.DirectionalLightHelper(directionalLight2, 10);
-            // var helper3 = new THREE.DirectionalLightHelper(directionalLight3, 10);
+            // let _helper = new THREE.DirectionalLightHelper(_directionalLight, 10);
+            // let _helper2 = new THREE.DirectionalLightHelper(_directionalLight2, 10);
+            // let _helper3 = new THREE.DirectionalLightHelper(_directionalLight3, 10);
             //
-            // this.add(helper);
-            // this.add(helper2);
-            // this.add(helper3);
+            // this.add(_helper);
+            // this.add(_helper2);
+            // this.add(_helper3);
 
         } else {
 
@@ -123,6 +123,7 @@ class EnvironmentLayer extends Layer {
             this._skyboxLight.castShadow = true;
 
             var d = 10000;
+
             this._skyboxLight.shadow.camera.left = -d;
             this._skyboxLight.shadow.camera.right = d;
             this._skyboxLight.shadow.camera.top = d;
@@ -164,11 +165,11 @@ class EnvironmentLayer extends Layer {
      */
     _initGrid() {
 
-        var size = 4000;
-        var step = 100;
+        let _size = 4000;
+        let _step = 100;
 
-        var gridHelper = new THREE.GridHelper( size, step );
-        this.add( gridHelper );
+        let _gridHelper = new THREE.GridHelper( _size, _step );
+        this.add( _gridHelper );
 
     }
 
